@@ -4,6 +4,7 @@
 ## them. Lines beginning with a single '#' mark are commented-out code, and you
 ## may want to uncomment them when appropriate.
 
+define config.developer = False
 
 ## Basics ######################################################################
 
@@ -12,7 +13,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("CardinalSin")
+define config.name = _("Cardinal Sin")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -62,7 +63,7 @@ define config.has_voice = True
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/bgm/title.ogg"
 
 
 ## Transitions #################################################################
@@ -95,6 +96,8 @@ define config.end_game_transition = None
 ## A variable to set the transition used when the game starts does not exist.
 ## Instead, use a with statement after showing the initial scene.
 
+define config.adv_nvl_transition = Dissolve(.2)
+define config.nvl_adv_transition = Dissolve(.2)
 
 ## Window management ###########################################################
 ##
@@ -183,11 +186,37 @@ init python:
     build.classify('**/.**', None)
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
+    build.classify("**.rpy", None)
+    build.classify("**.psd", None)
 
-    ## To archive files, classify them as 'archive'.
+    build.classify("game/audio/voice/caius/_unused/**.**", None)
+    build.classify("game/audio/voice/cultist_a/_unused/**.**", None)
+    build.classify("game/audio/voice/cultist_d/_unused/**.**", None)
+    build.classify("game/audio/voice/cultist_mage/_unused/**.**", None)
+    build.classify("game/audio/voice/griswyr/_unused/**.**", None)
+    build.classify("game/audio/voice/hale/_unused/**.**", None)
+    build.classify("game/audio/voice/jory/_unused/**.**", None)
+    build.classify("game/audio/voice/priam/_unused/**.**", None)
+    build.classify("game/audio/voice/persephone/_unused/**.**", None)
 
-    # build.classify('game/**.png', 'archive')
-    # build.classify('game/**.jpg', 'archive')
+    # Audio files
+    build.classify('game/**.mp3', 'archive')
+    build.classify('game/**.wav', 'archive')
+    build.classify('game/**.ogg', 'archive')
+
+    #Code files
+    build.classify('game/**.rpyc', 'archive')
+
+    # Image files
+    build.classify('game/**.png', 'archive')
+    build.classify('game/**.jpg', 'archive')
+    build.classify('game/**.ico', 'archive')
+    build.classify('game/**.icns', 'archive')
+
+    # Other files (fonts, ...)
+    build.classify('game/**.ttf', 'archive')
+    build.classify('game/**.otf', 'archive')
+    build.classify('game/**.webm', 'archive')
 
     ## Files matching documentation patterns are duplicated in a mac app build,
     ## so they appear in both the app and the zip file.
