@@ -1,21 +1,25 @@
-label Explanation:
+
+label explanation:
     
     #scene office with dissolve
-    "I open my eyes at the sunset streaming through the window. Looks like I was more tired
-    than I thought..."
+    "I open my eyes at the sunset streaming through the window. Looks like I was more tired than I thought..."
     "That damned banshee nearly killed us. To be given so much trouble by a lowly succubus, it's humiliating."
     "Her kind isn't usually that deadly, at least one-on-one. And now she's out doing Ishmael-knows-what."
     "I sit up, my stomach grumbling."
     extend " It's been three days since I last ate. I should have a syringe lying around somewhere."
 
     play sound door_open
+
     "The door creaks open, and I narrow my eyes at the lanky elf that enters."
     "Disgust graces my tongue. I'd sooner starve than feed on him, even if he was the last mortal on the plane."
 
     ni "Wow, you were out like a light. Never thought you'd struggle against a succubus."
+    
     gr "Be quiet, Nick."
+    
     ni "Hehe...of course, she was the banshee who caused {i}the Reckoning{/i}."
     extend " Too bad you can't wield silver."
+    
     gr "Hmph, I only need to tear him limb from limb. The monk can do the rest.."
 
     "I put on my boots, stand, and stretch. I wish my scenery wasn't so unpleasant."
@@ -29,18 +33,27 @@ label Explanation:
     extend "It is no less than what I deserve for my weakness."
 
     gr "Speaking of, how is Caius?"
+    
     ni "He'll be fine. Though he will need to get used to wearing a mask. His mana was gushing like a fountain."
+    
     gr "What the hell happened? I patched up his wounds. He was fine for a moment, then this white mana started spilling out."
+    
     ni "That's Justice for you."
+    
     gr "Justice?"
+    
     ni "Ahh, it's the mana of angels. Much like how your Malice is from Hell."
     extend " Mortals weren't intended to wield it. And when they do, it tears their body apart."
+    
     gr "Doesn't Malice do the same?"
-    ni "Malice wears on your soul when overused. Justice is like turning your very soul into a weapon. It will kill you, and
-    probably everyone else nearby if mishandled."
+    
+    ni "Malice wears on your soul when overused. Justice is like turning your very soul into a weapon. It will kill you, and probably everyone else nearby if mishandled."
     ni "On top of that, your friend is a lunatic."
+    
     gr "He's not insane, you are."
+    
     ni "Not every lunatic is insane. He just sees the world differently than us."
+    
     gr "hmmm..."
 
     "I scratch my chin. It does make sense."
@@ -51,6 +64,7 @@ label Explanation:
     extend " Has he weaponized his peculiarity? Hmm..."
 
     gr "And you gauged that much just from treating an unconscious body?"
+    
     ni "Well, how his mana flows was also a clue. It doesn't have the restraints that a normal person's does, 
     so it's no wonder Justice started erupting from him out of nowhere."
     extend " I hypothesize the stress of that battle must've led to him somehow channeling it. Justice manifests 
@@ -62,19 +76,24 @@ label Explanation:
     pure enough."
 
     gr "Hmph, than I'll let him rest. I have a banshee to hunt."
+    
     ni "I'd prefer you not-"
 
     play sound grapple
+    
     "I yank the fool by his collar, only for him to smile whimiscally."
     "If he wasn't so useful, I'd crush his neck where we stand. But he'd enjoy every second of it anyway. 
     This maniac adores pain."    
     extend " Granted, I adore hitting him..."
 
-    gr "Listen, you disgusting cur! If that banshee causes another Reckoning, we're finished! 
-    Our Empire is on the verge of war as it is!"
+    gr "Listen, you disgusting cur! If that banshee causes another Reckoning, we're finished! Our Empire is on the verge of war as it is!"
+    
     ni "Ehehehe..."
+
     gr "So, I'm going to track her down and finish what we started. Are we clear?"
+    
     ni "But Griswyr, I found a nest of Paste smugglers..."
+    
     gr "Really?"
 
     "I release him. He crumples, then regains his footing haphazardly. He isn't even winded after being manhandled."
@@ -85,11 +104,16 @@ label Explanation:
     extend " I'd know, I was one of those idiots..."
 
     ni "Consider this your reward for dealing with those cultists."
+    
     gr "Hmm... Why are you giving me this? Surely, you understand that Persephone is our top priority."
+    
     ni "She is, and I intend to help you find her, but there's something I want to investigate first."
     extend " You know how a dretchling destroyed Thrycia?"
+    
     gr "How can I not? It's what put Caius into a coma. And it wasn't a dretchling."
+    
     ni "Absolutely not. So I just want to do a bit of research and-"
+    
     gr "It's that pain devil, isn't it?!" with vpunch
 
     "He grins sheepishly. Maybe I should kill him after all!"
@@ -99,11 +123,16 @@ label Explanation:
     extend " Well, he didn't listen, she broke free, and is going to be a {b}pain in the ass{/b} to take down."
 
     ni "I doubt Persephone was behind this, though maybe more of Hecate's cultists were..."
+    
     gr "For your sake, you better hope it's those Thorns! I'm certain you realize the carnage a pain devil would cause."
+    
     ni "Hehehe...oh it'd be a bloodbath. There's a reason I bound her."
+    
     gr "Yes, spite, because you blame her for your failure. As if you alone could've stopped {i}the Reckoning{/i}."
+    
     ni "Hard to close a tear in the plane with a chain through your chest."
     extend " It was so wonderful!"
+    
     gr "You're revolting!" with vpunch
 
     "Hmm, prioritize drug dealers or the very monster that nearly destroyed everything. The choice is obvious."
@@ -117,11 +146,16 @@ label Explanation:
     but removing their infection is still a service."
 
     gr "Fine, I'll snuff out this operation. Be grateful I hate Sanguine Paste more than I hate you."
+    
     ni "It does keep you in line hehehe-"
     
     play sound heavy_crash
     #hide Nick with moveoutright
     with vpunch
+    
     "I send him spiraling into the desk on my way out."
     extend " Attacking him is fruitless, but it makes me better. It's too addicting..."
-    jump Exploration
+    
+    jump exploration
+
+    return
