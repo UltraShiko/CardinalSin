@@ -11,7 +11,7 @@ label prologue:
     "I try wiping the red stuff away, but it keeps coming.\nOnly a warm cloth manages to douse this 
     crimson stream."
 
-    mo "By Ishmael, she split your head open..."
+    mo "By Ishmael, he split your head open..."
     ch "Mom...? What's-"
     mo "Shh! Be quiet, dear. He's still outside."
     ch "He...?"
@@ -31,7 +31,7 @@ label prologue:
     "Mommy holds me tight as our front door is torn from its hinges.\nWe're crammed inside the wardrobe."
     "Heavy footsteps pound against our floor, followed by crashing sounds as our stuff is thrown around."
     "Mom tries to calm me down by humming in my ear.\nOne hand presses a hankerchief to my head, and her other hand grips a knife."
-    extend " But she'll die if she catches us. She's a monster..."
+    extend " But she'll die if he catches us. He's a monster..."
     "He threw me at a tree like I was a toy. That's all I can remember..."
 
     v "Graaaah! Where the hell are they?!" with vpunch
@@ -39,7 +39,7 @@ label prologue:
     "Mama holds my mouth shut as another door is torn from its hinges.\nHe's in our room..."
     "Mom's breathing is getting faster.\nShe pulls me back, tucking me under her arms and scooting in front of me."
 
-    ch "Mom, you'll die! She wants me, so I'll-"
+    ch "Mom, you'll die! He wants me, so I'll-"
     mo "No, no, Christoph... I won't let her hurt you again."
 
     #play sound crash
@@ -74,7 +74,7 @@ label prologue:
     "Their pupils look at me. It feels like she's still here, even though she's not..."
     "I shiver like a leaf as the monster, looking like one of the humans, wipes his mouth and glares at me."
     "A mix of tears and more goop run down my face. I'm about to cry, but I clench my fists instead."
-    "I grab the broom. I know I can't hurt her, but I'll make her pay!"
+    "I grab the broom. I know I can't hurt him, but I'll make him pay!"
     extend "Somehow..."
 
     ch "You...You killed her-"
