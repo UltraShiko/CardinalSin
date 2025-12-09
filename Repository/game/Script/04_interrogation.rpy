@@ -161,7 +161,7 @@ label interrogation:
     c "How vile..."
 
     "Every time that infernal name is mentioned, I twitch."
-    extend " I oughta cut this butcher down for that slight alone. For some reason, I feel nostalgia when I hear his name. But I never met a butcher with a name like it..."
+    extend " I oughta cut this butcher down for that slight alone. For some reason, I feel nostalgia when I hear his name. But I never met a butcher by that name..."
     "But have I ever met a goblin? They're uncommon in the cities."
     extend "\nThey're not trusted. They're treated better than the dretchlings, but that's hardly impressive. So they stick to the forests."
     "Many look at them as savages. Some are, resorting to banditry and ambushing travelers. They can be a real nuisance under the proper leader."
