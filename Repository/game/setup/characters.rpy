@@ -10,6 +10,7 @@ define j = Character("Jory")
 define m = Character("Man")
 define mo = Character("Mom")
 define ni = Character("Nick")
+define sm = Character("Blacksmith")
 define v = Character("Voice")
 define w = Character("Woman")
 
