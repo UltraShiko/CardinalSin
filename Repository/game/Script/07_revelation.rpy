@@ -189,7 +189,7 @@ label revelation:
     
     bu "Buzz knows~! Two mana signatures were detected."
     
-    gr "...And you waited to share those facts because?"
+    gr "...And you waited to share this fact because?"
     
     bu "You-You attack Buzz master!" with vpunch
     

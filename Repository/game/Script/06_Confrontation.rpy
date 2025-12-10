@@ -86,7 +86,7 @@ label confrontation:
     queue sound crash
 
     "He springs at at me like a grasshopper. Not bad, he almost nicked me."
-    extend "\nI saw mana coming from his legs. So that agility is natural then..."
+    extend "\nI didn't see mana coming from his legs. So that agility is natural then..."
 
     ch "{b}I DON'T GIVE A DAMN ABOUT YOUR GRATITUDE!!! YOU RUINED ME!!!{/b}" with vpunch
     ch "You killed my mother, and forced me to eat flesh!"
@@ -98,7 +98,7 @@ label confrontation:
 
     "I flash the empty syringe."
     "At times like these, I'm thankful I've lost my mortality.\nIf I let my guilt speak for me, I'd just become another meal."
-    extend " Cruel indeed considering that the only way to save him is to expose his weakness."
+    extend " Cruel indeed considering that it’s the only way to save him and expose his weakness."
 
     gr "You're mistaken. I don't crave flesh, however I nearly devoured four men on my way here. I almost didn't spare them."
     extend " Yes, you cannot escape your hunger. Yes, I did turn you into a monster. However."
