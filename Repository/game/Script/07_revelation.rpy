@@ -1,8 +1,8 @@
-label Revelation:
+label revelation:
 
     #scene office with dissolve
     "I return and find both Caius and Nick conversing."
-    "The pious boy, now masked, looks to me in horror and rushes over. Nick is as unfazed as alway."
+    "The pious boy, now masked, looks to me in horror and rushes over.\nNick is as unfazed as always."
 
     ca "A-Are you alright?!"
 
@@ -13,9 +13,9 @@ label Revelation:
     gr "I don't know what the hell he was, but he's dead. Now pour me my casket!"
 
     "Caius recoils as a wooden mug, filled to the brim with blood's metallic stench, is placed before me."
-    extend " I down it all immediately. The pain in my body eases to a dull tingle instead of an agonizing throb. I feel as if I'm drunk as both fatigue and drowsiness finally sett in."
+    "I down it all immediately. The pain in my body eases to a dull tingle instead of an agonizing throb. I feel as if I'm drunk as both fatigue and drowsiness finally set in."
 
-    gr "With a day of rest, I'll be as right as rain. My body isn't feeble unlike yours, monk."
+    gr "With a day of rest, I'll be as right as rain.\nMy body isn't feeble unlike yours, monk."
 
     ca "I'm, I'm not a monk..."
     
@@ -30,14 +30,14 @@ label Revelation:
     gr "No, but I wish he was."
     
     "That elf has a stupid grin on his face. I glare at him and it only grows."
-    "I then take notice of the mask shrouding Caius's forehead. It looks like its glued to his skin."
+    "I then take notice of the mask shrouding Caius's forehead.\nIt looks like its glued to his skin."
     extend " Didn't Nick mention this earlier?"
 
     gr "What's with the headwear?"
 
     ca "It's to restrain my mana..."
     
-    gr "Nicck?"
+    gr "Nick?"
     
     ni "Well, it keeps his mana from erupting, at least. Otherwise it'd burst out like a geyser if something upset him."
     extend " He'll be able to fight and channel mana. This will just keep him from exploding."
@@ -47,7 +47,7 @@ label Revelation:
     gr "Yeah, why is that?"
     
     ni "So that it attunes to his mana. Can't have Justice dislodging it."
-    extend " He now has a trump card. The inhibitors will vanish if he rips it off. You might want to flee the scene when that happen~."
+    extend " He now has a trump card. The inhibitors will vanish if he rips it off. You might want to flee the scene when that happens~."
     
     gr "...Do you mean to tell me this boy I met just a day ago is now a ticking time bomb?"
 
@@ -60,7 +60,7 @@ label Revelation:
     play sound door_open
     
     "Suddenly, a batlike monster, the size of my palm, flies inside." 
-    extend " Caius leaps into action, but I block him from advancing."
+    extend "\nCaius leaps into action, but I block him from advancing."
 
     ca "Th-That's an imp! We have to-"
     
@@ -68,32 +68,32 @@ label Revelation:
     
     ca "Wh-what?! But we just fought a devil! Why does he-"
 
-    gr "Stop shouting. Nick summons devils to fight devils. I'm truly disappointed that you didn't figure this out sooner."
+    gr "Stop shouting. Nick summons devils to fight devils.\nI'm truly disappointed that you didn't figure this out sooner."
     
     bu "Good evening! Buzz brings reconnaissance~."
 
     "This ugly, devilish cockroach gives me a migraine."
-    extend " Oh Ishmael, how much more will you test my patience tonight?!"
+    extend "\nOh Ishmael, how much more will you test my patience tonight?!"
 
     "Nick chuckles faintly. He isn't amused, he's guilty."
     extend " Whenever he's done something foolish, he acts like this. A sane mortal would dread my wrath, but Nick's lust for pain encourages it."
 
     gr "Caius, fetch me a broom."
-    extend " On second thought, a broom won't do. Grab me that staff over there."
+    extend " On second thought, a broom won't do.\nGrab me that staff over there."
     
     ca "Umm, okay...?"
     
     ni "Alright Buzz, tell them what we saw."
 
-    bu "Oooh yes, city destroyed! Burned! Blood and ash everywhere! Many dead knights, with red and brown armors scattered about! It was hilarious! Favorite mission so far~!"
+    bu "Oooh yes, city destroyed! Burned! Blood and ash everywhere!\nMany dead knights, with red and brown armors scattered about!\nIt was hilarious! Favorite mission so far~!"
     
     gr "Hmm, so those hellknights perpetuated that..."
 
     ni "Yep... They lacked the numbers to face the Celestials, so they sacked Thrycia. I guess they believed their attack wouldn't warrant retaliation since that city is independent."
 
-    gr "I do not understand why we cling to this peace. It's only a matter of time before those peons attack again."
+    gr "I do not understand why we cling to this peace.\nIt's only a matter of time before those peons attack again."
     
-    b "Unlikely! All of them are dead hahahaha!"
+    bu "Unlikely! All of them are dead hahahaha!"
 
     ca "W-wait, you were there at Thrycia?!"
 
@@ -106,21 +106,21 @@ label Revelation:
     
     ca "Did you see a dretchling? Any survivors?"
 
-    bu "Nope~. Buzz said everyone dead. However...Buzz found a charred silhouette on the ground~. Only devils could broil the earth like that. We explode when slain."
+    bu "Nope~. Buzz said everyone dead. However...Buzz found a charred silhouette on the ground~. Only devils could broil the earth like that.\nWe explode when slain."
     
     gr "Oh really? Tell us more..!"
 
-    play sound Lightgrapple
+    play sound light_grapple
 
     "The wood creaks in my palms and Nick gulps in excitement."
-    "I arch forward, already knowing what that imp is going to say. I only await confirmation..!"
+    "I arch forward, already knowing what that imp is going to say.\nI only await confirmation..!"
 
-    bu "Buzz know mana signature of the deceased. Yes yes, the hellknights were not alone. In fact, some corpses were nice and crispy~. Electrocuted, hmhmhm!"
-    bu "Buzz detect powerful mana. Very malicious and sadistic. We devils enjoy torturing others, but this one's bloodlust is unrivaled."
+    bu "Buzz know mana signature of the deceased. Yes yes, the hellknights were not alone. In fact, some corpses were nice and crispy~.\nElectrocuted, hmhmhm!"
+    bu "Buzz detect powerful mana. Very malicious and sadistic.\nWe devils enjoy torturing others, but this one's bloodlust is unrivaled."
     
-    play sound Lightgrapple
+    play sound light_grapple
     
-    extend " Yes, Buzz detect what you mortals call; a pain devil-"
+    extend "\nYes, Buzz detect what you mortals call; a pain devil-"
 
     play sound heavy_crash
     
@@ -129,8 +129,8 @@ label Revelation:
     play sound bam
     queue sound bam
 
-    extend " Buzz darts to the ceiling and Caius watches, horrified, as I proceed to kick the shit out of Nick."
-    "Small giggles escape him each time my boot bludgeons his chest. I'm almost happy he's enjoying it, because I don't need to worry about breaking him."
+    extend "\nBuzz darts to the ceiling and Caius watches, horrified, as I proceed to kick the shit out of Nick."
+    "Small giggles escape him each time my boot bludgeons his chest.\nI'm almost happy he's enjoying it, because I don't need to worry about breaking him."
 
     ca "St-Stop! You're going to kill him!"
     
@@ -148,13 +148,13 @@ label Revelation:
     play sound grapple
 
     "I yank Nick up by his hair and make him face Caius."
-    "Ishmael knows what godforsaken expression is on Nick's face. I never understood Caius's fixation on joining us."
-    extend " Either way, here's his chance to quit!"
+    "Ishmael knows what godforsaken expression is on Nick's face.\nI never understood Caius's fixation on joining us."
+    extend "\nEither way, here's his chance to quit!"
 
-    gr "Thrycia was your home, right? And remember how your companion was blamed for its destruction?"
-    extend " Well, you can thank this maniac for that!. Yes, the leader of us Emissaries is an irresponsible lunatic who summons devils! He is who you'll be working for."
+    gr "Thrycia was your home, right?\nAnd remember how your companion was blamed for its destruction?"
+    gr "Well, you can thank this maniac for that!\nYes, the leader of us Emissaries is an irresponsible lunatic who summons devils! He is who you'll be working for."
 
-    gr "That pain devil that destroyed Thrycia was {i]his{/i} doing! He could've sent it back too, but his vendetta kept her on our plane. And now she's loose..."
+    gr "That pain devil that destroyed Thrycia was {i}his{/i} doing! He could've sent it back too, but his vendetta kept her on our plane. And now she's loose..."
     
     ca "...If you understood how destructive this monster could be, why would you bind her?"
     
@@ -173,29 +173,29 @@ label Revelation:
 
     "He squints at us both." 
     extend " As dumbfounded as he seems, I'm impressed with how quickly he regains his composure. Especially considering how he just lost his hometown because of an idiot."
-    "Granted, Caius has a level head despite being so green. He only loses himself when his past is brought up, a weakness the banshee exploited..."
+    "Granted, Caius has a level head despite being so green.\nHe only loses himself when his past is brought up, a weakness the banshee exploited..."
     
     ca "...You summon fiends, does that mean you know how to defeat them?"
 
     ni "Of course. It's my passion. A really bad passion hehehe, but I know just about everything when it comes to devils."
     
-    gr "He's only escaped the noose because he's useful. Even the Third had to put up with him."
+    gr "He's only escaped the noose because he's useful.\nEven the Third had to put up with him."
 
-    ca "Tell me Nick, can you track down my friend. If you can bind devils, perhaps you can seek out a dretchling?"
+    ca "Tell me Nick, can you track down my friend.\nIf you can bind devils, perhaps you can seek out a dretchling?"
     
     gr "You don't need this fool's aid. Consult the Reverend."
 
-    ca "But fiends are drawn to dretchlings like moths to a flame. Maybe this pain devil was after him. Or maybe something else was.."
+    ca "But fiends are drawn to dretchlings like moths to a flame.\nMaybe this pain devil was after him. Or maybe something else was.."
     
     bu "Buzz knows~! Two mana signatures were detected."
     
-    gr "...And you wait to share thos face because?"
+    gr "...And you waited to share those facts because?"
     
-    bu " You-You attack Buzz master!" with vpunch
+    bu "You-You attack Buzz master!" with vpunch
     
     ca "Please continue, Buzz."
 
-    bu "Second signature was weak. No corpse detected. It was a fiend, a very powerful fiend~!"
+    bu "Second signature was weak. No corpse detected.\nIt was a fiend, a very powerful fiend~!"
 
     "I groan as Caius's eyes expand. He has a one track mind, this monk..."
     "He'll be a liability, at this rate. All some monster has to do is capture his friend, and Caius will surrender."
@@ -220,7 +220,7 @@ label Revelation:
     ni "Nah. I think Caius has a point."
     extend " More importantly, there's another powerful fiend on the loose. We probably need to stop it."
     
-    gr "Do not fill his head with fantasies, Malconvoker. He's barking up the wrong tree."
+    gr "Do not fill his head with fantasies, Malconvoker.\nHe's barking up the wrong tree."
     
     ni "He doesn't think so. Otherwise, he would've fled to the reverend once he learned it was my fault."
     extend " You're misreading him, Griswyr. He wants to save his friend, but he also wants to fight devils."
@@ -232,18 +232,18 @@ label Revelation:
     "I toss him into the wall. I've heard enough of his nonsense."
 
     gr "Very well, you are hereby my suboordinate."
-    extend " But understand this. We will do things {i}my{/i} way. I'm not interested in rescuing damsels, or your friend."
-    extend " In fact, I plan to kill him if he's aiding fiends, and I expect you to back me up."
+    extend " But understand this.\nWe will do things {i}my{/i} way. I'm not interested in rescuing damsels, or your friend."
+    gr "In fact, I plan to kill him if he's aiding fiends, and I expect you to back me up."
     
     c "I'm aware..."
     
     gr "Elf, make arrangements. Once my wounds are healed, we depart."
-    extend " As for you, monk..."
+    extend "\nAs for you, monk..."
     
     ca "Why do you keep calling me that...?"
 
-    gr "Start trying to get that mana of yours under control. If you're truly able to wield Justice, we'll need that firepower."
-    extend " More importantly, I don't want to have to protect you from yourself. I expect you to make the most of your respite."
+    gr "Start trying to get that mana of yours under control.\nIf you're truly able to wield Justice, we'll need that firepower."
+    gr "More importantly, I don't want to have to protect you from yourself.\nI expect you to make the most of your respite."
     
     ca "You don't have to tell me twice."
     
@@ -256,36 +256,36 @@ label Revelation:
     "I rest on one of the cots, throwing the blanket over my face so I don't have to see either of them any longer."
     "My mind races. I still can't believe that I channeled Sin in place of Malice.  Does this development imply I'm getting soft? I sure hope not..."
     "I clench my fists, still irate at what Jory said."
-    extend " That \"kindness\" nearly cost me my life. Am I to be food for monsters because I'm sentimental now? I'd sooner die!"
+    extend "\nThat \"kindness\" nearly cost me my life. Am I to be food for monsters because I'm sentimental now? I'd sooner die!"
     "Besides, I'm going to have to keep that monk from getting himself killed. It isn't a matter of when our enemy exploits his piety, but {i}when{/i}."
-    extend " If anything, I need to toughen up on the-"
+    extend "\nIf anything, I need to toughen up on the-"
 
     vi "Hey Snowflake! We need to chat." with vpunch
 
     "A voice booms into my ear. No one else has arrived here, or Caius and Nick would've reacted by now. And our base is littered with alarm wards. So it must be telepathy."
-    extend " That, and only one person addresses me with that name..."
+    "That, and only one person addresses me with that name..."
 
     gri "Banshee. To what do I owe the displeasure?"
 
     pei "So I did some digging, and you're a liar. You weren't jinxed, you fed on a child... You turned him into a freak, {i}after{/i}, you devoured his mother in front of him!"
 
     gri "Heh, do my ears betray me, or does {i}the banshee{/i} have a bleeding heart?"
-    gri "The fact that you fell for such a fib betrays your ignorance. Perhaps you aren't as clever as I thought."
+    gri "The fact that you fell for such a fib betrays your ignorance.\nPerhaps you aren't as clever as I thought."
 
-    pei "Yeah well here's something to chew on. If I see you again, it's on sight!"
-    extend " And here I was pitying you, willing to take you under my wing. You're disgusting, and that's coming from me..."
+    pei "Yeah, well, here's something to chew on. If I see you again, it's on sight!"
+    extend " And here I was pitying you, willing to take you under my wing.\nYou're disgusting, and that's coming from me..."
 
-    gri "Oh no, the Banshee doesn't approve of me. I'm certain to lose so much sleep."
-    extend " Especially when you and your broodmother's henchman murdered thousands. People still suffer because {i}the Reckoning{/i}. And you don't scare me, heh, it's quite the opposite."
+    gri "Oh no, the Banshee doesn't approve of me.\nI'm certain to lose so much sleep."
+    gri "Especially when you and your broodmother's henchman murdered thousands. People still suffer because {i}the Reckoning{/i}.\nAnd you don't scare me, heh, it's quite the opposite."
     gri "If you're so offended, then stop hiding. We'll find you eventually."
     
-    pei "In due time, Snowflake. Your days are numbered all the same. You'll beg for death when Mother gets her hands on you."
+    pei "In due time, Snowflake. Your days are numbered all the same.\nYou'll beg for death when Mother gets her hands on you."
     
     gri "My days have been numbered. Do you have anything new to share?"
 
-    "She stops responding. I opt not to inform my comrades. We can't trace telepathy anyway."
+    "She stops responding. I opt not to inform my comrades.\nWe can't trace telepathy anyway."
     "I reach for my hatchet and view my bloodied reflection."
-    extend " I gather a streak of the blood on my finger and lick it, treating myself to the sight of a monstrous grin."
+    extend "\nI gather a streak of the blood on my finger and lick it, treating myself to the sight of a monstrous grin."
 
     gr "Wonderful! That's just the way I wanted it, banshee!"
 
