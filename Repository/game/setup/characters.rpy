@@ -4,6 +4,7 @@ define ch = Character("Christoph")
 define gr = Character("Griswyr")
 
 ## Side Characters
+define bu = Character("Buzz")
 define c = Character("Celestial")
 define ca = Character("Caius")
 define j = Character("Jory")
