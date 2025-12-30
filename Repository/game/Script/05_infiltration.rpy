@@ -158,7 +158,7 @@ label infiltration:
     extend "\nI grab my hatchet, my resolve somewhat restored. It's not an intent to save her that drives me. She put herself in this position, after all."
 
     play sound hurl
-    queue sound slash
+    queue sound slash with bloodflash
 
     ch "{b}GRAHHHHH!!!!{/b}" with vpunch 
 

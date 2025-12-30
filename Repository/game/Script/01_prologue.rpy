@@ -1,4 +1,3 @@
-
 label prologue:
 
     #scene CG
@@ -25,10 +24,10 @@ label prologue:
     ch "Aghhh!"
     mo "Shh! You have to be strong. You have to or he'll-"
 
-    #play sound crash
+    play sound wood_break
     with hpunch
 
-    "Mommy holds me tight as our front door is torn from its hinges.\nWe're crammed inside the wardrobe."
+    "Mommy holds me tight as our bedrrom door is torn from its hinges.\nWe're crammed inside the wardrobe."
     "Heavy footsteps pound against our floor, followed by crashing sounds as our stuff is thrown around."
     "Mom tries to calm me down by humming in my ear.\nOne hand presses a hankerchief to my head, and her other hand grips a knife."
     extend " But she'll die if he catches us. He's a monster..."
@@ -42,7 +41,7 @@ label prologue:
     ch "Mom, you'll die! He wants me, so I'll-"
     mo "No, no, Christoph... I won't let her hurt you again."
 
-    #play sound crash
+    play sound glass_break
     with hpunch
 
     ch "But mom he's-"
@@ -50,9 +49,11 @@ label prologue:
     ch "But-"
     mo "I love you, Christoph. I always-"
 
-    #play sound crash
-    #play sound weapon_swing
-    #play sound blood_splatter
+    play sound wood_break
+    pause 0.5
+    play sound weapon_swing
+    pause 0.3
+    play sound blood_splatter
 
     ch "Mooooom!!!" with vpunch
 
@@ -69,7 +70,7 @@ label prologue:
     extend " Chris...toph-"
     v "Mmph! Bland."
 
-    #play sound thud
+    play sound thud
     "He drops her like a sack of potatoes.\nShe lies there, her eyes open and her throat torn to shreds."
     "Their pupils look at me. It feels like she's still here, even though she's not..."
     "I shiver like a leaf as the monster, looking like one of the humans, wipes his mouth and glares at me."
@@ -86,7 +87,7 @@ label prologue:
     
     v "If you hadn't ran, she'd be alive."
     
-    #play sound heavy_slash
+    play sound heavy_slash
     #have screen turn red
     
     ch "{b}AHHHHHHHHH!!!{/b}" with vpunch

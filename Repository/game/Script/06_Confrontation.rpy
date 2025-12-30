@@ -82,7 +82,7 @@ label confrontation:
     
     ch "Hehehehehehe... Why thank you!"
 
-    #play sound leap
+    play sound leap
     queue sound crash
 
     "He springs at at me like a grasshopper. Not bad, he almost nicked me."
@@ -255,7 +255,7 @@ label confrontation:
     
     ch "Shut up! You aren't better than me!\nIf I can't flay you, I'll just rip you limb from limb!"
 
-    play sound slash
+    play sound lunge
     with bloodflash
     
     "He springs at me. My injured leg halts my attempt to evade."
@@ -265,7 +265,7 @@ label confrontation:
     extend "\nHis nails, laced with Malice and blood, rain down scratches upon me."
     
     play sound whoosh
-    queue sound crash
+    queue sound wood_break
     
     extend "\nI have to roll away. The table behind me isn't as lucky. It falls to pieces."
     "He storms towards me. Now it is I who am shaken." 
@@ -318,10 +318,16 @@ label confrontation:
     with bloodflash
     
     ch "{b}My mother!"
+
+    play sound singe
+    with bloodflash
     extend " My joy!"
+
+    play sound singe
+    with bloodflash
     extend " MY LIFE!!!{/b}" with vpunch
 
-    "It's as if acid has been splashed onto my skin. This excruciating isn't enough to make me 
+    "It's as if acid is being splashed onto my skin. This excruciating pain isn't enough to make me 
     scream at, but I won't survive much longer at this rate.."
     
     gr "..."
@@ -363,8 +369,10 @@ label confrontation:
 
     play sound lunge
     queue sound heavy_bam
+    pause 0.5
+    play sound bone_break
 
-    ch "{b}AAAAAGGGGHHHH!!!{/b}"
+    ch "{b}AAAAAGGGGHHHH!!!{/b}" with vpunch
 
     "He backs off, his jaw slouched open.\nIt was so fast I could hardly recall it."
     "Despite my injuries, my fist have jolted forward and slammed into his mouth, dislocating his jaw. Despite my injuries, my fist jolts and slammed his mouth shut."
@@ -424,8 +432,10 @@ label confrontation:
 
     play sound heavy_slash
     pause 0.5
-    play sound 0.5
-    queue sound thud
+    play sound heavy_slash
+
+    #hide Christoph moveoutbottom
+    play sound thud
 
     "I flense his back twice. He cries out as his flesh is ripped from his body." 
     extend " That attack is a feint, the blood pushing my body to accelerate.\nIt looks to most as if I've teleported."

@@ -132,7 +132,9 @@ label explanation:
     
     ni "It does keep you in line, hehehe-"
     
-    play sound heavy_crash
+    play sound hurl
+    pause 0.3
+    play sound crash
     #hide Nick with moveoutright
     with vpunch
     

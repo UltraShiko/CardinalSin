@@ -28,14 +28,21 @@ label interrogation:
 
     m "Ohhh Charlotta, take me... Take-"
 
-    play sound crash
+    play sound lunge
+    pause 0.5
+    play sound thud
+    pause 0.3
+    play sound grapple
+    with vpunch
     extend " Gahhh!!!" with vpunch
 
     "I pin him in seconds, his chest facing me."
     extend "\nI snatch a vial from my bandolier and pop the cork.\nHe grins foolishly."
 
     m "Oh...my dear Charlotta. I didn't know you liked it so-"
-    #play sound potion
+    play sound bottle_open
+    pause 0.5
+    play sound slash
     extend "\nNgh, ahh...{b}AaaaaAAAGHHHH!!!{/b}"
 
     "I ram the elixir's contents up his nose. It's much quicker than forcing it down his throat."
@@ -70,7 +77,7 @@ label interrogation:
     
     extend "\nGngh! I-Ican't tell you! He'll, he'll kill-"
     
-    play sound bone_snap
+    play sound bone_break
     
     extend " {b}GAAAAAAAAHHHHH!!!{/b}" with vpunch
     
@@ -90,7 +97,7 @@ label interrogation:
     "The band approach but don't draw too close.\nOne is bold enough to have his sword out."
     extend " I tense up. Like devils, I'm susceptible to silver. Assuming he can hit me, that is."
     
-    play sound bone_snap
+    play sound bone_break
     
     "I meet their gaze, then break the other pinky."
     extend " His outcry provokes the band to march closer. I grab his index finger, ready to resume

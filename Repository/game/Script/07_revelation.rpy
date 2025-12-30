@@ -122,12 +122,12 @@ label revelation:
     
     extend "\nYes, Buzz detect what you mortals call; a pain devil-"
 
-    play sound heavy_crash
+    play sound wood_break
     
     "It's instantaneous. The staff breaks on the first strike."
     
-    play sound bam
-    queue sound bam
+    play sound heavy_bam
+    queue sound heavy_bam
 
     extend "\nBuzz darts to the ceiling and Caius watches, horrified, as I proceed to kick the shit out of Nick."
     "Small giggles escape him each time my boot bludgeons his chest.\nI'm almost happy he's enjoying it, because I don't need to worry about breaking him."
@@ -137,10 +137,10 @@ label revelation:
     gr "{b}GOOD!{/b}" with vpunch
     
     play sound bam
-    queue sound bam
-    queue sound bam
-    
     ni "Ouch... It could be any pain-"
+
+    play sound sound bam
+    queue sound bam
     extend " Ouch. Ouch. Ouch, hehehe!"
     
     gr "Behold, monk!"
@@ -229,6 +229,11 @@ label revelation:
 
     ni "And besides vampire, someone needs to keep you in-"
 
+
+    #hide Nick with moveoutright
+    play sound hurl
+    pause 0.5
+    play sound thud
     "I toss him into the wall. I've heard enough of his nonsense."
 
     gr "Very well, you are hereby my suboordinate."
