@@ -1,11 +1,13 @@
 label prologue:
 
-    #scene CG
+    
     "...My head, it hurts..."
     "I can't see... Every time I open my eyes, a red, goo burns them.\nThis ick is all over me..."
 
     v "-istop- Chris- ca- -ou -ar me?!"
 
+    #scene CG with dissolve
+    play bgm.something_amiss fadein
     "Mom...?"
     "I try wiping the red stuff away, but it keeps coming.\nOnly a warm cloth manages to douse this 
     crimson stream."
@@ -18,13 +20,13 @@ label prologue:
     "My head throbs suddenly. Even thinking about it hurts...!"
     "I was, outside, gathering firewood and-"
 
-    play sound zap
+    play sound sfx.zap
     with bloodflash
 
     ch "Aghhh!"
     mo "Shh! You have to be strong. You have to or he'll-"
 
-    play sound wood_break
+    play sound sfx.wood_break
     with hpunch
 
     "Mommy holds me tight as our bedrrom door is torn from its hinges.\nWe're crammed inside the wardrobe."
@@ -41,7 +43,7 @@ label prologue:
     ch "Mom, you'll die! He wants me, so I'll-"
     mo "No, no, Christoph... I won't let her hurt you again."
 
-    play sound glass_break
+    play sound sfx.glass_break
     with hpunch
 
     ch "But mom he's-"
@@ -49,17 +51,17 @@ label prologue:
     ch "But-"
     mo "I love you, Christoph. I always-"
 
-    play sound wood_break
+    play sound sfx.wood_break
     pause 0.5
-    play sound weapon_swing
+    play sound sfx.weapon_swing
     pause 0.3
-    play sound blood_splatter
+    play sound sfx.blood_splatter
 
     ch "Mooooom!!!" with vpunch
 
     "My mouth falls open. All I see is the door open, and then Mom..."
 
-    play sound stab
+    play sound sfx.slash
 
     "She tries her best. lunging and driving the knife into his chest." 
     extend "\nBut there's no sign that he's hurt..."
@@ -70,7 +72,7 @@ label prologue:
     extend " Chris...toph-"
     v "Mmph! Bland."
 
-    play sound thud
+    play sound sfx.thud
     "He drops her like a sack of potatoes.\nShe lies there, her eyes open and her throat torn to shreds."
     "Their pupils look at me. It feels like she's still here, even though she's not..."
     "I shiver like a leaf as the monster, looking like one of the humans, wipes his mouth and glares at me."
@@ -80,18 +82,18 @@ label prologue:
 
     ch "You...You killed her-"
     
-    play sound weapon_swing
-    queue sound grapple
+    play sound sfx.weapon_swing
+    queue sound sfx.grapple
     
     extend " Aggh!"
     
     v "If you hadn't ran, she'd be alive."
     
-    play sound heavy_slash
+    play sound sfx.heavy_slash
     #have screen turn red
     
     ch "{b}AHHHHHHHHH!!!{/b}" with vpunch
     
-    jump explanation
+    #jump explanation
 
     return
