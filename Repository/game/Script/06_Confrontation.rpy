@@ -82,8 +82,8 @@ label confrontation:
     
     ch "Hehehehehehe... Why thank you!"
 
-    play sound leap
-    queue sound crash
+    play sound sfx.lunge #TODO: Replace with leap
+    queue sound sfx.heavy_crash
 
     "He springs at at me like a grasshopper. Not bad, he almost nicked me."
     extend "\nI didn't see mana coming from his legs. So that agility is natural then..."
@@ -140,12 +140,12 @@ label confrontation:
 
     "He crouches, brandishing his razor-sharp nails at me as he growls."
 
-    play sound mana_charge
+    play sound sfx.mana_charge
     with maliceflash
     
     "A red aura begins seeping from him. Damn, he's wielding Malice.\nAnd here I thought I destroyed his resolve..."
     
-    play sound weapon_draw 
+    play sound sfx.weapon_draw 
 
     "I draw my sword. With my hatchet being in the wall, I'm not at my best. And if he leaps at me, I'll need all the defenses I can get."
 
@@ -169,7 +169,7 @@ label confrontation:
     "I duck a chair flung at me and sidestep a swipe of his hand."
     extend " I kick him, sending him crashing into the wall as I dart towards my other weapon."
     
-    play sound mana_charge
+    play sound sfx.mana_charge
     
     "I wince as I spot blood bubbling from his fingertips.\nCan he wield hemomancy as well?"
 
@@ -180,13 +180,14 @@ label confrontation:
     "However, doing so taxes your constitution, just as mana taxes one's willpower. Wielding both Malice and blood with reckless abandon will tire him out quickly."
     "I'd know, I do both as well. But I can replenish myself through drinking the blood of my foe. I'm doubtful he can do the same."
     
-    play sound weapon_draw
+    #play sound halberd_draw #Add sfx later
 
     "I hold the ax head up to my palm."
 
     gr "What was that supposed to be? I thought you wanted to kill me."
     extend "\nLet me show you how its done!" with vpunch 
 
+    play sound sfx.slash
     "I cut the skin, but nothing happens."
     "I scowl. Blood is dripping just fine, but no Malice is coming out.\nI can't call on it!"
     "Don't tell me... Can I not use mana against him?\nI thought I was over my guilt."
@@ -206,24 +207,24 @@ label confrontation:
 
     "He scratches the air, sending a wave of carmine at me.\nIt's too wide to dodge."
     
-    play sound parry
+    play sound sfx.heavy_slash
     
     "I carve through it. A second blast is fired my way."
     
-    play sound slash fadeout 0.5
-    play sound slash fadeout 0.5
-    play sound slash fadeout 0.5
+    play sound sfx.slash
+    queue sound sfx.slash
+    queue sound sfx.slash
     
     extend "\nAnd the next, and the next, and the next."
     
     "My flurry of swings shakes the goblin."
     
-    play sound lunge
+    play sound sfx.lunge
     #zoom in
     
     extend "\nHe hesitates. Readying both weapons, I lunge."
 
-    play sound zap
+    play sound sfx.zap
     with bloodflash
     
     gr "Ngh?!" with vpunch
@@ -231,14 +232,14 @@ label confrontation:
     "I flinch?! My arms buckle just before I can decapitate him."
     extend "\nDamn, I'm wide open! I can't move..."
 
-    play sound heavy_slash
+    play sound sfx.heavy_slash
     with bloodflash
     
     gr "Grrr!"
 
     "He ragged teeth into my leg."
     
-    play sound bam 
+    play sound sfx.bam 
     #zoom out
     
     extend " My other foot kicks and dislodges his jaw from my calf. And now said leg won't stop quivering..."
@@ -255,17 +256,17 @@ label confrontation:
     
     ch "Shut up! You aren't better than me!\nIf I can't flay you, I'll just rip you limb from limb!"
 
-    play sound lunge
+    play sound sfx.lunge
     with bloodflash
     
     "He springs at me. My injured leg halts my attempt to evade."
     
-    play sound mana_charge
+    play sound sfx.mana_charge
     
     extend "\nHis nails, laced with Malice and blood, rain down scratches upon me."
     
-    play sound whoosh
-    queue sound wood_break
+    play sound sfx.whoosh
+    queue sound sfx.wood_break
     
     extend "\nI have to roll away. The table behind me isn't as lucky. It falls to pieces."
     "He storms towards me. Now it is I who am shaken." 
@@ -280,11 +281,11 @@ label confrontation:
 
     "He drags his lethal claws through the air. He has power but he lacks str-"
     
-    play sound heavy_whoosh
+    play sound sfx.whoosh #TODO; Replace with heavy variant later
     
     extend " A feint! He's leapt behind me!"
 
-    play sound heavy_slash
+    play sound sfx.heavy_slash
     with bloodflash
     
     gr "Aaaaghh!!!"
@@ -294,7 +295,7 @@ label confrontation:
 
     ch "Terrible, yet so exquisite. Vengeance is always sweet, not matter how rotten the ingredients are."
 
-    play sound heavy_slash
+    play sound sfx.heavy_slash
     
     "He rips his claws out of me, leaving me stumbling backwards"
     "My breathing is rapid and labored. Vampires don't have the same vulnerabilities as mortals, so we don't die from internal injuries. That fact is the only reason I'm standing..."
@@ -306,7 +307,7 @@ label confrontation:
     "Here comes another blood wave."
     extend " I cleave through it, but another follows.\nPain tears through my core as I swing again."
 
-    play sound singe
+    #play sound sfx.singe #TODO: Find SFX for singe
     with bloodflash
 
     gr "Nnnngh...!"
@@ -314,16 +315,16 @@ label confrontation:
     ch "Hahahaha! Hurts doesn't it?!"
     extend "\n{b}AND IT'S NOT A FRACTION OF WHAT I'VE FELT!{/b}" with vpunch 
     
-    play sound singe
+    #play sound sfx.singe
     with bloodflash
     
     ch "{b}My mother!"
 
-    play sound singe
+    #play sound sfx.singe
     with bloodflash
     extend " My joy!"
 
-    play sound singe
+    #play sound sfx.singe
     with bloodflash
     extend " MY LIFE!!!{/b}" with vpunch
 
@@ -337,12 +338,12 @@ label confrontation:
     gr "..."
     extend "Pitiful."
     
-    play sound mana_charge
+    play sound sfx.mana_charge
     
     ch "{b}GRAAAAAH!!!{/b}" with vpunch
 
-    play sound heavy_bam fadeout 0.5
-    play sound crash
+    play sound sfx.heavy_bam
+    queue sound sfx.wood_break
     with vpunch
     
     "A closed hand sends me sliding into the wall."
@@ -367,10 +368,8 @@ label confrontation:
     "Whether because of addiction or a lust for revenge, someone will come for him just as he has come for me. My death is justified, but will it solve anything?"
     "How interesting. I took on this role knowing I'd be cut down for my sins one day. Yet my death here would only breed more monsters. I chuckle."
 
-    play sound lunge
-    queue sound heavy_bam
-    pause 0.5
-    play sound bone_break
+    play sound sfx.lunge
+    queue sound sfx.bone_break
 
     ch "{b}AAAAAGGGGHHHH!!!{/b}" with vpunch
 
@@ -387,7 +386,7 @@ label confrontation:
     "Instead I walk towards him. My mind has surrendered, but my body refuses. These aren't my instincts taking over. Something else powers me now."
     "I ready my weapons, my grip heavy and trembling. Yet I wonder..."
 
-    play sound mana_charge
+    play sound sfx.mana_charge
     with sinflash
 
     gr "Sin?"
@@ -415,27 +414,26 @@ label confrontation:
     "Here he comes, his hand tearing through the wood as he progresses."
     extend "\nI hold my hatchet towards my hand. I know my blood can fuel Malice, but will the same be true for Sin?"
     
-    play sound mana_charge
+    play sound sfx.mana_charge
 
     "This fight ends here. Either I win or I'm destroyed."
     extend "\nLet's see what happens!" with vpunch
 
-    play sound hurl
+    play sound sfx.hurl
     
     ch "Ha! You missed!"
 
-    play sound mana_charge
+    play sound sfx.mana_charge
     
     extend " Wh-what?! Where did he-"
     
     gr "{b}{i}Bloodedge!{/b}{/i}"
 
-    play sound heavy_slash
-    pause 0.5
-    play sound heavy_slash
+    play sound sfx.heavy_slash
+    queue sound sfx.heavy_slash #TODO: make them play consecutively
 
     #hide Christoph moveoutbottom
-    play sound thud
+    play sound sfx.thud
 
     "I flense his back twice. He cries out as his flesh is ripped from his body." 
     extend " That attack is a feint, the blood pushing my body to accelerate.\nIt looks to most as if I've teleported."

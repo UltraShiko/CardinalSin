@@ -57,7 +57,7 @@ label revelation:
     
     gr "And {i}very{/i} sheltered."
 
-    play sound door_open
+    play sound sfx.door_open
     
     "Suddenly, a batlike monster, the size of my palm, flies inside." 
     extend "\nCaius leaps into action, but I block him from advancing."
@@ -110,7 +110,7 @@ label revelation:
     
     gr "Oh really? Tell us more..!"
 
-    play sound light_grapple
+    play sound sfx.light_grapple
 
     "The wood creaks in my palms and Nick gulps in excitement."
     "I arch forward, already knowing what that imp is going to say.\nI only await confirmation..!"
@@ -118,16 +118,16 @@ label revelation:
     bu "Buzz know mana signature of the deceased. Yes yes, the hellknights were not alone. In fact, some corpses were nice and crispy~.\nElectrocuted, hmhmhm!"
     bu "Buzz detect powerful mana. Very malicious and sadistic.\nWe devils enjoy torturing others, but this one's bloodlust is unrivaled."
     
-    play sound light_grapple
+    play sound sfx.light_grapple
     
     extend "\nYes, Buzz detect what you mortals call; a pain devil-"
 
-    play sound wood_break
+    play sound sfx.wood_break
     
     "It's instantaneous. The staff breaks on the first strike."
     
-    play sound heavy_bam
-    queue sound heavy_bam
+    play sound sfx.heavy_bam
+    queue sound sfx.heavy_bam
 
     extend "\nBuzz darts to the ceiling and Caius watches, horrified, as I proceed to kick the shit out of Nick."
     "Small giggles escape him each time my boot bludgeons his chest.\nI'm almost happy he's enjoying it, because I don't need to worry about breaking him."
@@ -136,16 +136,16 @@ label revelation:
     
     gr "{b}GOOD!{/b}" with vpunch
     
-    play sound bam
+    play sound sfx.bam
     ni "Ouch... It could be any pain-"
 
-    play sound sound bam
-    queue sound bam
+    play sound sfx.bam
+    queue sound sfx.bam
     extend " Ouch. Ouch. Ouch, hehehe!"
     
     gr "Behold, monk!"
 
-    play sound grapple
+    play sound sfx.grapple
 
     "I yank Nick up by his hair and make him face Caius."
     "Ishmael knows what godforsaken expression is on Nick's face.\nI never understood Caius's fixation on joining us."
@@ -164,7 +164,7 @@ label revelation:
     
     ni "Devils take years to revive. We have tim-"
     
-    play sound bam
+    play sound sfx.bam
     
     gr "Be quiet, swine!" with vpunch
     gr "If this tomfoolery teaches you anything, monk, let it be that you should leave. Go join the Celestials if you want to play the hero."
@@ -231,9 +231,9 @@ label revelation:
 
 
     #hide Nick with moveoutright
-    play sound hurl
+    play sound sfx.hurl
     pause 0.5
-    play sound thud
+    play sound sfx.thud
     "I toss him into the wall. I've heard enough of his nonsense."
 
     gr "Very well, you are hereby my suboordinate."

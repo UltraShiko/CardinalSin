@@ -7,7 +7,7 @@ label prologue:
     v "-istop- Chris- ca- -ou -ar me?!"
 
     #scene CG with dissolve
-    play bgm.something_amiss fadein
+    play music bgm.something_amiss fadein 0.5
     "Mom...?"
     "I try wiping the red stuff away, but it keeps coming.\nOnly a warm cloth manages to douse this 
     crimson stream."
@@ -52,18 +52,17 @@ label prologue:
     mo "I love you, Christoph. I always-"
 
     play sound sfx.wood_break
-    pause 0.5
-    play sound sfx.weapon_swing
-    pause 0.3
-    play sound sfx.blood_splatter
+    queue sound sfx.weapon_swing
+    queue sound sfx.slash
+    queue sound sfx.blood_splatter
+    with bloodflash
+    #scene CG2
+    pause 2.0
 
     ch "Mooooom!!!" with vpunch
 
     "My mouth falls open. All I see is the door open, and then Mom..."
-
-    play sound sfx.slash
-
-    "She tries her best. lunging and driving the knife into his chest." 
+    "She tried her best. lunging and driving the knife into his chest." 
     extend "\nBut there's no sign that he's hurt..."
     "He grabs her, and his teeth tear into her neck."
     extend "\nRed goo starts gushing from her. I yelp as some splatters on my leg."
@@ -94,6 +93,6 @@ label prologue:
     
     ch "{b}AHHHHHHHHH!!!{/b}" with vpunch
     
-    #jump explanation
+    jump explanation
 
-    return
+    #return

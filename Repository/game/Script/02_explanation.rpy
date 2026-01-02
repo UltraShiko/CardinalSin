@@ -8,7 +8,7 @@ label explanation:
     "I sit up, my stomach grumbling."
     extend "\nIt's been three days since I last ate. I should have a syringe lying around somewhere."
 
-    play sound door_open
+    play sound sfx.door_open
 
     "The door creaks open, and I narrow my eyes at the lanky elf that enters."
     "Disgust graces my tongue.\nI'd sooner starve than feed on him, even if he was the last mortal on the plane."
@@ -70,7 +70,7 @@ label explanation:
     
     ni "I'd prefer you not-"
 
-    play sound grapple
+    play sound sfx.grapple
     
     "I yank the fool by his collar, only for him to smile whimiscally."
     "If he wasn't so useful, I'd crush his neck where we stand.\nBut he'd enjoy every second of it anyway. This maniac adores pain."    
@@ -132,9 +132,8 @@ label explanation:
     
     ni "It does keep you in line, hehehe-"
     
-    play sound hurl
-    pause 0.3
-    play sound crash
+    play sound sfx.hurl
+    queue sound sfx.crash
     #hide Nick with moveoutright
     with vpunch
     

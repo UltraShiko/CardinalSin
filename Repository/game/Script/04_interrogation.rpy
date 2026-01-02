@@ -28,22 +28,20 @@ label interrogation:
 
     m "Ohhh Charlotta, take me... Take-"
 
-    play sound lunge
-    pause 0.5
-    play sound thud
-    pause 0.3
-    play sound grapple
+    play sound sfx.lunge
+    queue sound sfx.thud
+    queue sound sfx.grapple
     with vpunch
-    extend " Gahhh!!!" with vpunch
+    extend " Gahhh!!!"
 
     "I pin him in seconds, his chest facing me."
     extend "\nI snatch a vial from my bandolier and pop the cork.\nHe grins foolishly."
 
     m "Oh...my dear Charlotta. I didn't know you liked it so-"
     play sound bottle_open
-    pause 0.5
-    play sound slash
-    extend "\nNgh, ahh...{b}AaaaaAAAGHHHH!!!{/b}"
+    pause 1.0
+    queue sound sfx.slash
+    m "Ngh, ahh...{b}AaaaaAAAGHHHH!!!{/b}" with vpunch
 
     "I ram the elixir's contents up his nose. It's much quicker than forcing it down his throat."
     extend " To call this an elixir is generous. It's mere garlic concentrated into a liquid."
@@ -88,7 +86,7 @@ label interrogation:
 
     gr "Talk, you wretch."
     
-    play sound light_grapple
+    play sound sfx.light_grapple
     
     m "Ngh... I, I-"
     v "Goddamned leech!" with vpunch 
@@ -97,7 +95,8 @@ label interrogation:
     "The band approach but don't draw too close.\nOne is bold enough to have his sword out."
     extend " I tense up. Like devils, I'm susceptible to silver. Assuming he can hit me, that is."
     
-    play sound bone_break
+    play sound sfx.bone_break
+    with vpunch
     
     "I meet their gaze, then break the other pinky."
     extend " His outcry provokes the band to march closer. I grab his index finger, ready to resume

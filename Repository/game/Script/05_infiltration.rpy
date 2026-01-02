@@ -13,9 +13,9 @@ label infiltration:
     "Christoph will probably figure out what I am with a glance.\nI could slip in, or..."
     extend " I can face him head on and see why he has such a hold over me." with vpunch
     
-    play sound knock fadeout 0.5
-    play sound knock fadeout 0.5
-    queue sound door_open
+    #play sound sfx.knock
+    #play sound sfx.knock 
+    play sound sfx.door_open
     #show silhouette with dissolve
 
     "An elf, with the grace and dexterity of a three legged horse, meets my gaze."
@@ -128,7 +128,7 @@ label infiltration:
 
     gr "(Ngh...these thoughts aren't my own. Are they related to these memories?)"
 
-    play sound door_close
+    #play sound sfx.door_close #TODO: Find a new sound fx
 
     "The young goblin tuggling on his fur jacket, shambles outside."
     extend " Being of the forest, their eyes are more accustomed to the dark. But so are mine."
@@ -157,8 +157,9 @@ label infiltration:
     "I see an enraged Christoph pinning one of the addicts to a wall."
     extend "\nI grab my hatchet, my resolve somewhat restored. It's not an intent to save her that drives me. She put herself in this position, after all."
 
-    play sound hurl
-    queue sound slash with bloodflash
+    play sound sfx.hurl
+    queue sound sfx.slash 
+    with bloodflash
 
     ch "{b}GRAHHHHH!!!!{/b}" with vpunch 
 
