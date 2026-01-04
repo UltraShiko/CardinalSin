@@ -82,7 +82,7 @@ label confrontation:
     
     ch "Hehehehehehe... Why thank you!"
 
-    play sound sfx.lunge #TODO: Replace with leap
+    play sound sfx.lunge
     queue sound sfx.heavy_crash
 
     "He springs at at me like a grasshopper. Not bad, he almost nicked me."
@@ -307,7 +307,7 @@ label confrontation:
     "Here comes another blood wave."
     extend " I cleave through it, but another follows.\nPain tears through my core as I swing again."
 
-    #play sound sfx.singe #TODO: Find SFX for singe
+    play sound sfx.singe
     with bloodflash
 
     gr "Nnnngh...!"
@@ -315,16 +315,16 @@ label confrontation:
     ch "Hahahaha! Hurts doesn't it?!"
     extend "\n{b}AND IT'S NOT A FRACTION OF WHAT I'VE FELT!{/b}" with vpunch 
     
-    #play sound sfx.singe
+    play sound sfx.singe
     with bloodflash
     
     ch "{b}My mother!"
 
-    #play sound sfx.singe
+    play sound sfx.singe
     with bloodflash
     extend " My joy!"
 
-    #play sound sfx.singe
+    play sound sfx.singe
     with bloodflash
     extend " MY LIFE!!!{/b}" with vpunch
 

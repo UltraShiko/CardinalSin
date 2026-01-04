@@ -133,7 +133,7 @@ label explanation:
     ni "It does keep you in line, hehehe-"
     
     play sound sfx.hurl
-    queue sound sfx.crash
+    queue sound sfx.pottery_break
     #hide Nick with moveoutright
     with vpunch
     

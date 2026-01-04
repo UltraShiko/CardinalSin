@@ -1,4 +1,3 @@
-
 label interrogation:
     
     "I skulk away, my foootfalls making no sound.\nMy stomach growls, and my eyes dilate. Good!"
@@ -38,9 +37,9 @@ label interrogation:
     extend "\nI snatch a vial from my bandolier and pop the cork.\nHe grins foolishly."
 
     m "Oh...my dear Charlotta. I didn't know you liked it so-"
-    play sound bottle_open
+    play sound sfx.bottle_open
     pause 1.0
-    queue sound sfx.slash
+    queue sound sfx.stab
     m "Ngh, ahh...{b}AaaaaAAAGHHHH!!!{/b}" with vpunch
 
     "I ram the elixir's contents up his nose. It's much quicker than forcing it down his throat."
@@ -71,11 +70,11 @@ label interrogation:
     
     m "What-what does a monster like you want with-"
     
-    play sound grapple
+    play sound sfx.grapple
     
     extend "\nGngh! I-Ican't tell you! He'll, he'll kill-"
     
-    play sound bone_break
+    play sound sfx.bone_break
     
     extend " {b}GAAAAAAAAHHHHH!!!{/b}" with vpunch
     

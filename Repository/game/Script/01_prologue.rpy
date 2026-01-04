@@ -43,7 +43,7 @@ label prologue:
     ch "Mom, you'll die! He wants me, so I'll-"
     mo "No, no, Christoph... I won't let her hurt you again."
 
-    play sound sfx.glass_break
+    play sound sfx.pottery_break
     with hpunch
 
     ch "But mom he's-"
