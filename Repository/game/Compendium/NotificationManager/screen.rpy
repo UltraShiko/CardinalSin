@@ -4,7 +4,7 @@
 style notification_system_text:
 
     font "fonts/gara.ttf"
-    color "#172768"
+    color "#511717"
 
 style notification_system_frame is frame:
 

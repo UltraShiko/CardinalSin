@@ -30,7 +30,7 @@ screen say(who, what):
                 style "namebox"
                 text who id "who":
 
-                    color "#172768"
+                    color "#511717"
 
 
         text what id "what"
