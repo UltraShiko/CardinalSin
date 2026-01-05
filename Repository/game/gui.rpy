@@ -25,7 +25,7 @@ define config.check_conflicting_properties = True
 ## The colors of text in the interface.
 
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#83bbff'
+define gui.accent_color = '#ff4668'
 
 ## The color used for a text button when it is neither selected nor hovered.
 define gui.idle_color = '#fff'
@@ -35,11 +35,11 @@ define gui.idle_color = '#fff'
 define gui.idle_small_color = '#fff'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#83bbff'
+define gui.hover_color = '#ff4668'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = '#83bbff'
+define gui.selected_color = '#ff4668'
 
 ## The color used for a text button when it cannot be selected.
 define gui.insensitive_color = '#aaa'
@@ -216,7 +216,7 @@ define gui.choice_button_text_font = gui.text_font
 define gui.choice_button_text_size = gui.text_size
 define gui.choice_button_text_xalign = 0.5
 define gui.choice_button_text_idle_color = '#511717'
-define gui.choice_button_text_hover_color = "#83bbff"
+define gui.choice_button_text_hover_color = "#ff4668"
 define gui.choice_button_text_insensitive_color = '#888'
 
 ## File Slot Buttons ###########################################################
