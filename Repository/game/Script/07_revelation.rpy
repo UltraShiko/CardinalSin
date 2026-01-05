@@ -294,4 +294,22 @@ label revelation:
 
     gr "Wonderful! That's just the way I wanted it, banshee!"
 
+    ##############################
+    ### Roll credits.
+    ##############################
+
+    $ quick_menu = False
+
+    call screen cinematic_credits_screen()
+
+    # Update flag used to determine if the ending has been seen once.
+    # From this point forward, the credits can be skipped.
+    $ persistent.ending_watched =  True
+
+    pause 3.0
+
+    ##############################
+    #### Game ends
+    ##############################
+
     return
