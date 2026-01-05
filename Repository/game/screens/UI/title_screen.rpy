@@ -18,7 +18,7 @@ screen main_menu():
         margin (0,0)
         padding (0,0)
 
-        background "gui/title_screen/test_3.png" # "background cult altar"
+        background "gui/title_screen/background.png" # "background cult altar"
 
         # add "gui/title_screen/background.png":
         #
