@@ -1,13 +1,17 @@
 ### BGM
 
+define bgm.another_day = "audio/bgm/another_day.ogg"
+define bgm.bad_ending = "audio/bgm/bad_ending.ogg"
 define bgm.title = "audio/bgm/title.ogg"
+define bgm.lethal_suspense = "audio/bgm/lethal_suspense.ogg"
 define bgm.reckoning_I = "audio/bgm/reckoning_I.ogg"
 define bgm.reckoning_II = "audio/bgm/reckoning_II.ogg"
-define bgm.epilogue = "audio/bgm/marching_forward.ogg"
+define bgm.marching_forward = "audio/bgm/marching_forward.ogg"
 define bgm.something_amiss = "audio/bgm/something_amiss.ogg"
+
+#ambience
 define bgm.village_ambience = "audio/bgm/village_ambience.ogg"
 define bgm.village_ambienceLoop = "audio/bgm/village_ambienceLoop.ogg"
-
 define bgm.night_ambience = "audio/Ambience/night_ambience.ogg"
 define bgm.dungeon_ambience = "audio/Ambience/dungeon_ambience.ogg" 
 define bgm.altar_ambience = "audio/Ambience/altar_ambience.ogg" 
