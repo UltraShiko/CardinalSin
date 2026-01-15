@@ -51,7 +51,7 @@ label prologue:
     ch "But-"
     mo "I love you, Christoph. I always-"
 
-    play sound sfx.wood_break
+    play sound sfx.door_break
     queue sound sfx.weapon_swing
     queue sound sfx.slash
     queue sound sfx.blood_splatter
@@ -88,7 +88,7 @@ label prologue:
     
     v "If you hadn't ran, she'd be alive."
     
-    play sound sfx.heavy_slash
+    play sound sfx.stab
     #have screen turn red
     
     ch "{b}AHHHHHHHHH!!!{/b}" with vpunch

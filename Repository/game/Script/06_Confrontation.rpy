@@ -8,7 +8,7 @@ label confrontation:
     ch "I thought you only hunted fiends!"
     
     gr "We don't discriminate."
-    extend " However I'm feeling rather merciful tonight.\nSo if you abandon your wares and flee, you just might see the sun tomorrow."
+    extend " However I'm feeling rather merciful tonight.\nSo if you abandon your wares and flee, you might see the sun tomorrow."
     
     ch "Grrr... And what's the catch?! You rogues are merciless!"
 
@@ -82,8 +82,8 @@ label confrontation:
     
     ch "Hehehehehehe... Why thank you!"
 
-    play sound sfx.lunge
-    queue sound sfx.heavy_crash
+    #zoom in Christoph
+    play sound weapon_swingh
 
     "He springs at at me like a grasshopper. Not bad, he almost nicked me."
     extend "\nI didn't see mana coming from his legs. So that agility is natural then..."
@@ -146,7 +146,6 @@ label confrontation:
     "A red aura begins seeping from him. Damn, he's wielding Malice.\nAnd here I thought I destroyed his resolve..."
     
     play sound sfx.weapon_draw 
-
     "I draw my sword. With my hatchet being in the wall, I'm not at my best. And if he leaps at me, I'll need all the defenses I can get."
 
     ch "{b}YOU THINK THIS CHANGES ANYTHING?! YOU THINK THIS MAKES THING RIGHT?!{/b}" with vpunch
@@ -180,7 +179,7 @@ label confrontation:
     "However, doing so taxes your constitution, just as mana taxes one's willpower. Wielding both Malice and blood with reckless abandon will tire him out quickly."
     "I'd know, I do both as well. But I can replenish myself through drinking the blood of my foe. I'm doubtful he can do the same."
     
-    #play sound halberd_draw #Add sfx later
+    play sound sfx.halberd_draw
 
     "I hold the ax head up to my palm."
 
@@ -207,7 +206,7 @@ label confrontation:
 
     "He scratches the air, sending a wave of carmine at me.\nIt's too wide to dodge."
     
-    play sound sfx.heavy_slash
+    play sound sfx.slash
     
     "I carve through it. A second blast is fired my way."
     
@@ -225,7 +224,7 @@ label confrontation:
     extend "\nHe hesitates. Readying both weapons, I lunge."
 
     play sound sfx.zap
-    with bloodflash
+    with bloodflash #TODO - invert colors of screen briefly to show off hesitation
     
     gr "Ngh?!" with vpunch
 
@@ -239,7 +238,7 @@ label confrontation:
 
     "He ragged teeth into my leg."
     
-    play sound sfx.bam 
+    play sound sfx.heavy_bam 
     #zoom out
     
     extend " My other foot kicks and dislodges his jaw from my calf. And now said leg won't stop quivering..."
@@ -256,8 +255,8 @@ label confrontation:
     
     ch "Shut up! You aren't better than me!\nIf I can't flay you, I'll just rip you limb from limb!"
 
-    play sound sfx.lunge
-    with bloodflash
+    play sound sfx.weapon_swingh
+    with bloodflash #TODO - Reevaluate this sequence
     
     "He springs at me. My injured leg halts my attempt to evade."
     
@@ -265,7 +264,7 @@ label confrontation:
     
     extend "\nHis nails, laced with Malice and blood, rain down scratches upon me."
     
-    play sound sfx.whoosh
+    play sound sfx.weapon_swingh
     queue sound sfx.wood_break
     
     extend "\nI have to roll away. The table behind me isn't as lucky. It falls to pieces."
@@ -281,7 +280,7 @@ label confrontation:
 
     "He drags his lethal claws through the air. He has power but he lacks str-"
     
-    play sound sfx.whoosh #TODO; Replace with heavy variant later
+    play sound sfx.weapon_swingh
     
     extend " A feint! He's leapt behind me!"
 
@@ -305,11 +304,14 @@ label confrontation:
     extend " {b}HAVE SOME MORE!!!{/b}" with vpunch 
 
     "Here comes another blood wave."
+
+    play sound sfx.slash
     extend " I cleave through it, but another follows.\nPain tears through my core as I swing again."
 
     play sound sfx.singe
     with bloodflash
 
+    stop music fadeout 
     gr "Nnnngh...!"
     
     ch "Hahahaha! Hurts doesn't it?!"
@@ -343,6 +345,7 @@ label confrontation:
     ch "{b}GRAAAAAH!!!{/b}" with vpunch
 
     play sound sfx.heavy_bam
+    #zoom out
     queue sound sfx.wood_break
     with vpunch
     
@@ -368,8 +371,7 @@ label confrontation:
     "Whether because of addiction or a lust for revenge, someone will come for him just as he has come for me. My death is justified, but will it solve anything?"
     "How interesting. I took on this role knowing I'd be cut down for my sins one day. Yet my death here would only breed more monsters. I chuckle."
 
-    play sound sfx.lunge
-    queue sound sfx.bone_break
+    play sound sfx.bone_break
 
     ch "{b}AAAAAGGGGHHHH!!!{/b}" with vpunch
 
@@ -383,12 +385,13 @@ label confrontation:
 
     "I pull myself to my feet. By then, he's back to his senses."
     extend " I don't know what to do. I can't kill him, and my body won't survive another onslaught. Even if he is exhausted."
+    play music bgm.reckoning_II fadein
     "Instead I walk towards him. My mind has surrendered, but my body refuses. These aren't my instincts taking over. Something else powers me now."
     "I ready my weapons, my grip heavy and trembling. Yet I wonder..."
 
     play sound sfx.mana_charge
     with sinflash
-
+    play music bgm.Reckoning_II
     gr "Sin?"
 
     "When I focus, a purple hue arises in place of the red one I'm usually wield."
@@ -434,9 +437,11 @@ label confrontation:
 
     #hide Christoph moveoutbottom
     play sound sfx.thud
+    ch "{b}GAAAAAGGGGHHHH!!!{/b}" with vpunch
 
     "I flense his back twice. He cries out as his flesh is ripped from his body." 
     extend " That attack is a feint, the blood pushing my body to accelerate.\nIt looks to most as if I've teleported."
+    play sound sfx.thud
     "He crumples. His wounds aren't lethal. He'll remember this pain, but he will live."
     extend " Of course this doesn't stop him from trying to retaliate. All he can do is flip onto his butt before convulsing."
     "The red Malice on his claws is now mere embers." 
@@ -478,6 +483,8 @@ label confrontation:
 
     "He snarls, and I turn away."
 
+
+    play sound door_break
     #hide Christoph with moveoutbottom
     #show Celestial at left with with moveinleft
     #show Jory at right with moveinright 
@@ -493,7 +500,7 @@ label confrontation:
 
     c "O-Oh, I apologize! Is... Whatever Christoph was... Vanquished?"
     
-    gr "Indeed. Your sacred streets are now safe again.\nUntil something else arises."
+    gr "Indeed. Your sacred streets are now safe again.\nUntil something else arises..."
     
     j "Hmm..."
 
@@ -522,6 +529,7 @@ label confrontation:
 
     gr "To call you an oaf would be a cardinal sin against the stupid!\nGet out of my way!" with vpunch
 
+    play sound footsteps_snowf
     hide Jory with moveoutright
     hide Celestial with moveoutleft
 

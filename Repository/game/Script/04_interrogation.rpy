@@ -1,11 +1,14 @@
 label interrogation:
     
-    "I skulk away, my foootfalls making no sound.\nMy stomach growls, and my eyes dilate. Good!"
+    play sound sfx.footsteps_snow
+    "I skulk away. \nMy stomach growls, and my eyes dilate. Good!"
     extend " Monstrosity follows my gnawing hunger. These heightened senses make tracking all to easy."
-    "I see many prints in the snow, but one pattern stands outs."
+    "I see many footprints in the snow, but one pattern stands outs."
     "These tracks are haphazard, almost as if he was hopping about like a rabbit. Intoxication leads to vivid hallucinations. I remember thinking I could fly during one of them..."
+    stop sound
     "I take a whiff. The sickly sweet smell irritates my nose.\nSanguine Paste smells eerily similar to candy."
     extend "\nSo these tracks belong to an addict, or a loon."
+    play sound sfx.footsteps_snow
     "Either way, I follow them."
     "The stench of the paste grows stronger with each step.\nIs he indulging even as I track him? I'm prepared all the same, this'll just make subdoing him easier."
     "I snarl.\nI no longer crave that wretched paste but I don't want to reek of it either! This disgusting oaf is going to regret using."
@@ -16,9 +19,12 @@ label interrogation:
     v "Ohh my sweet! I'm not going to wait. Let us make love this time!\nWho cares if it's in the snow?! And if anyone sees us, let 'em watch!"
 
     "Despicable swine! I can't believe the levels I must sink too..."
+
     "Hmmm... A hatchet to the head would shut him up.\nI could just find someone else, but..."
     extend " No, he'll do. I'll drink his blood as payment. He {i}clearly{/i} doesn't need it anymore."
     "He comes in my sights, arms and body flailing for an illusion.\nHiding is hardly necessary."
+
+    stop sound
     "Regardless I crouch. I calculate the distance between us."
     extend "\nNo weapons or mana will be needed. I don't know why I bother preparing to attack.." 
     "My instincts call for wariness, even from an oaf trapped in stupor."
@@ -33,6 +39,8 @@ label interrogation:
     with vpunch
     extend " Gahhh!!!"
 
+    #stop music
+    play music bg.lethal_suspense
     "I pin him in seconds, his chest facing me."
     extend "\nI snatch a vial from my bandolier and pop the cork.\nHe grins foolishly."
 
@@ -54,17 +62,17 @@ label interrogation:
     
     m "Nnngh, those eyes. Are you a dretchling..?!"
     
-    gr "You dare compare me to them? Your foolishness is beginning to offend me."
+    gr "You dare compare me to them? Your foolishness is starting to offend me."
     
     m "No wait, you have fangs... And your eyes, they're...so-"
     extend "\nBy Ishmael! Vampire!!!" with vpunch 
 
-    "I chuckle. His squirms only entertain me.\nHe can writhe and scream as he much as he likes, no one is saving him."
+    "I snicker. His squirms only entertain me.\nHe can writhe and scream as he much as he likes, no one is saving him."
     "I imagine he wishes Charlotta was here in my place.\nPerhaps Hell will have a devil in store for him to tend to his wishes."
     "Unfortunately, he'll likely fall to the circle of gluttony.\nSuccubi can be found there, but I wager they're {i}far{/i} less gentle."
 
-    gr "You have two options, pig. You can tell me what I want to know and have a painless death."
-    extend " Or, I can break each bone in your body and watch you suffer if you hold out on me. The choice is yours."
+    gr "You have two options, pig. You can tell me what you know, and have a painless death."
+    extend " Or, I can break each bone in your body until you talk. The choice is yours."
 
     gr "First off, where did you find that paste?"
     
@@ -80,8 +88,8 @@ label interrogation:
     
     gr "One down, nine to go."
 
-    "His pinky snaps like a twig and I grip the other one. Though, I'm being much too merciful counting down and giving him time to reconsider."
-    "After all, there are 205 more bones left to break. Outliers happen of course, but I imagine he won't be conscious long enough for it to matter."
+    "His pinky snaps like a twig and I grip the other one."
+    "I'm being much too merciful counting down from ten. After all, there are 205 more bones left to break. Outliers happen of course, but I imagine he won't be conscious long enough for it to matter."
 
     gr "Talk, you wretch."
     
@@ -90,9 +98,13 @@ label interrogation:
     m "Ngh... I, I-"
     v "Goddamned leech!" with vpunch 
 
+
+    play sfx.footsteps_snowf
+    #show celestial at left with moveinleft
+    #show celestial at right with moveinright
     "Booted footsteps trample our way.\nIt's those hallowmen again, how quaint..."
     "The band approach but don't draw too close.\nOne is bold enough to have his sword out."
-    extend " I tense up. Like devils, I'm susceptible to silver. Assuming he can hit me, that is."
+    extend " I tense up. Like devils, I'm susceptible to silver. Assuming they can hit me, that is."
     
     play sound sfx.bone_break
     with vpunch
@@ -108,7 +120,7 @@ label interrogation:
     gr "Under what authority? I outrank you both."
     
     m "That's...impossible! There's no way in Hell you're a-"
-    extend "\nWait, if you  outrank them that means... That means..."
+    extend "\nWait, if you outrank them that means... That means..."
     
     gr "Go on, remind them of their place~."
     
@@ -132,18 +144,21 @@ label interrogation:
 
     "I stand, dragging my morsel to his feet. They can see my hatchet from this angle, but not my sword."
     "I lurch forward. In one fell swoop, this'll be over."
-    extend "\nMy heart races.They'll all be dead in three..."
+    extend "\nMy heart races. They'll all be dead in three..."
     extend " Two..."
     
     m "Okay! It's Christoph! {b}CHRISTOPHHH!!!{/b}" with vpunch
 
+    stop music
     gr "Gngh!"
 
     "My body recoils at his name. Why...?"
     extend " I'm no longer eager nor entertained.\nAnd we vampires aren't susceptible to magic, which means Christoph wasn't an incantation. So what gives the word power over me?"
     "If anything, it sparks clarity in my mind. The ferocity I felt slips away as I regain my composure."
-    extend " Damnable hunger... Was I {i}truly{/i} about to stoop to murder? Over a quick bite, nonetheless. How pathetic!"
+    extend " Damnable hunger... Was I {i}truly{/i} about to stoop to murder? Over a low-grade meal?! How pathetic!"
     "I shove him into their arms and take the syringe from my belt."
+
+    play sound sfx.stab
     "As the blood pumps into my arm, sanity returns. My eyesight dulls as do my other senses, but having them enhanced is no use to me if it drives me to madness."
     "The heroes look at me in disbelief. This must quite the night for them."
 
@@ -161,7 +176,7 @@ label interrogation:
     
     m "No, but he gives us the same look you gave me earlier..."
     extend " Now that I think about it, a lot of us addicts disappear as we indulge. I figured they used too much and succumbed to illness."
-    m "Christoph doesn't care.\n\"Tis the price they pay for pleasure\", as he would say..."
+    m "Christoph doesn't care. \n\"Tis the price they pay for pleasure\", as he would say..."
 
     c "How vile..."
 
@@ -199,7 +214,8 @@ label interrogation:
     c "Look, I know we got off on the wrong foot but-"
     
     gr "Save it." 
-    extend " You are right for fearing me. And you {i}should{/i} fear me.\nDo not be swayed, for I may be deceiving you. That is how we monsters entrap our food~."
+    extend " You are right for fearing me. And you {i}should{/i} fear me."
+    gr "Do not be swayed, for I may be deceiving you. That is how we monsters entrap our food~."
     
     jump infiltration
 

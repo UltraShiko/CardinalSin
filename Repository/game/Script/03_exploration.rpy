@@ -8,6 +8,8 @@ label exploration:
     "A vampire."
     "I only cloak myself to conceal my occupation.\nWe Emissaries are despised at best, and hunted by criminals and fiends otherwise."
     "The Celestials know of us. We even hold some power over them.\nBut any respect they give us is shallow. Many vie for our heads to be on pikes."
+
+    play sfx.footsteps_snow loop
     "As I stroll through the snow, people part from my path as if I'm feral.\nI can't blame them. They're {i}almost{/i} right."
 
     w "Is that a mongrel?"
@@ -23,6 +25,7 @@ label exploration:
     "If those cattle could think, they'd likely figure out what role I serve.\nWhy else would a blood-sucking monster be allowed to roam free?"
     extend "\nI almost envy their ignorance."
 
+    stop sound
     "Fortunately, I'm just in time. The smith's stand is still open."
     "The grizzled, bloated dwarf eyes me with scorn.\nAs usual, I pull out both my hatchet and sword."
     "We do business only out of necessity.\nHe needs coin, and I cannot afford to purchase a sharpening wheel."
@@ -69,7 +72,7 @@ label exploration:
     
     sm "And not the Celestials? Why is a crook like you getting involved?"
     
-    gr "I suspect it's the same reason why you drink.\nConsider investing in some incense."
+    gr "I suspect it's the same reason why you drink.\nConsider purchasing in some incense."
 
     "I take my posessions and leave."
     extend "\nHumorously, I hear him start drinking from a bottle on my way out."
@@ -77,6 +80,8 @@ label exploration:
     "I review the writ.\nMy quarry is located at some hobble in {i}the Hells{/i}, where the bottomfeeders of Jubilee reside." 
     "If the Celestials are doing a search, then maybe I can follow them."
     extend "\nBefore I can finish reading, I notice a band of silvered knights marching by, conveniently right where I need them to be."
+    
+    play sfx.footsteps_snow loop
     "I follow. I don't hide.\nWhat will they do, arrest an Emissary? That would be quite amusing."
     "These white knights are seen as heroes.\nThey take the credit for everything, including our work."
     "Granted, the higher-ranked Celestials wield the mana of Grace, and some Justice too. Both manas are highly effeicient at killing devils."
@@ -86,11 +91,13 @@ label exploration:
     "Some sympathize with the banshee. What got her burned was an attempt on his life. Hecate's suboordinates see her as a martyr despite {i}the Reckoning{/i}."
     "The lackadaisical Nick always grows stern when we speak of {i}The Third{/i}.\nAnd this is the same buffoon he conjures fiends for a profession."
     "As our march continues, a man of over nine feet blocks their path."
+
+    stop sound
     extend "\nThis giant is named Jory. He's a nephillim rumored to have courted the banshee. That's what Caius believes."
 
     c "Hail Jory!"
     
-    j "It's awfully late for a visit, don't you think?"
+    j "...It's awfully late for a visit, don't you think?"
     
     c "We're hear on official business.\nWe believe there are drug dealers nested within the slums.\nPlease step aside."
     
@@ -98,7 +105,7 @@ label exploration:
     
     c "Of course not, Jory.\nWhy would the fourth, as gracious as he is, call for us to-"
     
-    j "I wasn't talking to you."
+    j "I wasn't talking to you..."
 
     "He points me out, and the knights turn and wince."
     extend "\nI smirk as a hallowman grips his sword's pommel."
@@ -162,7 +169,7 @@ label exploration:
     j "Praise Ishmael..."
     extend "\nListen, don't kill anyone you don't have to. Please.\nMy people don't want to see bloodshed."
     
-    gr "I make no promises.\nA little blood is better than more addicts distirbuting the paste.\nYou might want to see if any of \"your people\" are using."
+    gr "I make no promises.\nA little blood is better than more addicts distributing the paste.\nYou might want to see if any of \"your people\" are using."
     
     j "They aren't. I'm well aware of the symptoms.\nI saw a lot of addiction when I was {i}the fourth's{/i} shieldbearer..."
 
@@ -175,7 +182,7 @@ label exploration:
     
     c "Wh-What-?!"
 
-    "I snicker. It doesn't take much to shatter their bravado.\nAs I predicted, they aren't prepared."
+    "I chuckle. It doesn't take much to shatter their bravado.\nAs I predicted, they aren't prepared."
     "At least Jory remains composed. I hear he was on the frontlines during {i}the Reckoning{/i}. Nick claims he went toe-to-toe with that pain devil."
     "Truth be told, I wager it's one of my kind distributing the paste.\nA devil appearing isn't an impossibility though."
 
