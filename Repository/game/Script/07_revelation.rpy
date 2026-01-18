@@ -13,10 +13,12 @@ label revelation:
     
     ni "Oof, what happened? Vampire?"
     
-    gr "I don't know what the hell he was, but he's dead. Now pour me my casket!"
+    gr "I don't know what the hell he was, but he's dead. Now give me a drink!"
 
-    "Caius recoils as a wooden mug, filled to the brim with blood's metallic stench, is placed before me."
-    "I down it all immediately. The pain in my body eases to a dull tingle instead of an agonizing throb. I feel as if I'm drunk as both fatigue and drowsiness finally set in."
+    #hide nick
+    #show Caius at center with dissolve
+    "Caius recoils as a wooden mug, filled to the brim with blood, is placed before me."
+    "I down it all immediately. The pain in my body eases to a dull tingle in place of the agonizing throb. I feel as if I'm drunk as both fatigue and drowsiness finally set in."
 
     gr "With a day of rest, I'll be as right as rain.\nMy body isn't feeble unlike yours, monk."
 
@@ -32,6 +34,8 @@ label revelation:
     
     gr "No, but I wish he was."
     
+    #hide Caius with dissolve
+    #show Nick happy at right with easeinright
     "That elf has a stupid grin on his face. I glare at him and it only grows."
     "I then take notice of the mask shrouding Caius's forehead.\nIt looks like its glued to his skin."
     extend " Didn't Nick mention this earlier?"
@@ -50,7 +54,7 @@ label revelation:
     gr "Yeah, why is that?"
     
     ni "So that it attunes to his mana. Can't have Justice dislodging it."
-    extend " He now has a trump card. The inhibitors will vanish if he rips it off. You might want to flee the scene when that happens~."
+    extend " He now has a trump card. The inhibitors will vanish if he rips it off. You might want to run when that happens~."
     
     gr "...Do you mean to tell me this boy I met just a day ago is now a ticking time bomb?"
 
@@ -62,6 +66,9 @@ label revelation:
 
     play sound sfx.door_open
     
+    #hide Nick
+    #hide Caius
+    #show imp at center with moveinright
     "Suddenly, a batlike monster, the size of my palm, flies inside." 
     extend "\nCaius leaps into action, but I block him from advancing."
 
@@ -71,7 +78,7 @@ label revelation:
     
     ca "Wh-what?! But we just fought a devil! Why does he-"
 
-    gr "Stop shouting. Nick summons devils to fight devils.\nI'm truly disappointed that you didn't figure this out sooner."
+    gr "Stop shouting. Nick summons devils to fight devils.\nI'm disappointed you couldn't figure this out earlier."
     
     bu "Good evening! Buzz brings reconnaissance~."
 
@@ -92,7 +99,7 @@ label revelation:
     
     gr "Hmm, so those hellknights perpetuated that..."
 
-    ni "Yep... They lacked the numbers to face the Celestials, so they sacked Thrycia. I guess they believed their attack wouldn't warrant retaliation since that city is independent."
+    ni "Yep... They lacked the numbers to face the Celestials, so they sacked Thrycia. I guess they believed their attack wouldn't warrant retaliation. Thrycia was technically independent."
 
     gr "I do not understand why we cling to this peace.\nIt's only a matter of time before those peons attack again."
     
@@ -100,6 +107,7 @@ label revelation:
 
     ca "W-wait, you were there at Thrycia?!"
 
+    #show Caius at left with easinleft
     "Caius eagerly passes me the staff. His eyes are filled with desperation, hoping that his friend was not responsible, I imagine."
     "The imp eyes him like a slab of meat. I guess devils big and small can't resist corrupting souls as virtuous as his."
 
@@ -109,13 +117,16 @@ label revelation:
     
     ca "Did you see a dretchling? Any survivors?"
 
-    bu "Nope~. Buzz said everyone dead. However...Buzz found a charred silhouette on the ground~. Only devils could broil the earth like that.\nWe explode when slain."
+    bu "Nope~. Buzz said everyone dead. \nHowever...Buzz found a charred silhouette on the ground~. Only devils could broil the earth like that.\nWe explode when slain."
     
     gr "Oh really? Tell us more..!"
 
     play sound sfx.light_grapple
-
+    #hide Caius
+    #hide Buzz 
+    show Nick happy at center 
     "The wood creaks in my palms and Nick gulps in excitement."
+    #zoom in on Nick
     "I arch forward, already knowing what that imp is going to say.\nI only await confirmation..!"
 
     bu "Buzz know mana signature of the deceased. Yes yes, the hellknights were not alone. In fact, some corpses were nice and crispy~.\nElectrocuted, hmhmhm!"
@@ -126,7 +137,8 @@ label revelation:
     extend "\nYes, Buzz detect what you mortals call; a pain devil-"
 
     play sound sfx.wood_break
-    
+    #hide Nick with moveoutbottom
+
     "It's instantaneous. The staff breaks on the first strike."
     
     play sound sfx.heavy_bam
@@ -139,22 +151,23 @@ label revelation:
     
     gr "{b}GOOD!{/b}" with vpunch
     
-    play sound sfx.bam
+    play sound sfx.heavy_bam
     ni "Ouch... It could be any pain-"
 
-    play sound sfx.bam
-    queue sound sfx.bam
+    play sound sfx.heavy_bam
+    queue sound sfx.heavy_bam
     extend " Ouch. Ouch. Ouch, hehehe!"
     
     gr "Behold, monk!"
 
     play sound sfx.grapple
-
+    #show Caius at left with quickblinds
+    #show Nick at right with moveinbottom
     "I yank Nick up by his hair and make him face Caius."
     "Ishmael knows what godforsaken expression is on Nick's face.\nI never understood Caius's fixation on joining us."
     extend "\nEither way, here's his chance to quit!"
 
-    gr "Thrycia was your home, right?\nAnd remember how your companion was blamed for its destruction?"
+    gr "Thrycia was your home, right? \nAnd remember how your companion was blamed for its destruction?"
     gr "Well, you can thank this maniac for that!\nYes, the leader of us Emissaries is an irresponsible lunatic who summons devils! He is who you'll be working for."
 
     gr "That pain devil that destroyed Thrycia was {i}his{/i} doing! He could've sent it back too, but his vendetta kept her on our plane. And now she's loose..."
@@ -184,12 +197,15 @@ label revelation:
     
     gr "He's only escaped the noose because he's useful.\nEven the Third had to put up with him."
 
+    stop music fadeout
+    play bgm.marching_forward fadein
     ca "Tell me Nick, can you track down my friend.\nIf you can bind devils, perhaps you can seek out a dretchling?"
     
     gr "You don't need this fool's aid. Consult the Reverend."
 
     ca "But fiends are drawn to dretchlings like moths to a flame.\nMaybe this pain devil was after him. Or maybe something else was.."
     
+    #show Buzz with moveinbottom
     bu "Buzz knows~! Two mana signatures were detected."
     
     gr "...And you waited to share this fact because?"
@@ -200,6 +216,9 @@ label revelation:
 
     bu "Second signature was weak. No corpse detected.\nIt was a fiend, a very powerful fiend~!"
 
+    #hide Nick with dissolve
+    #hide Buzz with dissolve
+    #show Caius at center with fade
     "I groan as Caius's eyes expand. He has a one track mind, this monk..."
     "He'll be a liability, at this rate. All some monster has to do is capture his friend, and Caius will surrender."
     extend " Besides, we Emissaries are not saviors."
@@ -216,6 +235,7 @@ label revelation:
     
     gr "Thrycia is a week's travel by horseback. Unless you plan to walk..."
     
+    #show Nick at right with moveinright
     ni "I can arrange a carriage."
     
     gr "Be quiet-"
@@ -232,11 +252,10 @@ label revelation:
 
     ni "And besides vampire, someone needs to keep you in-"
 
-
     #hide Nick with moveoutright
     play sound sfx.hurl
     pause 0.5
-    play sound sfx.thud
+    play sound sfx.pottery_crash
     "I toss him into the wall. I've heard enough of his nonsense."
 
     gr "Very well, you are hereby my suboordinate."
@@ -261,7 +280,9 @@ label revelation:
     
     gr "I make no promises..."
 
-    "I rest on one of the cots, throwing the blanket over my face so I don't have to see either of them any longer."
+    scene image "#000" with pixellate
+    play sound sfx.clothes_drop
+    "I rest on one of the beds, throwing the blanket over my face so I don't have to see either of them any longer."
     "My mind races. I still can't believe that I channeled Sin in place of Malice.  Does this development imply I'm getting soft? I sure hope not..."
     "I clench my fists, still irate at what Jory said."
     extend "\nThat \"kindness\" nearly cost me my life. Am I to be food for monsters because I'm sentimental now? I'd sooner die!"
@@ -319,4 +340,5 @@ label revelation:
     #### Game ends
     ##############################
 
+    stop music fadeout
     return
