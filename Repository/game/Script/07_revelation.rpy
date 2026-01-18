@@ -1,6 +1,9 @@
 label revelation:
 
-    #scene office with dissolve
+    scene emissary_base with fade
+    play sound door_open
+    #show Nick happy at left
+    #show Caius at right
     "I return and find both Caius and Nick conversing."
     "The pious boy, now masked, looks to me in horror and rushes over.\nNick is as unfazed as always."
 
@@ -306,7 +309,7 @@ label revelation:
     # From this point forward, the credits can be skipped.
     $ persistent.ending_watched =  True
 
-    pause 3.0
+    #pause 3.0
 
     ##############################
     #### Game ends

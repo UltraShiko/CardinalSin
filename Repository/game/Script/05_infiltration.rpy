@@ -1,6 +1,7 @@
 
 label infiltration:
 
+    play sound sfx.footsteps_snowf
     "I chortle darkly as I slip past the demoralized hallowmen."
     "Seeing that pig's delusions reminds me of my own.\nJudge him as I may, I wasn't much different..."
     "The hallucinations vary based on our desires.\nI thought I could fly out of this god forsaken empire. My hardships were caused by {i}the Recknoning's{/i} impact."
@@ -13,9 +14,7 @@ label infiltration:
     "Christoph will probably figure out what I am with a glance.\nI could slip in, or..."
     extend " I can face him head on and see why he has such a hold over me." with vpunch
     
-    #play sound sfx.knock
-    #play sound sfx.knock 
-    play sound sfx.door_open
+    play sound sfx.knock_and_open
     #show silhouette with dissolve
 
     "An elf, with the grace and dexterity of a three legged horse, meets my gaze."
@@ -32,6 +31,8 @@ label infiltration:
     
     m "Hmph! Follow me."
 
+    scene christoph_house with dissolve
+    play music bgm.something_amiss fadein
     "I almost pity just how simple he is. I wonder if he knows what plane he's on now. Christoph should consider a sober watchhman next time."
     "He doesn't confiscate my weapons. They're out of sight, but any decent guardsman would search me at least."
     "The house is cramped. Not because it's small, but because of the mess."
@@ -66,7 +67,7 @@ label infiltration:
 
     "The elf takes a a wad of paste from his pocket and dumps it into my hands."
     extend " I shouldn't be surprised but I'm repulsed all the same. Ishmael knows what else lies in those breeches. Though addicts rarely care..."
-    "If I use, I will hallucinate but won't be incapacitated.\nMy cravings have evolved to blood, and paste is now only a recreation rather than a hindurance."
+    "If I use, I will hallucinate but not be incapacitated.\nMy cravings have evolved to blood, and paste is now only a recreation rather than a hindurance."
     "Perhaps I can use it to tap into my memories, help me decipher why this fiend matters so much to me."
     "I reach for my hatchet. The thought of hurling it at the goblin's head causes my hand to twitch."
     extend " As expected, violence is off the table.\nFor now..."
@@ -97,6 +98,9 @@ label infiltration:
 
     "I only witness him indulge before my vision grows hazy."
     extend " Ugh, no wonder this stuff is addictive. It acts quickly. If I were still mortal, I'd be beyond helpless."
+
+    #change scene with whirling effects
+    stop music fadeout
     "The world shifts. It's as if I'm traveling to a new reality. The dank smell and dirty flooring leave my senses."
     extend " I shudder. This is the feeling of flight I had craved long ago."
     "I hate it!" with vpunch
@@ -114,22 +118,25 @@ label infiltration:
     "The illusions continue to wobble and ripple like water."
     extend " And then I see a green woman with the same ears as Christoph. She too, sparks familiarity within me."
 
-    w "Christoph, can you fetch the firewood?"
+    w "Christoph, can you fetch the firewood? Let's get a roaring fire going!"
 
-    ch "But it's sooo cold outside. Can I do it tomorrow?"
+    ch "But it's sooo cold outside. Can you do it this time?"
     
-    w "It'll be cold {i}inside{/i} as well if we don't build a fire. Now hurry along."
+    w "Hehe, you asked me the same thing last time. Now hurry along~."
     
     gr "(Ahh, this must be his mother.)"
 
+    scene forest with dissolve
     "I'm now standing outside a window. They don't see me."
     "My mouth waters. Both of them look so scrumptuous!\nAnd I've heard the blood of a child is {b}DIVINE!{/b}"
     "It'll be so easy. This foolish mother is trusting him outside as the sun sets. She deserves to lose him. Later I'll feast on her too as punishment."
 
     gr "(Ngh...these thoughts aren't my own. Are they related to these memories?)"
 
-    #play sound sfx.door_close #TODO: Find a new sound fx
+    play sound sfx.door_open
 
+    play music bgm.something_amiss fadein
+    #show goblin_silhouette at center with dissolve
     "The young goblin tuggling on his fur jacket, shambles outside."
     extend " Being of the forest, their eyes are more accustomed to the dark. But so are mine."
     "I leave the window. Trailing him is child's play.\nHe doesn't even look over his shoulder. A wolf could pounce on him at any moment."
@@ -141,9 +148,11 @@ label infiltration:
     extend "\nI inch forward. In Three..."
     extend " Two..."
 
+    stop music
     gr "(I've seen enough.)"
 
-    "Like glassm the illusion shatters. I'm now back in Christoph's den."
+    #scene christoph_house with shatter fx #TODO - Learn how to do this
+    "Like glass, the illusion shatters. I'm now back in Christoph's den."
     "I understand now. Christoph is the only prey I've ever spared.\nAs I sank my fangs into him that day, I realized just how low I had sunk."
     "Shortly after, a band of Celestials stormed the house.\nThey must've heard his mother's screams."
     "I didn't resist. I let them bind and gag me. I was to be burned for my heinous offense, and then I met Nick."
@@ -170,6 +179,8 @@ label infiltration:
     
     gr "No one. But this is over, Christoph."
 
+    play music bgm.reckoning_I fadein
+    play sound sfx.drop_clothes
     "I throw off my cloak, revealing my dark red breastplate."
     extend "\nTheir stupor prevents the denizens from descending into fright.\nOur occupation is one that inspires terror." 
     "Christoph's pet elf bolts for the door, and the goblin's anger only grows stronger."

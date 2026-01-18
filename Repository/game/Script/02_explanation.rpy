@@ -1,7 +1,7 @@
 
 label explanation:
     
-    #scene office with dissolve
+    scene emissary_base with dissolve
     "I open my eyes at the sunset streaming through the window.\nLooks like I was more tired than I thought..."
     "That damned banshee nearly killed us.\nTo be given so much trouble by a lowly succubus, it's humiliating."
     "Her kind isn't usually that deadly, at least one-on-one.\nAnd now she's out doing Ishmael-knows-what."
