@@ -275,6 +275,7 @@ label revelation:
 
     gri "Banshee. To what do I owe the displeasure?"
 
+    show Persephone angry at t_alpha(0.5) with dissolve #t_alpha makes her sprite transparent
     pei "So I did some digging, and you're a liar. You weren't jinxed, you fed on a child... You turned him into a freak, {i}after{/i}, you devoured his mother in front of him!"
 
     gri "Heh, do my ears betray me, or does {i}the banshee{/i} have a bleeding heart?"
@@ -287,9 +288,12 @@ label revelation:
     gri "Especially when you and your broodmother's henchman murdered thousands. People still suffer because {i}the Reckoning{/i}.\nAnd you don't scare me, heh, it's quite the opposite."
     gri "If you're so offended, then stop hiding. We'll find you eventually."
     
+    show Persephone smirk at t_alpha(0.5)
     pei "In due time, Snowflake. Your days are numbered all the same.\nYou'll beg for death when Mother gets her hands on you."
     
     gri "My days have been numbered. Do you have anything new to share?"
+
+    hide Persephone with dissolve
 
     "She stops responding. I opt not to inform my comrades.\nWe can't trace telepathy anyway."
     "I reach for my hatchet and view my bloodied reflection."
