@@ -383,7 +383,7 @@ label confrontation:
     "Whether because of addiction or a lust for revenge, someone will come for him just as he has come for me. My death is justified, but will it solve anything?"
     "How interesting. I took on this role knowing I'd be cut down for my sins one day. Yet my death here would only breed more monsters. I chuckle."
 
-    play sound sfx.bone_break
+    play sound sfx.bone_breakh
 
     ch "{b}AAAAAGGGGHHHH!!!{/b}" with vpunch
 
@@ -446,8 +446,8 @@ label confrontation:
     
     gr "{b}{i}Bloodedge!{/b}{/i}"
 
-    play sound sfx.heavy_slash
-    queue sound sfx.heavy_slash #TODO: make them play consecutively
+    play sound sfx.heavy_slash_twice
+    #VFX or Bloodflash twice
     ch "{b}GAAAAAGGGGHHHH!!!{/b}" with vpunch
 
     #hide Christoph moveoutbottom
@@ -500,7 +500,7 @@ label confrontation:
     play sound door_break
     #hide Christoph with moveoutbottom
     #show Celestial at left with with moveinleft
-    #show Jory at right with moveinright 
+    show Jory at right with moveinright 
     
     extend " The sound of steel pounding the ground grows closer until both the Celestials and Jory appear before us."
     "The band of knights recoil upon seeing me.\nMy injuries are grisly, to the mortal eye."
@@ -545,7 +545,7 @@ label confrontation:
     gr "To call you an oaf would be a cardinal sin against the stupid!\nGet out of my way!" with vpunch
 
     play sound footsteps_snowf
-    hide Jory with moveoutright #maybe zoomin?
+    hide Jory with moveoutright #TODO: #maybe zoomin?
     hide Celestial with moveoutleft
 
     "I slither haphazardly past the lot. The hallowmen rightfully avoid me, but my ears detect that giant's obnoxious snickers!"
