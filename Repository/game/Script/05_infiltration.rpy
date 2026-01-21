@@ -31,7 +31,7 @@ label infiltration:
     
     m "Hmph! Follow me."
 
-    scene christoph_house with dissolve
+    scene background christoph house with dissolve
     play music bgm.something_amiss fadein 0.8
 
     "I almost pity just how simple he is. I wonder if he knows what plane he's on now. Christoph should consider a sober watchhman next time."
@@ -156,7 +156,7 @@ label infiltration:
     stop music
     gr "(I've seen enough.)"
 
-    #scene christoph_house with shatter fx #TODO - Learn how to do this
+    #scene background christoph house with shatter fx #TODO - Learn how to do this
     "Like glass, the illusion shatters. I'm now back in Christoph's den."
     "I understand now. Christoph is the only prey I've ever spared.\nAs I sank my fangs into him that day, I realized just how low I had sunk."
     "Shortly after, a band of Celestials stormed the house.\nThey must've heard his mother's screams."
