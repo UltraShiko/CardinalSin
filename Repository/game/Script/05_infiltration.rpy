@@ -32,7 +32,8 @@ label infiltration:
     m "Hmph! Follow me."
 
     scene christoph_house with dissolve
-    play music bgm.something_amiss fadein
+    play music bgm.something_amiss fadein 0.8
+
     "I almost pity just how simple he is. I wonder if he knows what plane he's on now. Christoph should consider a sober watchhman next time."
     "He doesn't confiscate my weapons. They're out of sight, but any decent guardsman would search me at least."
     "The house is cramped. Not because it's small, but because of the mess."
@@ -100,7 +101,9 @@ label infiltration:
     extend " Ugh, no wonder this stuff is addictive. It acts quickly. If I were still mortal, I'd be beyond helpless."
 
     #change scene with whirling effects
-    stop music fadeout
+    
+    stop music fadeout 0.8
+
     "The world shifts. It's as if I'm traveling to a new reality. The dank smell and dirty flooring leave my senses."
     extend " I shudder. This is the feeling of flight I had craved long ago."
     "I hate it!" with vpunch
@@ -135,8 +138,10 @@ label infiltration:
 
     play sound sfx.door_open
 
-    play music bgm.something_amiss fadein
+    play music bgm.something_amiss fadein 0.8
+
     #show goblin_silhouette at center with dissolve
+    
     "The young goblin tuggling on his fur jacket, shambles outside."
     extend " Being of the forest, their eyes are more accustomed to the dark. But so are mine."
     "I leave the window. Trailing him is child's play.\nHe doesn't even look over his shoulder. A wolf could pounce on him at any moment."
@@ -179,8 +184,10 @@ label infiltration:
     
     gr "No one. But this is over, Christoph."
 
-    play music bgm.reckoning_I fadein
+    play music bgm.reckoning_I fadein 0.8
+
     play sound sfx.drop_clothes
+    
     "I throw off my cloak, revealing my dark red breastplate."
     extend "\nTheir stupor prevents the denizens from descending into fright.\nOur occupation is one that inspires terror." 
     "Christoph's pet elf bolts for the door, and the goblin's anger only grows stronger."

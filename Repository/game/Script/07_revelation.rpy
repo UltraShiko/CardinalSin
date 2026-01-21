@@ -197,8 +197,9 @@ label revelation:
     
     gr "He's only escaped the noose because he's useful.\nEven the Third had to put up with him."
 
-    stop music fadeout
-    play bgm.marching_forward fadein
+    stop music fadeout 0.8
+    play music bgm.marching_forward fadein 0.8
+
     ca "Tell me Nick, can you track down my friend.\nIf you can bind devils, perhaps you can seek out a dretchling?"
     
     gr "You don't need this fool's aid. Consult the Reverend."
@@ -340,5 +341,6 @@ label revelation:
     #### Game ends
     ##############################
 
-    stop music fadeout
+    stop music fadeout 0.8
+
     return

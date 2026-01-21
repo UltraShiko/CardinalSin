@@ -99,7 +99,7 @@ label interrogation:
     v "Goddamned leech!" with vpunch 
 
 
-    play sfx.footsteps_snowf
+    play sound sfx.footsteps_snowf
     #show celestial at left with moveinleft
     #show celestial at right with moveinright
     "Booted footsteps trample our way.\nIt's those hallowmen again, how quaint..."

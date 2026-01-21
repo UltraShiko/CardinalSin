@@ -9,7 +9,7 @@ label exploration:
     "I only cloak myself to conceal my occupation.\nWe Emissaries are despised at best, and hunted by criminals and fiends otherwise."
     "The Celestials know of us. We even hold some power over them.\nBut any respect they give us is shallow. Many vie for our heads to be on pikes."
 
-    play sfx.footsteps_snow loop
+    play sound sfx.footsteps_snow loop
     "As I stroll through the snow, people part from my path as if I'm feral.\nI can't blame them. They're {i}almost{/i} right."
 
     w "Is that a mongrel?"
@@ -81,7 +81,8 @@ label exploration:
     "If the Celestials are doing a search, then maybe I can follow them."
     extend "\nBefore I can finish reading, I notice a band of silvered knights marching by, conveniently right where I need them to be."
     
-    play sfx.footsteps_snow loop
+    play sound sfx.footsteps_snow loop
+    
     "I follow. I don't hide.\nWhat will they do, arrest an Emissary? That would be quite amusing."
     "These white knights are seen as heroes.\nThey take the credit for everything, including our work."
     "Granted, the higher-ranked Celestials wield the mana of Grace, and some Justice too. Both manas are highly effeicient at killing devils."

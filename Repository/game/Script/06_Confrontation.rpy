@@ -317,12 +317,14 @@ label confrontation:
     "Here comes another blood wave."
 
     play sound sfx.slash
+
     extend " I cleave through it, but another follows.\nPain tears through my core as I swing again."
 
     play sound sfx.singe
     with bloodflash
 
-    stop music fadeout 
+    stop music fadeout 0.8
+
     gr "Nnnngh...!"
     
     ch "Hahahaha! Hurts doesn't it?!"
@@ -402,7 +404,8 @@ label confrontation:
 
     play sound sfx.mana_charge
     with sinflash
-    play music bgm.Reckoning_II fadein
+    play music bgm.Reckoning_II fadein 0.8
+    
     gr "Sin?"
 
     "When I focus, a purple hue arises in place of the red one I'm usually wield."

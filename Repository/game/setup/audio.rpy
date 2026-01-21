@@ -9,7 +9,8 @@ define bgm.reckoning_II = "audio/bgm/reckoning_II.ogg"
 define bgm.marching_forward = "audio/bgm/marching_forward.ogg"
 define bgm.something_amiss = "audio/bgm/something_amiss.ogg"
 
-#ambience
+### Ambience
+
 define bgm.village_ambience = "audio/bgm/village_ambience.ogg"
 define bgm.village_ambienceLoop = "audio/bgm/village_ambienceLoop.ogg"
 define bgm.night_ambience = "audio/Ambience/night_ambience.ogg"
@@ -33,7 +34,7 @@ define sfx.crash = "audio/sfx/crash.ogg"
 define sfx.dagger_draw = "audio/sfx/dagger_draw.ogg"
 define sfx.door_break = "audio/sfx/door_break.ogg"
 define sfx.door_open = "audio/sfx/door_close.ogg"
-define sfx.drop clothes = "audio/sfx/drop_clothes.ogg"
+define sfx.drop_clothes = "audio/sfx/drop_clothes.ogg"
 define sfx.forest_footsteps = "audio/sfx/forest_footsteps.ogg"
 define sfx.footsteps_snow = "audio/sfx/footsteps_snow.ogg"
 define sfx.footsteps_snowf = "audio/sfx/footsteps_snowf.ogg"
