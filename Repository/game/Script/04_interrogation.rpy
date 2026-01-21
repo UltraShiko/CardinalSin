@@ -1,14 +1,19 @@
 label interrogation:
     
-    play sound sfx.footsteps_snow
+    play sound sfx.footsteps_snow loop
+
     "I skulk away. \nMy stomach growls, and my eyes dilate. Good!"
     extend " Monstrosity follows my gnawing hunger. These heightened senses make tracking all to easy."
     "I see many footprints in the snow, but one pattern stands outs."
     "These tracks are haphazard, almost as if he was hopping about like a rabbit. Intoxication leads to vivid hallucinations. I remember thinking I could fly during one of them..."
-    stop sound
+    
+    stop sound fadeout 0.8
+    
     "I take a whiff. The sickly sweet smell irritates my nose.\nSanguine Paste smells eerily similar to candy."
     extend "\nSo these tracks belong to an addict, or a loon."
-    play sound sfx.footsteps_snow
+    
+    play sound sfx.footsteps_snow loop
+    
     "Either way, I follow them."
     "The stench of the paste grows stronger with each step.\nIs he indulging even as I track him? I'm prepared all the same, this'll just make subdoing him easier."
     "I snarl.\nI no longer crave that wretched paste but I don't want to reek of it either! This disgusting oaf is going to regret using."
@@ -24,7 +29,8 @@ label interrogation:
     extend " No, he'll do. I'll drink his blood as payment. He {i}clearly{/i} doesn't need it anymore."
     "He comes in my sights, arms and body flailing for an illusion.\nHiding is hardly necessary."
 
-    stop sound
+    stop sound fadeout 0.8
+
     "Regardless I crouch. I calculate the distance between us."
     extend "\nNo weapons or mana will be needed. I don't know why I bother preparing to attack.." 
     "My instincts call for wariness, even from an oaf trapped in stupor."
@@ -37,10 +43,13 @@ label interrogation:
     queue sound sfx.thud
     queue sound sfx.grapple
     with vpunch
+
+    stop music
+
     extend " Gahhh!!!"
 
-    #stop music
-    play music bg.lethal_suspense
+    play music bgm.lethal_suspense
+
     "I pin him in seconds, his chest facing me."
     extend "\nI snatch a vial from my bandolier and pop the cork.\nHe grins foolishly."
 
