@@ -54,9 +54,11 @@ label interrogation:
     extend "\nI snatch a vial from my bandolier and pop the cork.\nHe grins foolishly."
 
     m "Oh...my dear Charlotta. I didn't know you liked it so-"
+
     play sound sfx.bottle_open
     pause 1.0
     queue sound sfx.stab
+    
     m "Ngh, ahh...{b}AaaaaAAAGHHHH!!!{/b}" with vpunch
 
     "I ram the elixir's contents up his nose. It's much quicker than forcing it down his throat."
@@ -111,6 +113,7 @@ label interrogation:
     play sound sfx.footsteps_snowf
     #show celestial at left with moveinleft
     #show celestial at right with moveinright
+
     "Booted footsteps trample our way.\nIt's those hallowmen again, how quaint..."
     "The band approach but don't draw too close.\nOne is bold enough to have his sword out."
     extend " I tense up. Like devils, I'm susceptible to silver. Assuming they can hit me, that is."
@@ -159,6 +162,7 @@ label interrogation:
     m "Okay! It's Christoph! {b}CHRISTOPHHH!!!{/b}" with vpunch
 
     stop music
+
     gr "Gngh!"
 
     "My body recoils at his name. Why...?"
@@ -168,6 +172,7 @@ label interrogation:
     "I shove him into their arms and take the syringe from my belt."
 
     play sound sfx.stab
+    
     "As the blood pumps into my arm, sanity returns. My eyesight dulls as do my other senses, but having them enhanced is no use to me if it drives me to madness."
     "The heroes look at me in disbelief. This must quite the night for them."
 
