@@ -6,8 +6,16 @@ label prologue:
 
     v "-istop- Chris- ca- -ou -ar me?!"
 
-    #scene CG with dissolve
+    window hide
+    
+    scene cg christoph with Dissolve(1.0)
+   
     play music bgm.something_amiss fadein 0.5
+
+    pause 1.0
+
+    window show
+
     "Mom...?"
     "I try wiping the red stuff away, but it keeps coming.\nOnly a warm cloth manages to douse this 
     crimson stream."
@@ -51,14 +59,21 @@ label prologue:
     ch "But-"
     mo "I love you, Christoph. I always-"
 
+    window hide
+    
     play sound sfx.door_break
     queue sound sfx.weapon_swing
     queue sound sfx.slash
     queue sound sfx.blood_splatter
     with bloodflash
+    
     #scene CG2
+    scene image "#000"
+
     pause 2.0
 
+    window show
+    
     ch "Mooooom!!!" with vpunch
 
     "My mouth falls open. All I see is the door open, and then Mom..."
@@ -69,9 +84,11 @@ label prologue:
 
     mo "Uughhh..."
     extend " Chris...toph-"
+
     v "Mmph! Bland."
 
     play sound sfx.thud
+
     "He drops her like a sack of potatoes.\nShe lies there, her eyes open and her throat torn to shreds."
     "Their pupils look at me. It feels like she's still here, even though she's not..."
     "I shiver like a leaf as the monster, looking like one of the humans, wipes his mouth and glares at me."
@@ -90,6 +107,8 @@ label prologue:
     
     play sound sfx.stab
     #have screen turn red
+
+    scene image "#f00" with Dissolve(0.2)
     
     ch "{b}AHHHHHHHHH!!!{/b}" with vpunch
     
