@@ -3,6 +3,10 @@ label explanation:
     
     scene background emissary base with dissolve
     
+    pause 1.0
+
+    window show
+    
     "I open my eyes at the sunset streaming through the window.\nLooks like I was more tired than I thought..."
     "That damned banshee nearly killed us.\nTo be given so much trouble by a lowly succubus, it's humiliating."
     "Her kind isn't usually that deadly, at least one-on-one.\nAnd now she's out doing Ishmael-knows-what."
@@ -141,6 +145,8 @@ label explanation:
     "I send him spiraling into the desk on my way out."
     extend "\nAttacking him is fruitless, but it makes me better.\nIt's too addicting..."
     
+    window hide
+
     jump exploration
 
     return

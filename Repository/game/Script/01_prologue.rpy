@@ -112,6 +112,8 @@ label prologue:
     
     ch "{b}AHHHHHHHHH!!!{/b}" with vpunch
     
+    window hide
+    
     jump explanation
 
     #return

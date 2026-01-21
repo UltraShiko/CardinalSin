@@ -1,8 +1,12 @@
 
 label exploration:
     
-    scene jubilee night with dissolve 
+    scene background jubilee night with dissolve 
 
+    pause 1.0
+
+    window show
+    
     "As I exit, I bury myself under a cloak.\nNot because I am cold, but to hide my identity."
     "Not as a monster, however.\nMy pale flesh and blood-red eyes can't be concealed. If I'm not mistaken for a dretchling, people see me for what I am."
     "A vampire."
