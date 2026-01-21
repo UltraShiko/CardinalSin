@@ -6,7 +6,7 @@ label exploration:
     pause 1.0
 
     window show
-    
+
     "As I exit, I bury myself under a cloak.\nNot because I am cold, but to hide my identity."
     "Not as a monster, however.\nMy pale flesh and blood-red eyes can't be concealed. If I'm not mistaken for a dretchling, people see me for what I am."
     "A vampire."
@@ -14,6 +14,7 @@ label exploration:
     "The Celestials know of us. We even hold some power over them.\nBut any respect they give us is shallow. Many vie for our heads to be on pikes."
 
     play sound sfx.footsteps_snow loop
+    
     "As I stroll through the snow, people part from my path as if I'm feral.\nI can't blame them. They're {i}almost{/i} right."
 
     w "Is that a mongrel?"
@@ -29,7 +30,8 @@ label exploration:
     "If those cattle could think, they'd likely figure out what role I serve.\nWhy else would a blood-sucking monster be allowed to roam free?"
     extend "\nI almost envy their ignorance."
 
-    stop sound
+    stop sound fadeout 0.8
+
     "Fortunately, I'm just in time. The smith's stand is still open."
     "The grizzled, bloated dwarf eyes me with scorn.\nAs usual, I pull out both my hatchet and sword."
     "We do business only out of necessity.\nHe needs coin, and I cannot afford to purchase a sharpening wheel."
@@ -97,7 +99,8 @@ label exploration:
     "The lackadaisical Nick always grows stern when we speak of {i}The Third{/i}.\nAnd this is the same buffoon he conjures fiends for a profession."
     "As our march continues, a man of over nine feet blocks their path."
 
-    stop sound
+    stop sound fadeout 0.8
+    
     extend "\nThis giant is named Jory. He's a nephillim rumored to have courted the banshee. That's what Caius believes."
 
     c "Hail Jory!"
