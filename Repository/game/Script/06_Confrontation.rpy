@@ -589,6 +589,8 @@ label confrontation:
     extend " No wonder he was seduced by the banshee..."
     "Caius begged me not to tell Jory that she has returned, and he is very fortunate I owe my life and that favor to him. Otherwise..."
     
+    window hide
+    
     jump revelation
 
     return
