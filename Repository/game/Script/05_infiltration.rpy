@@ -2,6 +2,7 @@
 label infiltration:
 
     play sound sfx.footsteps_snowf
+
     "I chortle darkly as I slip past the demoralized hallowmen."
     "Seeing that pig's delusions reminds me of my own.\nJudge him as I may, I wasn't much different..."
     "The hallucinations vary based on our desires.\nI thought I could fly out of this god forsaken empire. My hardships were caused by {i}the Recknoning's{/i} impact."
@@ -31,8 +32,15 @@ label infiltration:
     
     m "Hmph! Follow me."
 
-    scene background christoph house with dissolve
+    window hide
+
+    scene background christoph house with Dissolve(0.8)
+
     play music bgm.something_amiss fadein 0.8
+
+    pause 1.0
+
+    window show
 
     "I almost pity just how simple he is. I wonder if he knows what plane he's on now. Christoph should consider a sober watchhman next time."
     "He doesn't confiscate my weapons. They're out of sight, but any decent guardsman would search me at least."
@@ -129,7 +137,14 @@ label infiltration:
     
     gr "(Ahh, this must be his mother.)"
 
-    scene forest with dissolve
+    window hide
+
+    scene background forest with Fade(0.7, 0.8, 0.7, color="#fff")
+
+    pause 1.0
+
+    window show
+
     "I'm now standing outside a window. They don't see me."
     "My mouth waters. Both of them look so scrumptuous!\nAnd I've heard the blood of a child is {b}DIVINE!{/b}"
     "It'll be so easy. This foolish mother is trusting him outside as the sun sets. She deserves to lose him. Later I'll feast on her too as punishment."
@@ -154,9 +169,16 @@ label infiltration:
     extend " Two..."
 
     stop music
+
     gr "(I've seen enough.)"
 
+    window hide
+
     #scene background christoph house with shatter fx #TODO - Learn how to do this
+    scene background christoph house with Fade(0.7, 0.8, 0.7, color="#fff")
+
+    window show
+
     "Like glass, the illusion shatters. I'm now back in Christoph's den."
     "I understand now. Christoph is the only prey I've ever spared.\nAs I sank my fangs into him that day, I realized just how low I had sunk."
     "Shortly after, a band of Celestials stormed the house.\nThey must've heard his mother's screams."
