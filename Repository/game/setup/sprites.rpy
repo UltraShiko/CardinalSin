@@ -72,36 +72,36 @@ image Jory:
 
     yoffset 251
 
-    # "images/sprites/jory/neutral.png"
-    "images/sprites/jory/silhouette.png"
+    "images/sprites/jory/neutral.png"
+    #"images/sprites/jory/silhouette.png"
 
 image Jory angry:
 
     yoffset 251
 
-    # "images/sprites/jory/angry.png"
-    "images/sprites/jory/silhouette.png"
+    "images/sprites/jory/angry.png"
+    #"images/sprites/jory/silhouette.png"
 
 image Jory happy:
 
     yoffset 251
 
-    # "images/sprites/jory/happy.png"
-    "images/sprites/jory/silhouette.png"
+    "images/sprites/jory/happy.png"
+    #"images/sprites/jory/silhouette.png"
 
 image Jory neutral:
 
     yoffset 251
 
-    # "images/sprites/jory/neutral.png"
-    "images/sprites/jory/silhouette.png"
+    "images/sprites/jory/neutral.png"
+    #"images/sprites/jory/silhouette.png"
 
 image Jory sad:
 
     yoffset 251
 
-    # "images/sprites/jory/sad.png"
-    "images/sprites/jory/silhouette.png"
+    "images/sprites/jory/sad.png"
+    #"images/sprites/jory/silhouette.png"
 
 ### Other
 

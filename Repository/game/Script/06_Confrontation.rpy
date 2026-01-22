@@ -138,7 +138,6 @@ label confrontation:
 
     ch "{b}LIKE HELL, EMISSARY!!!{/b}" with vpunch 
 
-
     "He crouches, brandishing his razor-sharp nails at me as he growls."
 
     play sound sfx.mana_charge
@@ -146,7 +145,8 @@ label confrontation:
     
     "A red aura begins seeping from him. Damn, he's wielding Malice.\nAnd here I thought I destroyed his resolve..."
     
-    play sound sfx.weapon_draw 
+    play sound sfx.weapon_draw
+
     "I draw my sword. With my hatchet being in the wall, I'm not at my best. And if he leaps at me, I'll need all the defenses I can get."
 
     ch "{b}YOU THINK THIS CHANGES ANYTHING?! YOU THINK THIS MAKES THING RIGHT?!{/b}" with vpunch
@@ -169,8 +169,9 @@ label confrontation:
     "I duck a chair flung at me and sidestep a swipe of his hand."
     extend " I kick him, sending him crashing into the wall as I dart towards my other weapon."
     
-    play sound sfx.bubbles1
+    play sound sfx.bubble1
     with bloodflash
+
     "I wince as I spot blood bubbling from his fingertips.\nCan he wield hemomancy as well?"
 
     ch "Since you love blood so much, have some on the house!"
@@ -188,6 +189,7 @@ label confrontation:
     extend "\nLet me show you how its done!" with vpunch 
 
     play sound sfx.slash
+
     "I cut the skin, but nothing happens."
     "I scowl. Blood is dripping just fine, but no Malice is coming out.\nI can't call on it!"
     "Don't tell me... Can I not use mana against him?\nI thought I was over my guilt."
@@ -195,6 +197,7 @@ label confrontation:
     "Without Malice, I can't use my hemomancy. I can't use any of my techniques either. Shit!"
 
     #show Christoph happy
+
     "A grisly smile etches itself across Christoph's face.\nThat serpentine tongue again graces his lips."
 
     ch "Ahhh, I see."
@@ -205,8 +208,8 @@ label confrontation:
     gr "Hmph, as if this is any handicap worth noting. I only wished to end this in one strike." 
     extend " It appears I'll have to toy with you instead."
 
-
     #show Christoph combat
+
     ch "{b}I'LL TEAR THAT SMILE FROM YOUR FACE!{/b}" with vpunch
 
     "He scratches the air, sending a wave of carmine at me.\nIt's too wide to dodge."
@@ -255,11 +258,13 @@ label confrontation:
     gr "How disappointing... I've had vermin bite harder than that."
     
     #show christoph happy
+
     ch "Hmmm... Perhaps I'll flay you instead. It'd be much more painful that way."
     
     gr "Heh. You, flay me? I've seen drunks with more grace.\nOne of your addicts would do a better job."
     
     #show christoph combat
+    
     ch "Shut up! You aren't better than me!\nIf I can't flay you, I'll just rip you limb from limb!"
 
     play sound sfx.zap
@@ -274,11 +279,13 @@ label confrontation:
     extend "\nHis nails, laced with Malice and blood, rain down scratches upon me."
     
     play sound sfx.weapon_swingh
+
     #show Christoph with zoomout or zoom out of the sprite
     
     extend "\nI have to roll away. The table behind me isn't as lucky. It falls to pieces."
 
     #zoom in Christoph, likely with a zoomin transition
+
     "He storms towards me. Now it is I who am shaken." 
     extend " If just one swipe lands, I won't be able to stop the next one..."
     "He strikes the ground, and I dodge bloodied spikes ambushing me from below."
@@ -337,10 +344,12 @@ label confrontation:
 
     play sound sfx.singe
     with bloodflash
+
     extend " My joy!"
 
     play sound sfx.singe
     with bloodflash
+
     extend " MY LIFE!!!{/b}" with vpunch
 
     "It's as if acid is being splashed onto my skin. This excruciating pain isn't enough to make me 
@@ -354,6 +363,7 @@ label confrontation:
     extend "Pitiful."
     
     play sound sfx.mana_charge
+
     ch "{b}GRAAAAAH!!!{/b}" with vpunch
 
     play sound sfx.heavy_bam
@@ -370,6 +380,7 @@ label confrontation:
     extend " But death has never been far for me. I knew that one day, I'd be cut down. It's the fate of all Emissaries."
 
     #show christoph combat with zoomin
+
     ch "Grrr... I'll kill you...!"
 
     "To be slain by the person whose life I destroyed is justice.\nI avoided the stake but merely postponed my execution."
@@ -378,6 +389,7 @@ label confrontation:
     extend " Am I concerned? Why do I care? Caius helped me defeat the banshee sure, but I hardly know him."
 
     #show Christoph happy
+
     ch "The last sight you'll see will be my gullet! I don't care if you taste awful..." 
     extend " I'm going to savor {b}EVERY BITE!{/b}" with vpunch
 
@@ -395,6 +407,7 @@ label confrontation:
     extend " That strength... The more damage I sustain, the more feral I become. But there was no hatred in that attack."
 
     ch "Agh...aggghhh! You broke my jaw, you bastard!"
+
     gr "Yet, you're still talking."
 
     "I pull myself to my feet. By then, he's back to his senses."
@@ -404,7 +417,7 @@ label confrontation:
 
     play sound sfx.mana_charge
     with sinflash
-    play music bgm.Reckoning_II fadein 0.8
+    play music bgm.reckoning_II fadein 0.8
     
     gr "Sin?"
 
@@ -416,6 +429,7 @@ label confrontation:
     gr "Give up, Christoph. Every farce must come to an end."
 
     #show Christoph angry with moveinbottom
+
     ch "F-Farce?! I was destroying you!" 
     
     gr "I see you aren't as loud with that jaw displaced. And you're about to keel over as well."
@@ -427,8 +441,11 @@ label confrontation:
     extend "\nHe strikes the wall, digging through the wood."
 
     ch "I'll rend that head from its perch. I won't be able to eat you alive, but I'll have my fill one way or another!"
+    
     play sound sfx.lunge
+    
     #show christoph combat with zoomin
+    
     extend " You're finished, vampire! Now you {b}DIE!!!{/b}" with vpunch
 
     "Here he comes, his hand tearing through the wood as he progresses."
@@ -445,12 +462,14 @@ label confrontation:
 
     play sound sfx.mana_charge
     with sinflash
+
     extend " Wh-what?! Where did he-"
     
     gr "{b}{i}Bloodedge!{/b}{/i}"
 
     play sound sfx.heavy_slash_twice
     #VFX or Bloodflash twice
+
     ch "{b}GAAAAAGGGGHHHH!!!{/b}" with vpunch
 
     #hide Christoph moveoutbottom
@@ -458,7 +477,9 @@ label confrontation:
 
     "I flense his back twice. He cries out as his flesh is ripped from his body." 
     extend " That attack is a feint, the blood pushing my body to accelerate.\nIt looks to most as if I've teleported."
+    
     play sound sfx.thud
+    
     "He crumples. His wounds aren't lethal. He'll remember this pain, but he will live."
     extend " Of course this doesn't stop him from trying to retaliate. All he can do is flip onto his butt before convulsing."
     "The red Malice on his claws is now mere embers." 
@@ -500,10 +521,16 @@ label confrontation:
 
     "He snarls, and I turn away."
 
+    window hide
+
     play sound door_break
     #hide Christoph with moveoutbottom
     #show Celestial at left with with moveinleft
-    show Jory at right with moveinright 
+    show Jory angry at right with moveinright 
+
+    pause 0.4
+
+    window show
     
     extend " The sound of steel pounding the ground grows closer until both the Celestials and Jory appear before us."
     "The band of knights recoil upon seeing me.\nMy injuries are grisly, to the mortal eye."
@@ -527,7 +554,8 @@ label confrontation:
     gr "If we are done here, I need to rest."
     extend "\nThough if you're willing to donate some of your-"
 
-    show jory happy
+    show Jory happy
+
     c "Y-You are {b}FREE{/b} to go! We'll take over from here."
     
     gr "Lovely."
@@ -539,7 +567,8 @@ label confrontation:
 
     "He smiles boradly. A cold fury pumps through my veins."
 
-    show jory neutral
+    show Jory neutral
+
     j "N-No, that's not what I meant... I just think, maybe I was wrong about you. Maybe you aren't so bad after-"
 
     "I bare my fangs, unnerving all in sight." 
@@ -547,9 +576,13 @@ label confrontation:
 
     gr "To call you an oaf would be a cardinal sin against the stupid!\nGet out of my way!" with vpunch
 
+    window hide
+
     play sound footsteps_snowf
     hide Jory with moveoutright #TODO: #maybe zoomin?
     hide Celestial with moveoutleft
+
+    window show
 
     "I slither haphazardly past the lot. The hallowmen rightfully avoid me, but my ears detect that giant's obnoxious snickers!"
     "If he actually believes that this one act of kindness makes me any different from the next monster, it is truly miraculous that he's survived for so long."
