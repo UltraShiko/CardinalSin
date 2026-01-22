@@ -1,2 +1,2 @@
 
-image cg christoph = "images/CGs/christoph1.webp"
+image cg christoph = "images/CGs/christoph1.png"
