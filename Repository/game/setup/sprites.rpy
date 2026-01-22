@@ -103,6 +103,30 @@ image Jory sad:
     "images/sprites/jory/sad.png"
     #"images/sprites/jory/silhouette.png"
 
-### Other
+### Persephone
+
+layeredimage Persephone:
+
+    zoom 0.90
+
+    # xysize (1962, 1471)
+
+    always:
+        
+        "images/sprites/persephone/base.png"
+
+    group emotions:
+
+        attribute smirk default:
+
+            pos (900, 333)
+
+            "images/sprites/persephone/smirk.png"
+
+        attribute angry:
+
+            pos (902, 344)
+
+            "images/sprites/persephone/angry.png"
 
 
