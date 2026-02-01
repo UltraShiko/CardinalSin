@@ -3,7 +3,7 @@ label revelation:
     scene background emissary base with fade
     play sound door_open
 
-    #show Nick happy at left
+    show nick happy at left
     #show Caius at right
     
     window show
@@ -19,7 +19,7 @@ label revelation:
     
     gr "I don't know what the hell he was, but he's dead. Now give me a drink!"
 
-    #hide nick
+    hide nick
     #show Caius at center with dissolve
 
     "Caius recoils as a wooden mug, filled to the brim with blood, is placed before me."
@@ -40,7 +40,7 @@ label revelation:
     gr "No, but I wish he was."
     
     #hide Caius with dissolve
-    #show Nick happy at right with easeinright
+    show nick happy at right with easeinright
 
     "That elf has a stupid grin on his face. I glare at him and it only grows."
     "I then take notice of the mask shrouding Caius's forehead.\nIt looks like its glued to his skin."
@@ -72,9 +72,9 @@ label revelation:
 
     play sound sfx.door_open
     
-    #hide Nick
+    hide nick
     #hide Caius
-    #show imp at center with moveinright
+    #show imp at center with zoomin
 
     "Suddenly, a batlike monster, the size of my palm, flies inside." 
     extend "\nCaius leaps into action, but I block him from advancing."
@@ -137,7 +137,7 @@ label revelation:
 
     "The wood creaks in my palms and Nick gulps in excitement."
     
-    #zoom in on Nick
+    show nick elated with zoomin
     
     "I arch forward, already knowing what that imp is going to say.\nI only await confirmation..!"
 
@@ -150,7 +150,7 @@ label revelation:
 
     play sound sfx.wood_break
 
-    #hide Nick with moveoutbottom
+    hide nick with moveoutbottom
 
     "It's instantaneous. The staff breaks on the first strike."
     
@@ -178,7 +178,7 @@ label revelation:
     play sound sfx.grapple
 
     #show Caius at left with quickblinds
-    #show Nick at right with moveinbottom
+    show nick neutral at right with moveinbottom
     
     "I yank Nick up by his hair and make him face Caius."
     "Ishmael knows what godforsaken expression is on Nick's face.\nI never understood Caius's fixation on joining us."
@@ -234,7 +234,7 @@ label revelation:
 
     bu "Second signature was weak. No corpse detected.\nIt was a fiend, a very powerful fiend~!"
 
-    #hide Nick with dissolve
+    hide nick with dissolve
     #hide Buzz with dissolve
     #show Caius at center with fade
 
@@ -254,8 +254,7 @@ label revelation:
     
     gr "Thrycia is a week's travel by horseback. Unless you plan to walk..."
     
-    #show Nick at right with moveinright
-
+    show nick happy at right with moveinright
     ni "I can arrange a carriage."
     
     gr "Be quiet-"
@@ -272,8 +271,7 @@ label revelation:
 
     ni "And besides vampire, someone needs to keep you in-"
 
-    #hide Nick with moveoutright
-
+    hide nick with moveoutright
     play sound sfx.hurl
     pause 0.5
     play sound sfx.pottery_break

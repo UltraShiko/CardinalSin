@@ -37,6 +37,7 @@ label exploration:
     "We do business only out of necessity.\nHe needs coin, and I cannot afford to purchase a sharpening wheel."
     extend "\nIt would be a gross waste of money for maintaining my arms and armor."
 
+    #show dwarf silhouette with dissolve
     sm "Back again? All too soon..."
 
     gr "I want these sharpened."
@@ -80,11 +81,15 @@ label exploration:
     
     gr "I suspect it's the same reason why you drink.\nConsider purchasing in some incense."
 
+    #hide dwarf
     "I take my posessions and leave."
     extend "\nHumorously, I hear him start drinking from a bottle on my way out."
 
     "I review the writ.\nMy quarry is located at some hobble in {i}the Hells{/i}, where the bottomfeeders of Jubilee reside." 
     "If the Celestials are doing a search, then maybe I can follow them."
+
+    show celestial at left
+    show celestial at right
     extend "\nBefore I can finish reading, I notice a band of silvered knights marching by, conveniently right where I need them to be."
     
     play sound sfx.footsteps_snow loop
@@ -101,6 +106,7 @@ label exploration:
 
     stop sound fadeout 0.8
     
+    show jory neutral with zoomin
     extend "\nThis giant is named Jory. He's a nephillim rumored to have courted the banshee. That's what Caius believes."
 
     c "Hail Jory!"
@@ -115,7 +121,12 @@ label exploration:
     
     j "I wasn't talking to you..."
 
+
+    hide jory with dissolve
+    show celestial at left
+    show celestial at right
     "He points me out, and the knights turn and wince."
+    play sound sfx.light_grapple
     extend "\nI smirk as a hallowman grips his sword's pommel."
     "Meanwhile the nephillim scowls at me.\nOut of everyone who despises me, Jory nets the most respect."
     "I had no intention of endagering his pupil. Had I known the banshee was going to be summoned, Nick would've accompanied me instead."
@@ -124,6 +135,8 @@ label exploration:
     
     gr "Indeed I am.\nKeep on with your search, it isn't like any of you can stop me."
     
+    show celestial combat at right
+    play sound sfx.halberd_draw
     c "Monster! I'll drive this this blade through your heart!"
     
     gr "And kill an Emissary? Heh, that would make my night."
@@ -132,6 +145,8 @@ label exploration:
     
     j "Enough!" with vpunch
 
+    hide celestial
+    show jory angry with dissolve
     "Jory's gentle, yet thunderous voice leaves the knights shivering from more than just the snow."
     "The hallowman look at each other in disbelief, and then turn to Jory, who nods gravely."
     extend " Despite his composure, even this gentle giant is bitter with me."
@@ -141,9 +156,10 @@ label exploration:
 
     j "Yes, I know him. He's telling the truth."
 
+    show celestial with dissolve
     c "You must be kidding!\nThe fourth, allow a leech like him to roam free?! Is he mad?"
     
-    gr "As if your low-grade blood could satisfy me."
+    gr "As if your low-grade blood would satisfy me."
     
     c "Then what are you doing here?!"
     

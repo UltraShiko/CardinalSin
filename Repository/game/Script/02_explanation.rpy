@@ -18,10 +18,13 @@ label explanation:
     "The door creaks open, and I narrow my eyes at the lanky elf that enters."
     "Disgust graces my tongue.\nI'd sooner starve than feed on him, even if he was the last mortal on the plane."
 
+
+    show nick happy with dissolve
     ni "Wow, you were out like a light.\nNever thought you'd struggle against a succubus."
     
     gr "Be quiet, Nick."
     
+    show nick elated
     ni "Hehe... Of course, she was the banshee who caused {i}the Reckoning{/i}."
     extend "\nToo bad you can't wield silver."
     
@@ -36,6 +39,7 @@ label explanation:
 
     gr "Speaking of, how is Caius?"
     
+    show nick neutral
     ni "He'll be fine. Though he will need to get used to wearing a mask.\nHis mana was gushing like a fountain."
     
     gr "What the hell happened? I patched up his wounds.\nHe was fine for a moment, then this white mana started spilling out."
@@ -43,7 +47,8 @@ label explanation:
     ni "That's Justice for you."
     
     gr "Justice?"
-    
+
+    show nick happy
     ni "Ahh, it's the mana of angels. Much like how your Malice is from Hell."
     extend " Mortals weren't intended to wield it. And when they do, it tears their body apart."
     
@@ -54,6 +59,7 @@ label explanation:
     
     gr "He's not insane, you are."
     
+    show nick neutral
     ni "Not every lunatic is insane. He just sees the world differently than us."
     
     gr "Hmmm..."
@@ -76,6 +82,7 @@ label explanation:
     ni "I'd prefer you not-"
 
     play sound sfx.grapple
+    show nick elated with zoomin
     
     "I yank the fool by his collar, only for him to smile whimiscally."
     "If he wasn't so useful, I'd crush his neck where we stand.\nBut he'd enjoy every second of it anyway. This maniac adores pain."    
@@ -91,11 +98,14 @@ label explanation:
     
     gr "Really?"
 
+    hide nick with moveoutbottom
+    play sound sfx.thud
     "I release him. He crumples, then regains his footing haphazardly.\nHe isn't even winded after being manhandled."
     "He hands me a writ. It's a warrant written by the Celestials to search some house, under suspicion of the occupant harboring Sanguine Paste."
     "My fingers tense upon reading those wretched words.\nThat infernal drug causes nothing but problems, and people {i}still{/i} use it!"
     extend "\nI'd know, I was one of those idiots..."
 
+    show nick happy with easeinbottom
     ni "Consider this your reward for dealing with those cultists."
     
     gr "Hmm... Why are you giving me this?\nSurely, you understand that Persephone is our top priority."
@@ -109,6 +119,7 @@ label explanation:
     
     gr "It's that pain devil, isn't it?!" with vpunch
 
+    show nick elated
     "He grins sheepishly. Maybe I should kill him after all!"
     "When I first met this loon, he had a brute of a fiend bound to his service. She was over seven feet tall and a even monster by devil standards."
     "I told this fool {b}countless{/b} times to slit her throat and be done with it."
@@ -122,11 +133,11 @@ label explanation:
     
     gr "Yes, spite, because you blame her for your failure.\nAs if you alone could've stopped {i}the Reckoning{/i}."
     
-    ni "Hard to close a tear in the plane with a chain through your chest."
-    extend "\nIt was so wonderful!"
+    ni "Hard to close a tear in the plane with a chain through your chest hehehe..."
     
     gr "You're revolting!" with vpunch
 
+    hide nick with dissolve
     "Hmm, prioritize drug dealers or the very monster that nearly destroyed everything. The choice is obvious."
     "However, I have no leads. And Thrycia, or what remains of it, is a week's journey away. Even if I do find the pain devil there, it'd be curtains for me."
     "As much as I'm loath to admit it, these paste dealers are the safer target right now. And I detest them with a burning passion."
@@ -137,9 +148,9 @@ label explanation:
     
     ni "It does keep you in line, hehehe-"
     
+    hide nick with moveoutright
     play sound sfx.hurl
     queue sound sfx.pottery_break
-    #hide Nick with moveoutright
     with vpunch
     
     "I send him spiraling into the desk on my way out."

@@ -2,15 +2,15 @@ label prologue:
 
     
     "...My head, it hurts..."
-    "I can't see... Every time I open my eyes, a red, goo burns them.\nThis ick is all over me..."
+    "I can't see... Every time I open my eyes, a red goo burns them.\nThis ick is all over me..."
 
     v "-istop- Chris- ca- -ou -ar me?!"
 
     window hide
+
+    play music bgm.something_amiss fadein 0.5
     
     scene cg christoph with Dissolve(1.0)
-   
-    play music bgm.something_amiss fadein 0.5
 
     pause 1.0
 
@@ -33,6 +33,13 @@ label prologue:
 
     ch "Aghhh!"
     mo "Shh! You have to be strong. You have to or he'll-"
+
+    scene sword swipe with MultipleTransition([
+        False, Dissolve(0.5),
+        "sword_swing.png", Pause(1.0),
+        "sword_swing.png", dissolve,
+        True])
+
 
     play sound sfx.wood_break
     with hpunch

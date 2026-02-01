@@ -1,0 +1,1 @@
+image sword swing = "images\vfx\sword_swing.png"
