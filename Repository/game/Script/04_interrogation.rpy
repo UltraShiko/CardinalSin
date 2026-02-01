@@ -19,6 +19,9 @@ label interrogation:
     "I snarl.\nI no longer crave that wretched paste but I don't want to reek of it either! This disgusting oaf is going to regret using."
     "Soon the prints are followed by sounds.\nTheir keeper is babbling not too far from here."
 
+    #TODO - Find a silhouette or royalty free sprite
+    #show silhouette sprite moving back and forth in a loop:
+        #Expecting something like linear 0.5 with easeinright / easeinleft etc.
     v "Hey-hey! Yes, Charlotta, it's me! I'm back just as I promised!"
     v "Ohohoho! There's no way you could be evil. Not with those sweet, voluptuous tits of yours! If they drag me to Hell, I won't struggle~!\nUnless you want me too..."
     v "Ohh my sweet! I'm not going to wait. Let us make love this time!\nWho cares if it's in the snow?! And if anyone sees us, let 'em watch!"
@@ -30,7 +33,7 @@ label interrogation:
     "He comes in my sights, arms and body flailing for an illusion.\nHiding is hardly necessary."
 
     stop sound fadeout 0.8
-
+    #maybe alter the camera a few xpos down to simulate squatting?
     "Regardless I crouch. I calculate the distance between us."
     extend "\nNo weapons or mana will be needed. I don't know why I bother preparing to attack.." 
     "My instincts call for wariness, even from an oaf trapped in stupor."
@@ -39,10 +42,13 @@ label interrogation:
 
     m "Ohhh Charlotta, take me... Take-"
 
-    play sound sfx.lunge
+    #show silhouette zoomin / have him zomm in to simulate Griswyr's charge
+    play sound sfx.weapon_swing
+    #hide silhouette moveoutbottom
     queue sound sfx.thud
     queue sound sfx.grapple
     with vpunch
+    # OPTIONAL - have the camera jostle upon the tackle. Like as if it got knocked around
 
     stop music
 
@@ -53,9 +59,11 @@ label interrogation:
     "I pin him in seconds, his chest facing me."
     extend "\nI snatch a vial from my bandolier and pop the cork.\nHe grins foolishly."
 
+    #show silhoutte with dissolve
     m "Oh...my dear Charlotta. I didn't know you liked it so-"
 
     play sound sfx.bottle_open
+    with bloodflash
     pause 1.0
     queue sound sfx.stab
     
@@ -67,6 +75,9 @@ label interrogation:
     "His eyes twitch and snot runs down both nostrils.\nI then retrieve the vial and clean it in the snow."
     "Tears leave both eyes, but they're no longer glazed.\nHis gaze becomes fearful now as it meets mine."
 
+    #I honestly do not know if much can be done here sprite wise. The silhouette is more or less just a placeholder. I
+    #don't intend on commissioning a sprite for this person. However, I'm not opposed to using something royalty free
+    #either. I leave it up to your best judgement. We can talk about it.
     m "Agh...by Ishmael, what the-?"
     
     gr "Sobered up, are we?"
@@ -75,6 +86,8 @@ label interrogation:
     
     gr "You dare compare me to them? Your foolishness is starting to offend me."
     
+    #maybe since the sprite would lack expressions, we could use various renpy commands to make the sprite more active.
+    #like having him hop up and down when scared?
     m "No wait, you have fangs... And your eyes, they're...so-"
     extend "\nBy Ishmael! Vampire!!!" with vpunch 
 
@@ -87,6 +100,7 @@ label interrogation:
 
     gr "First off, where did you find that paste?"
     
+    #have silhouette hop up and down if doing animations
     m "What-what does a monster like you want with-"
     
     play sound sfx.grapple
@@ -94,11 +108,12 @@ label interrogation:
     extend "\nGngh! I-Ican't tell you! He'll, he'll kill-"
     
     play sound sfx.bone_break
-    
+    #do we need some sort of flash fx here?
     extend " {b}GAAAAAAAAHHHHH!!!{/b}" with vpunch
     
     gr "One down, nine to go."
 
+    #hide silhouette with blinds
     "His pinky snaps like a twig and I grip the other one."
     "I'm being much too merciful counting down from ten. After all, there are 205 more bones left to break. Outliers happen of course, but I imagine he won't be conscious long enough for it to matter."
 
@@ -106,13 +121,14 @@ label interrogation:
     
     play sound sfx.light_grapple
     
+    #show silhouette with moveinbottom
     m "Ngh... I, I-"
     v "Goddamned leech!" with vpunch 
 
-
+    #hide silhouette
     play sound sfx.footsteps_snowf
-    #show celestial at left with moveinleft
-    #show celestial at right with moveinright
+    show celestial combat at left with moveinleft
+    show celestial combat at right with moveinright
 
     "Booted footsteps trample our way.\nIt's those hallowmen again, how quaint..."
     "The band approach but don't draw too close.\nOne is bold enough to have his sword out."
@@ -122,6 +138,8 @@ label interrogation:
     with vpunch
     
     "I meet their gaze, then break the other pinky."
+
+    #maybe zoomin on both?
     extend " His outcry provokes the band to march closer. I grab his index finger, ready to resume
     as if they weren't present."
 
@@ -131,6 +149,7 @@ label interrogation:
     
     gr "Under what authority? I outrank you both."
     
+
     m "That's...impossible! There's no way in Hell you're a-"
     extend "\nWait, if you outrank them that means... That means..."
     
@@ -140,20 +159,28 @@ label interrogation:
     
     gr "Hmm, so if I choose to break another finger..."
     
+    #have one of the sprites hop
     c "By Ishmael, he isn't your target! I thought you were after the dealer!"
     
     gr "I need information, and he's keeping it from me.\nHe fears his supplier more than me..!"
     extend "\nBut if you wish to oppose me, you're free to try."
 
+    #have screen tint redden. Either a carmine red or a dark red
+    #this is to emulate Griswyr's vampiric nature taking hold
     "After all, there are no other witnesses in sight. As big as Jubilee is, many murders still go unnoticed down here."
+    #hide silhouette
+    hide celestial with pixellate
     "I shiver from excitement."
     extend " Four men. Four sacks of blood...\nHad I taken the syringe, I would've missed out on this banquet!" with vpunch
     "It'd only take five seconds, and I'll have these merry men on the ground and painted carmine. They can cry out, I'll be done long before help arrives."
     "Perhaps after I butcher these pretenders, my quarry will speak up.\nIt isn't like the reverend is coming to save him, though I'd be delighted if he tried!"
     "I flash my fangs at the intruders. They recoil and ready their weapons."
 
+
     c "Ishmael shield us, he's eyeing us like meat!"
 
+    play sound sfx.grapple
+    #show silhouette with easeinbottom
     "I stand, dragging my morsel to his feet. They can see my hatchet from this angle, but not my sword."
     "I lurch forward. In one fell swoop, this'll be over."
     extend "\nMy heart races. They'll all be dead in three..."
@@ -162,9 +189,11 @@ label interrogation:
     m "Okay! It's Christoph! {b}CHRISTOPHHH!!!{/b}" with vpunch
 
     stop music
+    #have screen tint be inversed
 
     gr "Gngh!"
 
+    #revert screen tint to normal colors
     "My body recoils at his name. Why...?"
     extend " I'm no longer eager nor entertained.\nAnd we vampires aren't susceptible to magic, which means Christoph wasn't an incantation. So what gives the word power over me?"
     "If anything, it sparks clarity in my mind. The ferocity I felt slips away as I regain my composure."
@@ -172,10 +201,10 @@ label interrogation:
     "I shove him into their arms and take the syringe from my belt."
 
     play sound sfx.stab
-    
     "As the blood pumps into my arm, sanity returns. My eyesight dulls as do my other senses, but having them enhanced is no use to me if it drives me to madness."
     "The heroes look at me in disbelief. This must quite the night for them."
 
+    show celestial at right with easeinright
     c "You're...releasing him? Ishmael must live indeed."
 
     gr "Talk, morsel, before I change my mind."
@@ -194,7 +223,9 @@ label interrogation:
 
     c "How vile..."
 
-    "Every time that infernal name is mentioned, I twitch."
+    hide celestial
+    #hide sulhouette
+    "Every time Christoph's infernal name is mentioned, I twitch."
     extend " I oughta cut this butcher down for that slight alone. For some reason, I feel nostalgia when I hear his name. But I never met a butcher by that name..."
     "But have I ever met a goblin? They're uncommon in the cities."
     extend "\nThey're not trusted. They're treated better than the dretchlings, but that's hardly impressive. So they stick to the forests."
@@ -203,19 +234,29 @@ label interrogation:
 
     m "That's everything I know, I swear!"
     
-    gr "Hmph, get him out of my sight. His babbling has spoiled my appetite."
+    gr "Hmph!"
+    play sound sf.xthude
+    #hide silhouette with zoomoutright
+    extend " Get him out of my sight. His babbling has spoiled my appetite."
     
+    show celestial at left with easeinleft
     c "I'm not so sure... What's sparked this change in you?\nHoping to dine on the others instead?"
     
     gr "As I said, my appetite has been spoiled..."
     extend " Besides I'm only delaying his death. When he relapses and this \"Charlotta\" turns him into what I've become, I will slay him."
     
+
+    #show silhouette at center with easeinbottom
     m "You, you saw all of that?!"
 
     gr "Regrettably, I did..."
+    #show silhouette zoomin
     extend " Considering the intel, I wager this Christoph is a monster just like myself. You all are free to accompany me at your own peril."
     gr "As the addiction turns you, you crave more and more forbidden tastes, ending with blood. He is likely using his supplies to attract more prey."
 
+    #hide silhouette
+    show celestial at left with dissolve
+    show celestial at right with dissolve
     "The hallowmen turn to each other, mutter, than turn back to me."
     "The hostility in their faces has evaporated. They look to me with concern and hope."
     extend " Do they now understand the severity of our situation? Or do they misjudge me for sparing that pig?"
@@ -225,6 +266,7 @@ label interrogation:
 
     gr "I cannot wield holy water, and I'll be fine on my own.\nIf anything, I'd prefer it that way."
     
+    #move one of the celestials a bit to simulate speaking
     c "Look, I know we got off on the wrong foot but-"
     
     gr "Save it." 

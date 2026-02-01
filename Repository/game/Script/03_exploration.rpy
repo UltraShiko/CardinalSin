@@ -165,6 +165,8 @@ label exploration:
     
     gr "Trailing you, as you already observed.\nI'm after the same criminals you are."
     
+    hide celestial
+    show celestial at right
     c "Absolutely not! This doesn't concern you rogues!\nHalf of you are criminals yourselves!"
     
     gr "You aren't wrong, and you aren't stopping me."
@@ -174,23 +176,29 @@ label exploration:
     gr "Are you going to shed tears for drug dealers?\nDo you understand what Sanguine Paste is?"
     gr "I wonder, if you knew that this infernal substance made me what I am today, would you still mourn their deaths?"
     
+    show jory sad
     j "Most of them aren't that far gone yet.\nA lot of them are only sick for now, much like you used to be."
     
     gr "Perhaps, however I wager their kingpin isn't much different from myself."
     gr "Drugs like that paste are made by monsters.\nI'm certain you all know that the Archfiend, Dharts, concocted it to spread his kin. They don't call him the {i}King of Hunger{/i} for nothing."
     gr "It's quite impressive how these Archdevils harvest souls.\nEach one has their own methods, and I intend to stop this plague before it spreads any further."
 
+    hide Jory with dissolve
+    hide celestial with dissolve
     "I talk proudly, but I'm well aware I am one of his abominations.\nIf these cattle have anything over me, it's their humanity."
     "Hence why it is I who should hunt them down. These sentimental knights will only make things worse. Their sympathy for those who abuse the paste will inevitably help its spread."
     "Besides anyone can indulge in drugs. Even the Reverend.\nAnd those who don't indulge in the paste sell it. It's a very lucrative trade, especially after {i}the Reckoning{/i}."
     "I imagine the Celestials will arrest everyone, bring them in, and lock up the addicts for some time. But when they get out, they'll just resume their anttics."
     "It's what I did. You can't help those that have become enslaved to the paste. No one could have helped me."
 
+    show jory neutral with dissolve
     j "Griswyr, how is Caius?"
 
     gr "Still asleep, and he will live."
     
+    show jory happy
     j "Praise Ishmael..."
+    show jory neutral
     extend "\nListen, don't kill anyone you don't have to. Please.\nMy people don't want to see bloodshed."
     
     gr "I make no promises.\nA little blood is better than more addicts distributing the paste.\nYou might want to see if any of \"your people\" are using."
@@ -199,13 +207,17 @@ label exploration:
 
     gr "Addicts are superb at hiding their use, nephillim.\nThey understand well what happens if they're caught."
     
+    show celestial at right
     c "Or, you could crawl back into whatever hole you came from and let us handle it."
     
     gr "You're free to join me. I won't forbid it, however..."
     extend "\nAs you know, there may be fiendish activity afoot. I recently fought a devil, and I wouldn't be surprised if another is behind this."
     
+    #have sprite hop up and down once
     c "Wh-What-?!"
 
+    hide jory with dissolve 
+    hide celestial with moveoutright
     "I chuckle. It doesn't take much to shatter their bravado.\nAs I predicted, they aren't prepared."
     "At least Jory remains composed. I hear he was on the frontlines during {i}the Reckoning{/i}. Nick claims he went toe-to-toe with that pain devil."
     "Truth be told, I wager it's one of my kind distributing the paste.\nA devil appearing isn't an impossibility though."
