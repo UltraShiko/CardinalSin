@@ -1,6 +1,5 @@
 label prologue:
 
-    
     "...My head, it hurts..."
     "I can't see... Every time I open my eyes, a red goo burns them.\nThis ick is all over me..."
 
@@ -29,19 +28,18 @@ label prologue:
     "I was, outside, gathering firewood and-"
 
     play sound sfx.zap
-    with bloodflash
+    with quickblood
 
     ch "Aghhh!"
     mo "Shh! You have to be strong. You have to or he'll-"
 
-    scene sword swipe with MultipleTransition([
-        False, Dissolve(0.5),
-        "sword_swing.png", Pause(1.0),
-        "sword_swing.png", dissolve,
-        True])
+    #scene sword swipe with MultipleTransition([ #TODO - Figure out this code
+        #False, Dissolve(0.5),
+        #"sword_swing.png", Pause(1.0),
+        #"sword_swing.png", dissolve,
+        #True])
 
-
-    play sound sfx.wood_break
+    play sound sfx.pottery_break
     with hpunch
 
     "Mommy holds me tight as our bedrrom door is torn from its hinges.\nWe're crammed inside the wardrobe."
@@ -50,8 +48,11 @@ label prologue:
     extend " But she'll die if he catches us. He's a monster..."
     "He threw me at a tree like I was a toy. That's all I can remember..."
 
+    play sound sfx.door_break
+    with quickflash
     v "Graaaah! Where the hell are they?!" with vpunch
 
+    play sound sfx.light_grapple
     "Mama holds my mouth shut as another door is torn from its hinges.\nHe's in our room..."
     "Mom's breathing is getting faster.\nShe pulls me back, tucking me under her arms and scooting in front of me."
 
@@ -113,12 +114,12 @@ label prologue:
     v "If you hadn't ran, she'd be alive."
     
     play sound sfx.stab
-    #have screen turn red
 
     scene image "#f00" with Dissolve(0.2)
     
     ch "{b}AHHHHHHHHH!!!{/b}" with vpunch
     
+    stop music
     window hide
     
     jump explanation

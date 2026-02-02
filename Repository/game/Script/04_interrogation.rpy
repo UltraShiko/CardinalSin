@@ -1,6 +1,6 @@
 label interrogation:
     
-    play sound sfx.footsteps_snow loop
+    play sound sfx.footsteps_snow fadein 0.8 loop
 
     "I skulk away. \nMy stomach growls, and my eyes dilate. Good!"
     extend " Monstrosity follows my gnawing hunger. These heightened senses make tracking all to easy."
@@ -12,7 +12,7 @@ label interrogation:
     "I take a whiff. The sickly sweet smell irritates my nose.\nSanguine Paste smells eerily similar to candy."
     extend "\nSo these tracks belong to an addict, or a loon."
     
-    play sound sfx.footsteps_snow loop
+    play sound sfx.footsteps_snow  fadein 0.8 loop
     
     "Either way, I follow them."
     "The stench of the paste grows stronger with each step.\nIs he indulging even as I track him? I'm prepared all the same, this'll just make subdoing him easier."
@@ -43,10 +43,9 @@ label interrogation:
     m "Ohhh Charlotta, take me... Take-"
 
     #show silhouette zoomin / have him zomm in to simulate Griswyr's charge
-    play sound sfx.weapon_swing
+    play sound sfx.weapon_swingh
     #hide silhouette moveoutbottom
     queue sound sfx.thud
-    queue sound sfx.grapple
     with vpunch
     # OPTIONAL - have the camera jostle upon the tackle. Like as if it got knocked around
 
@@ -54,25 +53,25 @@ label interrogation:
 
     extend " Gahhh!!!"
 
-    play music bgm.lethal_suspense
+    play music bgm.lethal_suspense fadein 0.8
 
+    play sound sfx.grapple
     "I pin him in seconds, his chest facing me."
     extend "\nI snatch a vial from my bandolier and pop the cork.\nHe grins foolishly."
 
     #show silhoutte with dissolve
+    play sound sfx.bottle_open
     m "Oh...my dear Charlotta. I didn't know you liked it so-"
 
-    play sound sfx.bottle_open
-    with bloodflash
-    pause 1.0
-    queue sound sfx.stab
+    play sound sfx.stab
+    with quickblood
     
     m "Ngh, ahh...{b}AaaaaAAAGHHHH!!!{/b}" with vpunch
 
     "I ram the elixir's contents up his nose. It's much quicker than forcing it down his throat."
     extend " To call this an elixir is generous. It's mere garlic concentrated into a liquid."
     "It's amusing how many think garlic repels me.\nGranted, it's very effective for ending the effects of the paste."
-    "His eyes twitch and snot runs down both nostrils.\nI then retrieve the vial and clean it in the snow."
+    "His eyes twitch and snot runs down both of his nostrils.\nI then retrieve the vial and clean it in the snow."
     "Tears leave both eyes, but they're no longer glazed.\nHis gaze becomes fearful now as it meets mine."
 
     #I honestly do not know if much can be done here sprite wise. The silhouette is more or less just a placeholder. I
@@ -108,13 +107,13 @@ label interrogation:
     extend "\nGngh! I-Ican't tell you! He'll, he'll kill-"
     
     play sound sfx.bone_break
-    #do we need some sort of flash fx here?
+    with quickflash
     extend " {b}GAAAAAAAAHHHHH!!!{/b}" with vpunch
     
     gr "One down, nine to go."
 
     #hide silhouette with blinds
-    "His pinky snaps like a twig and I grip the other one."
+    "His pinky snaps like a twig as I grip the other one."
     "I'm being much too merciful counting down from ten. After all, there are 205 more bones left to break. Outliers happen of course, but I imagine he won't be conscious long enough for it to matter."
 
     gr "Talk, you wretch."
@@ -135,9 +134,9 @@ label interrogation:
     extend " I tense up. Like devils, I'm susceptible to silver. Assuming they can hit me, that is."
     
     play sound sfx.bone_break
-    with vpunch
+    with quickflash
     
-    "I meet their gaze, then break the other pinky."
+    "I meet their gaze, then break the remaining pinky."
 
     #maybe zoomin on both?
     extend " His outcry provokes the band to march closer. I grab his index finger, ready to resume
@@ -148,7 +147,6 @@ label interrogation:
     c "Release him at once! We are taking custody of this man!"
     
     gr "Under what authority? I outrank you both."
-    
 
     m "That's...impossible! There's no way in Hell you're a-"
     extend "\nWait, if you outrank them that means... That means..."
@@ -176,7 +174,6 @@ label interrogation:
     "Perhaps after I butcher these pretenders, my quarry will speak up.\nIt isn't like the reverend is coming to save him, though I'd be delighted if he tried!"
     "I flash my fangs at the intruders. They recoil and ready their weapons."
 
-
     c "Ishmael shield us, he's eyeing us like meat!"
 
     play sound sfx.grapple
@@ -188,6 +185,7 @@ label interrogation:
     
     m "Okay! It's Christoph! {b}CHRISTOPHHH!!!{/b}" with vpunch
 
+    play sound sfx.zap #TODO - Replace with piano soundfx
     stop music
     #have screen tint be inversed
 
@@ -235,8 +233,8 @@ label interrogation:
     m "That's everything I know, I swear!"
     
     gr "Hmph!"
-    play sound sf.xthude
-    #hide silhouette with zoomoutright
+    play sound sfx.thud
+    #hide silhouette with zoomout
     extend " Get him out of my sight. His babbling has spoiled my appetite."
     
     show celestial at left with easeinleft
@@ -244,7 +242,6 @@ label interrogation:
     
     gr "As I said, my appetite has been spoiled..."
     extend " Besides I'm only delaying his death. When he relapses and this \"Charlotta\" turns him into what I've become, I will slay him."
-    
 
     #show silhouette at center with easeinbottom
     m "You, you saw all of that?!"
@@ -257,6 +254,7 @@ label interrogation:
     #hide silhouette
     show celestial at left with dissolve
     show celestial at right with dissolve
+    #Ragyuo - Consider some sort of animation where the sprites move a certain way or something to simulate the conversation
     "The hallowmen turn to each other, mutter, than turn back to me."
     "The hostility in their faces has evaporated. They look to me with concern and hope."
     extend " Do they now understand the severity of our situation? Or do they misjudge me for sparing that pig?"

@@ -14,12 +14,11 @@ label explanation:
     extend "\nIt's been three days since I last ate. I should have a syringe lying around somewhere."
 
     play sound sfx.door_open
+    show nick happy with dissolve
 
     "The door creaks open, and I narrow my eyes at the lanky elf that enters."
     "Disgust graces my tongue.\nI'd sooner starve than feed on him, even if he was the last mortal on the plane."
 
-
-    show nick happy with dissolve
     ni "Wow, you were out like a light.\nNever thought you'd struggle against a succubus."
     
     gr "Be quiet, Nick."
@@ -30,7 +29,9 @@ label explanation:
     
     gr "Hmph, I only need to tear him limb from limb. The monk can do the rest.."
 
+    play sound light_grapple
     "I put on my boots, stand, and stretch.\nI wish my scenery wasn't so unpleasant."
+    show nick elated with zoomin #Ragyuo find the proper dimensions to where he's not too close to the screen
     "This elf is revolting!" 
     extend " His hair is disheveled, his jagged fingernails are unsightly, and he's wearing short sleeves despite the winter's snow."
     "Worst of all, he's a Malconvoker - a buffoon who summons devils to fight other devils. It's only a matter of time before one takes his head off."
@@ -39,7 +40,7 @@ label explanation:
 
     gr "Speaking of, how is Caius?"
     
-    show nick neutral
+    show nick neutral 
     ni "He'll be fine. Though he will need to get used to wearing a mask.\nHis mana was gushing like a fountain."
     
     gr "What the hell happened? I patched up his wounds.\nHe was fine for a moment, then this white mana started spilling out."
@@ -67,22 +68,27 @@ label explanation:
     "I scratch my chin. It does make sense."
     "For example, Caius rarely makes eye contact without straining himself. And one of his limbs, and sometimes his entire body, is always in motion."
     "It was humorous watching him weave past Persephone's attacks. I figured he had an unusual fighting style."
-    "Has he weaponized his peculiarity? Hmm..."
+    "Has he weaponized his peculiarity? How interesting..."
 
     gr "And you gauged that much just from treating an unconscious body?"
     
     ni "Well, how his mana flows was also a clue.\nIt doesn't have the restraints that a normal person does, so it's no wonder Justice started erupting from him out of nowhere."
     ni "I hypothesize the stress of that battle must've led to him somehow channeling it. Justice manifests from one's regrets, much like your Malice comes from hatred. "
 
+    show jory at t_alpha(0.5) with dissolve #t_alpha makes her sprite transparent
+    #TODO - Use a multipletransition command to center the sprite
+
     "I see. Jory told me the monk lost control when he learned what happened to his hometown. Most notably, the fate of some old companion of his."
     "Considering the regrets I have, I wonder why that white mana hasn't sprouted from me yet. Guess I'm not pure enough."
+
+    hide jory with blinds
 
     gr "Hmph, than I'll let him rest. I have a banshee to hunt."
     
     ni "I'd prefer you not-"
 
     play sound sfx.grapple
-    show nick elated with zoomin
+    show nick neutral with zoomin
     
     "I yank the fool by his collar, only for him to smile whimiscally."
     "If he wasn't so useful, I'd crush his neck where we stand.\nBut he'd enjoy every second of it anyway. This maniac adores pain."    
@@ -101,11 +107,11 @@ label explanation:
     hide nick with moveoutbottom
     play sound sfx.thud
     "I release him. He crumples, then regains his footing haphazardly.\nHe isn't even winded after being manhandled."
+    show nick happy with easeinbottom
     "He hands me a writ. It's a warrant written by the Celestials to search some house, under suspicion of the occupant harboring Sanguine Paste."
     "My fingers tense upon reading those wretched words.\nThat infernal drug causes nothing but problems, and people {i}still{/i} use it!"
     extend "\nI'd know, I was one of those idiots..."
 
-    show nick happy with easeinbottom
     ni "Consider this your reward for dealing with those cultists."
     
     gr "Hmm... Why are you giving me this?\nSurely, you understand that Persephone is our top priority."
@@ -117,12 +123,12 @@ label explanation:
     
     ni "Absolutely not. So I just want to do a bit of research and-"
     
-    gr "It's that pain devil, isn't it?!" with vpunch
+    gr "It was that pain devil, isn't it?!" with vpunch
 
     show nick elated
     "He grins sheepishly. Maybe I should kill him after all!"
     "When I first met this loon, he had a brute of a fiend bound to his service. She was over seven feet tall and a even monster by devil standards."
-    "I told this fool {b}countless{/b} times to slit her throat and be done with it."
+    "I told this fool {i}countless{/i} times to slit her throat and be done with it."
     extend "\nWell, he didn't listen, she broke free, and is going to be a {b}pain in the ass{/b} to take down."
 
     ni "I doubt Persephone was behind this, though maybe more of Hecate's cultists were..."
@@ -131,26 +137,27 @@ label explanation:
     
     ni "Hehehe... Oh it'd be a bloodbath. There's a reason I bound her."
     
-    gr "Yes, spite, because you blame her for your failure.\nAs if you alone could've stopped {i}the Reckoning{/i}."
+    gr "Yes, {i}spite{/i}, because you blame her for your failure.\nAs if you alone could've stopped {i}the Reckoning{/i}."
     
     ni "Hard to close a tear in the plane with a chain through your chest hehehe..."
     
     gr "You're revolting!" with vpunch
 
-    hide nick with dissolve
+    hide nick with zoomout
     "Hmm, prioritize drug dealers or the very monster that nearly destroyed everything. The choice is obvious."
     "However, I have no leads. And Thrycia, or what remains of it, is a week's journey away. Even if I do find the pain devil there, it'd be curtains for me."
     "As much as I'm loath to admit it, these paste dealers are the safer target right now. And I detest them with a burning passion."
     "When overused, Sanguine Paste warps your humanity.\nIt makes you crave forbidden pleasures until you ultimately turn to seeking the blood of others."
     "These drug dealers may as well be plaguespreaders.\nThey won't threaten all of humanity, but removing their infection is still a service."
 
+    show nick elated with zoomout
     gr "Fine, I'll snuff out this operation.\nBe grateful I hate Sanguine Paste more than I hate you."
     
     ni "It does keep you in line, hehehe-"
     
-    hide nick with moveoutright
     play sound sfx.hurl
     queue sound sfx.pottery_break
+    hide nick with moveoutright
     with vpunch
     
     "I send him spiraling into the desk on my way out."

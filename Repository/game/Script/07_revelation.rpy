@@ -1,7 +1,7 @@
 label revelation:
 
     scene background emissary base with fade
-    play sound door_open
+    play sound sfx.door_open
 
     show nick happy at left
     #show Caius at right
@@ -125,8 +125,8 @@ label revelation:
     
     ca "Did you see a dretchling? Any survivors?"
 
-    bu "Nope~. Buzz said everyone dead. \nHowever...Buzz found a charred silhouette on the ground~. Only devils could broil the earth like that."
-    bu "We explode when slain."
+    bu "Nope~. Buzz said everyone dead. \nHowever...Buzz found a charred silhouette on the ground~. Only devils could broil the earth like that. 
+    We explode when slain."
     
     gr "Oh really? Tell us more..!"
 
@@ -144,7 +144,7 @@ label revelation:
     bu "Buzz know mana signature of the deceased. Yes yes, the hellknights were not alone. In fact, some corpses were nice and crispy~.\nElectrocuted, hmhmhm!"
     bu "Buzz detect powerful mana. Very malicious and sadistic.\nWe devils enjoy torturing others, but this one's bloodlust is unrivaled."
     
-    play sound sfx.light_grapple
+    show nick elated with zoomin #further than before
     
     extend "\nYes, Buzz detect what you mortals call; a pain devil-"
 
@@ -162,7 +162,7 @@ label revelation:
 
     ca "St-Stop! You're going to kill him!"
     
-    gr "{b}GOOD!{/b}" with vpunch
+    gr "{b}GOOD!{/b}" with vpunch #center text via textbox
     
     play sound sfx.heavy_bam
 
@@ -214,7 +214,7 @@ label revelation:
     
     gr "He's only escaped the noose because he's useful.\nEven the Third had to put up with him."
 
-    play music bgm.marching_forward fadein 0.8 fadeout 0.8
+    play music bgm.marching_forward fadein 0.8
 
     ca "Tell me Nick, can you track down my friend.\nIf you can bind devils, perhaps you can seek out a dretchling?"
     
@@ -249,7 +249,7 @@ label revelation:
     
     gr "Do you honestly believe some dretchling would attract the banshee?"
 
-    ca "The fiendish presence was powerful, and we both know how powerful she is."
+    ca "The fiendish presence was powerful, and we both know how deadly she is."
     extend " Frankly, I plan on going to Thrycia with or without you. It was what I wanted to do before, you know..."
     
     gr "Thrycia is a week's travel by horseback. Unless you plan to walk..."
@@ -262,7 +262,7 @@ label revelation:
     ni "Nah. I think Caius has a point."
     extend " More importantly, there's another powerful fiend on the loose. We probably need to stop it."
     
-    gr "Do not fill his head with fantasies, Malconvoker.\nHe's barking up the wrong tree."
+    gr "Do not fill his head with fantasies, Malconvoker! \nHe's barking up the wrong tree."
     
     ni "He doesn't think so. Otherwise, he would've fled to the reverend once he learned it was my fault."
     extend " You're misreading him, Griswyr. He wants to save his friend, but he also wants to fight devils."
@@ -271,10 +271,10 @@ label revelation:
 
     ni "And besides vampire, someone needs to keep you in-"
 
-    hide nick with moveoutright
     play sound sfx.hurl
     pause 0.5
     play sound sfx.pottery_break
+    hide nick with moveoutright
     
     "I toss him into the wall. I've heard enough of his nonsense."
 
@@ -311,7 +311,7 @@ label revelation:
     "Besides, I'm going to have to keep that monk from getting himself killed. It isn't a matter of when our enemy exploits his piety, but {i}when{/i}."
     extend "\nIf anything, I need to toughen up on the-"
 
-    stop music
+    stop music fadeout 0.8
 
     vi "Hey Snowflake! We need to chat." with vpunch
 
@@ -322,7 +322,9 @@ label revelation:
 
     window hide
 
-    show Persephone angry at t_alpha(0.5) with dissolve #t_alpha makes her sprite transparent
+    play music bgm.mother_of_the_damned fadein 0.8
+
+    show persephone angry at t_alpha(0.3) with Dissolve(1.0) #t_alpha makes her sprite transparent
 
     window show
 
@@ -338,7 +340,7 @@ label revelation:
     gri "Especially when you and your broodmother's henchman murdered thousands. People still suffer because {i}the Reckoning{/i}.\nAnd you don't scare me, heh, it's quite the opposite."
     gri "If you're so offended, then stop hiding. We'll find you eventually."
     
-    show Persephone smirk at t_alpha(0.5)
+    show persephone smirk at t_alpha(0.3)
 
     pei "In due time, Snowflake. Your days are numbered all the same.\nYou'll beg for death when Mother gets her hands on you."
     
@@ -346,11 +348,12 @@ label revelation:
 
     window hide
 
-    hide Persephone with dissolve
+    hide persephone with dissolve
 
     window show
 
     "She stops responding. I opt not to inform my comrades.\nWe can't trace telepathy anyway."
+    play sound sfx.dagger_draw
     "I reach for my hatchet and view my bloodied reflection."
     extend "\nI gather a streak of the blood on my finger and lick it, treating myself to the sight of a monstrous grin."
 

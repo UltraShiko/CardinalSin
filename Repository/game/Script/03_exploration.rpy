@@ -7,17 +7,17 @@ label exploration:
 
     window show
 
+    play sound sfx.footsteps_snow loop #TODO - Add more noise cancellation / make a more seemless loop
+
     "As I exit, I bury myself under a cloak.\nNot because I am cold, but to hide my identity."
     "Not as a monster, however.\nMy pale flesh and blood-red eyes can't be concealed. If I'm not mistaken for a dretchling, people see me for what I am."
     "A vampire."
     "I only cloak myself to conceal my occupation.\nWe Emissaries are despised at best, and hunted by criminals and fiends otherwise."
     "The Celestials know of us. We even hold some power over them.\nBut any respect they give us is shallow. Many vie for our heads to be on pikes."
 
-    play sound sfx.footsteps_snow loop
-    
     "As I stroll through the snow, people part from my path as if I'm feral.\nI can't blame them. They're {i}almost{/i} right."
 
-    w "Is that a mongrel?"
+    w "Is that a hellspawn?"
     
     m "Worse, a bloody leech. Look at his eyes.\nHe's sizing us up like meat."
     
@@ -38,6 +38,7 @@ label exploration:
     extend "\nIt would be a gross waste of money for maintaining my arms and armor."
 
     #show dwarf silhouette with dissolve
+    #TODO - Add more sfx to this dialogue sequence
     sm "Back again? All too soon..."
 
     gr "I want these sharpened."
@@ -79,25 +80,24 @@ label exploration:
     
     sm "And not the Celestials? Why is a crook like you getting involved?"
     
-    gr "I suspect it's the same reason why you drink.\nConsider purchasing in some incense."
+    gr "I suspect it's the same reason why you drink.\nConsider purchasing some incense."
 
-    #hide dwarf
+    #hide dwarf with zoomout
+    play sound sfx.footsteps_snow fadein 0.8 loop
     "I take my posessions and leave."
     extend "\nHumorously, I hear him start drinking from a bottle on my way out."
 
     "I review the writ.\nMy quarry is located at some hobble in {i}the Hells{/i}, where the bottomfeeders of Jubilee reside." 
     "If the Celestials are doing a search, then maybe I can follow them."
 
-    show celestial at left
-    show celestial at right
+    show celestial at left with dissolve
+    show celestial at right with dissolve
     extend "\nBefore I can finish reading, I notice a band of silvered knights marching by, conveniently right where I need them to be."
-    
-    play sound sfx.footsteps_snow loop
     
     "I follow. I don't hide.\nWhat will they do, arrest an Emissary? That would be quite amusing."
     "These white knights are seen as heroes.\nThey take the credit for everything, including our work."
     "Granted, the higher-ranked Celestials wield the mana of Grace, and some Justice too. Both manas are highly effeicient at killing devils."
-    "Problem is, most of these knights are just showy fodder, celebrated to keep the commoners from panicking. {i}The Reckoning's{/i} scars cut deep."
+    "Problem is, most of these knights are just fodder, celebrated to keep the commoners from panicking. {i}The Reckoning's{/i} scars cut deep."
     "I wonder if that Archfiend Hecate intended to split our empire into halves.\nGranted, I hear {i}the Third{/i} was a fiend in his own way."
     "They say he was a tyrant. Some say he needed a staff just to wield mana. And he supposedly executed people at the drop of a hat."
     "Some sympathize with the banshee. What got her burned was an attempt on his life. Hecate's suboordinates see her as a martyr despite {i}the Reckoning{/i}."
@@ -117,17 +117,16 @@ label exploration:
     
     j "...You aren't going to cause any trouble, are you?"
     
-    c "Of course not, Jory.\nWhy would the fourth, as gracious as he is, call for us to-"
+    c "Of course not, Jory! \nWhy would the fourth, as gracious as he is, call for us to-"
     
     j "I wasn't talking to you..."
-
 
     hide jory with dissolve
     show celestial at left
     show celestial at right
     "He points me out, and the knights turn and wince."
     play sound sfx.light_grapple
-    extend "\nI smirk as a hallowman grips his sword's pommel."
+    extend "\nI smirk as one of the knights grips his sword's pommel."
     "Meanwhile the nephillim scowls at me.\nOut of everyone who despises me, Jory nets the most respect."
     "I had no intention of endagering his pupil. Had I known the banshee was going to be summoned, Nick would've accompanied me instead."
 
@@ -136,7 +135,7 @@ label exploration:
     gr "Indeed I am.\nKeep on with your search, it isn't like any of you can stop me."
     
     show celestial combat at right
-    play sound sfx.halberd_draw
+    play sound sfx.weapon_draw
     c "Monster! I'll drive this this blade through your heart!"
     
     gr "And kill an Emissary? Heh, that would make my night."

@@ -7,14 +7,20 @@
 #image side griswyr neutral = "griswyr neutral"
 #image side griswyr angry = "griswyr angry"
 #image side griswyr smile = "griswyr smile"
-#image side griswyr = "griswyr snide"
+#image side griswyr snide = "griswyr snide"
 
-# TODO - Fineine tune sprites
+# TODO - Redraw sprite if available
 #image Celestial:
 
     #yoffset 251
 
-    # "images/sprites/celestial/neutral.png"
+    # "images/sprites/celestial/default.webp"
+
+#image Celestial combat:
+
+    #yoffset 251
+
+    # "images/sprites/celestial/combat.webp"
 
 # TODO - Acquire and fine tune sprites
 #image Caius: #This sprite will have him masked
@@ -37,31 +43,36 @@
 
     # "images/sprites/christoph/combat.png"
 
-# TODO - Acquire and fine tune sprites
-#image Nick:
+layeredimage nick:
 
-    #yoffset 251
+    yoffset 175
+    zoom 0.90
 
-    # "images/sprites/nick/neutral.png"
+    xysize (1962, 1471)
 
-#image Nick happy:
+    always: #ensures the default sprite is the one below
 
-    #yoffset 251
+        "images\sprites\nick\base.png"
 
-    # "images/sprites/nick/happy.png"
+    group emotions:
 
-# TODO - Acquire and fine tune sprites
-#image Nick:
+        attribute happy default:
 
-    #yoffset 251
+            pos (900, 333)
 
-    # "images/sprites/nick/neutral.png"
+            "images\sprites\nick\happy.png"
 
-#image Nick happy:
+        attribute neutral:
 
-    #yoffset 251
+            pos (900, 333)
 
-    # "images/sprites/nick/happy.png"
+            "images/sprites/nick/neutral.png"
+
+        attribute elated:
+
+            pos (902, 344)
+
+            "images/sprites/nick/elated.png"
 
 
 ### Jory
@@ -73,46 +84,45 @@ image Jory:
     yoffset 251
 
     "images/sprites/jory/neutral.png"
-    #"images/sprites/jory/silhouette.png"
+    # "images/sprites/jory/silhouette.png"
 
 image Jory angry:
 
     yoffset 251
 
     "images/sprites/jory/angry.png"
-    #"images/sprites/jory/silhouette.png"
+    # "images/sprites/jory/silhouette.png"
 
 image Jory happy:
 
     yoffset 251
 
     "images/sprites/jory/happy.png"
-    #"images/sprites/jory/silhouette.png"
+    # "images/sprites/jory/silhouette.png"
 
 image Jory neutral:
 
     yoffset 251
 
     "images/sprites/jory/neutral.png"
-    #"images/sprites/jory/silhouette.png"
+    # "images/sprites/jory/silhouette.png"
 
 image Jory sad:
 
     yoffset 251
 
     "images/sprites/jory/sad.png"
-    #"images/sprites/jory/silhouette.png"
+    # "images/sprites/jory/silhouette.png"
 
-### Persephone
+layeredimage persephone:
 
-layeredimage Persephone:
-
+    yoffset 175
     zoom 0.90
 
-    # xysize (1962, 1471)
+    xysize (1962, 1471)
 
     always:
-        
+
         "images/sprites/persephone/base.png"
 
     group emotions:
@@ -128,5 +138,7 @@ layeredimage Persephone:
             pos (902, 344)
 
             "images/sprites/persephone/angry.png"
+
+### Other
 
 

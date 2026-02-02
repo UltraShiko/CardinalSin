@@ -44,7 +44,7 @@ label confrontation:
     "He finally releases the woman, who joins the lookout in fleeing."
     extend "\nThe rest of his clients do so as well, albeit more out of disinterest.\nThey seem more disappointed than afraid. Typical addicts..."
 
-    ch "What did you think I was going to do to that woman?\nViolate her? Nonsense."
+    ch "What did you think I was going to do to that woman?\nViolate her? Nonsense!"
     extend " I wanted to {b}EAT{/b} her!" with vpunch 
     extend " Not her blood, her {b}FLESH!{/b}!" with vpunch 
     ch "Not only did you kill my mother, you murdered my humanity!\nAfter you \"spared\" me, I started getting these cravings..."
@@ -53,7 +53,7 @@ label confrontation:
 
     "His snake-like tongue graces his lips."
 
-    ch " {b}HUMAN FLESH!{/b}"
+    ch " {b}HUMAN FLESH!{/b}" #TODO - Find a way to center the text in the textbox
     ch "I tried to stop it... I tried to eat only animals. I even became an apprentice under the butcher. My tastes made me talented in the trade. Who would know how to prepare meat better than a monster?"
     ch "But it was never enough..."
     ch "As I matured, so did my cravings... I'd devour cow after cow and never be sated! Have you any idea how torturous that is?!" 
@@ -82,7 +82,7 @@ label confrontation:
     
     ch "Hehehehehehe... Why thank you!"
 
-    #zoom in Christoph
+    #show christoph combat with zoomin
     play sound weapon_swingh
 
     "He springs at at me like a grasshopper. Not bad, he almost nicked me."
@@ -93,7 +93,7 @@ label confrontation:
     
     gr "The former is true, but you did the rest yourself."
     
-    ch "Oh?"
+    ch "Oh...?"
     extend " {b}AS IF A LEECH LIKE YOU WOULD UNDERSTAND!{/b}" with vpunch
 
     "I flash the empty syringe."
@@ -107,7 +107,7 @@ label confrontation:
     
     gr "You chose to consume your master. You've chosen to hide like a predator, spread addiction, and pounce on those you've rendered helpless."
     
-    ch "Grrraaahhh...!" with vpunch
+    ch "Grrraaahhh...!" with vpunch #TODO - Find a way to center the text in the textbox
 
     gr "I still feed, I just do so on the deserving. I don't let my affliction command me. And you can do the same."
 
@@ -136,7 +136,7 @@ label confrontation:
     "It would do us both good. I've no clue what monstrosity he is.\nAnd I may need to hunt more like him."
     extend " Nick should know something..."
 
-    ch "{b}LIKE HELL, EMISSARY!!!{/b}" with vpunch 
+    ch "{b}LIKE HELL, EMISSARY!!!{/b}" with vpunch  #TODO - Find a way to center the text in the textbox
 
     "He crouches, brandishing his razor-sharp nails at me as he growls."
 
@@ -163,11 +163,20 @@ label confrontation:
     extend " Your fury is justified, but your actions aren't. You and I have ruined many lives, Christoph."
     gr "I'll give you one more chance. Leave with me and end this wretched cycle."
     extend " Or die at my hand, here and now."
-    
-    ch "{b}FUCK YOU!!!{/b}" with vpunch
+
+    play sound sfx.weapon_swingh
+    #show christoph with zoomin
+    ch "{b}FUCK YOU!!!{/b}" with vpunch #TODO - Find a way to center the text in the textbox
+
+    play sound sfx.wood_break
+    queue sound sfx.weapon_swing
 
     "I duck a chair flung at me and sidestep a swipe of his hand."
-    extend " I kick him, sending him crashing into the wall as I dart towards my other weapon."
+
+    #hide cristoph with zoomout
+    play sound sfx.heavy_bam
+    queue sound sfx.pottery_break
+    extend " I kick him, sending him crashing into a set of plates as I dart towards my other weapon."
     
     play sound sfx.bubble1
     with bloodflash
@@ -181,14 +190,14 @@ label confrontation:
     "However, doing so taxes your constitution, just as mana taxes one's willpower. Wielding both Malice and blood with reckless abandon will tire him out quickly."
     "I'd know, I do both as well. But I can replenish myself through drinking the blood of my foe. I'm doubtful he can do the same."
     
-    play sound sfx.halberd_draw
+    play sound sfx.dagger_draw
 
     "I hold the ax head up to my palm."
 
     gr "What was that supposed to be? I thought you wanted to kill me."
     extend "\nLet me show you how its done!" with vpunch 
 
-    play sound sfx.slash
+    play sound sfx.stab
 
     "I cut the skin, but nothing happens."
     "I scowl. Blood is dripping just fine, but no Malice is coming out.\nI can't call on it!"
@@ -212,13 +221,18 @@ label confrontation:
 
     ch "{b}I'LL TEAR THAT SMILE FROM YOUR FACE!{/b}" with vpunch
 
+    play sound weapon_swing
+    queue sound mana_charge #TODO - Find a better sound fx. Namely a torrent
+    with quickblood
+
     "He scratches the air, sending a wave of carmine at me.\nIt's too wide to dodge."
     
     play sound sfx.slash
+    queue sound sfx.mana_charge 
     
     "I carve through it, and a second blast is fired my way."
     
-    play sound sfx.slash
+    play sound sfx.slash #TODO - Merge sound fx
     queue sound sfx.slash
     queue sound sfx.slash
     
@@ -226,13 +240,13 @@ label confrontation:
     
     "My flurry of swings shakes the goblin."
     
-    play sound sfx.lunge
+    play sound sfx.weapon_swingh
     #zoom in, maybe a show sprite with zoomin transition / transform
     
     extend "\nHe hesitates. Readying both weapons, I lunge."
 
     play sound sfx.zap
-    with bloodflash #TODO - invert colors of screen briefly to show off hesitation
+    with quickblood #TODO - invert tint of screen briefly to show off hesitation
     
     gr "Ngh?!" with vpunch
 
@@ -240,7 +254,7 @@ label confrontation:
     extend "\nDamn, I'm wide open! I can't move..."
 
     play sound sfx.heavy_slash
-    with bloodflash
+    with quickblood
     
     gr "Grrr!"
 
@@ -253,7 +267,7 @@ label confrontation:
     "This searing pain doesn't faze me. If I were mortal though, he would've crippled me. I can still stand, albeit hindered..."
     "Christoph smacks his mouth before spitting."
 
-    ch "{b}BLECH! Rancid!{/b}" with vpunch
+    ch "{b}BLECH! Rancid!{/b}" with vpunch #TODO - Center text
     
     gr "How disappointing... I've had vermin bite harder than that."
     
@@ -268,23 +282,25 @@ label confrontation:
     ch "Shut up! You aren't better than me!\nIf I can't flay you, I'll just rip you limb from limb!"
 
     play sound sfx.zap
-    with bloodflash
+    with bquickblood
     
-    "He springs at me. My injured leg halts my attempt to evade."
+    "He leaps at me. My injured leg halts my attempt to evade."
     
-    play sound wood_break
-    queue sound sfx.wood_break
-    with vpunch
+    #TODO - Make a multiple weapon_slash sound effect
+    #RAGYUO insert an appropriate vfx
 
     extend "\nHis nails, laced with Malice and blood, rain down scratches upon me."
     
     play sound sfx.weapon_swingh
 
     #show Christoph with zoomout or zoom out of the sprite
+
+    play sound sfx.door_break
+    with vpunch
     
     extend "\nI have to roll away. The table behind me isn't as lucky. It falls to pieces."
 
-    #zoom in Christoph, likely with a zoomin transition
+    #show christoph combat with zoomin
 
     "He storms towards me. Now it is I who am shaken." 
     extend " If just one swipe lands, I won't be able to stop the next one..."
@@ -292,18 +308,18 @@ label confrontation:
     "He scratches the air. A flurry of red needles beelines for me."
     extend "\nI swat them away, and now he's rushing for me."
 
-    ch "{b}I hate you! I HATE YOU!!!{/b}" with vpunch
+    ch "I hate you! {b}I HATE YOU!!!{/b}" with vpunch #center text in textbox
     
     gr "Tch!"
 
     "He drags his lethal claws through the air. He has power but he lacks str-"
     
     play sound sfx.weapon_swingh
-    
+    #hide christoph with moveoutleft
     extend " A feint! He's leapt behind me!"
 
     play sound sfx.heavy_slash
-    with bloodflash
+    with quickblood
     
     gr "Aaaaghh!!!"
 
@@ -325,10 +341,12 @@ label confrontation:
 
     play sound sfx.slash
 
-    extend " I cleave through it, but another follows.\nPain tears through my core as I swing again."
+    extend " I cleave through it, but another follows."
 
     play sound sfx.singe
-    with bloodflash
+    with quickblood
+
+    extend " Pain tears through my core as I swing again."
 
     stop music fadeout 0.8
 
@@ -338,17 +356,17 @@ label confrontation:
     extend "\n{b}AND IT'S NOT A FRACTION OF WHAT I'VE FELT!{/b}" with vpunch 
     
     play sound sfx.singe
-    with bloodflash
+    with quickblood
     
     ch "{b}My mother!"
 
     play sound sfx.singe
-    with bloodflash
+    with quickblood
 
     extend " My joy!"
 
     play sound sfx.singe
-    with bloodflash
+    with quickblood
 
     extend " MY LIFE!!!{/b}" with vpunch
 
@@ -364,8 +382,9 @@ label confrontation:
     
     play sound sfx.mana_charge
 
-    ch "{b}GRAAAAAH!!!{/b}" with vpunch
+    ch "{b}GRAAAAAH!!!{/b}" with vpunch #center text in textbox
 
+    with quickflash
     play sound sfx.heavy_bam
     #hide Christoph with zoomout
     queue sound sfx.wood_break
@@ -393,12 +412,15 @@ label confrontation:
     ch "The last sight you'll see will be my gullet! I don't care if you taste awful..." 
     extend " I'm going to savor {b}EVERY BITE!{/b}" with vpunch
 
+    #show Christoph happy with zoomin
+
     "In fact, Christoph is the one I should worry about. His suffering won't end with my death, it'll only continue and eventually spread when he infects someone else."
     "Whether because of addiction or a lust for revenge, someone will come for him just as he has come for me. My death is justified, but will it solve anything?"
     "How interesting. I took on this role knowing I'd be cut down for my sins one day. Yet my death here would only breed more monsters. I chuckle."
 
     play sound sfx.bone_breakh
-
+    with quickflash
+    #zoomout on christoph
     ch "{b}AAAAAGGGGHHHH!!!{/b}" with vpunch
 
     "He backs off, his jaw slouched open.\nIt was so fast I could hardly recall it."
@@ -406,9 +428,14 @@ label confrontation:
     "He tries hopelessly to pop it back into place. I examine my palm while he's distracted."
     extend " That strength... The more damage I sustain, the more feral I become. But there was no hatred in that attack."
 
+    show christoph combat with easeinbottom
     ch "Agh...aggghhh! You broke my jaw, you bastard!"
 
     gr "Yet, you're still talking."
+
+    ch "Agggghh...! Damn you...!"
+
+    #hide christoph with blinds
 
     "I pull myself to my feet. By then, he's back to his senses."
     extend " I don't know what to do. I can't kill him, and my body won't survive another onslaught. Even if he is exhausted."
@@ -442,8 +469,7 @@ label confrontation:
 
     ch "I'll rend that head from its perch. I won't be able to eat you alive, but I'll have my fill one way or another!"
     
-    play sound sfx.lunge
-    
+    play sound sfx.weapon_swingh
     #show christoph combat with zoomin
     
     extend " You're finished, vampire! Now you {b}DIE!!!{/b}" with vpunch
@@ -467,17 +493,16 @@ label confrontation:
     
     gr "{b}{i}Bloodedge!{/b}{/i}"
 
+    #Ragyou - Import the Slash vfx
     play sound sfx.heavy_slash_twice
-    #VFX or Bloodflash twice
+    #with quickblood
 
     ch "{b}GAAAAAGGGGHHHH!!!{/b}" with vpunch
-
-    #hide Christoph moveoutbottom
-    play sound sfx.thud
 
     "I flense his back twice. He cries out as his flesh is ripped from his body." 
     extend " That attack is a feint, the blood pushing my body to accelerate.\nIt looks to most as if I've teleported."
     
+    #hide Christoph moveoutbottom
     play sound sfx.thud
     
     "He crumples. His wounds aren't lethal. He'll remember this pain, but he will live."
@@ -485,6 +510,7 @@ label confrontation:
     "The red Malice on his claws is now mere embers." 
     extend "\nHe leers at me, his busted jaw and face writhing in pain."
 
+    #show christoph combat with zoomin
     ch "This...this is only a flesh wound...!"
 
     gr "Then stand. I'll wait."
@@ -511,6 +537,7 @@ label confrontation:
 
     "Despite his disbelief, his face still burns with anger." 
     extend " Good, this is how it should be. One mercy on my end doesn't erase the suffering I caused him."
+    play sound footsteps_snowf
     "I hear footsteps from closeby. All of the addicts have fled, so it's either bystanders or those pesky hallowmen."
     "I move in front of him, my body shielding him from sight."
 
@@ -519,14 +546,17 @@ label confrontation:
     gr "Good. In fact, you flatter me. If I were to lose myself and become feral, I hope you would take me down. If it keeps you from becoming monster, hate me as I much as you want."
     gr "But do us both a favor; stay away from fiends. Don't succumb to their trickery just to get to me. I'll glady face you any time, anywhere. So long as you do not disgrace us both by falling for their deceit."
 
+    #hide christoph with moveoutbottom
     "He snarls, and I turn away."
 
     window hide
 
+    stop music fadeout 0.8
+
     play sound door_break
-    #hide Christoph with moveoutbottom
-    #show Celestial at left with with moveinleft
-    show Jory angry at right with moveinright 
+    #hide christoph with moveoutbottom
+    show celestial with moveinleft
+    show jory angry with moveinright 
 
     pause 0.4
 
@@ -554,7 +584,7 @@ label confrontation:
     gr "If we are done here, I need to rest."
     extend "\nThough if you're willing to donate some of your-"
 
-    show Jory happy
+    show jory happy
 
     c "Y-You are {b}FREE{/b} to go! We'll take over from here."
     
@@ -567,7 +597,7 @@ label confrontation:
 
     "He smiles boradly. A cold fury pumps through my veins."
 
-    show Jory neutral
+    show jory neutral
 
     j "N-No, that's not what I meant... I just think, maybe I was wrong about you. Maybe you aren't so bad after-"
 
@@ -579,8 +609,8 @@ label confrontation:
     window hide
 
     play sound footsteps_snowf
-    hide Jory with moveoutright #TODO: #maybe zoomin?
-    hide Celestial with moveoutleft
+    hide jory with moveoutright #TODO: #maybe zoomin?
+    hide celestial with moveoutleft
 
     window show
 

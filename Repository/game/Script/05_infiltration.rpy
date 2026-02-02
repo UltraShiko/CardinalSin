@@ -1,7 +1,7 @@
 
 label infiltration:
 
-    play sound sfx.footsteps_snowf
+    play sound sfx.footsteps_snowf fadein 0.8 loop
     hide celestial with moveoutright #Idk how to have the hide command apply to one of the sprites
     "I chortle darkly as I slip past the demoralized hallowmen."
     "Seeing that pig's delusions reminds me of my own.\nJudge him as I may, I wasn't much different..."
@@ -32,9 +32,11 @@ label infiltration:
     
     m "Hmph! Follow me."
 
-        window hide
+    window hide
 
     scene background christoph house with Dissolve(0.8)
+
+    play sound sfx.door_open
 
     play music bgm.something_amiss fadein 0.8
 
@@ -138,7 +140,6 @@ label infiltration:
     "The illusions continue to wobble and ripple like water."
     extend " And then I see a green woman with the same ears as Christoph. She too, sparks familiarity within me."
 
-
     #I do not know if we necessarily need silhouettes for these two
     w "Christoph, can you fetch the firewood? Let's get a roaring fire going!"
 
@@ -207,7 +208,7 @@ label infiltration:
 
     play sound sfx.hurl
     queue sound sfx.slash 
-    with bloodflash
+    with quickblood
 
     ch "{b}GRAHHHHH!!!!{/b}" with vpunch 
 
