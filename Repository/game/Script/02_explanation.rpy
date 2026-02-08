@@ -75,7 +75,7 @@ label explanation:
     ni "Well, how his mana flows was also a clue.\nIt doesn't have the restraints that a normal person does, so it's no wonder Justice started erupting from him out of nowhere."
     ni "I hypothesize the stress of that battle must've led to him somehow channeling it. Justice manifests from one's regrets, much like your Malice comes from hatred. "
 
-    show jory at t_alpha(0.5) with dissolve #t_alpha makes her sprite transparent
+    show jory at t_alpha(0.3) with Dissolve(1.0) #t_alpha makes her sprite transparent
     #TODO - Use a multipletransition command to center the sprite
 
     "I see. Jory told me the monk lost control when he learned what happened to his hometown. Most notably, the fate of some old companion of his."

@@ -52,7 +52,7 @@ layeredimage nick:
 
     always: #ensures the default sprite is the one below
 
-        "images\sprites\nick\base.png"
+        "images/sprites/nick/base.png"
 
     group emotions:
 
@@ -60,7 +60,7 @@ layeredimage nick:
 
             pos (900, 333)
 
-            "images\sprites\nick\happy.png"
+            "images/sprites/nick/happy.png"
 
         attribute neutral:
 
@@ -79,35 +79,35 @@ layeredimage nick:
 
 # TODO: Replace Jory's sprites with redraws if commissioned
 
-image Jory:
+image jory:
 
     yoffset 251
 
     "images/sprites/jory/neutral.png"
     # "images/sprites/jory/silhouette.png"
 
-image Jory angry:
+image jory angry:
 
     yoffset 251
 
     "images/sprites/jory/angry.png"
     # "images/sprites/jory/silhouette.png"
 
-image Jory happy:
+image jory happy:
 
     yoffset 251
 
     "images/sprites/jory/happy.png"
     # "images/sprites/jory/silhouette.png"
 
-image Jory neutral:
+image jory neutral:
 
     yoffset 251
 
     "images/sprites/jory/neutral.png"
     # "images/sprites/jory/silhouette.png"
 
-image Jory sad:
+image jory sad:
 
     yoffset 251
 

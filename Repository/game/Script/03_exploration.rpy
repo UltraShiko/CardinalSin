@@ -7,7 +7,7 @@ label exploration:
 
     window show
 
-    play sound sfx.footsteps_snow loop #TODO - Add more noise cancellation / make a more seemless loop
+    play sound sfx.footsteps_snow loop
 
     "As I exit, I bury myself under a cloak.\nNot because I am cold, but to hide my identity."
     "Not as a monster, however.\nMy pale flesh and blood-red eyes can't be concealed. If I'm not mistaken for a dretchling, people see me for what I am."
@@ -38,13 +38,13 @@ label exploration:
     extend "\nIt would be a gross waste of money for maintaining my arms and armor."
 
     #show dwarf silhouette with dissolve
-    #TODO - Add more sfx to this dialogue sequence
     sm "Back again? All too soon..."
 
     gr "I want these sharpened."
     
     sm "Put the money on the table first."
 
+    play sound sfx.coins
     "I obey. He takes my weapons and hobbles towards the sharpening wheel."
 
     gr "It would be much faster if I sharpened them myself."
@@ -57,6 +57,7 @@ label exploration:
     
     gr "Suit yourself, dwarf."
 
+
     "I lean against his stall, my stomach grumbling."
     extend "\nI choose to wait on taking the syringe. As my cravings worsen, my senses heighten. Hunger makes you better at finding food after all."
     "This twinge in my gut isn't too unlike when I used to be an addict.\nOnly instead of sweats or mania, I become more feral."
@@ -66,9 +67,10 @@ label exploration:
 
     sm "I don't suppose ya want yer breastplate repaired as well?"
     
-    gr "Not for this venture. My quarry won't be nearly as threatening."
+    gr "Not for this venture. My quarry isn't nearly as threatening."
 
-    "He spits and practically shoves my weapons into my arms."
+    play sound sfx.bam
+    "He spits and shoves my weapons into my arms."
 
     sm "Here ya are. Now begone with ya!"
     
@@ -197,6 +199,7 @@ label exploration:
     
     show jory happy
     j "Praise Ishmael..."
+
     show jory neutral
     extend "\nListen, don't kill anyone you don't have to. Please.\nMy people don't want to see bloodshed."
     

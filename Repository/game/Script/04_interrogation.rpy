@@ -12,7 +12,7 @@ label interrogation:
     "I take a whiff. The sickly sweet smell irritates my nose.\nSanguine Paste smells eerily similar to candy."
     extend "\nSo these tracks belong to an addict, or a loon."
     
-    play sound sfx.footsteps_snow  fadein 0.8 loop
+    play sound sfx.footsteps_snow fadein 0.8 loop
     
     "Either way, I follow them."
     "The stench of the paste grows stronger with each step.\nIs he indulging even as I track him? I'm prepared all the same, this'll just make subdoing him easier."
@@ -185,7 +185,7 @@ label interrogation:
     
     m "Okay! It's Christoph! {b}CHRISTOPHHH!!!{/b}" with vpunch
 
-    play sound sfx.zap #TODO - Replace with piano soundfx
+    play sound sfx.zap
     stop music
     #have screen tint be inversed
 

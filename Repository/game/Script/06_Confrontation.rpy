@@ -286,7 +286,7 @@ label confrontation:
     
     "He leaps at me. My injured leg halts my attempt to evade."
     
-    #TODO - Make a multiple weapon_slash sound effect
+    play sound sfx.weapon_swingf
     #RAGYUO insert an appropriate vfx
 
     extend "\nHis nails, laced with Malice and blood, rain down scratches upon me."

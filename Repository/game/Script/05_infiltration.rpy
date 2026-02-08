@@ -67,7 +67,7 @@ label infiltration:
     
     gr "My name is of no importance to you."
 
-    #TODO - Find a coin sound fx
+    play sound sfx.coins
     ch "Oooooh!!!"
 
     #hide Christoph moveoutleft
