@@ -45,10 +45,8 @@
 
 layeredimage nick:
 
-    yoffset 175
-    zoom 0.90
-
-    xysize (1962, 1471)
+    yoffset 25
+    # zoom 0.90
 
     always: #ensures the default sprite is the one below
 
@@ -58,19 +56,19 @@ layeredimage nick:
 
         attribute happy default:
 
-            pos (900, 333)
+            pos (270, 124)
 
             "images/sprites/nick/happy.png"
 
         attribute neutral:
 
-            pos (900, 333)
+            pos (270, 129)
 
             "images/sprites/nick/neutral.png"
 
         attribute elated:
 
-            pos (902, 344)
+            pos (270, 123)
 
             "images/sprites/nick/elated.png"
 
