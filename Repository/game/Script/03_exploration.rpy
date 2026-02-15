@@ -57,7 +57,6 @@ label exploration:
     
     gr "Suit yourself, dwarf."
 
-
     "I lean against his stall, my stomach grumbling."
     extend "\nI choose to wait on taking the syringe. As my cravings worsen, my senses heighten. Hunger makes you better at finding food after all."
     "This twinge in my gut isn't too unlike when I used to be an addict.\nOnly instead of sweats or mania, I become more feral."
@@ -93,7 +92,7 @@ label exploration:
     "If the Celestials are doing a search, then maybe I can follow them."
 
     show celestial at left with dissolve
-    show celestial at right with dissolve
+    show celestial as celestial_2 at right with dissolve
     extend "\nBefore I can finish reading, I notice a band of silvered knights marching by, conveniently right where I need them to be."
     
     "I follow. I don't hide.\nWhat will they do, arrest an Emissary? That would be quite amusing."
@@ -108,7 +107,7 @@ label exploration:
 
     stop sound fadeout 0.8
     
-    show jory neutral with zoomin
+    show jory neutral with dissolve
     extend "\nThis giant is named Jory. He's a nephillim rumored to have courted the banshee. That's what Caius believes."
 
     c "Hail Jory!"
@@ -125,7 +124,7 @@ label exploration:
 
     hide jory with dissolve
     show celestial at left
-    show celestial at right
+    show celestial as celestial_2 at right #allows me to display dupliccates of same sprite
     "He points me out, and the knights turn and wince."
     play sound sfx.light_grapple
     extend "\nI smirk as one of the knights grips his sword's pommel."
@@ -136,8 +135,9 @@ label exploration:
     
     gr "Indeed I am.\nKeep on with your search, it isn't like any of you can stop me."
     
-    show celestial combat at right
     play sound sfx.weapon_draw
+    show celestial combat at left with ease:
+        xpos 0.2 zpos 400
     c "Monster! I'll drive this this blade through your heart!"
     
     gr "And kill an Emissary? Heh, that would make my night."
@@ -146,7 +146,8 @@ label exploration:
     
     j "Enough!" with vpunch
 
-    hide celestial
+    hide celestial with moveoutleft
+    hide celestial_2 with moveoutright
     show jory angry with dissolve
     "Jory's gentle, yet thunderous voice leaves the knights shivering from more than just the snow."
     "The hallowman look at each other in disbelief, and then turn to Jory, who nods gravely."

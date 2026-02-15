@@ -9,18 +9,24 @@
 #image side griswyr smile = "griswyr smile"
 #image side griswyr snide = "griswyr snide"
 
-# TODO - Redraw sprite if available
-#image Celestial:
 
-    #yoffset 251
+image zo_celestial: #zoomed out
 
-    # "images/sprites/celestial/default.webp"
+    yoffset 251
 
-#image Celestial combat:
+    "images/sprites/celestial/default.webp"
 
-    #yoffset 251
+image celestial:
 
-    # "images/sprites/celestial/combat.webp"
+    zpos 400
+
+    "images/sprites/celestial/default.webp"
+
+image celestial combat:
+
+    zpos 400
+
+    "images/sprites/celestial/combat.webp"
 
 # TODO - Acquire and fine tune sprites
 #image Caius: #This sprite will have him masked
