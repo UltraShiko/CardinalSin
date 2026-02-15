@@ -1,9 +1,12 @@
 label prologue:
 
+    camera:
+        perspective True
+
     "...My head, it hurts..."
     "I can't see... Every time I open my eyes, a red goo burns them.\nThis ick is all over me..."
 
-    v "-istop- Chris- ca- -ou -ar me?!"
+    v "-istop- Chris- ca- -ou -ar me?!" with vpunch
 
     window hide
 
@@ -42,7 +45,7 @@ label prologue:
     play sound sfx.pottery_break
     with hpunch
 
-    "Mommy holds me tight as our bedrrom door is torn from its hinges.\nWe're crammed inside the wardrobe."
+    "Mommy holds me tight as our bedroom door is torn from its hinges.\nWe're crammed inside the wardrobe."
     "Heavy footsteps pound against our floor, followed by crashing sounds as our stuff is thrown around."
     "Mom tries to calm me down by humming in my ear.\nOne hand presses a hankerchief to my head, and her other hand grips a knife."
     extend " But she'll die if he catches us. He's a monster..."
@@ -57,7 +60,7 @@ label prologue:
     "Mom's breathing is getting faster.\nShe pulls me back, tucking me under her arms and scooting in front of me."
 
     ch "Mom, you'll die! He wants me, so I'll-"
-    mo "No, no, Christoph... I won't let her hurt you again."
+    mo "No, no, Christoph... I won't let him hurt you again."
 
     play sound sfx.pottery_break
     with hpunch
@@ -70,10 +73,6 @@ label prologue:
     window hide
     
     play sound sfx.door_break
-    queue sound sfx.weapon_swing
-    queue sound sfx.slash
-    queue sound sfx.blood_splatter
-    with bloodflash
     
     #scene CG2
     scene image "#000"
@@ -84,9 +83,15 @@ label prologue:
     
     ch "Mooooom!!!" with vpunch
 
-    "My mouth falls open. All I see is the door open, and then Mom..."
+    "My mouth falls open. All I see is the door crumble, and then Mom..."
+
+    play sound sfx.weapon_swing
     "She tried her best. lunging and driving the knife into his chest." 
     extend "\nBut there's no sign that he's hurt..."
+
+    play sound sfx.slash
+    queue sound sfx.blood_splatter
+    with quickblood
     "He grabs her, and his teeth tear into her neck."
     extend "\nRed goo starts gushing from her. I yelp as some splatters on my leg."
 
@@ -101,7 +106,7 @@ label prologue:
     "Their pupils look at me. It feels like she's still here, even though she's not..."
     "I shiver like a leaf as the monster, looking like one of the humans, wipes his mouth and glares at me."
     "A mix of tears and more goop run down my face. I'm about to cry, but I clench my fists instead."
-    "I grab the broom. I know I can't hurt him, but I'll make him pay!"
+    "I grab the dagger from mom's body. I know I can't hurt him, but I'll make him pay!"
     extend "Somehow..."
 
     ch "You...You killed her-"
@@ -113,7 +118,7 @@ label prologue:
     
     v "If you hadn't ran, she'd be alive."
     
-    play sound sfx.stab
+    play sound sfx.slash
 
     scene image "#f00" with Dissolve(0.2)
     

@@ -45,8 +45,8 @@
 
 layeredimage nick:
 
-    yoffset 175
-    zoom 0.90
+    yoffset 175 #TODO - Adjust due to crotch shot
+    zoom 0.30
 
     xysize (1962, 1471)
 

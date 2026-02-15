@@ -8,7 +8,7 @@ label explanation:
     window show
     
     "I open my eyes at the sunset streaming through the window.\nLooks like I was more tired than I thought..."
-    "That damned banshee nearly killed us.\nTo be given so much trouble by a lowly succubus, it's humiliating."
+    "That damned banshee nearly killed us.\nTo be given so much trouble by a lowly succubus, it's humiliating!"
     "Her kind isn't usually that deadly, at least one-on-one.\nAnd now she's out doing Ishmael-knows-what."
     "I sit up, my stomach grumbling."
     extend "\nIt's been three days since I last ate. I should have a syringe lying around somewhere."
@@ -75,20 +75,23 @@ label explanation:
     ni "Well, how his mana flows was also a clue.\nIt doesn't have the restraints that a normal person does, so it's no wonder Justice started erupting from him out of nowhere."
     ni "I hypothesize the stress of that battle must've led to him somehow channeling it. Justice manifests from one's regrets, much like your Malice comes from hatred. "
 
-    show jory at t_alpha(0.3) with Dissolve(1.0) #t_alpha makes her sprite transparent
+    hide nick with quickblinds
+    show jory at t_alpha(0.3) with pixellate(1.0) #t_alpha makes her sprite transparent
     #TODO - Use a multipletransition command to center the sprite
 
     "I see. Jory told me the monk lost control when he learned what happened to his hometown. Most notably, the fate of some old companion of his."
     "Considering the regrets I have, I wonder why that white mana hasn't sprouted from me yet. Guess I'm not pure enough."
 
-    hide jory with blinds
+    hide jory with pixellate
 
     gr "Hmph, than I'll let him rest. I have a banshee to hunt."
     
+    show nick neutral with zoomin
     ni "I'd prefer you not-"
 
     play sound sfx.grapple
-    show nick neutral with zoomin
+    show nick neutral #Ragyuo have the sprite move towards the camera
+        #xalign 0.5 zpos -200
     
     "I yank the fool by his collar, only for him to smile whimiscally."
     "If he wasn't so useful, I'd crush his neck where we stand.\nBut he'd enjoy every second of it anyway. This maniac adores pain."    
@@ -125,7 +128,8 @@ label explanation:
     
     gr "It was that pain devil, isn't it?!" with vpunch
 
-    show nick elated
+    show nick elated:
+        xzoom -1.0 #flips the sprite
     "He grins sheepishly. Maybe I should kill him after all!"
     "When I first met this loon, he had a brute of a fiend bound to his service. She was over seven feet tall and a even monster by devil standards."
     "I told this fool {i}countless{/i} times to slit her throat and be done with it."
@@ -150,9 +154,9 @@ label explanation:
     "When overused, Sanguine Paste warps your humanity.\nIt makes you crave forbidden pleasures until you ultimately turn to seeking the blood of others."
     "These drug dealers may as well be plaguespreaders.\nThey won't threaten all of humanity, but removing their infection is still a service."
 
-    show nick elated with zoomout
     gr "Fine, I'll snuff out this operation.\nBe grateful I hate Sanguine Paste more than I hate you."
     
+    show nick elated with zoomin
     ni "It does keep you in line, hehehe-"
     
     play sound sfx.hurl
