@@ -14,7 +14,7 @@ label explanation:
     extend "\nIt's been three days since I last ate. I should have a syringe lying around somewhere."
 
     play sound sfx.door_open
-    show nick happy with dissolve
+    show nick happy at center with dissolve
 
     "The door creaks open, and I narrow my eyes at the lanky elf that enters."
     "Disgust graces my tongue.\nI'd sooner starve than feed on him, even if he was the last mortal on the plane."
