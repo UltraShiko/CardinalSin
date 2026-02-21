@@ -51,9 +51,6 @@ image celestial combat:
 
 layeredimage nick:
 
-    yoffset 25
-    # zoom 0.90
-
     always: #ensures the default sprite is the one below
 
         "images/sprites/nick/base.png"
@@ -62,19 +59,19 @@ layeredimage nick:
 
         attribute happy default:
 
-            pos (270, 124)
+            pos (906, 417)
 
             "images/sprites/nick/happy.png"
 
         attribute neutral:
 
-            pos (270, 129)
+            pos (905, 434)
 
             "images/sprites/nick/neutral.png"
 
         attribute elated:
 
-            pos (270, 123)
+            pos (905, 412)
 
             "images/sprites/nick/elated.png"
 
