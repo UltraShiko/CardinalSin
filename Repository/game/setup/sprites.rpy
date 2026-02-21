@@ -18,13 +18,13 @@ image zo_celestial: #zoomed out
 
 image celestial:
 
-    zpos 400
+    # zpos 400
 
     "images/sprites/celestial/default.webp"
 
 image celestial combat:
 
-    yoffset 251 zpos 250
+    # yoffset 251 zpos 250
 
     "images/sprites/celestial/combat.webp"
 
@@ -80,9 +80,6 @@ layeredimage zo_nick: #testing zoomed out positioning
 
 layeredimage nick:
 
-    yoffset 25
-    # zoom 0.90
-
     always: #ensures the default sprite is the one below
 
         "images/sprites/nick/base.png"
@@ -91,19 +88,19 @@ layeredimage nick:
 
         attribute happy default:
 
-            pos (270, 124)
+            pos (906, 417)
 
             "images/sprites/nick/happy.png"
 
         attribute neutral:
 
-            pos (270, 129)
+            pos (905, 434)
 
             "images/sprites/nick/neutral.png"
 
         attribute elated:
 
-            pos (270, 123)
+            pos (905, 412)
 
             "images/sprites/nick/elated.png"
 
