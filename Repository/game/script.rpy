@@ -43,6 +43,10 @@ label sprite_positioning:
 
     hide nick
 
+    ############################################
+
+    ############################################
+    
     show celestial at center, celestial_normal_range
 
     pause
@@ -69,7 +73,8 @@ label sprite_positioning:
 
     pause
 
-
+    ############################################
+    
 
     return
 
