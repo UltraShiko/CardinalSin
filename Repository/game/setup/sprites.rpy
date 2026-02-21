@@ -18,13 +18,13 @@ image zo_celestial: #zoomed out
 
 image celestial:
 
-    zpos 400
+    # zpos 400
 
     "images/sprites/celestial/default.webp"
 
 image celestial combat:
 
-    yoffset 251 zpos 250
+    # yoffset 251 zpos 250
 
     "images/sprites/celestial/combat.webp"
 

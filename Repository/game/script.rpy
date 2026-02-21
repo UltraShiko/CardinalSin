@@ -37,25 +37,40 @@ label sprite_positioning:
     
     pause
 
-    show nick happy at center, nick_far_range
+    show nick happy
     
     pause
+
+    hide nick
+
+    show celestial at center, celestial_normal_range
+
+    pause
+
+    show celestial combat at center, celestial_normal_range
+
+    pause
+
+    show celestial at center, celestial_close_range
+
+    pause
+
+    show celestial combat at center, celestial_close_range
+
+    pause
+
+    window show
+
+    show celestial at center, celestial_far_range
+
+    pause
+
+    show celestial combat at center, celestial_far_range
+
+    pause
+
+
 
     return
 
 
-transform nick_normal_range:
-
-    zoom 0.2976846747519294
-    yoffset 25
-
-transform nick_close_range:
-
-    zoom 0.5
-    yoffset 750
-
-transform nick_far_range:
-
-    zoom 0.2
-    yoffset 0
-    
