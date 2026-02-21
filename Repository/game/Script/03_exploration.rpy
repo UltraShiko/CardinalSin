@@ -91,8 +91,8 @@ label exploration:
     "I review the writ.\nMy quarry is located at some hobble in {i}the Hells{/i}, where the bottomfeeders of Jubilee reside." 
     "If the Celestials are doing a search, then maybe I can follow them."
 
-    show celestial at left with dissolve
-    show celestial as celestial_2 at right with dissolve
+    show zo_celestial at left with dissolve
+    show zo_celestial as celestial_2 at right with dissolve
     extend "\nBefore I can finish reading, I notice a band of silvered knights marching by, conveniently right where I need them to be."
     
     "I follow. I don't hide.\nWhat will they do, arrest an Emissary? That would be quite amusing."
@@ -123,8 +123,8 @@ label exploration:
     j "I wasn't talking to you..."
 
     hide jory with dissolve
-    show celestial at left
-    show celestial as celestial_2 at right #allows me to display dupliccates of same sprite
+    show zo_celestial at left
+    show zo_celestial as celestial_2 at right #allows me to display dupliccates of same sprite
     "He points me out, and the knights turn and wince."
     play sound sfx.light_grapple
     extend "\nI smirk as one of the knights grips his sword's pommel."
@@ -136,8 +136,8 @@ label exploration:
     gr "Indeed I am.\nKeep on with your search, it isn't like any of you can stop me."
     
     play sound sfx.weapon_draw
-    show celestial combat at left with ease:
-        xpos 0.2 zpos 400
+    hide zo_celestial with dissolve
+    show celestial combat at center_left with moveinleft #TODO - Find a transition that moves him forward
     c "Monster! I'll drive this this blade through your heart!"
     
     gr "And kill an Emissary? Heh, that would make my night."
@@ -158,7 +158,7 @@ label exploration:
 
     j "Yes, I know him. He's telling the truth."
 
-    show celestial with dissolve
+    show zo_celestial at right with moveinright
     c "You must be kidding!\nThe fourth, allow a leech like him to roam free?! Is he mad?"
     
     gr "As if your low-grade blood would satisfy me."
@@ -167,8 +167,7 @@ label exploration:
     
     gr "Trailing you, as you already observed.\nI'm after the same criminals you are."
     
-    hide celestial
-    show celestial at right
+    show zo_celestial as celestial_2 at left with moveinleft
     c "Absolutely not! This doesn't concern you rogues!\nHalf of you are criminals yourselves!"
     
     gr "You aren't wrong, and you aren't stopping me."
@@ -185,15 +184,18 @@ label exploration:
     gr "Drugs like that paste are made by monsters.\nI'm certain you all know that the Archfiend, Dharts, concocted it to spread his kin. They don't call him the {i}King of Hunger{/i} for nothing."
     gr "It's quite impressive how these Archdevils harvest souls.\nEach one has their own methods, and I intend to stop this plague before it spreads any further."
 
-    hide Jory with dissolve
-    hide celestial with dissolve
+    hide jory
+    hide zo_celestial
+    hide celestial_2
+    with dissolve #position this way triggers the transitions simultaneously
     "I talk proudly, but I'm well aware I am one of his abominations.\nIf these cattle have anything over me, it's their humanity."
     "Hence why it is I who should hunt them down. These sentimental knights will only make things worse. Their sympathy for those who abuse the paste will inevitably help its spread."
     "Besides anyone can indulge in drugs. Even the Reverend.\nAnd those who don't indulge in the paste sell it. It's a very lucrative trade, especially after {i}the Reckoning{/i}."
     "I imagine the Celestials will arrest everyone, bring them in, and lock up the addicts for some time. But when they get out, they'll just resume their anttics."
     "It's what I did. You can't help those that have become enslaved to the paste. No one could have helped me."
 
-    show jory neutral with dissolve
+    show jory sad at left with easeinleft:
+        xzoom -1.0
     j "Griswyr, how is Caius?"
 
     gr "Still asleep, and he will live."
@@ -210,7 +212,7 @@ label exploration:
 
     gr "Addicts are superb at hiding their use, nephillim.\nThey understand well what happens if they're caught."
     
-    show celestial at right
+    show zo_celestial at right with easeinright
     c "Or, you could crawl back into whatever hole you came from and let us handle it."
     
     gr "You're free to join me. I won't forbid it, however..."
@@ -219,8 +221,8 @@ label exploration:
     #have sprite hop up and down once
     c "Wh-What-?!"
 
-    hide jory with dissolve 
-    hide celestial with moveoutright
+    hide jory with moveoutleft
+    hide zo_celestial with moveoutright
     "I chuckle. It doesn't take much to shatter their bravado.\nAs I predicted, they aren't prepared."
     "At least Jory remains composed. I hear he was on the frontlines during {i}the Reckoning{/i}. Nick claims he went toe-to-toe with that pain devil."
     "Truth be told, I wager it's one of my kind distributing the paste.\nA devil appearing isn't an impossibility though."

@@ -24,7 +24,7 @@ image celestial:
 
 image celestial combat:
 
-    zpos 400
+    yoffset 251 zpos 250
 
     "images/sprites/celestial/combat.webp"
 
