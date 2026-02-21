@@ -14,16 +14,17 @@ label explanation:
     extend "\nIt's been three days since I last ate. I should have a syringe lying around somewhere."
 
     play sound sfx.door_open
-    show nick happy at center with dissolve
+    show nick happy at left with easeinleft
 
     "The door creaks open, and I narrow my eyes at the lanky elf that enters."
     "Disgust graces my tongue.\nI'd sooner starve than feed on him, even if he was the last mortal on the plane."
 
+    show nick happy at center with ease
     ni "Wow, you were out like a light.\nNever thought you'd struggle against a succubus."
     
     gr "Be quiet, Nick."
     
-    show nick elated:
+    show nick elated at center:
         xzoom -1.0
     ni "Hehe... Of course, she was the banshee who caused {i}the Reckoning{/i}."
     extend "\nToo bad you can't wield silver."
@@ -33,17 +34,17 @@ label explanation:
     play sound light_grapple
     "I put on my boots, stand, and stretch.\nI wish my scenery wasn't so unpleasant."
 
+    
     show nick elated with dissolve:
-        ypos 1.25 zpos 400
+        zoom 1.5 ypos 1.5
     "This elf is revolting!" 
     extend " His hair is disheveled, his jagged fingernails are unsightly, and he's wearing short sleeves despite the winter's snow."
     "Worst of all, he's a Malconvoker - a buffoon who summons devils to fight other devils. It's only a matter of time before one takes his head off."
     "Granted, I'm no saint myself.\nWe only avoid execution because we Emissaries hunt down the trash the Celestials don't wish to deal with."
     "It is no less than what I deserve for my weakness."
 
-    hide nick
-    show nick neutral at center with zoomout:
-        xzoom -1.0 
+    show nick neutral with dissolve:
+        zoom 1.0 ypos 1.0 
     gr "Speaking of, how is Caius?"
 
     ni "He'll be fine. Though he will need to get used to wearing a mask.\nHis mana was gushing like a fountain."
@@ -61,7 +62,7 @@ label explanation:
     
     gr "Doesn't Malice do the same?"
     
-    show nick neutral:
+    show nick neutral at right with easeinright:
         xzoom -1.0 
     ni "Malice wears on your soul when overused.\nJustice is like turning your very soul into a weapon. It will kill you, and probably everyone else nearby if mishandled."
     ni "On top of that, your friend is a lunatic."
@@ -72,7 +73,7 @@ label explanation:
     
     gr "Hmmm..."
 
-    hide nick with dissolve
+    hide nick with quickblinds
     "I scratch my chin. It does make sense."
     "For example, Caius rarely makes eye contact without straining himself. And one of his limbs, and sometimes his entire body, is always in motion."
     "It was humorous watching him weave past Persephone's attacks. I figured he had an unusual fighting style."
@@ -80,13 +81,14 @@ label explanation:
 
     gr "And you gauged that much just from treating an unconscious body?"
     
+    show nick at right with easeinright:
+        xzoom -1.0
     ni "Well, how his mana flows was also a clue.\nIt doesn't have the restraints that a normal person does, so it's no wonder Justice started erupting from him out of nowhere."
     ni "I hypothesize the stress of that battle must've led to him somehow channeling it. Justice manifests from one's regrets, much like your Malice comes from hatred. "
 
     hide nick with quickblinds
     show jory at center with pixellate:
         t_alpha(0.3) #t_alpha makes sprite transparent
-    #TODO - Use a multipletransition command to center the sprite
 
     "I see. Jory told me the monk lost control when he learned what happened to his hometown. Most notably, the fate of some old companion of his."
     "Considering the regrets I have, I wonder why that white mana hasn't sprouted from me yet. Guess I'm not pure enough."
@@ -94,13 +96,15 @@ label explanation:
     hide jory with pixellate
     gr "Hmph, than I'll let him rest. I have a banshee to hunt."
     
-    show nick neutral with zoomin
+    show nick neutral at center with easeinbottom 
     ni "I'd prefer you not-"
 
     play sound sfx.grapple
-    show nick neutral with move: #Ragyuo have the sprite move towards the camera
-        ypos 1.15 zpos 250
+    show nick neutral:
+        ease 0.1 zoom 1.5 ypos 1.5
+    extend " Ngh!"
     
+    show nick elated
     "I yank the fool by his collar, only for him to smile whimiscally."
     "If he wasn't so useful, I'd crush his neck where we stand.\nBut he'd enjoy every second of it anyway. This maniac adores pain."    
     extend " Granted, I adore hitting him..."
@@ -110,7 +114,7 @@ label explanation:
     show nick elated
     ni "Ehehehe..."
 
-    gr "So, I'm going to track her down and finish what we started.\nAre we clear?"
+    gr "So, I'm going to track her down and finish what I started.\nAre we clear?"
     
     ni "But Griswyr, I found a nest of Paste smugglers..."
     
@@ -130,7 +134,7 @@ label explanation:
     gr "Hmm... Why are you giving me this?\nSurely, you understand that Persephone is our top priority."
     
     show nick happy at center:
-        xzoom 1.0
+        ease 0.5 zoom 1.5 ypos 1.5
     ni "She is, and I intend to help you find her, but there's something I want to investigate first."
     extend " You know how a dretchling destroyed Thrycia?"
     
@@ -140,8 +144,7 @@ label explanation:
     
     gr "It was that pain devil, isn't it?!" with vpunch
 
-    show nick elated:
-        xzoom -1.0 #flips the sprite
+    show nick elated with dissolve
     "He grins sheepishly. Maybe I should kill him after all!"
     "When I first met this loon, he had a brute of a fiend bound to his service. She was over seven feet tall and a even monster by devil standards."
     "I told this fool {i}countless{/i} times to slit her throat and be done with it."
@@ -155,8 +158,8 @@ label explanation:
     
     gr "Yes, {i}spite{/i}, because you blame her for your failure.\nAs if you alone could've stopped {i}the Reckoning{/i}."
     
-    show nick neutral at center:
-        xzoom -1.0
+    show nick neutral:
+        xzoom 1.0
     ni "Hard to close a tear in the plane with a chain through your chest..."
     show nick elated
     extend " hehehe..."
@@ -172,13 +175,13 @@ label explanation:
 
     gr "Fine, I'll snuff out this operation.\nBe grateful I hate Sanguine Paste more than I hate you."
     
-    show nick elated with easeinleft:
-        yalign 0.75
-    ni "It does keep you in linee--"
+    show nick elated at left with easeinleft:
+        zoom 1.5 ypos 1.5
+    ni "It does keep you in linee-"
     
     play sound sfx.hurl
     queue sound sfx.pottery_break
-    hide nick with moveoutright
+    hide nick with moveoutright #TODO - Make a dropout command that's faster
     with vpunch
     
     "I send him spiraling into the desk on my way out."

@@ -49,10 +49,68 @@ image celestial combat:
 
     # "images/sprites/christoph/combat.png"
 
+layeredimage zo_nick: #testing zoomed out positioning
+
+    zoom 0.6
+    ypos 2.5
+
+    always: #ensures the default sprite is the one below
+
+        "images/sprites/nick/base.png"
+
+    group emotions:
+
+        attribute happy default:
+
+            pos (270, 124)
+
+            "images/sprites/nick/happy.png"
+
+        attribute neutral:
+
+            pos (270, 129)
+
+            "images/sprites/nick/neutral.png"
+
+        attribute elated:
+
+            pos (270, 123)
+
+            "images/sprites/nick/elated.png"
+
 layeredimage nick:
 
     yoffset 25
     # zoom 0.90
+
+    always: #ensures the default sprite is the one below
+
+        "images/sprites/nick/base.png"
+
+    group emotions:
+
+        attribute happy default:
+
+            pos (270, 124)
+
+            "images/sprites/nick/happy.png"
+
+        attribute neutral:
+
+            pos (270, 129)
+
+            "images/sprites/nick/neutral.png"
+
+        attribute elated:
+
+            pos (270, 123)
+
+            "images/sprites/nick/elated.png"
+
+layeredimage zi_nick: #zoomed in
+
+    zoom 1.5
+    ypos 1.5
 
     always: #ensures the default sprite is the one below
 
