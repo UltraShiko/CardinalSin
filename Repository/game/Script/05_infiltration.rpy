@@ -59,8 +59,8 @@ label infiltration:
     "How has this place not been searched sooner?\nEven if the Celestials have their hands full, where are the city guards?"
     "Hmm, I wonder how many of them are in this circle? Or have been bribed?\nMortals are weak in the face of sinful temptation, after all..."
 
-    #show Christoph happy
-    #Sprite is in development. Will be added later. Ragyuo, feel free to use whatever
+    #show Christoph happy - Sprite is in development
+    show eileen
     "I'm escorted past them to a bluish green goblin lounging in a chair too regal for this dump. This must be my prey."
     extend " He looks up at me and grins, jagged teeth meeting my eyes."
     "My heart pounds. As I predicted, I've met him somewhere. But when?"
@@ -69,14 +69,18 @@ label infiltration:
 
     m "He claims he wants to buy."
     
+    show eileen: #zoom in christoph
+        ease 0.5 zoom 1.5 ypos 1.5
     ch "Yes, yes, buy a lot more than my average customer, I'm assuming.\nHehehehe, to whom do I owe the pleasure for his patronage."
     
     gr "My name is of no importance to you."
 
     play sound sfx.coins
+    show eileen at hop
     ch "Oooooh!!!"
 
     #hide Christoph moveoutleft
+    hide eileen with moveoutleft
     "I slap down a sack of coin, much more than I paid the smith."
     "The goblin's eyes expand. This must be more money than he's ever seen in his life. I see a long, slender tongue lick his lips."
     "I take the time to examine him. He lacks the traits I do, and I'm {i}certain{/i} my tongue isn't as hideous..."
@@ -85,6 +89,7 @@ label infiltration:
     "But he doesn't appear to recognize me either. He reverts his gaze from his spoils, flashing a toothy smile."
 
     #show Christoph happy
+    show eileen at left with easeinleft
     ch "Start him off. We're having him over for the night.\nIt is our duty to cater to our guests~."
     
     m "Hmph."
@@ -98,6 +103,9 @@ label infiltration:
     extend " As expected, violence is off the table.\nFor now..."
 
     #show Christoph happy with zoomin
+    show eileen:
+        ease 0.5 xpos 0.3 ypos 1.5 zoom 1.5 #xpos moves to center
+
     ch "Go on, take a whiff. You have the entire night. No need to hurry."
 
     gr "..."
