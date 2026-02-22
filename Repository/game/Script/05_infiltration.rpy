@@ -2,12 +2,17 @@
 label infiltration:
 
     play sound sfx.footsteps_snowf fadein 0.8 loop
-    hide celestial with moveoutright #Idk how to have the hide command apply to one of the sprites
+    hide celestial 
+    hide villager
+    hide celestial_2
+    with moveoutright #Idk how to have the hide command apply to one of the sprites
     "I chortle darkly as I slip past the demoralized hallowmen."
     "Seeing that pig's delusions reminds me of my own.\nJudge him as I may, I wasn't much different..."
     "The hallucinations vary based on our desires.\nI thought I could fly out of this god forsaken empire. My hardships were caused by {i}the Recknoning's{/i} impact."
     "Thanks to that archfiend, all I knew was poverty and sadness.\nSanguine Paste gave me everything I ever wanted, and took everything else..."
     "It's odd that the addict turned to the drug for \"Charlotta\", but I suppose it fits. Escape is the goal."
+
+    stop sound fadeout 0.8
     "I find the door with the deer's skull in no time."
     extend " I don't need heightened senses to sniff out the drug. The scent creeps through the door, and I imagine it's going to be overpowering inside..."
     "I consider my options. I could kick down the door and start swinging, but some of his clients may try to defend their plug."
@@ -16,7 +21,8 @@ label infiltration:
     extend " I can face him head on and see why he has such a hold over me." with vpunch
     
     play sound sfx.knock_and_open
-    #show silhouette_elf with dissolve - if we get one
+    pause 1.8
+    show villager with dissolve
 
     "An elf, with the grace and dexterity of a three legged horse, meets my gaze."
     extend " He's trying so hard to be intimidating. He'd break like glass if he tried to attack me. He's so skinny, I can see his skeleton."

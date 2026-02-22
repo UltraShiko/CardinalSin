@@ -131,13 +131,15 @@ label exploration:
     "Meanwhile the nephillim scowls at me.\nOut of everyone who despises me, Jory nets the most respect."
     "I had no intention of endagering his pupil. Had I known the banshee was going to be summoned, Nick would've accompanied me instead."
 
-    c "Godforsaken leech! You dare trail us?!"
+    c "Godforsaken leech! You dare trail us?!" with vpunch
     
     gr "Indeed I am.\nKeep on with your search, it isn't like any of you can stop me."
     
     play sound sfx.weapon_draw
-    hide zo_celestial with dissolve
-    show celestial combat at center_left with moveinleft #TODO - Find a transition that moves him forward
+    hide zo_celestial
+    show celestial combat:
+        ease 0.3 zoom 1.5
+
     c "Monster! I'll drive this this blade through your heart!"
     
     gr "And kill an Emissary? Heh, that would make my night."
@@ -163,7 +165,7 @@ label exploration:
     
     gr "As if your low-grade blood would satisfy me."
     
-    c "Then what are you doing here?!"
+    c "Then what are you doing here?!" with vpunch
     
     gr "Trailing you, as you already observed.\nI'm after the same criminals you are."
     
@@ -194,8 +196,8 @@ label exploration:
     "I imagine the Celestials will arrest everyone, bring them in, and lock up the addicts for some time. But when they get out, they'll just resume their anttics."
     "It's what I did. You can't help those that have become enslaved to the paste. No one could have helped me."
 
-    show jory sad at left with easeinleft:
-        xzoom -1.0
+    show jory sad at center with dissolve:
+        xzoom -1.0 zoom 1.2 ypos 1.25
     j "Griswyr, how is Caius?"
 
     gr "Still asleep, and he will live."
@@ -221,7 +223,6 @@ label exploration:
     #have sprite hop up and down once
     c "Wh-What-?!"
 
-    hide jory with moveoutleft
     hide zo_celestial with moveoutright
     "I chuckle. It doesn't take much to shatter their bravado.\nAs I predicted, they aren't prepared."
     "At least Jory remains composed. I hear he was on the frontlines during {i}the Reckoning{/i}. Nick claims he went toe-to-toe with that pain devil."
@@ -230,6 +231,7 @@ label exploration:
     gr "I'm leaving now. If you're ready to die, you are free to follow."
     extend "\nOr, you could take credit for my work as usual.\nI have no use for prestige, only results."
     
+    hide jory with dissolve
     jump interrogation
 
     return

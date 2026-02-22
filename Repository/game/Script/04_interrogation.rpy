@@ -19,9 +19,12 @@ label interrogation:
     "I snarl.\nI no longer crave that wretched paste but I don't want to reek of it either! This disgusting oaf is going to regret using."
     "Soon the prints are followed by sounds.\nTheir keeper is babbling not too far from here."
 
-    #TODO - Find a silhouette or royalty free sprite
-    #show silhouette sprite moving back and forth in a loop:
-        #Expecting something like linear 0.5 with easeinright / easeinleft etc.
+    show villager at center_left with moveinbottom:
+        zoom 0.8
+        ease 2 xalign 0.75 #this block has him sway from side to side
+        ease 2 xalign 0.25 #ease is used due to it's speed being sudden
+        repeat
+
     v "Hey-hey! Yes, Charlotta, it's me! I'm back just as I promised!"
     v "Ohohoho! There's no way you could be evil. Not with those sweet, voluptuous tits of yours! If they drag me to Hell, I won't struggle~!\nUnless you want me too..."
     v "Ohh my sweet! I'm not going to wait. Let us make love this time!\nWho cares if it's in the snow?! And if anyone sees us, let 'em watch!"
@@ -30,9 +33,21 @@ label interrogation:
 
     "Hmmm... A hatchet to the head would shut him up.\nI could just find someone else, but..."
     extend " No, he'll do. I'll drink his blood as payment. He {i}clearly{/i} doesn't need it anymore."
+
+    show villager at center_left:
+        ease 1 zoom 1.2 #has him sway closer 
+    
+    pause 0.5 #needed to separate the statements so only the second block loops
+    
+    show villager:
+        ease 2 xalign 0.75
+        ease 2 xalign 0.25
+        repeat
+
     "He comes in my sights, arms and body flailing for an illusion.\nHiding is hardly necessary."
 
     stop sound fadeout 0.8
+
     #maybe alter the camera a few xpos down to simulate squatting?
     "Regardless I crouch. I calculate the distance between us."
     extend "\nNo weapons or mana will be needed. I don't know why I bother preparing to attack.." 
@@ -42,12 +57,14 @@ label interrogation:
 
     m "Ohhh Charlotta, take me... Take-"
 
-    #show silhouette zoomin / have him zomm in to simulate Griswyr's charge
+    window hide
     play sound sfx.weapon_swingh
-    #hide silhouette moveoutbottom
+    show villager at center:
+        zoom 1.5 ypos 1.3
+    pause 0.5
     queue sound sfx.thud
     with vpunch
-    # OPTIONAL - have the camera jostle upon the tackle. Like as if it got knocked around
+    window show
 
     stop music
 
@@ -59,7 +76,6 @@ label interrogation:
     "I pin him in seconds, his chest facing me."
     extend "\nI snatch a vial from my bandolier and pop the cork.\nHe grins foolishly."
 
-    #show silhoutte with dissolve
     play sound sfx.bottle_open
     m "Oh...my dear Charlotta. I didn't know you liked it so-"
 
@@ -74,9 +90,6 @@ label interrogation:
     "His eyes twitch and snot runs down both of his nostrils.\nI then retrieve the vial and clean it in the snow."
     "Tears leave both eyes, but they're no longer glazed.\nHis gaze becomes fearful now as it meets mine."
 
-    #I honestly do not know if much can be done here sprite wise. The silhouette is more or less just a placeholder. I
-    #don't intend on commissioning a sprite for this person. However, I'm not opposed to using something royalty free
-    #either. I leave it up to your best judgement. We can talk about it.
     m "Agh...by Ishmael, what the-?"
     
     gr "Sobered up, are we?"
@@ -85,8 +98,6 @@ label interrogation:
     
     gr "You dare compare me to them? Your foolishness is starting to offend me."
     
-    #maybe since the sprite would lack expressions, we could use various renpy commands to make the sprite more active.
-    #like having him hop up and down when scared?
     m "No wait, you have fangs... And your eyes, they're...so-"
     extend "\nBy Ishmael! Vampire!!!" with vpunch 
 
@@ -112,22 +123,24 @@ label interrogation:
     
     gr "One down, nine to go."
 
-    #hide silhouette with blinds
+    hide villager with quickblinds
     "His pinky snaps like a twig as I grip the other one."
     "I'm being much too merciful counting down from ten. After all, there are 205 more bones left to break. Outliers happen of course, but I imagine he won't be conscious long enough for it to matter."
 
     gr "Talk, you wretch."
     
     play sound sfx.light_grapple
-    
-    #show silhouette with moveinbottom
+    show villager at center with moveinbottom:
+        zoom 1.5 ypos 1.3
     m "Ngh... I, I-"
     v "Goddamned leech!" with vpunch 
 
-    #hide silhouette
+    hide villager
     play sound sfx.footsteps_snowf
-    show celestial combat at left with moveinleft
-    show celestial combat at right with moveinright
+    show celestial combat at left with moveinleft:
+        zoom 1.5 ypos 1.6
+    show celestial combat as celestial_2 at right with moveinright:
+        zoom 1.5 xzoom -1.0 ypos 1.6
 
     "Booted footsteps trample our way.\nIt's those hallowmen again, how quaint..."
     "The band approach but don't draw too close.\nOne is bold enough to have his sword out."
@@ -167,7 +180,15 @@ label interrogation:
     #this is to emulate Griswyr's vampiric nature taking hold
     "After all, there are no other witnesses in sight. As big as Jubilee is, many murders still go unnoticed down here."
     #hide silhouette
-    hide celestial with pixellate
+    hide celestial
+    hide celestial_2
+    with pixellate
+    window hide
+    camera: #turns screen dark red
+        subpixel True matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.25)*HueMatrix(135.0) 
+    window show
+
+
     "I shiver from excitement."
     extend " Four men. Four sacks of blood...\nHad I taken the syringe, I would've missed out on this banquet!" with vpunch
     "It'd only take five seconds, and I'll have these merry men on the ground and painted carmine. They can cry out, I'll be done long before help arrives."
@@ -177,7 +198,8 @@ label interrogation:
     c "Ishmael shield us, he's eyeing us like meat!"
 
     play sound sfx.grapple
-    #show silhouette with easeinbottom
+    show villager at center with moveinbottom:
+        zoom 1.5 ypos 1.3
     "I stand, dragging my morsel to his feet. They can see my hatchet from this angle, but not my sword."
     "I lurch forward. In one fell swoop, this'll be over."
     extend "\nMy heart races. They'll all be dead in three..."
@@ -187,29 +209,36 @@ label interrogation:
 
     play sound sfx.zap
     stop music
-    #have screen tint be inversed
+    camera: #inverts the sceen colors
+        subpixel True additive 0.0 matrixcolor InvertMatrix(1.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
 
     gr "Gngh!"
 
     #revert screen tint to normal colors
+    camera: #inverts the sceen colors
+        subpixel True additive 0.0 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
     "My body recoils at his name. Why...?"
     extend " I'm no longer eager nor entertained.\nAnd we vampires aren't susceptible to magic, which means Christoph wasn't an incantation. So what gives the word power over me?"
     "If anything, it sparks clarity in my mind. The ferocity I felt slips away as I regain my composure."
     extend " Damnable hunger... Was I {i}truly{/i} about to stoop to murder? Over a low-grade meal?! How pathetic!"
+
+    play sound sfx.bam
+    hide villager with moveoutbottom
     "I shove him into their arms and take the syringe from my belt."
 
     play sound sfx.stab
     "As the blood pumps into my arm, sanity returns. My eyesight dulls as do my other senses, but having them enhanced is no use to me if it drives me to madness."
     "The heroes look at me in disbelief. This must quite the night for them."
 
-    show celestial at right with easeinright
+    show celestial at right with easeinright:
+        zoom 1.5 ypos 1.6
     c "You're...releasing him? Ishmael must live indeed."
 
     gr "Talk, morsel, before I change my mind."
     
     m "He's...he's a goblin butcher.\nHe reeks of blood and gore, but he always has the paste."
     
-    gr "Ngh!"
+    gr "Gnngh..!" with vpunch
     
     m "Look...for a house with a deer's skull on the front door.\nThat's where we'd have our parties. They were so...amazing."
     
@@ -221,8 +250,7 @@ label interrogation:
 
     c "How vile..."
 
-    hide celestial
-    #hide sulhouette
+    hide celestial with moveoutright
     "Every time Christoph's infernal name is mentioned, I twitch."
     extend " I oughta cut this butcher down for that slight alone. For some reason, I feel nostalgia when I hear his name. But I never met a butcher by that name..."
     "But have I ever met a goblin? They're uncommon in the cities."
@@ -230,31 +258,33 @@ label interrogation:
     "Many look at them as savages. Some are, resorting to banditry and ambushing travelers. They can be a real nuisance under the proper leader."
     "However, I've never been sent to dispatch them. They're pests for guards and upstart adventurers to deal with. So I couldn't have battled one..."
 
+    show villager with moveinbottom
     m "That's everything I know, I swear!"
     
     gr "Hmph!"
-    play sound sfx.thud
-    #hide silhouette with zoomout
     extend " Get him out of my sight. His babbling has spoiled my appetite."
     
-    show celestial at left with easeinleft
+    show celestial at left with easeinleft:
+        zoom 1.5 ypos 1.6
     c "I'm not so sure... What's sparked this change in you?\nHoping to dine on the others instead?"
     
     gr "As I said, my appetite has been spoiled..."
     extend " Besides I'm only delaying his death. When he relapses and this \"Charlotta\" turns him into what I've become, I will slay him."
 
-    #show silhouette at center with easeinbottom
+    show villager:
+        linear 0.1 yoffset -150 #TODO - Create a hop transform
+        linear 0.1 yoffset 0
+        linear 0.1 yoffset -150
+        linear 0.1 yoffset 0
     m "You, you saw all of that?!"
 
     gr "Regrettably, I did..."
-    #show silhouette zoomin
     extend " Considering the intel, I wager this Christoph is a monster just like myself. You all are free to accompany me at your own peril."
     gr "As the addiction turns you, you crave more and more forbidden tastes, ending with blood. He is likely using his supplies to attract more prey."
 
     #hide silhouette
-    show celestial at left with dissolve
-    show celestial at right with dissolve
-    #Ragyuo - Consider some sort of animation where the sprites move a certain way or something to simulate the conversation
+    show celestial as celestial_2 at right with moveinright:
+        zoom 1.5 ypos 1.6
     "The hallowmen turn to each other, mutter, than turn back to me."
     "The hostility in their faces has evaporated. They look to me with concern and hope."
     extend " Do they now understand the severity of our situation? Or do they misjudge me for sparing that pig?"

@@ -198,6 +198,11 @@ layeredimage persephone:
 
             "images/sprites/persephone/angry.png"
 
+image villager:
+    yoffset 100
+
+    "images/sprites/villager.png"
+
 ### Other
 
 
