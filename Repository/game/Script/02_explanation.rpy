@@ -14,7 +14,7 @@ label explanation:
     extend "\nIt's been three days since I last ate. I should have a syringe lying around somewhere."
 
     play sound sfx.door_open
-    show nick happy at left with easeinleft
+    show nick happy at nick_normal_range with easeinleft
 
     "The door creaks open, and I narrow my eyes at the lanky elf that enters."
     "Disgust graces my tongue.\nI'd sooner starve than feed on him, even if he was the last mortal on the plane."
@@ -34,17 +34,14 @@ label explanation:
     play sound light_grapple
     "I put on my boots, stand, and stretch.\nI wish my scenery wasn't so unpleasant."
 
-    
-    show nick elated with dissolve:
-        zoom 1.5 ypos 1.5
+    show nick elated at nick_close_range with dissolve
     "This elf is revolting!" 
     extend " His hair is disheveled, his jagged fingernails are unsightly, and he's wearing short sleeves despite the winter's snow."
     "Worst of all, he's a Malconvoker - a buffoon who summons devils to fight other devils. It's only a matter of time before one takes his head off."
     "Granted, I'm no saint myself.\nWe only avoid execution because we Emissaries hunt down the trash the Celestials don't wish to deal with."
     "It is no less than what I deserve for my weakness."
 
-    show nick neutral with dissolve:
-        zoom 1.0 ypos 1.0 
+    show nick neutral
     gr "Speaking of, how is Caius?"
 
     ni "He'll be fine. Though he will need to get used to wearing a mask.\nHis mana was gushing like a fountain."
@@ -62,7 +59,7 @@ label explanation:
     
     gr "Doesn't Malice do the same?"
     
-    show nick neutral at right with easeinright:
+    show nick neutral at right with moveinright:
         xzoom -1.0 
     ni "Malice wears on your soul when overused.\nJustice is like turning your very soul into a weapon. It will kill you, and probably everyone else nearby if mishandled."
     ni "On top of that, your friend is a lunatic."
@@ -81,12 +78,12 @@ label explanation:
 
     gr "And you gauged that much just from treating an unconscious body?"
     
-    show nick at right with easeinright:
-        xzoom -1.0
+    show nick at nick_normal_range with easeinright:
+        xzoom -1.0, xalign 1.0
     ni "Well, how his mana flows was also a clue.\nIt doesn't have the restraints that a normal person does, so it's no wonder Justice started erupting from him out of nowhere."
     ni "I hypothesize the stress of that battle must've led to him somehow channeling it. Justice manifests from one's regrets, much like your Malice comes from hatred. "
 
-    hide nick with quickblinds
+    hide nick
     show jory at center with pixellate:
         t_alpha(0.3) #t_alpha makes sprite transparent
 
@@ -96,15 +93,18 @@ label explanation:
     hide jory with pixellate
     gr "Hmph, than I'll let him rest. I have a banshee to hunt."
     
-    show nick neutral at center with easeinbottom 
+    show nick neutral at nick_normal_range with easeinbottom:
+        xalign 0.5
     ni "I'd prefer you not-"
 
     play sound sfx.grapple
-    show nick neutral:
-        ease 0.1 zoom 1.5 ypos 1.5
+    show nick happy:
+        center
+        nick_close_range
+
+        
     extend " Ngh!"
-    
-    show nick elated
+
     "I yank the fool by his collar, only for him to smile whimiscally."
     "If he wasn't so useful, I'd crush his neck where we stand.\nBut he'd enjoy every second of it anyway. This maniac adores pain."    
     extend " Granted, I adore hitting him..."
@@ -123,7 +123,7 @@ label explanation:
     hide nick with moveoutbottom
     play sound sfx.thud
     "I release him. He crumples, then regains his footing haphazardly.\nHe isn't even winded after being manhandled."
-    show nick happy at center with easeinbottom:
+    show nick happy at nick_close_range with easeinbottom:
         xzoom -1.0
     "He hands me a writ. It's a warrant written by the Celestials to search some house, under suspicion of the occupant harboring Sanguine Paste."
     "My fingers tense upon reading those wretched words.\nThat infernal drug causes nothing but problems, and people {i}still{/i} use it!"
