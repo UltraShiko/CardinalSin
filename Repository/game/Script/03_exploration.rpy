@@ -17,14 +17,20 @@ label exploration:
 
     "As I stroll through the snow, people part from my path as if I'm feral.\nI can't blame them. They're {i}almost{/i} right."
 
+    show villager at left with dissolve
     w "Is that a hellspawn?"
     
+    show villager as villager_2 at right with dissolve
     m "Worse, a bloody leech. Look at his eyes.\nHe's sizing us up like meat."
     
+    show villager at hop
     w "Shouldn't the Celestials do something?"
     
+    show villager as villager_2 at hop
     m "They should, but methinks that leech pulled strings for special treatment.\nTo walk around  in public looking like that..."
 
+    hide villager with easeoutleft
+    hide villager as villager_2 with easeoutright
     "Tch, as if those simpletons would satisfy me.\nPerhaps if I abandoned my dignity..."
     "Their glares and murmurs do not interest me.\nIf I don't hurry, the Smith will close."
     "If those cattle could think, they'd likely figure out what role I serve.\nWhy else would a blood-sucking monster be allowed to roam free?"
@@ -33,11 +39,12 @@ label exploration:
     stop sound fadeout 0.8
 
     "Fortunately, I'm just in time. The smith's stand is still open."
+
+    show villager at center with dissolve
     "The grizzled, bloated dwarf eyes me with scorn.\nAs usual, I pull out both my hatchet and sword."
     "We do business only out of necessity.\nHe needs coin, and I cannot afford to purchase a sharpening wheel."
     extend "\nIt would be a gross waste of money for maintaining my arms and armor."
 
-    #show dwarf silhouette with dissolve
     sm "Back again? All too soon..."
 
     gr "I want these sharpened."
@@ -49,6 +56,7 @@ label exploration:
 
     gr "It would be much faster if I sharpened them myself."
     
+    show villager at hop
     sm "Ya trying to run me out of business?!\nI don't want yer mangy mitts on my equipment!"
     
     gr "Any diseases I'd harbor wouldn't spread through touch."
@@ -75,6 +83,7 @@ label exploration:
     
     gr "A satisfactory job as always."
     
+    show villager at hop
     sm "Hurry along! I don't want no one seeing ya at my stand!"
     
     gr "Would you prefer drug dealers? That's who I'm going after."
@@ -83,7 +92,7 @@ label exploration:
     
     gr "I suspect it's the same reason why you drink.\nConsider purchasing some incense."
 
-    #hide dwarf with zoomout
+    hide villager with easeoutright
     play sound sfx.footsteps_snow fadein 0.8 loop
     "I take my posessions and leave."
     extend "\nHumorously, I hear him start drinking from a bottle on my way out."
@@ -91,8 +100,10 @@ label exploration:
     "I review the writ.\nMy quarry is located at some hobble in {i}the Hells{/i}, where the bottomfeeders of Jubilee reside." 
     "If the Celestials are doing a search, then maybe I can follow them."
 
-    show zo_celestial at left with dissolve
-    show zo_celestial as celestial_2 at right with dissolve
+    show celestial at celestial_normal_range with dissolve: #TODO - Either fix the far range transform or scrap it
+        left
+    show celestial as celestial_2 at celestial_normal_range with dissolve:
+        right #TODO - Should I use a looping hop transform to simulate walking, or is the sound fx good enough?
     extend "\nBefore I can finish reading, I notice a band of silvered knights marching by, conveniently right where I need them to be."
     
     "I follow. I don't hide.\nWhat will they do, arrest an Emissary? That would be quite amusing."
@@ -103,11 +114,13 @@ label exploration:
     "They say he was a tyrant. Some say he needed a staff just to wield mana. And he supposedly executed people at the drop of a hat."
     "Some sympathize with the banshee. What got her burned was an attempt on his life. Hecate's suboordinates see her as a martyr despite {i}the Reckoning{/i}."
     "The lackadaisical Nick always grows stern when we speak of {i}The Third{/i}.\nAnd this is the same buffoon he conjures fiends for a profession."
-    "As our march continues, a man of over nine feet blocks their path."
 
     stop sound fadeout 0.8
-    
-    show jory neutral with dissolve
+
+    hide celestial with dissolve
+    hide celestial_2 with dissolve
+    show jory neutral with dissolve 
+    "As our march continues, a man of over nine feet blocks their path."    
     extend "\nThis giant is named Jory. He's a nephillim rumored to have courted the banshee. That's what Caius believes."
 
     c "Hail Jory!"
@@ -123,22 +136,27 @@ label exploration:
     j "I wasn't talking to you..."
 
     hide jory with dissolve
-    show zo_celestial at left
-    show zo_celestial as celestial_2 at right #allows me to display dupliccates of same sprite
+    show celestial at celestial_normal_range with easeinleft:
+        left
+    show celestial as celestial_2 at celestial_normal_range with easeinright:
+        right
     "He points me out, and the knights turn and wince."
     play sound sfx.light_grapple
     extend "\nI smirk as one of the knights grips his sword's pommel."
     "Meanwhile the nephillim scowls at me.\nOut of everyone who despises me, Jory nets the most respect."
     "I had no intention of endagering his pupil. Had I known the banshee was going to be summoned, Nick would've accompanied me instead."
 
+    show celestial as celestial_2 at celestial_normal_range:
+        hop
     c "Godforsaken leech! You dare trail us?!" with vpunch
     
     gr "Indeed I am.\nKeep on with your search, it isn't like any of you can stop me."
     
     play sound sfx.weapon_draw
-    hide zo_celestial
-    show celestial combat:
-        ease 0.3 zoom 1.5
+    hide celestial with Dissolve(0.4) #Capital D = customizable dissolve
+    #TODO - Find a way to have him move closer immersely, Likely with an ease / move transform
+    show celestial combat at celestial_close_range:
+        left
 
     c "Monster! I'll drive this this blade through your heart!"
     
@@ -148,9 +166,10 @@ label exploration:
     
     j "Enough!" with vpunch
 
-    hide celestial with moveoutleft
-    hide celestial_2 with moveoutright
-    show jory angry with dissolve
+    hide celestial with easeoutleft
+    hide celestial_2 with easeoutright
+    show jory angry with Dissolve(0.2)
+    # TODO - Create a zoom in transform for Jory
     "Jory's gentle, yet thunderous voice leaves the knights shivering from more than just the snow."
     "The hallowman look at each other in disbelief, and then turn to Jory, who nods gravely."
     extend " Despite his composure, even this gentle giant is bitter with me."
@@ -160,23 +179,29 @@ label exploration:
 
     j "Yes, I know him. He's telling the truth."
 
-    show zo_celestial at right with moveinright
+    show celestial as celestial_2 at celestial_normal_range with easeinright:
+        right
     c "You must be kidding!\nThe fourth, allow a leech like him to roam free?! Is he mad?"
     
     gr "As if your low-grade blood would satisfy me."
     
+    show celestial as celestial_2 at celestial_normal_range: #will probably need to reassign come zoom in sprite
+        hop
     c "Then what are you doing here?!" with vpunch
     
     gr "Trailing you, as you already observed.\nI'm after the same criminals you are."
     
-    show zo_celestial as celestial_2 at left with moveinleft
+    show celestial combat at celestial_normal_range with easeinleft:
+        left
     c "Absolutely not! This doesn't concern you rogues!\nHalf of you are criminals yourselves!"
     
     gr "You aren't wrong, and you aren't stopping me."
     
+    show celestial combat at celestial_normal_range: #will probably need to reassign come zoom in sprite
+        hop
     c "You just want a meal, don't you?!"
     
-    gr "Are you going to shed tears for drug dealers?\nDo you understand what Sanguine Paste is?"
+    gr "Are you going to shed tears for drug dealers?\nDo you not  understand what Sanguine Paste is?"
     gr "I wonder, if you knew that this infernal substance made me what I am today, would you still mourn their deaths?"
     
     show jory sad
@@ -187,7 +212,7 @@ label exploration:
     gr "It's quite impressive how these Archdevils harvest souls.\nEach one has their own methods, and I intend to stop this plague before it spreads any further."
 
     hide jory
-    hide zo_celestial
+    hide celestial
     hide celestial_2
     with dissolve #position this way triggers the transitions simultaneously
     "I talk proudly, but I'm well aware I am one of his abominations.\nIf these cattle have anything over me, it's their humanity."
@@ -196,13 +221,12 @@ label exploration:
     "I imagine the Celestials will arrest everyone, bring them in, and lock up the addicts for some time. But when they get out, they'll just resume their anttics."
     "It's what I did. You can't help those that have become enslaved to the paste. No one could have helped me."
 
-    show jory sad at center with dissolve:
-        xzoom -1.0 zoom 1.2 ypos 1.25
+    show jory sad at center with dissolve
     j "Griswyr, how is Caius?"
 
     gr "Still asleep, and he will live."
     
-    show jory happy
+    show jory happy at hop
     j "Praise Ishmael..."
 
     show jory neutral
@@ -214,17 +238,19 @@ label exploration:
 
     gr "Addicts are superb at hiding their use, nephillim.\nThey understand well what happens if they're caught."
     
-    show zo_celestial at right with easeinright
+    show celestial combat at celestial_normal_range with easeinleft:
+        left
     c "Or, you could crawl back into whatever hole you came from and let us handle it."
     
     gr "You're free to join me. I won't forbid it, however..."
     extend "\nAs you know, there may be fiendish activity afoot. I recently fought a devil, and I wouldn't be surprised if another is behind this."
     
-    #have sprite hop up and down once
+    show celestial combat at celestial_normal_range:
+        hop
     c "Wh-What-?!"
 
-    hide zo_celestial with moveoutright
-    "I chuckle. It doesn't take much to shatter their bravado.\nAs I predicted, they aren't prepared."
+    hide celestial with quickblinds
+    "I chuckle. It doesn't take much to shatter his bravado.\nAs I predicted, these hallowmen aren't prepared."
     "At least Jory remains composed. I hear he was on the frontlines during {i}the Reckoning{/i}. Nick claims he went toe-to-toe with that pain devil."
     "Truth be told, I wager it's one of my kind distributing the paste.\nA devil appearing isn't an impossibility though."
 

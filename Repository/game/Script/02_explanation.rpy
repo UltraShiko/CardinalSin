@@ -123,8 +123,8 @@ label explanation:
     hide nick with moveoutbottom
     play sound sfx.thud
     "I release him. He crumples, then regains his footing haphazardly.\nHe isn't even winded after being manhandled."
-    show nick happy at nick_close_range with easeinbottom:
-        xzoom -1.0
+    show nick happy at nick_normal_range with easeinbottom:
+        center
     "He hands me a writ. It's a warrant written by the Celestials to search some house, under suspicion of the occupant harboring Sanguine Paste."
     "My fingers tense upon reading those wretched words.\nThat infernal drug causes nothing but problems, and people {i}still{/i} use it!"
     extend "\nI'd know, I was one of those idiots..."
@@ -133,8 +133,9 @@ label explanation:
     
     gr "Hmm... Why are you giving me this?\nSurely, you understand that Persephone is our top priority."
     
-    show nick happy at center:
-        ease 0.5 zoom 1.5 ypos 1.5
+    show nick happy at hop:
+        xzoom -1.0
+
     ni "She is, and I intend to help you find her, but there's something I want to investigate first."
     extend " You know how a dretchling destroyed Thrycia?"
     
@@ -158,7 +159,7 @@ label explanation:
     
     gr "Yes, {i}spite{/i}, because you blame her for your failure.\nAs if you alone could've stopped {i}the Reckoning{/i}."
     
-    show nick neutral:
+    show nick neutral at left with move:
         xzoom 1.0
     ni "Hard to close a tear in the plane with a chain through your chest..."
     show nick elated
@@ -176,8 +177,8 @@ label explanation:
     gr "Fine, I'll snuff out this operation.\nBe grateful I hate Sanguine Paste more than I hate you."
     
     show nick elated at left with easeinleft:
-        zoom 1.5 ypos 1.5
-    ni "It does keep you in linee-"
+        nick_close_range
+    ni "It does keep you in line-"
     
     play sound sfx.hurl
     queue sound sfx.pottery_break

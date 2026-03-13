@@ -2,8 +2,9 @@ label interrogation:
     
     play sound sfx.footsteps_snow fadein 0.8 loop
 
-    "I skulk away. \nMy stomach growls, and my eyes dilate. Good!"
-    extend " Monstrosity follows my gnawing hunger. These heightened senses make tracking all to easy."
+    "I skulk away. \nMy stomach growls, and my eyes begin to dilate."
+    extend " Good!"
+    "Monstrosity follows my gnawing hunger. These heightened senses make tracking all to easy."
     "I see many footprints in the snow, but one pattern stands outs."
     "These tracks are haphazard, almost as if he was hopping about like a rabbit. Intoxication leads to vivid hallucinations. I remember thinking I could fly during one of them..."
     
@@ -19,12 +20,6 @@ label interrogation:
     "I snarl.\nI no longer crave that wretched paste but I don't want to reek of it either! This disgusting oaf is going to regret using."
     "Soon the prints are followed by sounds.\nTheir keeper is babbling not too far from here."
 
-    show villager at center_left with moveinbottom:
-        zoom 0.8
-        ease 2 xalign 0.75 #this block has him sway from side to side
-        ease 2 xalign 0.25 #ease is used due to it's speed being sudden
-        repeat
-
     v "Hey-hey! Yes, Charlotta, it's me! I'm back just as I promised!"
     v "Ohohoho! There's no way you could be evil. Not with those sweet, voluptuous tits of yours! If they drag me to Hell, I won't struggle~!\nUnless you want me too..."
     v "Ohh my sweet! I'm not going to wait. Let us make love this time!\nWho cares if it's in the snow?! And if anyone sees us, let 'em watch!"
@@ -35,20 +30,18 @@ label interrogation:
     extend " No, he'll do. I'll drink his blood as payment. He {i}clearly{/i} doesn't need it anymore."
 
     show villager at center_left:
-        ease 1 zoom 1.2 #has him sway closer 
+        zoom 1.2 
     
+    stop sound fadeout 0.8
     pause 0.5 #needed to separate the statements so only the second block loops
     
-    show villager:
-        ease 2 xalign 0.75
-        ease 2 xalign 0.25
-        repeat
+    show villager at sway
 
     "He comes in my sights, arms and body flailing for an illusion.\nHiding is hardly necessary."
 
     stop sound fadeout 0.8
 
-    #maybe alter the camera a few xpos down to simulate squatting?
+    #TODO - maybe alter the camera a few xpos down to simulate squatting?
     "Regardless I crouch. I calculate the distance between us."
     extend "\nNo weapons or mana will be needed. I don't know why I bother preparing to attack.." 
     "My instincts call for wariness, even from an oaf trapped in stupor."
@@ -82,7 +75,8 @@ label interrogation:
     play sound sfx.stab
     with quickblood
     
-    m "Ngh, ahh...{b}AaaaaAAAGHHHH!!!{/b}" with vpunch
+    m "Ngh, ahh..."
+    extend"{b}AaaaaAAAGHHHH!!!{/b}" with vpunch
 
     "I ram the elixir's contents up his nose. It's much quicker than forcing it down his throat."
     extend " To call this an elixir is generous. It's mere garlic concentrated into a liquid."
@@ -99,7 +93,8 @@ label interrogation:
     gr "You dare compare me to them? Your foolishness is starting to offend me."
     
     m "No wait, you have fangs... And your eyes, they're...so-"
-    extend "\nBy Ishmael! Vampire!!!" with vpunch 
+    show villager at hop
+    extend "\nBy Ishmael! Vampire!!!"
 
     "I snicker. His squirms only entertain me.\nHe can writhe and scream as he much as he likes, no one is saving him."
     "I imagine he wishes Charlotta was here in my place.\nPerhaps Hell will have a devil in store for him to tend to his wishes."
@@ -137,10 +132,10 @@ label interrogation:
 
     hide villager
     play sound sfx.footsteps_snowf
-    show celestial combat at left with moveinleft:
-        zoom 1.5 ypos 1.6
-    show celestial combat as celestial_2 at right with moveinright:
-        zoom 1.5 xzoom -1.0 ypos 1.6
+    show celestial combat at celestial_normal_range with moveinleft:
+        left
+    show celestial combat as celestial_2 at celestial_normal_range with moveinright:
+        xzoom -1.0 right
 
     "Booted footsteps trample our way.\nIt's those hallowmen again, how quaint..."
     "The band approach but don't draw too close.\nOne is bold enough to have his sword out."
@@ -157,6 +152,8 @@ label interrogation:
 
     gr "We aren't done here. Where did you find that paste?"
     
+    show celestial combat at celestial_normal_range:
+        hop
     c "Release him at once! We are taking custody of this man!"
     
     gr "Under what authority? I outrank you both."
@@ -170,7 +167,8 @@ label interrogation:
     
     gr "Hmm, so if I choose to break another finger..."
     
-    #have one of the sprites hop
+    show celestial combat as celestial_2 at celestial_normal_range:
+        hop
     c "By Ishmael, he isn't your target! I thought you were after the dealer!"
     
     gr "I need information, and he's keeping it from me.\nHe fears his supplier more than me..!"
@@ -205,7 +203,9 @@ label interrogation:
     extend "\nMy heart races. They'll all be dead in three..."
     extend " Two..."
     
-    m "Okay! It's Christoph! {b}CHRISTOPHHH!!!{/b}" with vpunch
+    show villager at hop
+    m "Okay! It's Christoph!"
+    extend " {b}CHRISTOPHHH!!!{/b}" with vpunch
 
     play sound sfx.zap
     stop music
@@ -228,14 +228,19 @@ label interrogation:
 
     play sound sfx.stab
     "As the blood pumps into my arm, sanity returns. My eyesight dulls as do my other senses, but having them enhanced is no use to me if it drives me to madness."
+    
+    show celestial combat at celestial_normal_range with moveinleft:
+        left
+    show celestial combat as celestial_2 at celestial_normal_range with moveinright:
+        xzoom -1.0 right
     "The heroes look at me in disbelief. This must quite the night for them."
 
-    show celestial at right with easeinright:
-        zoom 1.5 ypos 1.6
     c "You're...releasing him? Ishmael must live indeed."
 
     gr "Talk, morsel, before I change my mind."
     
+    show villager at center with moveinbottom:
+        zoom 0.8
     m "He's...he's a goblin butcher.\nHe reeks of blood and gore, but he always has the paste."
     
     gr "Gnngh..!" with vpunch
@@ -248,9 +253,11 @@ label interrogation:
     extend " Now that I think about it, a lot of us addicts disappear as we indulge. I figured they used too much and succumbed to illness."
     m "Christoph doesn't care. \n\"Tis the price they pay for pleasure\", as he would say..."
 
-    c "How vile..."
+    show celestial combat as celestial_2 at celestial_normal_range:
+        hop
+    c "H-How vile..."
 
-    hide celestial with moveoutright
+    play sound sfx.zap
     "Every time Christoph's infernal name is mentioned, I twitch."
     extend " I oughta cut this butcher down for that slight alone. For some reason, I feel nostalgia when I hear his name. But I never met a butcher by that name..."
     "But have I ever met a goblin? They're uncommon in the cities."
@@ -258,24 +265,20 @@ label interrogation:
     "Many look at them as savages. Some are, resorting to banditry and ambushing travelers. They can be a real nuisance under the proper leader."
     "However, I've never been sent to dispatch them. They're pests for guards and upstart adventurers to deal with. So I couldn't have battled one..."
 
-    show villager with moveinbottom
+    show villager at hop
     m "That's everything I know, I swear!"
     
     gr "Hmph!"
     extend " Get him out of my sight. His babbling has spoiled my appetite."
     
-    show celestial at left with easeinleft:
-        zoom 1.5 ypos 1.6
+    show celestial combat at celestial_normal_range:
+        hop
     c "I'm not so sure... What's sparked this change in you?\nHoping to dine on the others instead?"
     
     gr "As I said, my appetite has been spoiled..."
     extend " Besides I'm only delaying his death. When he relapses and this \"Charlotta\" turns him into what I've become, I will slay him."
 
-    show villager:
-        linear 0.1 yoffset -150 #TODO - Create a hop transform
-        linear 0.1 yoffset 0
-        linear 0.1 yoffset -150
-        linear 0.1 yoffset 0
+    show villager at hop
     m "You, you saw all of that?!"
 
     gr "Regrettably, I did..."
@@ -283,10 +286,22 @@ label interrogation:
     gr "As the addiction turns you, you crave more and more forbidden tastes, ending with blood. He is likely using his supplies to attract more prey."
 
     #hide silhouette
-    show celestial as celestial_2 at right with moveinright:
-        zoom 1.5 ypos 1.6
+    show celestial combat at celestial_normal_range:
+        hop
+    show celestial combat as celestial_2 at celestial_normal_range:
+        hop
     "The hallowmen turn to each other, mutter, than turn back to me."
-    "The hostility in their faces has evaporated. They look to me with concern and hope."
+
+    play sound sfx.sheathe_sword
+    hide celestial
+    hide celestial_2
+    with Dissolve(0.3)
+    show celestial at celestial_normal_range:
+        left
+    show celestial as celestial_2 at celestial_normal_range:
+        right
+    with Dissolve(0.3) #(0.3) is picked to simulate a natural transition
+    "The hostility in their faces evaporates. They look to me with concern and hope."
     extend " Do they now understand the severity of our situation? Or do they misjudge me for sparing that pig?"
     "I grumble. I do hope they aren't foolish enough to believe the latter.\nI nearly tore their throats open. And it's not too late for a relapse..."
 
@@ -294,7 +309,8 @@ label interrogation:
 
     gr "I cannot wield holy water, and I'll be fine on my own.\nIf anything, I'd prefer it that way."
     
-    #move one of the celestials a bit to simulate speaking
+    show celestial at celestial_normal_range:
+        hop
     c "Look, I know we got off on the wrong foot but-"
     
     gr "Save it." 
