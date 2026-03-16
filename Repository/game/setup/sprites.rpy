@@ -10,12 +10,6 @@
 #image side griswyr snide = "griswyr snide"
 
 
-image zo_celestial: #zoomed out
-
-    yoffset 251
-
-    "images/sprites/celestial/default.webp"
-
 image celestial:
 
     # zpos 400
@@ -35,48 +29,44 @@ image celestial combat:
 
     # "images/sprites/caius/neutral.png"
 
+layeredimage christoph:
+
+    attribute combat: #combat is first attribute for purpose of second statement
+
+        "images/sprites/christoph/combat.png"
+
+    attribute base default when not combat: #when combat is not typed, base pose will appear
+
+        "images/sprites/christoph/base.png"
+
+    group emotions: #groups all expressions
+
+        attribute happy: 
+
+            "images/sprites/christoph/happy.png"
+
+        attribute neutral:
+
+            "images/sprites/christoph/neutral.png"
+
+        attribute angry:
+
+            "images/sprites/christoph/angry.png"
+
+        attribute feral:
+
+            "images/sprites/christoph/feral.png"
+
+
+
+    
+
 # TODO - Acquire and fine tune sprites
-#image Christoph
-
-    #yoffset 251
-
-    # "images/sprites/christoph/neutral.png"
-
-# TODO - Acquire and fine tune sprites
-#image Christoph combat
+#image Christoph_combat
 
     #yoffset 251
 
     # "images/sprites/christoph/combat.png"
-
-layeredimage zo_nick: #testing zoomed out positioning
-
-    zoom 0.6
-    ypos 2.5
-
-    always: #ensures the default sprite is the one below
-
-        "images/sprites/nick/base.png"
-
-    group emotions:
-
-        attribute happy default:
-
-            pos (270, 124)
-
-            "images/sprites/nick/happy.png"
-
-        attribute neutral:
-
-            pos (270, 129)
-
-            "images/sprites/nick/neutral.png"
-
-        attribute elated:
-
-            pos (270, 123)
-
-            "images/sprites/nick/elated.png"
 
 layeredimage nick:
 
@@ -101,35 +91,6 @@ layeredimage nick:
         attribute elated:
 
             pos (905, 412)
-
-            "images/sprites/nick/elated.png"
-
-layeredimage zi_nick: #zoomed in
-
-    zoom 1.5
-    ypos 1.5
-
-    always: #ensures the default sprite is the one below
-
-        "images/sprites/nick/base.png"
-
-    group emotions:
-
-        attribute happy default:
-
-            pos (270, 124)
-
-            "images/sprites/nick/happy.png"
-
-        attribute neutral:
-
-            pos (270, 129)
-
-            "images/sprites/nick/neutral.png"
-
-        attribute elated:
-
-            pos (270, 123)
 
             "images/sprites/nick/elated.png"
 

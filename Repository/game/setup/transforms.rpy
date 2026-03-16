@@ -14,3 +14,14 @@ transform sway:
     ease 2 xalign 0.75 #this block has him sway from side to side
     ease 2 xalign 0.25 #ease is used due to it's speed being sudden
     repeat
+
+transform invert_camera:
+    matrixcolor InvertMatrix(1.0) #inverts the screen colors
+
+transform revert_camera:
+    subpixel True 
+    additive 0.0 
+    matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
+
+transform red_camera: #turns screen dark red
+    matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.25)*HueMatrix(135.0) 

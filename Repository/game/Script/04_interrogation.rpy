@@ -182,10 +182,8 @@ label interrogation:
     hide celestial_2
     with pixellate
     window hide
-    camera: #turns screen dark red
-        subpixel True matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(-0.25)*HueMatrix(135.0) 
+    camera at red_camera
     window show
-
 
     "I shiver from excitement."
     extend " Four men. Four sacks of blood...\nHad I taken the syringe, I would've missed out on this banquet!" with vpunch
@@ -209,14 +207,11 @@ label interrogation:
 
     play sound sfx.zap
     stop music
-    camera: #inverts the sceen colors
-        subpixel True additive 0.0 matrixcolor InvertMatrix(1.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
+    camera at invert_camera
 
     gr "Gngh!"
-
-    #revert screen tint to normal colors
-    camera: #inverts the sceen colors
-        subpixel True additive 0.0 matrixcolor InvertMatrix(0.0)*ContrastMatrix(1.0)*SaturationMatrix(1.0)*BrightnessMatrix(0.0)*HueMatrix(0.0) 
+    
+    camera at revert_camera
     "My body recoils at his name. Why...?"
     extend " I'm no longer eager nor entertained.\nAnd we vampires aren't susceptible to magic, which means Christoph wasn't an incantation. So what gives the word power over me?"
     "If anything, it sparks clarity in my mind. The ferocity I felt slips away as I regain my composure."

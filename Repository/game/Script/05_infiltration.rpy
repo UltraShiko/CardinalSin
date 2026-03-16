@@ -59,7 +59,8 @@ label infiltration:
     "How has this place not been searched sooner?\nEven if the Celestials have their hands full, where are the city guards?"
     "Hmm, I wonder how many of them are in this circle? Or have been bribed?\nMortals are weak in the face of sinful temptation, after all..."
 
-    #show Christoph happy - Sprite is in development
+    #show Christoph happy at Christoph_normal_range:
+        #center
     show eileen
     "I'm escorted past them to a bluish green goblin lounging in a chair too regal for this dump. This must be my prey."
     extend " He looks up at me and grins, jagged teeth meeting my eyes."
@@ -69,7 +70,9 @@ label infiltration:
 
     m "He claims he wants to buy."
     
-    show eileen: #zoom in christoph
+    #show Christoph happy at Christoph_close_range:
+        #center
+    show eileen:
         ease 0.5 zoom 1.5 ypos 1.5
     ch "Yes, yes, buy a lot more than my average customer, I'm assuming.\nHehehehe, to whom do I owe the pleasure for his patronage."
     
@@ -79,7 +82,7 @@ label infiltration:
     show eileen at hop
     ch "Oooooh!!!"
 
-    #hide Christoph moveoutleft
+    #hide Christoph with moveoutleft
     hide eileen with moveoutleft
     "I slap down a sack of coin, much more than I paid the smith."
     "The goblin's eyes expand. This must be more money than he's ever seen in his life. I see a long, slender tongue lick his lips."
@@ -88,7 +91,8 @@ label infiltration:
     "My chest grows heavier. I can't pinpoint when or where I've encountered Christoph. This amnesia is beginning to irritate me..!"
     "But he doesn't appear to recognize me either. He reverts his gaze from his spoils, flashing a toothy smile."
 
-    #show Christoph happy
+    #show Christoph happy at Christoph_normal_range:
+        #left
     show eileen at left with easeinleft
     ch "Start him off. We're having him over for the night.\nIt is our duty to cater to our guests~."
     
@@ -102,7 +106,8 @@ label infiltration:
     "I reach for my hatchet. The thought of hurling it at the goblin's head causes my hand to twitch."
     extend " As expected, violence is off the table.\nFor now..."
 
-    #show Christoph happy with zoomin
+    #show Christoph happy at Christoph_close_range:
+        #center
     show eileen:
         ease 0.5 xpos 0.3 ypos 1.5 zoom 1.5 #xpos moves to center
 
@@ -114,14 +119,16 @@ label infiltration:
     ch "Eh?"
     
     gr "I feel like we've met somewhere."
-    
+    #show Christoph happy at Christoph_close_range:
+        #right
     ch "Perhaps we have. My business isn't appreciated. I've become a wanderer of sorts. I've been at this for ten years now."
     extend " Though, I feel as if we've met as well. Mayhaps you were one of my earlier clients?"
     
     gr "Hmm. I have used for a long time... It isn't impossible."
     extend "\nSay, if I were to help you, where would I go to acquire more paste?"
     
-    #maybe have sprite bounce once to demonstrate joy?
+    #show Christoph happy at Christoph_close_range:
+        #hop
     ch "Hahahaha, an opportunist! I respect that, but I think we should get to know each other more first."
 
     "He too, pulls out a wad of paste."
@@ -132,7 +139,7 @@ label infiltration:
     ch "Yes! {b}YES!{/b} That's more like it!" with vpunch
 
     "I only witness him indulge before my vision grows hazy."
-    extend " Ugh, no wonder this stuff is addictive. It acts quickly. If I were still mortal, I'd be beyond helpless."
+    extend " Ugh, no wonder this stuff is addictive. It acts quicker than I remember. If I were still mortal, I'd be beyond helpless."
 
     #hide Christoph
     scene image "#000" with pixellate
@@ -152,16 +159,22 @@ label infiltration:
     gr "Who are you, goblin?"
 
     "The illusions continue to wobble and ripple like water."
-    extend " And then I see a green woman with the same ears as Christoph. She too, sparks familiarity within me."
+    extend " I see nothing, but begin hearing voices.."
 
     #I do not know if we necessarily need silhouettes for these two
     w "Christoph, can you fetch the firewood? Let's get a roaring fire going!"
 
     ch "But it's sooo cold outside. Can you do it this time?"
     
-    w "Hehe, you asked me the same thing last time. Now hurry along~."
+    w "Hehe, you asked me the same thing last time. And besides, fire is so breathtaking isn't it?"
     
     gr "(Ahh, this must be his mother.)"
+
+    ch "Ugh, but I'm so tired..."
+
+    w "So am I. You'll understand when you have kids. Now hurry alone~."
+
+    ch "Fine..."
 
     window hide
 
@@ -172,35 +185,44 @@ label infiltration:
     window show
     "I'm now standing outside a window. They don't see me."
     "My mouth waters. Both of them look so scrumptuous!\nAnd I've heard the blood of a child is {b}DIVINE!{/b}"
-    "It'll be so easy. This foolish mother is trusting him outside as the sun sets. She deserves to lose him. Later I'll feast on her too as punishment."
+    "It'll be so easy. This foolish mother is trusting him outside as the sun sets. She {b}deserves{/b} to lose him." 
+    extend " Later I'll feast on her too as punishment."
 
-    gr "(Ngh...these thoughts aren't my own. Are they related to these memories?)"
+    gr "(Ngh...these thoughts aren't my own. Is this the drug's handiwork too?)"
 
     play sound sfx.door_open
 
     play music bgm.lethal_suspense fadein 0.8
-    #show goblin_silhouette at center with dissolve
+    show villager at center:
+        zoom 0.8
     "The young goblin tuggling on his fur jacket, shambles outside."
     extend " Being of the forest, their eyes are more accustomed to the dark. But so are mine."
     "I leave the window. Trailing him is child's play.\nHe doesn't even look over his shoulder. A wolf could pounce on him at any moment."
     extend " How fortuitous for me!" with vpunch 
 
-    #maybe we can zoom in one certain parts of the camera to simulate this?
+    #play sound sfx.rustle_three #TODO - Import rustle sound fx
     "I dart from tree to tree, waiting for him to find his firewood.\nAs he does, he devotes his focus to gathering it. My mouth waters."
     "He bends down and I arch forward, eager to pounce."
 
-    #have screen tint red
+    camera at red_camera
     extend " My muscles brace.\nHe is {b}MINE!{/b} His feeble matron can't save him, even if she was here!"
     "My mouth waters, eager to taste his delectable blood.\nMy thirst is overwhelming! I cannot wait!!!"
     extend "\nI inch forward. In Three..."
     extend " Two..."
 
-    #revert screen tint
+    window hide #simulates a pounce
+    play sound sfx.weapon_swingh
+    show villager at center:
+        zoom 1.5 ypos 1.3
+    pause 1.0
+    camera at revert_camera
     stop music
+    window show
     gr "(I've seen enough.)"
 
     window hide
 
+    #play sound sfx.glass shatter #TODO - Find sound fx for glass shattering
     scene background christoph house with Fade(0.7, 0.8, 0.7, color="#fff")
 
     window show
@@ -208,13 +230,15 @@ label infiltration:
     "Like glass, the illusion shatters. I'm now back in Christoph's den."
     "I understand now. Christoph is the only prey I've ever spared.\nAs I sank my fangs into him that day, I realized just how low I had sunk."
     "Shortly after, a band of Celestials stormed the house.\nThey must've heard his mother's screams."
-    "I didn't resist. I let them bind and gag me. I was to be burned for my heinous offense, and then I met Nick."
+    extend " I didn't resist. I let them bind and gag me. I was to be burned for my heinous offense, and then I met Nick."
     "He convinced me to put my instincts to good use, and that I would be able to feed as much as I wished. I accepted."
-    "My sin is irredeemable. Only Hell or oblivion await me in the afterlife.\nI have no regrets. Tis a fitting end for someone like me."
+    "My sin is irredeemable. Only Hell or oblivion await me in the afterlife."
+    extend "\nI have no regrets. Tis a fitting end for someone like me."
 
     w "Ngh, what are you doing?!" with vpunch
     
-    #show Christoph angry
+    #show Christoph angry at christoph_normal_range:
+        #center
     ch "Sniveling wretch! You know what happens if you cannot pay!" with vpunch
 
     "I see an enraged Christoph pinning one of the addicts to a wall."
@@ -227,10 +251,11 @@ label infiltration:
     ch "{b}GRAHHHHH!!!!{/b}" with vpunch 
 
     "Christoph, however, is another matter."
-    #hide Christoph with zoomout
+    #hide Christoph with quickblinds
     extend "\nHe recoils, the gash on his cheek painting his hand crimson.\nHis feral eyes lock on mine and he snarls."
 
-    #show christoph combat with zoomin
+    #show christoph combat at christoph_normal_range with quickblinds:
+        #center
     ch "How dare you! What is she to you?!" with vpunch
     
     gr "No one. But this is over, Christoph."
@@ -238,7 +263,8 @@ label infiltration:
     play music bgm.reckoning_I fadein 0.8
     play sound sfx.drop_clothes
     "I throw off my cloak, revealing my dark red breastplate."
-    extend "\nTheir stupor prevents the denizens from descending into fright.\nOur occupation is one that inspires terror." 
+    extend "\nTheir stupor prevents the denizens from descending into fright.\nOur occupation is one that inspires terror."
+    play sound sfx.door_open
     "Christoph's pet elf bolts for the door, and the goblin's anger only grows stronger."
     extend " His bony face, twisted in both pain and rage, turns to mine."
 
