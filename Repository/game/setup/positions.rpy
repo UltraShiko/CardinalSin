@@ -22,7 +22,14 @@ transform nick_close_range:
     zoom 0.5
     yoffset 750
 
+transform christoph_normal_range: #work in progress
 
+    yoffset 250
+
+transform christoph_close_range:
+
+    zoom 1.5
+    yoffset 750
 
 transform celestial_normal_range:
 

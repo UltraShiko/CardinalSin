@@ -42,6 +42,7 @@ define sfx.footsteps_snow = "audio/sfx/footsteps_snow.ogg"
 define sfx.footsteps_snowf = "audio/sfx/footsteps_snowf.ogg"
 define sfx.gale_blast = "audio/sfx/galeblast.ogg"
 define sfx.glass_break = "audio/sfx/glass_break.ogg"
+define sfx.glass_shatter = "audio/sfx/glass_shatter.ogg"
 define sfx.grapple = "audio/sfx/grapple.ogg"
 define sfx.halberd_draw = "audio/sfx/halberd_draw.ogg" # TODO: Needs to be replaced by the correct SFX
 define sfx.heavy_bam = "audio/sfx/heavy_bam.ogg"
