@@ -41,16 +41,22 @@ init python:
             True, #this line displays the vfx
         ])
 
-transform in_and_out():
-    on show:
-        alpha 0.0
-        linear 0.2 alpha 1.0
-    on hide:
-        linear 0.2 alpha 0.0
+#transform slash_transition(delay=1.0, vfx_img="slash_vfx"):
+    #delay delay
+    #contains:
+        #old_widget
+        #alpha 1.0
 
-screen image_display(img: str):
-    timer 0.2 action Return(None)
-    hbox:
-        align (0.5, 0.5) 
-        add img
-        at in_and_out
+    #contains:
+        #vfx_img
+        #align (0.5, 0.5)
+        #alpha 0.0
+        #linear 0.1 alpha 1.0
+        #pause (delay - 0.2)
+        #linear 0.1 alpha 0.0
+
+    #contains:
+        #new_widget
+        #alpha 0.0
+        #pause (delay * 0.5)
+        #linear 0.2 alpha 1.0

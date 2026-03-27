@@ -22,8 +22,9 @@ label confrontation:
     
     ch "A brat you say?"
     extend " Oh..."
-    show christoph combat feral at christoph_normal_range with quickblinds:
+    show christoph combat feral at christoph_normal_range with dissolve:
         center
+        flip
     extend " Ohhhh! Now I remember!"
     
     "This time, his teeth greet me but not from the nicety of a smile."
@@ -38,11 +39,16 @@ label confrontation:
     
     gr "It's a funny world we live in."
 
-    "What else am I to say? That I'm sorry? That I'm different now?\nThat I'm trying to make things right?"
-    extend " He doesn't want to hear that drivel. His fury is justified. And I'm more a monster than he'll ever be."
-    "I chose to indulge. I knew the price, and I paid it gleefully. This hunger that haunts me is my judge, my jury, and eventually, my executioner."
-    extend "\nOr perhaps, the latter will be Christoph."
+    "What else am I to say?"
+    extend "\nThat I'm sorry?"
+    extend "\nThat I'm different now?"
+    "He doesn't want to hear that drivel. His fury is justified."
+    "I chose to indulge. I knew the price, and I paid it gleefully."
+    extend " This hunger that haunts me is my judge, my jury, and eventually, my executioner."
+    extend "\nOr perhaps, the latter will be Christoph. But not without a fight."
 
+    show christoph neutral at christoph_normal_range:
+        hop
     ch "Tell me, vampire, have you any idea what you've done to me?!"
 
     gr "Not a clue. You are not like myself."
@@ -51,11 +57,13 @@ label confrontation:
 
     play sound sfx.door_open
     show christoph neutral at christoph_normal_range with dissolve:
+        flip_r
         center
     "He finally releases the woman, who joins the lookout in fleeing."
     extend "\nThe rest of his clients do so as well, albeit more out of disinterest.\nThey seem more disappointed than afraid. Typical addicts..."
 
-    ch "What did you think I was going to do to that woman?\nViolate her? Nonsense!"
+    ch "What did you think I was going to do to that woman?"
+    extend"\nViolate her? Nonsense!"
     show christoph feral at christoph_normal_range
     extend " I wanted to {b}EAT{/b} her!" with vpunch 
     extend " Not her blood, her {b}FLESH!{/b}!" with vpunch 
@@ -70,86 +78,129 @@ label confrontation:
     show christoph happy at christoph_normal_range
     "His snake-like tongue graces his lips."
 
-    ch "{size=+20}{b}HUMAN FLESH!{/b}" with vpunch #size=+20 expands the dialogue
+    ch "{size=+80}{b}HUMAN FLESH!{/b}" with vpunch #size=+20 expands the dialogue
 
-    show christoph neutral at christoph_normal range:
+    hide christoph
+    show christoph angry at christoph_normal_range:
+        center
         flip
     ch "I tried to stop it... I tried to eat only animals. I even became an apprentice under the butcher."
     extend " My tastes made me talented in the trade. Who would know how to prepare meat better than a monster?"
     show christoph feral at christoph_normal_range
-    ch "{size=+20}But it was never enough!" with vpunch
+    ch "{size=+70}But it was never enough!" with vpunch
     ch "As I matured, so did my cravings... I'd devour cow after cow and never be sated! Have you any idea how torturous that is?!" 
     extend " {b}To never be full no matter how often you dine?!{/b}" with vpunch 
     
     gr "I can't relate."
 
-    ch "Of course you can't... You are gifted. You can feast on blood and lead a normal life." 
+    show christoph angry at christoph_normal_range:
+        hop
+    ch "Of course you can't... You are gifted. You can feast on blood and lead a normal life."
+    show christoph angry at christoph_normal_range:
+        flip_r
     extend " While I, the boy you defiled..."
-    extend "have to suffer a {b}neverending hunger!!!{/b}"
+    show christoph feral at christoph_normal_range
+    ch "Have to suffer {size=+50}{b}a neverending hunger!!!{/b}" with vpunch
     
     gr "My life is {i}far{/i} from normal, Chriistoph."
 
-    ch " Eventually, I succeeded my master. I became his finest pupil...but this day brought only sorrow, because suddenly he was no use to me..."
-    ch "{size=+20}{b}SO I DEVOURED HIM AS WELL!!!{/b}" with vpunch
+    hide christoph
+    show christoph neutral at christoph_normal_range:
+        center
+        flip
+    ch "Eventually, I succeeded my master. I became his finest pupil...but this day brought only sorrow, because suddenly he was no use to me..."
+    ch "{size=+45}{b}SO I DEVOURED HIM AS WELL!!!{/b}" with vpunch
 
     "He's becoming more and more unstable as we talk. Looks like I'm going to have to use force."
-    extend "\nI reach for my sword. I only intend to draw it if he attacks, but we both know that's going to happen."
+    play sound sfx.light_grapple
+    "I reach for my sword. I only intend to draw it if he attacks, but we both know that's going to happen."
 
-    show christoph neutral at christoph_normal range:
+    show christoph neutral at christoph_normal_range:
         flip_r
     ch "Finally... Finally, my hunger was sated. As I feasted on his corpse, I felt bliss!"
-    extend " I felt {b}FREE!{/b}" with vpunch
-    extend "\nBut of course this respite was short lived... I soon began to hunger once again."
+    show christoph feral at christoph_normal_range
+    ch "{size=+80}I felt {b}FREE!{/b}" with vpunch
+    
+    hide christoph
+    show christoph neutral at christoph_normal_range:
+        center
+        flip
+    "But of course this respite was short lived... I soon began to hunger once again."
 
     ch "Unlike paste, there is no market for human flesh. So I had to improvise, and I was as generous."
-    ch " So long as you pay, you keep both the paste and your life.\nTheft is punished severely by the Celestials, so becoming my meal is {b}JUSTICE!{/b} They knew the rules!"
-    show christoph neutral at christoph_normal range:
-        flip
+    ch " So long as you pay, you keep both the paste and your life."
+    extend "\nTheft is punished severely by the Celestials,"
+    show christoph feral at christoph_normal_range
+    extend " so becoming my meal is {b}JUSTICE!{/b} They knew the rules!" with vpunch
+
+    hide christoph
+    show christoph neutral at christoph_normal_range:
+        center
+        flip_r
     gr "And do you believe this changes anything? You are still enslaved to your hunger. And as people disappear, it's only a matter of time before they come for you"
     gr "I have to admit, I'm impressed with your ruse. Butchers are outcasts by trade, but few would suspect one of cannibalism."
     
-    show christoph happy at christoph_normal range:
+    show christoph happy at christoph_normal_range
 
     ch "Hehehehehehe... Why thank you!"
 
-    window hide #simulates a pounce
     play sound sfx.lunge
-    show chrstioph combat feral at christoph_close_range:
-        center
-    #call screen image_display("sword_swing.png")
-    play sound sfx.weapon_swingh
+    #TODO = VFX - call screen image_display("sword_swing.png")
+    hide christoph
+    show christoph combat feral at christoph_close_range with moveinright:
+        left #TODO - adjust xpos to make sprite move further to left
+        flip
+
+
+    window hide #simulates a pounce
+
+    #queue sound sfx.weapon_swingh
     window show
-    show christoph combat feral with christoph_close_range:
-        center
     # meant to simulate a lunge from Christoph lunge
 
     "He springs at at me like a grasshopper. Not bad, he almost nicked me."
     extend "\nI didn't see mana coming from his legs. So that agility is natural then?"
 
-    ch "{size=+20}{b}I DON'T GIVE A DAMN ABOUT YOUR GRATITUDE!!! YOU RUINED ME!!!{/b}" with vpunch
+    ch "{size=+30}{b}I DON'T GIVE A DAMN ABOUT YOUR GRATITUDE!!! YOU RUINED ME!!!{/b}" with vpunch
+
+    show christoph combat angry at christoph_close_range
     ch "You killed my mother! You forced me to eat flesh!"
     
     gr "The former is true, but you did the rest yourself."
     
     ch "Oh...?"
-    extend " {b}AS IF A LEECH LIKE YOU WOULD UNDERSTAND!{/b}" with vpunch
+    show christoph combat feral at christoph_close_range
+    ch "{size=+35}{b}AS IF A LEECH LIKE YOU WOULD UNDERSTAND!{/b}" with vpunch
 
-    "I flash the empty syringe."
-    "At times like these, I'm thankful I've lost my mortality.\nIf I let my guilt speak for me, I'd just become another meal."
-    extend " Cruel indeed considering that it’s the only way to save him and expose his weakness."
+    play sound sfx.weapon_swing
+    #TODO - Add sword swing vfx
+    hide christoph
+    show christoph combat feral at christoph_close_range with moveinright:
+        center
+    "He swings again, catching nothing but air."
+    extend "\nUnstable he may be, dodging him is child's play. Not even a drop of malice has left his body. Let's hope it stays that way."
+    "I show the empty syringe."
+    extend "\nAt times like these, I'm thankful I've lost my huamnity. If I let my guilt speak for me, I'd just become another meal."
+    "Cruel indeed considering that it’s the only way to save him and expose his weakness."
 
     gr "You're mistaken. I don't crave flesh, however I nearly devoured four men on my way here. I almost didn't spare them."
     extend " Yes, you cannot escape your hunger. Yes, I did turn you into a monster. However."
 
+    show christoph combat angry at christoph_close_range:
+        hop
     ch "However...?!"
     
     gr "You chose to consume your master. You've chosen to hide like a predator, spread addiction, and pounce on those you've rendered helpless."
-    show christoph feral with christoph_close_range
-    ch "{size=+20}Grrraaahhh...!" with vpunch
+    show christoph combat feral with christoph_close_range
+    ch "{b}{size=+80}Grrraaahhh!!!{/b}" with vpunch
 
+    #sword swing vfx
+    hide Christoph
+    show christoph combat angry at christoph_close_range:
+        right
     gr "I still feed, I just do so on the deserving. I don't let my affliction command me. And you can do the same."
 
-    ch "{size=+20}{b}YOU SAID YOU NEARLY DEVOURED FOUR MEN!\nWERE THEY MONSTERS TOO?!{/b}" with vpunch
+    ch "{size=+30}{b}YOU SAID YOU NEARLY DEVOURED FOUR MEN! WERE THEY MONSTERS TOO?!{/b}" with vpunch
     
     gr "No, and I'm thankful I didn't. Do you want to know what stopped me?"
     extend " Hearing your name."
