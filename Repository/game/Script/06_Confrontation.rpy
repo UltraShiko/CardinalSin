@@ -229,7 +229,7 @@ label confrontation:
     "It would do us both good. I've no clue what monstrosity he is.\nAnd I may need to hunt more like him."
     extend " Nick should know something..."
 
-    ch "{size=+20}{b}LIKE HELL, EMISSARY!!!{/b}" with vpunch
+    ch "{size=+70}{b}LIKE HELL, EMISSARY!!!{/b}" with vpunch
 
     show christoph combat feral at christoph_normal_range:
         center
@@ -244,7 +244,7 @@ label confrontation:
 
     "I grip my sword. With my hatchet being in the wall, I'm not at my best. And if he leaps at me, I'll need all the defenses I can get."
 
-    ch "{size=+20}{b}YOU THINK THIS CHANGES ANYTHING?! YOU THINK THIS MAKES THING RIGHT?!{/b}" with vpunch
+    ch "{size=+30}{b}YOU THINK THIS CHANGES ANYTHING?! YOU THINK THIS MAKES THING RIGHT?!{/b}" with vpunch
     ch "Why do I need to change..? Why do I need to fix myself..?\nI did nothing wrong..."
     extend " I'm only like this because of {b}YOU!!!{/b}" with vpunch
 
@@ -252,7 +252,7 @@ label confrontation:
     extend " How many people have you sold that paste too? How many fathers and mothers have you devoured?" 
     gr "I wonder how many of your victims would say the same to you."
     
-    ch "{size=+20}{b}BUT IT WAS ALL BECAUSE OF-{/b}"
+    ch "{size=+70}{b}BUT IT WAS ALL BECAUSE OF-{/b}"
     
     gr "I know. And I'm ending it here."
     extend " Your fury is justified, but your actions aren't. You and I have ruined many lives, Christoph."
@@ -294,7 +294,7 @@ label confrontation:
     "I'd know, I do both as well. But I can replenish myself through drinking the blood of my foe. I'm doubtful he can do the same."
     
     play sound sfx.dagger_draw
-
+    #scene Griswyr CG
     "I hold the ax head up to my palm."
 
     gr "What was that supposed to be? I thought you wanted to kill me."
@@ -308,6 +308,7 @@ label confrontation:
     extend " Can these {b}feeble{/b} emotions not see that he'll keep killing if I don't put him down?!" with vpunch
     "Without Malice, I can't use my hemomancy. Shit, I can't use any of my techniques either!"
 
+    scene christoph house with dissolve
     "A grisly smile etches itself across Christoph's face.\nThat serpentine tongue again graces his lips."
 
     show christoph combat happy at christoph_normal_range with moveinbottom:
@@ -324,7 +325,7 @@ label confrontation:
 
     show christoph combat angry at christoph_normal_range:
         center 
-    ch "{size=+20}{b}I'LL TEAR THAT SMILE FROM YOUR FACE!{/b}" with vpunch
+    ch "{size=+60}{b}I'LL TEAR THAT SMILE FROM YOUR FACE!{/b}" with vpunch
 
     play sound weapon_swing
     queue sound mana_charge 
@@ -380,7 +381,8 @@ label confrontation:
     extend "\nI can still stand, albeit hindered..."
     "Christoph smacks his mouth before spitting."
 
-    ch "{size=+20}{b}BLECH! Rancid!{/b}" with vpunch
+    ch "{size=+8
+    0}{b}BLECH! Rancid!{/b}" with vpunch
     
     gr "How disappointing... I've had vermin bite harder than that."
     
@@ -429,7 +431,7 @@ label confrontation:
     extend "\nI swat them away, and now he's rushing for me."
 
     ch "I hate you!" 
-    ch "{size=+20}{b}I HATE YOU!!!{/b}" with vpunch #center text in textbox
+    ch "{size=+80}{b}I HATE YOU!!!{/b}" with vpunch #center text in textbox
     
     gr "Tch!"
 
@@ -441,7 +443,7 @@ label confrontation:
 
     play sound sfx.heavy_slash
     with quickblood
-    #blood vfx? #TODO - Consider finding appropriate vfx
+    #blood vfx? #TODO - Consider finding appropriate vfx - probably sword swing
     gr "Aaaaghh!!!"
 
     show christoph combat happy at christoph_close_range with dissolve:
@@ -462,7 +464,7 @@ label confrontation:
     show christoph combat happy at christoph_close_range with quickblinds:
         center
     ch "Aww, are we in pain?"
-    ch "{size=+20}{b}HAVE SOME MORE!!!{/b}" with vpunch 
+    ch "{size=+80}{b}HAVE SOME MORE!!!{/b}" with vpunch 
 
     "Here comes another blood wave..."
 
@@ -488,7 +490,7 @@ label confrontation:
 
     show christoph combat feral at christoph_normal_range:
         center
-    ch "{size=+20}{b}AND IT'S NOT A FRACTION OF WHAT I'VE FELT!{/b}" with vpunch 
+    ch "{size=+80}{b}AND IT'S NOT A FRACTION OF WHAT I'VE FELT!{/b}" with vpunch 
     
     play sound sfx.singe
     with quickblood
@@ -498,12 +500,12 @@ label confrontation:
     play sound sfx.singe
     with quickblood
 
-    ch "{size=+20}{b}My joy!{/b}"
+    ch "{size=+80}{b}My joy!{/b}"
 
     play sound sfx.singe
     with quickblood
 
-    ch "{size=+20}{b}MY LIFE!!!{/b}" with vpunch
+    ch "{size=+80}{b}MY LIFE!!!{/b}" with vpunch
 
     "It's as if acid is being splashed onto my skin. This excruciating pain isn't enough to make me 
     scream at, but I won't survive much longer at this rate.."
@@ -517,7 +519,7 @@ label confrontation:
     
     play sound sfx.mana_charge
     with maliceflash
-    ch "{size=+20}{b}GRAAAAAH!!!{/b}" with vpunch #center text in textbox
+    ch "{size=+80}{b}GRAAAAAH!!!{/b}" with vpunch #center text in textbox
 
     with quickflash
     play sound sfx.heavy_bam
@@ -536,7 +538,8 @@ label confrontation:
 
     show christoph combat feral at christoph_normal_range with quikcblinds:
         center
-    ch "{size=+20}Grrr... I'll kill you...!"
+    ch "Grrr..." 
+    extend "{size=+70}I'll kill you...!"
 
     "To be slain by the person whose life I destroyed is justice.\nI avoided the stake but merely postponed my execution."
     "No one will mourn me. No one {i}should{/i} mourn me. Not even Caius."
@@ -570,12 +573,13 @@ label confrontation:
     "That strength... Normally, the more damage I sustain, the more feral I become."
     extend " But there was no hatred in that attack."
 
-    show christoph combat with easeinbottom
+    show christoph combat with easeinbottom:
+        center
     ch "Agh...aggghhh! You broke my jaw, you bastard!"
 
     gr "Yet, you're still talking."
 
-    ch "{size=+20}Agggghh... Damn you...!"
+    ch "{size=+75}Agggghh... Damn you...!"
 
     hide christoph with blinds
 
@@ -587,6 +591,7 @@ label confrontation:
     extend "\nThese aren't my instincts taking over. Something else powers me now."
     "I ready my weapons, my grip heavy and trembling. Yet I wonder..."
 
+    #scene CG_Griswyr_Sin
     play sound sfx.mana_charge
     with sinflash
     play music bgm.reckoning_II fadein 0.8
@@ -610,7 +615,7 @@ label confrontation:
     gr "I see you aren't as loud with that jaw displaced. And you're about to keel over as well."
     extend " Heh, you simpleton. You've lost this bout and you're too pigheaded to notice."
     
-    ch "{size=+20}I'll show you simple!!!" with vpunch 
+    ch "{size=+75}I'll show you simple!!!" with vpunch 
 
     "His madness fuels more Malice, yet blinds his common sense."
     extend "\nHe strikes the wall, digging through the wood."
@@ -634,11 +639,12 @@ label confrontation:
     with quickflash
     ch "Ha! You missed!"
 
+    #scene image "#000" #TODO - Implement when CG is collected
     play sound sfx.mana_charge
     with sinflash
     extend " Wh-what?! Where did he-"
     
-    gr "{size=+20}{b}{i}Bloodedge!{/b}{/i}"
+    gr "{size=+80}{b}{i}Bloodedge!{/b}{/i}"
 
     play sound sfx.heavy_slash_twice
     #twin_sword_slash vfx #TODO - implement the vfx
@@ -662,10 +668,9 @@ label confrontation:
     ch "This...this is only a flesh wound...!"
 
     gr "Then stand. I'll wait."
-    
 
     ch "Grr..."
-    show christoph combat feral at christoph_close_range with easeinbottom:
+    show christoph combat feral at christoph_close_range:
         hop
     extend " Agggh! Why can't I move?! My body...its wounds are nothing compared to yours."
     

@@ -3,7 +3,8 @@ label revelation:
     scene background emissary base with fade
     play sound sfx.door_open
 
-    show nick happy at left
+    show nick happy at nick_close_range:
+        left
     #show Caius at right
     
     window show
