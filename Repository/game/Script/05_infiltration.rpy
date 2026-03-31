@@ -261,15 +261,14 @@ label infiltration:
     ch "Sniveling wretch! You know what happens if you cannot pay!" with vpunch
 
     "I see an enraged Christoph pinning one of the addicts to a wall."
-    extend "\nI grab my hatchet, my resolve somewhat restored. It's not an intent to save her that drives me. She put herself in this position, after all."
+    extend "\nI grab my hatchet, my resolve somewhat restored. It's not an intent to save her that drives me. She put herself in this position."
 
-
-    call screen image_display("sword_swing.png")
+    call screen image_display("vfx/sword_swing.png")
     play sound sfx.hurl
     queue sound sfx.slash 
-    #with quickblood
+    with quickblood
 
-    ch "{b}GRAHHHHH!!!!{/b}" with vpunch 
+    ch "{size=+80}{b}GRAHHHHH!!!!{/b}" with vpunch 
 
     "Christoph, however, is another matter."
     hide christoph with quickblinds

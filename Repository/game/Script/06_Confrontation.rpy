@@ -25,7 +25,7 @@ label confrontation:
     show christoph combat feral at christoph_normal_range with dissolve:
         center
         flip
-    extend " Ohhhh! Now I remember!"
+    ch "{size=+70}Ohhhh! Now I remember!" with vpunch
     
     "This time, his teeth greet me but not from the nicety of a smile."
     "The tension between us spikes. I have never been the best at diplomacy.\nIt may have been wiser to reveal our connection after he left..."
@@ -89,7 +89,7 @@ label confrontation:
     show christoph feral at christoph_normal_range
     ch "{size=+70}But it was never enough!" with vpunch
     ch "As I matured, so did my cravings... I'd devour cow after cow and never be sated! Have you any idea how torturous that is?!" 
-    extend " {b}To never be full no matter how often you dine?!{/b}" with vpunch 
+    ch "{b}{size=+30}To never be full no matter how often you dine?!{/b}" with vpunch 
     
     gr "I can't relate."
 
@@ -137,7 +137,8 @@ label confrontation:
     show christoph neutral at christoph_normal_range:
         center
         flip_r
-    gr "And do you believe this changes anything? You are still enslaved to your hunger. And as people disappear, it's only a matter of time before they come for you"
+    gr "And do you believe this changes anything? You are still enslaved to your hunger."
+    extend "\nAnd as people disappear, it's only a matter of time before they come for you"
     gr "I have to admit, I'm impressed with your ruse. Butchers are outcasts by trade, but few would suspect one of cannibalism."
     
     show christoph happy at christoph_normal_range
@@ -145,16 +146,16 @@ label confrontation:
     ch "Hehehehehehe... Why thank you!"
 
     play sound sfx.lunge
-    #TODO = VFX - call screen image_display("sword_swing.png")
+    queue sound sfx.weapon_swingh #TODO - Merge sound fx into lunge_slash
+    call screen image_display("vfx/sword_swing.png")
     hide christoph
     show christoph combat feral at christoph_close_range with moveinright:
         left #TODO - adjust xpos to make sprite move further to left
         flip
 
-
     window hide #simulates a pounce
 
-    #queue sound sfx.weapon_swingh
+    
     window show
     # meant to simulate a lunge from Christoph lunge
 
@@ -173,7 +174,7 @@ label confrontation:
     ch "{size=+35}{b}AS IF A LEECH LIKE YOU WOULD UNDERSTAND!{/b}" with vpunch
 
     play sound sfx.weapon_swing
-    #TODO - Add sword swing vfx
+    call screen image_display("vfx/sword_swing.png")
     hide christoph
     show christoph combat feral at christoph_close_range with moveinright:
         center
@@ -263,11 +264,10 @@ label confrontation:
     with quickflash
     show christoph feral with christoph_close_range:
         center
-    ch "{size=+20}{b}FUCK YOU!!!{/b}" with vpunch 
+    ch "{size=+80}{b}FUCK YOU!!!{/b}" with vpunch 
 
     play sound sfx.weapon_swing
     queue sound sfx.wood_break
-    queue sound sfx.weapon_swing
 
     "I duck a chair flung at me and sidestep a swipe of his hand."
 
@@ -285,7 +285,7 @@ label confrontation:
 
     ch "Since you love blood so much, have some on the house!"
 
-    #red vfx #TODO - find the proper vfx
+    call screen image_display("vfx/sword_swing.png")
     play sound weapon_swingh
     queue sound sfx.singe
     "Again, I duck. The blob of crimson collides with the wall behind me, eating away at its paint."
@@ -329,7 +329,8 @@ label confrontation:
 
     play sound weapon_swing
     queue sound mana_charge 
-    #red vfx
+    call screen image_display("vfx/sword_swing.png")
+    with quickblood
 
     "He scratches the air, sending a wave of carmine at me.\nIt's too wide to dodge."
     
@@ -338,7 +339,7 @@ label confrontation:
     "I carve through it, and a second blast is fired my way."
     
     play sound sfx.weapon_swingf
-    #sword swing vfx
+    call screen image_display("vfx/sword_swing.png")
     extend "\nAnd the next, and the next, and the next."
     
     "My flurry of swings shakes the goblin."
@@ -381,8 +382,7 @@ label confrontation:
     extend "\nI can still stand, albeit hindered..."
     "Christoph smacks his mouth before spitting."
 
-    ch "{size=+8
-    0}{b}BLECH! Rancid!{/b}" with vpunch
+    ch "{size=+80}{b}BLECH! Rancid!{/b}" with vpunch
     
     gr "How disappointing... I've had vermin bite harder than that."
     
@@ -403,7 +403,8 @@ label confrontation:
     "He leaps at me again. My injured leg halts my attempt to evade."
     
     play sound sfx.weapon_swingf
-    #vfx #TODO - Figure out how to manage this
+    call screen image_display("vfx/sword_swing.png") 
+    #TODO - Find a different VFX
 
     extend "\nHis nails, laced with Malice and blood, rain down scratches upon me."
     
@@ -442,8 +443,8 @@ label confrontation:
     extend " A feint! He's leapt behind me!"
 
     play sound sfx.heavy_slash
+    call screen image_display("vfx/sword_swing.png")
     with quickblood
-    #blood vfx? #TODO - Consider finding appropriate vfx - probably sword swing
     gr "Aaaaghh!!!"
 
     show christoph combat happy at christoph_close_range with dissolve:
@@ -639,7 +640,7 @@ label confrontation:
     with quickflash
     ch "Ha! You missed!"
 
-    #scene image "#000" #TODO - Implement when CG is collected
+    scene image "#000" #TODO - Implement when CG is collected
     play sound sfx.mana_charge
     with sinflash
     extend " Wh-what?! Where did he-"

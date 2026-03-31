@@ -41,7 +41,21 @@ init python:
             True, #this line displays the vfx
         ])
 
-#transform slash_transition(delay=1.0, vfx_img="slash_vfx"):
+transform in_and_out():
+    on show:
+        alpha 0.0
+        linear 0.2 alpha 1.0
+    on hide:
+        linear 0.2 alpha 0.0
+
+screen image_display(img):
+    timer 0.3 action Return(None)
+    hbox:
+        align (0.5, 0.5) 
+        add img
+        at in_and_out
+
+#transform slash_transition(delay=1.0, vfx_img="sword_swing.png"):
     #delay delay
     #contains:
         #old_widget
