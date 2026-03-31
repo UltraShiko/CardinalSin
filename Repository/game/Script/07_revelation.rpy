@@ -1,17 +1,19 @@
 label revelation:
 
-    scene background emissary base with fade
+    scene background emissary base with slideleft
     play sound sfx.door_open
-
-    show nick happy at nick_close_range:
+    show nick happy at nick_normal_range with dissolve:
         left
-    #show Caius at right
+    #show caius neutral at caius_normal_range with dissolve:
+        #right
     
     window show
 
     "I return and find both Caius and Nick conversing."
     "The pious boy, now masked, looks to me in horror and rushes over.\nNick is as unfazed as always."
 
+    #show caius neutral at caius_normal_range with dissolve:
+        #hop
     ca "A-Are you alright?!"
 
     gr "Take your hand off of me. These wounds aren't fatal."
@@ -20,14 +22,17 @@ label revelation:
     
     gr "I don't know what the hell he was, but he's dead. Now give me a drink!"
 
-    hide nick
-    #show Caius at center with dissolve
+    hide nick with easeoutleft
+    #show caius at caius_normal_range with dissolve:
+        #hop
 
     "Caius recoils as a wooden mug, filled to the brim with blood, is placed before me."
     "I down it all immediately. The pain in my body eases to a dull tingle in place of the agonizing throb. I feel as if I'm drunk as both fatigue and drowsiness finally set in."
 
     gr "With a day of rest, I'll be as right as rain.\nMy body isn't feeble unlike yours, monk."
 
+    #show caius snide at caius_normal_range with dissolve:
+        #flip
     ca "I'm, I'm not a monk..."
     
     gr "You look and fight like one."
@@ -36,12 +41,15 @@ label revelation:
     
     gr "You have {i}your friend{/i} to thank for that!"
     
+    #show caius neutral at caius_normal_range with dissolve:
+        #flip_r
     ca "Oh, Jory must still be upset..."
     
     gr "No, but I wish he was."
     
-    #hide Caius with dissolve
-    show nick happy at right with easeinright
+    #hide caius with dissolve
+    show nick happy at nick_normal_range with easeinright:
+        right
 
     "That elf has a stupid grin on his face. I glare at him and it only grows."
     "I then take notice of the mask shrouding Caius's forehead.\nIt looks like its glued to his skin."
@@ -53,18 +61,24 @@ label revelation:
     
     gr "Nick?"
     
-    ni "Well, it keeps his mana from erupting, at least. Otherwise it'd burst out like a geyser if something upset him."
+    show nick happy at nick_normal_range with move:
+        center
+    ni "Well, it keeps his mana from erupting, at least. Otherwise it'd burst like a geyser if something upset him."
     extend " He'll be able to fight and channel mana. This will just keep him from exploding."
     
     ca "And it's stuck to my face..."
     
     gr "Yeah, why is that?"
     
+    show nick happy at nick_normal_range:
+        hop
     ni "So that it attunes to his mana. Can't have Justice dislodging it."
     extend " He now has a trump card. The inhibitors will vanish if he rips it off. You might want to run when that happens~."
     
     gr "...Do you mean to tell me this boy I met just a day ago is now a ticking time bomb?"
 
+    show nick happy at nick_normal_range:
+        flip
     ni "Something like that."
     
     ca "I'm twenty, Griswyr."
@@ -74,10 +88,12 @@ label revelation:
     play sound sfx.door_open
     
     hide nick
-    #hide Caius
-    #show imp at center with zoomin
+    #hide caius
+    #show buzz at buzz_normal_range with moveinright:
+        #center
 
     "Suddenly, a batlike monster, the size of my palm, flies inside." 
+    play sound sfx.lunge
     extend "\nCaius leaps into action, but I block him from advancing."
 
     ca "Th-That's an imp! We have to-"
@@ -86,10 +102,13 @@ label revelation:
     
     ca "Wh-what?! But we just fought a devil! Why does he-"
 
-    gr "Stop shouting. Nick summons devils to fight devils.\nI'm disappointed you couldn't figure this out earlier."
+    gr "Stop shouting." 
+    extend "\nNick summons devils to fight devils."
     
     bu "Good evening! Buzz brings reconnaissance~."
 
+    #show buzz at buzz_close_range with moveinright:
+        #center
     "This ugly, devilish cockroach gives me a migraine."
     extend "\nOh Ishmael, how much more will you test my patience tonight?!"
 
@@ -97,48 +116,60 @@ label revelation:
     extend " Whenever he's done something foolish, he acts like this. A sane mortal would dread my wrath, but Nick's lust for pain encourages it."
 
     gr "Caius, fetch me a broom."
-    extend " On second thought, a broom won't do.\nGrab me that staff over there."
+    extend "\nOn second thought, a broom won't cut it/ Grab me that staff over there."
     
     ca "Umm, okay...?"
     
     ni "Alright Buzz, tell them what we saw."
 
-    bu "Oooh yes, city destroyed! Burned! Blood and ash everywhere!\nMany dead knights, with red and brown armors scattered about!\nIt was hilarious! Favorite mission so far~!"
+    bu "Oooh yes, city destroyed! Burned! Blood and ash everywhere!"
+    extend "\nMany dead knights, with red and brown armors scattered about!\nIt was hilarious! Favorite mission so far~!"
     
-    gr "Hmm, so those hellknights perpetuated that..."
+    gr "Hmm, so those Exorcists perpetuated that..."
 
-    ni "Yep... They lacked the numbers to face the Celestials, so they sacked Thrycia. I guess they believed their attack wouldn't warrant retaliation. Thrycia was technically independent."
+    ni "Yep... They lacked the numbers to face the Celestials, so they sacked Thrycia."
+    extend "\nI guess they believed their attack wouldn't warrant retaliation. Thrycia was technically independent."
 
-    gr "I do not understand why we cling to this peace.\nIt's only a matter of time before those peons attack again."
+    gr "I do not understand why we cling to this peace."
+    extend "\nIt's only a matter of time before those peons attack again."
     
+    #show buzz at buzz_close_range with moveinright:
+        #hop
     bu "Unlikely! All of them are dead hahahaha!"
 
     ca "W-wait, you were there at Thrycia?!"
 
-    #show Caius at left with easinleft
+    #show caius snide at caius_normal_range with easinleft:
+        #left
 
     "Caius eagerly passes me the staff. His eyes are filled with desperation, hoping that his friend was not responsible, I imagine."
     "The imp eyes him like a slab of meat. I guess devils big and small can't resist corrupting souls as virtuous as his."
 
     gr "Nick, keep your pet under control or you'll need a new one."
     
+    #show buzz at buzz_close_range with moveinright:
+        #hop
     bu "Aiieee... Buzz continue."
     
     ca "Did you see a dretchling? Any survivors?"
 
-    bu "Nope~. Buzz said everyone dead. \nHowever...Buzz found a charred silhouette on the ground~. Only devils could broil the earth like that. 
+    bu "Nope~. Buzz said everyone dead." 
+    extend"\nHowever...Buzz found a charred silhouette on the ground~. Only devils could broil the earth like that. 
     We explode when slain."
     
     gr "Oh really? Tell us more..!"
 
     play sound sfx.light_grapple
-    #hide Caius
-    #hide Buzz 
-    show Nick happy at center
+    #hide caius
+    #hide buzz 
+    #with dissolve
+    show nick happy at nick_normal_range with dissolve:
+        center
 
     "The wood creaks in my palms and Nick gulps in excitement."
     
-    show nick elated with zoomin
+    show nick happy at nick_close_range with dissolve:
+        center
     
     "I arch forward, already knowing what that imp is going to say.\nI only await confirmation..!"
 
@@ -150,58 +181,72 @@ label revelation:
     extend "\nYes, Buzz detect what you mortals call; a pain devil-"
 
     play sound sfx.wood_break
-
-    hide nick with moveoutbottom
+    hide nick with quickflash
 
     "It's instantaneous. The staff breaks on the first strike."
     
-    play sound sfx.heavy_bam
-    queue sound sfx.heavy_bam
+    play sound sfx.wood_break
+    with quickflash
 
-    extend "\nBuzz darts to the ceiling and Caius watches, horrified, as I proceed to kick the shit out of Nick."
+    extend "\nBuzz darts to the ceiling and Caius watches, horrified, as I proceed to beat Nick with the splintered staff."
+    
+    play sound sfx.wood_break
+    with quickflash
     "Small giggles escape him each time my boot bludgeons his chest.\nI'm almost happy he's enjoying it, because I don't need to worry about breaking him."
 
     ca "St-Stop! You're going to kill him!"
     
-    gr "{b}GOOD!{/b}" with vpunch #center text via textbox
-    
-    play sound sfx.heavy_bam
+    gr "{size=+80}{b}GOOD!{/b}" with vpunch #center text via textbox
 
-    ni "Ouch... It could be any pain-"
+    show nick at nick_close_range with easeinbottom:
+        center
+    ni "Hehehe... It could be any pain-"
 
-    play sound sfx.heavy_bam
-    queue sound sfx.heavy_bam
+    play sound sfx.wood_break
+    with quickflash
 
-    extend " Ouch. Ouch. Ouch, hehehe!"
+    extend " Ouch!" 
+
+    play sound sfx.wood_break
+    with quickflash
+    extend " Ouch!"
+
+    play sound sfx.wood_break
+    with quickflash
+    extend " Ouch, hehehe!"
     
     gr "Behold, monk!"
 
     play sound sfx.grapple
 
-    #show Caius at left with quickblinds
-    show nick neutral at right with moveinbottom
+    hide nick with fade
+    #show caius snide at caius_close_range with fade:
+        #center
     
     "I yank Nick up by his hair and make him face Caius."
     "Ishmael knows what godforsaken expression is on Nick's face.\nI never understood Caius's fixation on joining us."
     extend "\nEither way, here's his chance to quit!"
 
-    gr "Thrycia was your home, right? \nAnd remember how your companion was blamed for its destruction?"
-    gr "Well, you can thank this maniac for that!\nYes, the leader of us Emissaries is an irresponsible lunatic who summons devils! He is who you'll be working for."
+    gr "Thrycia was your home, right? \nRemember how your friend was blamed for its destruction?"
+    gr "Well, you can thank this maniac for that!" with vpunch
+    extend "\nYes, the leader of us Emissaries is an irresponsible lunatic who summons devils! He is who you'll be working under."
+    gr "That pain devil that destroyed Thrycia was {i}his{/i} doing! He could've banished too, and now she's loose..."
 
-    gr "That pain devil that destroyed Thrycia was {i}his{/i} doing! He could've sent it back too, but his vendetta kept her on our plane. And now she's loose..."
-    
     ca "...If you understood how destructive this monster could be, why would you bind her?"
     
-    ni "Ehehehe, but she's useful."
+    ni "She's useful."
 
-    gr "Worst of all, she's going to want revenge, and you and I will be the ones to hunt her down! If you thought Persephone was bad, oh Ishmael... You are not prepared!"
+    gr "Worst of all, she's going to want revenge, and you and I will be the ones to hunt her down!" 
+    extend "\nIf you thought Persephone was bad, oh Ishmael... You are not prepared!"
     
     ni "Devils take years to revive. We have tim-"
     
-    play sound sfx.bam
+    play sound sfx.wood_break
+    with quickflash
     
     gr "Be quiet, swine!" with vpunch
-    gr "If this tomfoolery teaches you anything, monk, let it be that you should leave. Go join the Celestials if you want to play the hero."
+    gr "If this tomfoolery teaches you anything, monk, let it be that you should leave."
+    extend "\nGo join the Celestials if you want to play the hero."
     
     ca "Hmm..."
 
@@ -211,33 +256,43 @@ label revelation:
     
     ca "...You summon fiends, does that mean you know how to defeat them?"
 
+    show nick at nick_normal_range with easeinright:
+        right
     ni "Of course. It's my passion. A really bad passion hehehe, but I know just about everything when it comes to devils."
     
-    gr "He's only escaped the noose because he's useful.\nEven the Third had to put up with him."
+    gr "He's only escaped the noose because he's useful.\nEven {i}the Third{/i} had to put up with him."
 
     play music bgm.marching_forward fadein 0.8
 
-    ca "Tell me Nick, can you track down my friend.\nIf you can bind devils, perhaps you can seek out a dretchling?"
+    ca "Tell me Nick, can you track down my friend."
+    extend "\nIf you can bind devils, perhaps you can seek out a dretchling?"
     
     gr "You don't need this fool's aid. Consult the Reverend."
 
-    ca "But fiends are drawn to dretchlings like moths to a flame.\nMaybe this pain devil was after him. Or maybe something else was.."
+    #show caius neutral at caius_close_range with fade:
+        #hop
+    ca "But fiends are drawn to dretchlings like moths to a flame. Maybe this pain devil was after him."
     
-    #show Buzz with moveinbottom
+    #show buzz at buzz_normal_range with moveinleft:
+        #left
 
     bu "Buzz knows~! Two mana signatures were detected."
     
     gr "...And you waited to share this fact because?"
     
+    #show buzz at buzz_normal_range with moveinleft:
+        #hop
     bu "You-You attack Buzz master!" with vpunch
     
     ca "Please continue, Buzz."
 
-    bu "Second signature was weak. No corpse detected.\nIt was a fiend, a very powerful fiend~!"
+    bu "Second signature was weak. No corpse detected."
+    extend "]nIt was a fiend, a very powerful fiend~!"
 
-    hide nick with dissolve
-    #hide Buzz with dissolve
-    #show Caius at center with fade
+    #hide nick 
+    #hide buzz 
+    #hidde caius
+    #with dissolve
 
     "I groan as Caius's eyes expand. He has a one track mind, this monk..."
     "He'll be a liability, at this rate. All some monster has to do is capture his friend, and Caius will surrender."
@@ -246,6 +301,7 @@ label revelation:
     gr "Monk, heed my words."
     extend " If you think I'm about to partake in some rescue mission, do us both a favor and abandon all hopes of joining us."
 
+    #show caius neutral at caius_close_range with dissolve:
     ca "...I know it might be foolish of me. However, Nick has no trace on Persephone's whereabouts. So I wonder if she might be involved somehow?"
     
     gr "Do you honestly believe some dretchling would attract the banshee?"
@@ -255,27 +311,35 @@ label revelation:
     
     gr "Thrycia is a week's travel by horseback. Unless you plan to walk..."
     
-    show nick happy at right with moveinright
+    show nick happy at nick_normal_range with easeinleft:
+        left
     ni "I can arrange a carriage."
     
     gr "Be quiet-"
     
+    show nick happy at nick_normal_range with easeinleft:
+        hop
     ni "Nah. I think Caius has a point."
     extend " More importantly, there's another powerful fiend on the loose. We probably need to stop it."
     
     gr "Do not fill his head with fantasies, Malconvoker! \nHe's barking up the wrong tree."
     
     ni "He doesn't think so. Otherwise, he would've fled to the reverend once he learned it was my fault."
-    extend " You're misreading him, Griswyr. He wants to save his friend, but he also wants to fight devils."
+    extend " You're misreading him, Griswyr. Yes he wants to save his friend, but he also wants to fight devils."
 
-    ca "That, and I believe that the Celestials aren't addressing the root of our problems. I'd much rather cleanse the source, even if I have to get my hands dirty..."
+    #show caius neutral at caius_close_range:
+        #flip
+    ca "That, and I believe that the Celestials aren't addressing the root of our problems."
+    extend "\nI'd much rather cleanse the source, even if I have to get my hands dirty..."
 
+    show nick elated at nick_close_range with dissolve
     ni "And besides vampire, someone needs to keep you in-"
 
     play sound sfx.hurl
     pause 0.5
     play sound sfx.pottery_break
     hide nick with moveoutright
+    with quickflash
     
     "I toss him into the wall. I've heard enough of his nonsense."
 
@@ -293,6 +357,8 @@ label revelation:
     gr "Start trying to get that mana of yours under control.\nIf you're truly able to wield Justice, we'll need that firepower."
     gr "More importantly, I don't want to have to protect you from yourself.\nI expect you to make the most of your respite."
     
+    show caius happy at caius_close_range:
+        hop
     ca "You don't have to tell me twice."
     
     bu "Buzz accompany you~. Act as eyes and ears for master."

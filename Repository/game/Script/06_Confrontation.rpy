@@ -149,7 +149,7 @@ label confrontation:
     queue sound sfx.weapon_swingh #TODO - Merge sound fx into lunge_slash
     call screen image_display("vfx/sword_swing.png")
     hide christoph
-    show christoph combat feral at christoph_close_range with moveinright:
+    show christoph combat feral at christoph_normal_range with moveinright:
         left #TODO - adjust xpos to make sprite move further to left
         flip
 
@@ -164,19 +164,19 @@ label confrontation:
 
     ch "{size=+30}{b}I DON'T GIVE A DAMN ABOUT YOUR GRATITUDE!!! YOU RUINED ME!!!{/b}" with vpunch
 
-    show christoph combat angry at christoph_close_range
+    show christoph combat angry at christoph_normal_range
     ch "You killed my mother! You forced me to eat flesh!"
     
     gr "The former is true, but you did the rest yourself."
     
     ch "Oh...?"
-    show christoph combat feral at christoph_close_range
+    show christoph combat feral at christoph_normal_range
     ch "{size=+35}{b}AS IF A LEECH LIKE YOU WOULD UNDERSTAND!{/b}" with vpunch
 
     play sound sfx.weapon_swing
     call screen image_display("vfx/sword_swing.png")
     hide christoph
-    show christoph combat feral at christoph_close_range with moveinright:
+    show christoph combat feral at christoph_normal_range with moveinright:
         center
     "He swings again, catching nothing but air."
     extend "\nUnstable he may be, dodging him is child's play. Not even a drop of malice has left his body. Let's hope it stays that way."
@@ -187,21 +187,22 @@ label confrontation:
     gr "You're mistaken. I don't crave flesh, however I nearly devoured four men on my way here. I almost didn't spare them."
     extend " Yes, you cannot escape your hunger. Yes, I did turn you into a monster. However."
 
-    show christoph combat angry at christoph_close_range:
+    show christoph combat angry at christoph_normal_range:
         hop
-    ch "However...?!"
+    ch "However?!"
     
     gr "You chose to consume your master. You've chosen to hide like a predator, spread addiction, and pounce on those you've rendered helpless."
-    show christoph combat feral with christoph_close_range
+    show christoph combat feral at christoph_normal_range
     ch "{b}{size=+80}Grrraaahhh!!!{/b}" with vpunch
 
-    #sword swing vfx
-    hide Christoph
-    show christoph combat angry at christoph_close_range:
+    play sound sfx.weapon_swing #TODO Make lunge_slash
+    call screen image_display("vfx/sword_swing.png")
+    hide christoph
+    show christoph combat angry at christoph_normal_range with moveinleft:
         right
     gr "I still feed, I just do so on the deserving. I don't let my affliction command me. And you can do the same."
 
-    ch "{size=+30}{b}YOU SAID YOU NEARLY DEVOURED FOUR MEN! WERE THEY MONSTERS TOO?!{/b}" with vpunch
+    ch "{size=+20}{b}YOU SAID YOU NEARLY DEVOURED FOUR MEN! WERE THEY MONSTERS TOO?!{/b}" with vpunch
     
     gr "No, and I'm thankful I didn't. Do you want to know what stopped me?"
     extend " Hearing your name."
@@ -216,8 +217,8 @@ label confrontation:
     extend "\nWithout someone to hate, you will sink deeper into your madness until you become just like me."
     gr "Hate me if you wish, but at least try to be different. It would make your shouting a tad less obnoxious."
 
-    show christoph combat feral at christoph_close_range:
-        hop
+    show christoph combat feral at christoph_close_range with dissolve:
+        center
     "I extend my hand, further breaking his focus.."
 
     gr "As I stated, I'm feeling rather generous.\nCome with me, and I will help you find a remedy."
@@ -232,6 +233,8 @@ label confrontation:
 
     ch "{size=+70}{b}LIKE HELL, EMISSARY!!!{/b}" with vpunch
 
+    play sound sfx.lunge
+    hide christoph
     show christoph combat feral at christoph_normal_range:
         center
     "He leaps backwards, crouches, and brandishes his razor-sharp nails at me as he growls."
@@ -239,7 +242,7 @@ label confrontation:
     play sound sfx.mana_charge
     with maliceflash
     
-    extend "\nA red aura begins seeping from him. Damn, he's wielding Malice.\nAnd here I thought I destroyed his resolve..."
+    "A red aura begins seeping from him. Damn, he's wielding Malice.\nAnd here I thought I destroyed his resolve..."
     
     play sound sfx.light_grapple
 
@@ -253,39 +256,40 @@ label confrontation:
     extend " How many people have you sold that paste too? How many fathers and mothers have you devoured?" 
     gr "I wonder how many of your victims would say the same to you."
     
-    ch "{size=+70}{b}BUT IT WAS ALL BECAUSE OF-{/b}"
+    ch "{size=+50}{b}BUT IT WAS ALL BECAUSE OF-{/b}"
     
     gr "I know. And I'm ending it here."
     extend " Your fury is justified, but your actions aren't. You and I have ruined many lives, Christoph."
     gr "I'll give you one more chance. Leave with me and end this wretched cycle."
     extend " Or die at my hand, here and now."
 
-    play sound sfx.weapon_swingh
-    with quickflash
-    show christoph feral with christoph_close_range:
+
+    show christoph feral at christoph_normal_range:
         center
     ch "{size=+80}{b}FUCK YOU!!!{/b}" with vpunch 
 
     play sound sfx.weapon_swing
+    with quickflash
     queue sound sfx.wood_break
 
-    "I duck a chair flung at me and sidestep a swipe of his hand."
+    "I duck a chair flung at me."
 
-    hide christoph with moveoutright
+    hide christoph
+    call screen image_display("vfx/strike.png")
     play sound sfx.heavy_bam
-    queue sound sfx.pottery_break
-    extend " I kick him, sending him crashing into a set of plates as I dart towards my other weapon."
+    queue sound sfx.pottery_break #TODO bam_pottery_break sfx
+    extend " He tries to slash me but I kick him, sending him crashing into a set of plates as I dart towards my other weapon."
     
     play sound sfx.bubble1
     with bloodflash
 
-    show christoph combat happy at christoph_normal_range with moveinbottom:
+    show christoph combat happy at christoph_normal_range with dissolve:
         center
     "I wince as I spot blood bubbling from his fingertips.\nCan he wield hemomancy as well?"
 
     ch "Since you love blood so much, have some on the house!"
 
-    call screen image_display("vfx/sword_swing.png")
+    call screen image_display("vfx/blood_slash.png")
     play sound weapon_swingh
     queue sound sfx.singe
     "Again, I duck. The blob of crimson collides with the wall behind me, eating away at its paint."
@@ -308,10 +312,11 @@ label confrontation:
     extend " Can these {b}feeble{/b} emotions not see that he'll keep killing if I don't put him down?!" with vpunch
     "Without Malice, I can't use my hemomancy. Shit, I can't use any of my techniques either!"
 
-    scene christoph house with dissolve
+    #scene background christoph house with dissolve #TODO - Add when CG is ready
+    #show christoph combat happy at christoph_normal_range with dissolve
     "A grisly smile etches itself across Christoph's face.\nThat serpentine tongue again graces his lips."
 
-    show christoph combat happy at christoph_normal_range with moveinbottom:
+    show christoph combat happy at christoph_normal_range with dissolve:
         hop
     ch "Ahhh, I see."
     show christoph combat happy at christoph_normal_range with moveinbottom:
@@ -323,34 +328,33 @@ label confrontation:
     gr "Hmph, as if this is any handicap worth noting. I only wished to end this in one strike." 
     extend " It appears I'll have to toy with you instead."
 
-    show christoph combat angry at christoph_normal_range:
+    show christoph combat feral at christoph_normal_range:
         center 
-    ch "{size=+60}{b}I'LL TEAR THAT SMILE FROM YOUR FACE!{/b}" with vpunch
+    ch "{size=+35}{b}I'LL TEAR THAT SMILE FROM YOUR FACE!{/b}" with vpunch
 
     play sound weapon_swing
     queue sound mana_charge 
-    call screen image_display("vfx/sword_swing.png")
-    with quickblood
+    scene blood_slash
 
     "He scratches the air, sending a wave of carmine at me.\nIt's too wide to dodge."
     
-    play sound sfx.weapon_swing
+    play sound sfx.slash
     with quickflash
     "I carve through it, and a second blast is fired my way."
     
     play sound sfx.weapon_swingf
-    call screen image_display("vfx/sword_swing.png")
+    with quickflash
     extend "\nAnd the next, and the next, and the next."
     
     "My flurry of swings shakes the goblin."
     
-    scene christoph house
+    scene background christoph house
     show christoph combat feral at christoph_normal_range with moveinright:
         center
 
     ch "Grrrr...."
     
-    "\nHe hesitates."
+    "He hesitates."
 
     play sound sfx.weapon_swingh
     show christoph combat feral at christoph_close_range:
@@ -373,13 +377,15 @@ label confrontation:
 
     "He ragged teeth tear into my leg."
     
-    play sound sfx.heavy_bam 
-    show christoph feral at christoph_normal_range:
-        center
+    play sound sfx.heavy_bam #TODO bam_pottery_crash
+    with quickflash
+    hide christoph
     
     extend " My other foot kicks and dislodges his jaw from my calf. And now said leg won't stop quivering..."
     "This searing pain doesn't faze me. If I were mortal though, he would've crippled me." 
     extend "\nI can still stand, albeit hindered..."
+    show christoph feral at christoph_normal_range:
+        center
     "Christoph smacks his mouth before spitting."
 
     ch "{size=+80}{b}BLECH! Rancid!{/b}" with vpunch
@@ -398,6 +404,7 @@ label confrontation:
     ch "Shut up! You aren't better than me!"
     extend "\nIf I can't flay you, I'll just rip you limb from limb!"
 
+    play sound sfx.lunge
     show christoph cimbat angry at christoph_close_range:
         center
     "He leaps at me again. My injured leg halts my attempt to evade."
@@ -410,24 +417,24 @@ label confrontation:
     
     play sound sfx.weapon_swingh
 
-    show christoph cimbat angry at christoph_normal_range:
+    hide christoph
+    show christoph combat angry at christoph_normal_range:
         center
-    play sound sfx.door_break
+    play sound sfx.wood_break
     with vpunch
     
     extend "\nI have to roll away. The table behind me isn't as lucky. It falls to pieces."
 
     #play sound sfx.footsteps_stomp #TODO - Find sfx for stomping
-    show christoph cimbat angry at christoph_close_range with vpunch:
+    show christoph cimbat angry at christoph_close_range:
         center
     "He storms towards me. Now it is I who is shaken." 
     extend " If just one swipe lands, I won't be able to stop the next one..."
 
     play sound wood_break
     with quickflash
-    show christoph combat angry at christoph_normal_range:
-        center
-    "He strikes the ground, and I dodge bloodied spikes ambushing me from below."
+
+    "He strikes the ground, and I dodge bloodied spikes ambushing me from below." with vpunch
     "He scratches the air. A flurry of red needles beelines for me."
     extend "\nI swat them away, and now he's rushing for me."
 
@@ -443,9 +450,9 @@ label confrontation:
     extend " A feint! He's leapt behind me!"
 
     play sound sfx.heavy_slash
-    call screen image_display("vfx/sword_swing.png")
+    call screen image_display("vfx/blood_slash.png")
     with quickblood
-    gr "Aaaaghh!!!"
+    gr "Aaaaghh!!!" with vpunch
 
     show christoph combat happy at christoph_close_range with dissolve:
         center
@@ -467,10 +474,10 @@ label confrontation:
     ch "Aww, are we in pain?"
     ch "{size=+80}{b}HAVE SOME MORE!!!{/b}" with vpunch 
 
+    scene blood_slash
     "Here comes another blood wave..."
 
-    #red vfx
-    play sound sfx.weapon_swingf
+    play sound sfx.slash
     with quickflash
     extend " I cleave through it, but another follows. I can't defend...!"
 
@@ -481,22 +488,22 @@ label confrontation:
 
     stop music fadeout 0.8
 
-    scene christoph house
+    scene background christoph house
 
     gr "Nnnngh...!"
     
-    show christoph combat happy at christoph_normal_range:
+    show christoph combat happy at christoph_normal_range with dissolve:
         center
     ch "Hahahaha! Hurts doesn't it?!"
 
     show christoph combat feral at christoph_normal_range:
         center
-    ch "{size=+80}{b}AND IT'S NOT A FRACTION OF WHAT I'VE FELT!{/b}" with vpunch 
+    ch "{size=+40}{b}AND IT'S NOT A FRACTION OF WHAT I'VE FELT!{/b}" with vpunch 
     
     play sound sfx.singe
     with quickblood
     
-    ch "{b}My mother!{/b}"
+    ch "{size=+80}{b}My mother!{/b}"
 
     play sound sfx.singe
     with quickblood
@@ -508,8 +515,8 @@ label confrontation:
 
     ch "{size=+80}{b}MY LIFE!!!{/b}" with vpunch
 
-    "It's as if acid is being splashed onto my skin. This excruciating pain isn't enough to make me 
-    scream at, but I won't survive much longer at this rate.."
+    "It's as if acid is being splashed onto my skin."
+    extend "\nThis excruciating pain isn't enough to make me scream at, but I won't survive much longer at this rate.."
     
     gr "..."
     
@@ -518,47 +525,48 @@ label confrontation:
     gr "..."
     extend "Pitiful."
     
-    play sound sfx.mana_charge
-    with maliceflash
+    play sound sfx.mana_charge #TODO - Make quickMalice
     ch "{size=+80}{b}GRAAAAAH!!!{/b}" with vpunch #center text in textbox
 
-    with quickflash
-    play sound sfx.heavy_bam
-    hide christoph with zoomout
+    hide christoph with quickflash
+    play sound sfx.heavy_bam #TODO- Make bam_wood_break sfx
     queue sound sfx.wood_break
     with vpunch
     
     "A closed hand sends me sliding into the wall."
-    "I shut my eyes, expecting him to finish me, yet all I hear are raspy breaths."
+    "I brace for him to finish me, yet all I hear are raspy breaths."
     extend " He's hunched over, breathing almost as if he's drowning.\nThe red coating his claws has shrunk too."
     "It appears that we both are nearing our limit." 
-    extend "/nHowever, I'm sure he still has enough mana to kill me despite how tired he is."
+    extend "\nHowever, I'm sure he still has enough mana to kill me despite how tired he is."
     "And with my injuries, and my guilt restraining me, this is checkmate for me."
     "I imagine most would panic at the sight of this monster lumbering towards them."
     extend " But death has never been far for me. I knew that one day, I'd be cut down. It's the fate of all Emissaries."
 
-    show christoph combat feral at christoph_normal_range with quikcblinds:
+    show christoph combat feral at christoph_normal_range with quickblinds:
         center
     ch "Grrr..." 
     extend "{size=+70}I'll kill you...!"
 
-    "To be slain by the person whose life I destroyed is justice.\nI avoided the stake but merely postponed my execution."
+    "To be slain by the person whose life I destroyed is justice."
+    extend"\nI avoided the stake but merely postponed my execution."
     "No one will mourn me. No one {i}should{/i} mourn me. Not even Caius."
     extend "\nPerhaps my death will rid him of his silly fantasy of joining us.\nA soul as pure as his does not belong here."
-    "Christoph's maw inches wider and wider with each step he takes.\nYet my mind only thinks on that monk."
-    extend " Am I concerned? Why do I care? Caius helped me defeat the banshee sure, but I hardly know him."
+    "Christoph's maw inches wider and wider with each step he takes."
+    extend "\nYet my mind only thinks on that monk."
+    "Am I concerned? Why do I care? Caius helped me defeat the banshee sure, but I hardly know him."
 
-    show christoph combat happy at christoph_close_range:
+    show christoph combat happy at christoph_close_range with dissolve:
         center
 
     ch "The last sight you'll see will be my gullet! I don't care if you taste awful..." 
     extend " I'm going to savor {b}EVERY BITE!{/b}" with vpunch
 
-    #show Christoph happy with zoomin
     #TODO - Make a transform to simulate walking
 
-    "In fact, Christoph is the one I should worry about. His suffering won't end with my death, it'll only continue and eventually spread when he infects someone else."
-    "Whether because of addiction or a lust for revenge, someone will come for him just as he has come for me. My death is justified, but will it solve anything?"
+    "In fact, Christoph is the one I should worry about." 
+    extend "\nHis suffering won't end with my death, it'll only continue and eventually spread when he infects someone else."
+    "Whether because of addiction or a lust for revenge, someone will come for him just as he has come for me."
+    extend " My death is justified, but will it solve anything?"
     "How interesting."
     extend " I took on this role knowing I'd be cut down for my sins one day. Yet my death here would only breed more monsters. I chuckle."
 
@@ -574,7 +582,7 @@ label confrontation:
     "That strength... Normally, the more damage I sustain, the more feral I become."
     extend " But there was no hatred in that attack."
 
-    show christoph combat with easeinbottom:
+    show christoph combat feral at christoph_normal_range with easeinbottom:
         center
     ch "Agh...aggghhh! You broke my jaw, you bastard!"
 
@@ -582,7 +590,7 @@ label confrontation:
 
     ch "{size=+75}Agggghh... Damn you...!"
 
-    hide christoph with blinds
+    hide christoph with quickblinds
 
     "I pull myself to my feet. By then, he's back to his senses."
     extend " I don't know what to do. I can't kill him, and my body won't survive another onslaught. Even if he is exhausted."
@@ -607,6 +615,7 @@ label confrontation:
     "It pushes me forward. It grants me the strength to overcome my pain and keep fighting."
     extend "\nPerhaps my desire is to save him? Heh, how trite."
 
+    #scene background christoph house
     gr "Give up, Christoph. Every farce must come to an end."
 
     show christoph combat angry at christoph_normal_range:
@@ -618,6 +627,8 @@ label confrontation:
     
     ch "{size=+75}I'll show you simple!!!" with vpunch 
 
+    play sound mana_charge
+    with maliceflash
     "His madness fuels more Malice, yet blinds his common sense."
     extend "\nHe strikes the wall, digging through the wood."
 
@@ -647,24 +658,25 @@ label confrontation:
     
     gr "{size=+80}{b}{i}Bloodedge!{/b}{/i}"
 
-    play sound sfx.heavy_slash_twice
-    #twin_sword_slash vfx #TODO - implement the vfx
-    #with quickblood
+    call screen image_display("vfx/twin_sword_slash.jpg")
+    play sound sfx.slash
+    pause 0.2
+    play sound sfx.slash
+    with quickblood
 
     ch "{size=+20}{b}GAAAAAGGGGHHHH!!!{/b}" with vpunch
 
+    scene background christoph house with dissolve
     "I flense his back twice. He cries out as his flesh is ripped from his body." 
     extend " That attack is a feint, the blood pushing my body to accelerate.\nIt looks to most as if I've teleported."
     
-    hide christoph moveoutbottom
     play sound sfx.thud
-    
     "He crumples. His wounds aren't lethal. He'll remember this pain, but he will live."
     extend " Of course this doesn't stop him from trying to retaliate. All he can do is flip onto his butt before convulsing."
     "The red Malice on his claws is now mere embers." 
     extend "\nHe leers at me, his busted jaw and face writhing in pain."
 
-    show christoph combat feral at christoph_close_range with easeinbottom:
+    show christoph combat feral at christoph_close_range with dissolve:
         center
     ch "This...this is only a flesh wound...!"
 
@@ -675,18 +687,23 @@ label confrontation:
         hop
     extend " Agggh! Why can't I move?! My body...its wounds are nothing compared to yours."
     
-    gr "As I said, you are simple. You didn't realize the toll you were placing on your body. Even without summoning mana, you use up your very vitality when wielding your blood."
-    gr "Those wounds are indeed minor. It is your own recklessness that has lost you this fight."
+    gr "As I said, you are simple." 
+    extend " You didn't realize the toll you were placing on your body." 
+    extend " Even without summoning mana, you use up your very vitality when wielding your blood."
+    gr "Those wounds are indeed minor." 
+    extend " It is your own recklessness that has lost you this fight."
 
     ch "But...how would you know? You only used your blood once!"
     
-    gr "Unfortunately Christoph, my powers were limited during this fight.\nI couldn't wield mana nor kill you."
+    gr "Unfortunately Christoph, my powers were limited during this fight."
+    extend "\nI couldn't wield mana nor kill you."
     
     ch "Stop lying..!"
 
     gr "What do I gain by lying to you now? Torment? Please..."
     extend "\nAs I said earlier, your name saved those Celestials. And Malice requires hatred."
-    gr "I needed to adapt a different mana to defeat you. You may be surprised to know that I wanted to save you."
+    gr "I needed to adapt a different mana to defeat you." 
+    extend "\nYou may be surprised to know that I wanted to save you."
     
     show christoph combat angry at christoph_close_range with easeinbottom:
         hop
@@ -695,20 +712,25 @@ label confrontation:
     gr "On that, we agree. However I will not kill you either."
     extend "\nThe only person who can save you is yourself."
 
+    hide christoph
     show christoph angry at christoph_normal_range with dissolve:
         center
     "Despite his disbelief, his face still burns with anger." 
     extend "\nGood, this is how it should be. One mercy on my end doesn't erase the suffering I caused him."
     play sound footsteps_snowf
     "I hear footsteps from closeby. All of the addicts have fled, so it's either bystanders or those pesky hallowmen."
+    hide christoph with moveoutleft
     "I move in front of him, my body shielding him from sight."
 
     ch "This...this means nothing!\nOnly Hell awaits you, and I'll never forgive you...!"
 
-    gr "Good. In fact, you flatter me. If I were to lose myself and become feral, I hope you would take me down. If it keeps you from becoming monster, hate me as I much as you want."
-    gr "But do us both a favor; stay away from fiends. Don't succumb to their trickery just to get to me. I'll glady face you any time, anywhere. So long as you do not disgrace us both by falling for their deceit."
+    gr "Good. In fact, you flatter me."
+    extend " If I were to lose myself and become feral, I hope you would take me down." 
+    extend " If it keeps you from becoming monster, hate me as I much as you want."
+    gr "But do us both a favor; stay away from fiends." 
+    extend " Don't succumb to their trickery just to get to me. I'll gladly face you any time, anywhere." 
+    gr "So long as you do not disgrace us both by falling for their deceit."
 
-    hide christoph with fade
     "He snarls, and I turn away."
 
     window hide
@@ -716,7 +738,7 @@ label confrontation:
     stop music fadeout 0.8
 
     play sound door_break
-    queue sound sfx.footsteps_snowf
+    with quickflash
     show celestial combat at celestial_normal_range with moveinleft:
         left
     show celestial combat as celestial_2 at celestial_normal_range with moveinright:
@@ -738,8 +760,9 @@ label confrontation:
 
     gr "Do you not see my wounds, or are you just stupid?"
 
-    play sound sfx.weapon_sheathe
-    show celestial at celestial_normal_range with moveinleft:
+    play sound sfx.sheathe_sword
+    show celestial as celestial_2 at celestial_normal_range
+    show celestial at celestial_normal_range:
         hop
     c "O-Oh, I apologize! Is... Whatever Christoph was... Vanquished?"
     
@@ -755,8 +778,9 @@ label confrontation:
     gr "If we are done here, I need to rest."
     extend "\nThough if you're willing to donate some of your-"
 
-    play sound sfx.weapon_sheathe
-    show celestial as cekestial_2 at celestial_normal_range:
+    hide celestial_2
+    show celestial as celestial_2 at celestial_normal_range:
+        right
         hop
     c "Y-You are {i}free{/i} to go! We'll take over from here."
     
@@ -772,7 +796,7 @@ label confrontation:
 
     "He smiles broadly and a cold fury pumps through my veins."
 
-    show jory beutral
+    show jory neutral
     j "N-No, that's not what I meant... I just think, maybe I was wrong about you. Maybe you aren't so bad after-"
 
     "I bare my fangs, unnerving all in sight." 

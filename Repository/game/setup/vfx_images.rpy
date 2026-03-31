@@ -1,2 +1,4 @@
 image sword_swing = "images/vfx/sword_swing.png"
-image twin_sword_swing = "images/vfx/twin_sword_swing.png"
+image twin_sword_swing = "images/vfx/twin_sword_swing.jpg"
+image blood_slash = "images/vfx/blood_slash.png"
+image strike = "images/vfx/strike.png"
