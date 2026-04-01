@@ -1,6 +1,8 @@
-
+8
 label exploration:
     
+    stop music fadeout 0.8
+
     scene background jubilee night with dissolve 
 
     pause 1.0
@@ -100,13 +102,14 @@ label exploration:
     "I review the writ.\nMy quarry is located at some hobble in {i}the Hells{/i}, where the bottomfeeders of Jubilee reside." 
     "If the Celestials are doing a search, then maybe I can follow them."
 
-    show celestial at celestial_normal_range with dissolve: #TODO - Either fix the far range transform or scrap it
+    show celestial at celestial_normal_range with dissolve:
         left
     show celestial as celestial_2 at celestial_normal_range with dissolve:
         right #TODO - Should I use a looping hop transform to simulate walking, or is the sound fx good enough?
     extend "\nBefore I can finish reading, I notice a band of silvered knights marching by, conveniently right where I need them to be."
     
-    "I follow. I don't hide.\nWhat will they do, arrest an Emissary? That would be quite amusing."
+    "I follow. I don't hide."
+    extend "\nWhat will they do, arrest an Emissary? That would be quite amusing."
     "These white knights are seen as heroes.\nThey take the credit for everything, including our work."
     "Granted, the higher-ranked Celestials wield the mana of Grace, and some Justice too. Both manas are highly effeicient at killing devils."
     "Problem is, most of these knights are just fodder, celebrated to keep the commoners from panicking. {i}The Reckoning's{/i} scars cut deep."
@@ -154,7 +157,6 @@ label exploration:
     
     play sound sfx.weapon_draw
     hide celestial with Dissolve(0.4) #Capital D = customizable dissolve
-    #TODO - Find a way to have him move closer immersely, Likely with an ease / move transform
     show celestial combat at celestial_close_range:
         left
 
@@ -169,7 +171,6 @@ label exploration:
     hide celestial with easeoutleft
     hide celestial_2 with easeoutright
     show jory angry with Dissolve(0.2)
-    # TODO - Create a zoom in transform for Jory
     "Jory's gentle, yet thunderous voice leaves the knights shivering from more than just the snow."
     "The hallowman look at each other in disbelief, and then turn to Jory, who nods gravely."
     extend " Despite his composure, even this gentle giant is bitter with me."

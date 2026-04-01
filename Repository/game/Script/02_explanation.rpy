@@ -19,9 +19,11 @@ label explanation:
     "The door creaks open, and I narrow my eyes at the lanky elf that enters."
     "Disgust graces my tongue.\nI'd sooner starve than feed on him, even if he was the last mortal on the plane."
 
+    play music another_day fadein 0.8
+
     show nick happy at center with ease
     ni "Wow, you were out like a light.\nNever thought you'd struggle against a succubus."
-    
+
     gr "Be quiet, Nick."
     
     show nick elated at center:
