@@ -145,12 +145,11 @@ label confrontation:
 
     ch "Hehehehehehe... Why thank you!"
 
-    play sound sfx.lunge
-    queue sound sfx.weapon_swingh #TODO - Merge sound fx into lunge_slash
+    play sound sfx.lunge_slash
     call screen image_display("vfx/sword_swing.png")
     hide christoph
     show christoph combat feral at christoph_normal_range with moveinright:
-        left #TODO - adjust xpos to make sprite move further to left
+        left
         flip
 
     window hide #simulates a pounce
@@ -195,7 +194,7 @@ label confrontation:
     show christoph combat feral at christoph_normal_range
     ch "{b}{size=+80}Grrraaahhh!!!{/b}" with vpunch
 
-    play sound sfx.weapon_swing #TODO Make lunge_slash
+    play sound sfx.lunge_slash
     call screen image_display("vfx/sword_swing.png")
     hide christoph
     show christoph combat angry at christoph_normal_range with moveinleft:
@@ -277,7 +276,7 @@ label confrontation:
     hide christoph
     call screen image_display("vfx/strike.png")
     play sound sfx.heavy_bam
-    queue sound sfx.pottery_break #TODO bam_pottery_break sfx
+    queue sound sfx.bam_pottery_break
     extend " He tries to slash me but I kick him, sending him crashing into a set of plates as I dart towards my other weapon."
     
     play sound sfx.bubble1
@@ -377,7 +376,7 @@ label confrontation:
 
     "He ragged teeth tear into my leg."
     
-    play sound sfx.heavy_bam #TODO bam_pottery_crash
+    play sound sfx.bam_pottery_break
     with quickflash
     hide christoph
     
@@ -410,8 +409,7 @@ label confrontation:
     "He leaps at me again. My injured leg halts my attempt to evade."
     
     play sound sfx.weapon_swingf
-    call screen image_display("vfx/sword_swing.png") 
-    #TODO - Find a different VFX
+    call screen image_display("vfx/swipe.png") 
 
     extend "\nHis nails, laced with Malice and blood, rain down scratches upon me."
     
@@ -525,11 +523,12 @@ label confrontation:
     gr "..."
     extend "Pitiful."
     
-    play sound sfx.mana_charge #TODO - Make quickMalice
+    play sound sfx.mana_charge
+    with quickmalice
     ch "{size=+80}{b}GRAAAAAH!!!{/b}" with vpunch #center text in textbox
 
     hide christoph with quickflash
-    play sound sfx.heavy_bam #TODO- Make bam_wood_break sfx
+    play sound sfx.bam_wood_break
     queue sound sfx.wood_break
     with vpunch
     
@@ -615,7 +614,7 @@ label confrontation:
     "It pushes me forward. It grants me the strength to overcome my pain and keep fighting."
     extend "\nPerhaps my desire is to save him? Heh, how trite."
 
-    #scene background christoph house
+    scene background christoph house
     gr "Give up, Christoph. Every farce must come to an end."
 
     show christoph combat angry at christoph_normal_range:
@@ -651,9 +650,9 @@ label confrontation:
     with quickflash
     ch "Ha! You missed!"
 
-    scene image "#000" #TODO - Implement when CG is collected
+    #scene image "#000" #TODO - Implement when CG is collected
     play sound sfx.mana_charge
-    with sinflash
+    with quicksin
     extend " Wh-what?! Where did he-"
     
     gr "{size=+80}{b}{i}Bloodedge!{/b}{/i}"
@@ -796,7 +795,7 @@ label confrontation:
 
     "He smiles broadly and a cold fury pumps through my veins."
 
-    show jory neutral
+    show jory n#Teutral
     j "N-No, that's not what I meant... I just think, maybe I was wrong about you. Maybe you aren't so bad after-"
 
     "I bare my fangs, unnerving all in sight." 

@@ -9,6 +9,12 @@ define electricflash = Fade(.25, 0.0, .75, color="#5c7bd5")
 #quick fx
 define quickflash = Fade(.1, 0.0, .25, color="#f7f7fa")
 define quickblood = Fade(.25, 0.0, .25, color="#ff0000")
+define quickgrace = Fade(.25, 0.0, .25, color="#92a9f5")
+define quickmalice = Fade(.25, 0.0, .25, color="#680a0a")
+define quicksin = Fade(.25, 0.0, .25, color="#56066e")
+define quickfire = Fade(.25, 0.0, .25, color="#cb7f1c")
+define quickelectric = Fade(.25, 0.0, .25, color="#5c7bd5")
+
 
 define iris_in_out = ImageDissolve("images/transitions/eye_1.png", 0.5)
 define iris_in_out_slow = ImageDissolve("images/transitions/eye_1.png", 1.0)

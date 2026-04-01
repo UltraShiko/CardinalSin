@@ -36,14 +36,9 @@ label prologue:
     ch "Aghhh!"
     mo "Shh! You have to be strong. You have to or he'll-"
 
-    #scene sword swipe with MultipleTransition([ #TODO - Figure out this code
-        #False, Dissolve(0.5),
-        #"sword_swing.png", Pause(1.0),
-        #"sword_swing.png", dissolve,
-        #True])
 
     play sound sfx.pottery_break
-    with hpunch
+    with quickflash
 
     "Mommy holds me tight as our bedroom door is torn from its hinges.\nWe're crammed inside the wardrobe."
     "Heavy footsteps pound against our floor, followed by crashing sounds as our stuff is thrown around."
@@ -52,8 +47,8 @@ label prologue:
     "He threw me at a tree like I was a toy. That's all I can remember..."
 
     play sound sfx.door_break
-    with quickflash
-    v "Graaaah! Where the hell are they?!" with vpunch
+    with hpunch
+    v "{size=+40}Graaaah! Where the hell are they?!" with vpunch
 
     play sound sfx.light_grapple
     "Mama holds my mouth shut as another door is torn from its hinges.\nHe's in our room..."
@@ -62,8 +57,8 @@ label prologue:
     ch "Mom, you'll die! He wants me, so I'll-"
     mo "No, no, Christoph... I won't let him hurt you again."
 
-    play sound sfx.pottery_break
-    with hpunch
+    play sound sfx.wood_break
+    with quickflash
 
     ch "But mom he's-"
     mo "Shh! Not another word."
@@ -73,11 +68,15 @@ label prologue:
     window hide
     
     play sound sfx.door_break
-    
-    #scene CG2
-    scene image "#000"
+    with vpunch
 
     pause 2.0
+
+    call screen image_display("vfx/sword_swing.png")
+    queue sound sfx.weapon_swing
+    play sound sfx.blood_splatter
+    with quickblood
+    scene image "#000"
 
     window show
     
@@ -86,12 +85,16 @@ label prologue:
     "My mouth falls open. All I see is the door crumble, and then Mom..."
 
     play sound sfx.weapon_swing
-    "She tried her best. lunging and driving the knife into his chest." 
-    extend "\nBut there's no sign that he's hurt..."
+    "She tried her best. throwing herself at him."
+    extend "\nBut...it isn't enough. He grabs her and sinks and bites into her throat."
+
+    play sound sfx.blood_splatter
+    with quickblood
+    "her body twitches. I hear her gagging as she stares into my eyes."
+    extend "\nI hear him sucking, but blood is everywhere... It makes me want to puke!"
 
     play sound sfx.slash
-    queue sound sfx.blood_splatter
-    with quickblood
+
     "He grabs her, and his teeth tear into her neck."
     extend "\nRed goo starts gushing from her. I yelp as some splatters on my leg."
 
@@ -100,6 +103,7 @@ label prologue:
 
     v "Mmph! Bland."
 
+    scene christoph2
     play sound sfx.thud
 
     "He drops her like a sack of potatoes.\nShe lies there, her eyes open and her throat torn to shreds."
@@ -112,6 +116,7 @@ label prologue:
     ch "You...You killed her-"
     
     play sound sfx.weapon_swing
+    with quickflash
     queue sound sfx.grapple
     
     extend " Aggh!"
@@ -122,7 +127,7 @@ label prologue:
 
     scene image "#f00" with Dissolve(0.2)
     
-    ch "{b}AHHHHHHHHH!!!{/b}" with vpunch
+    ch "{size+=80}{b}AHHHHHHHHH!!!{/b}" with vpunch
     
     stop music
     window hide
