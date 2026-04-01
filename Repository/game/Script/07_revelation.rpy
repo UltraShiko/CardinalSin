@@ -22,6 +22,7 @@ label revelation:
     
     gr "I don't know what the hell he was, but he's dead. Now give me a drink!"
 
+    play music another_day fadein 0.8
     hide nick with easeoutleft
     #show caius at caius_normal_range with dissolve:
         #hop

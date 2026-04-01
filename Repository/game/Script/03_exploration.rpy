@@ -5,9 +5,13 @@ label exploration:
 
     scene background jubilee night with dissolve 
 
+    play sound sfx.door_open
+
     pause 1.0
 
     window show
+
+    play music winter_ambience loop
 
     play sound sfx.footsteps_snow loop
 
