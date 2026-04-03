@@ -1,4 +1,3 @@
-8
 label exploration:
     
     stop music fadeout 0.8
@@ -11,9 +10,8 @@ label exploration:
 
     window show
 
-    play music winter_ambience loop
-
-    play sound sfx.footsteps_snow loop
+    play music bgm.village_ambience
+    queue music bgm.village_ambienceLoop loop
 
     "As I exit, I bury myself under a cloak.\nNot because I am cold, but to hide my identity."
     "Not as a monster, however.\nMy pale flesh and blood-red eyes can't be concealed. If I'm not mistaken for a dretchling, people see me for what I am."
@@ -41,8 +39,6 @@ label exploration:
     "Their glares and murmurs do not interest me.\nIf I don't hurry, the Smith will close."
     "If those cattle could think, they'd likely figure out what role I serve.\nWhy else would a blood-sucking monster be allowed to roam free?"
     extend "\nI almost envy their ignorance."
-
-    stop sound fadeout 0.8
 
     "Fortunately, I'm just in time. The smith's stand is still open."
 
@@ -99,11 +95,11 @@ label exploration:
     gr "I suspect it's the same reason why you drink.\nConsider purchasing some incense."
 
     hide villager with easeoutright
-    play sound sfx.footsteps_snow fadein 0.8 loop
     "I take my posessions and leave."
     extend "\nHumorously, I hear him start drinking from a bottle on my way out."
 
-    "I review the writ.\nMy quarry is located at some hobble in {i}the Hells{/i}, where the bottomfeeders of Jubilee reside." 
+    "I review the writ."
+    extend "\nMy quarry is located at some hobble in {i}the Hells{/i}, where the bottomfeeders of Jubilee reside." 
     "If the Celestials are doing a search, then maybe I can follow them."
 
     show celestial at celestial_normal_range with dissolve:
@@ -112,6 +108,8 @@ label exploration:
         right #TODO - Should I use a looping hop transform to simulate walking, or is the sound fx good enough?
     extend "\nBefore I can finish reading, I notice a band of silvered knights marching by, conveniently right where I need them to be."
     
+    stop music fadeout 0.8
+    play music bgm.winter_ambience loop
     "I follow. I don't hide."
     extend "\nWhat will they do, arrest an Emissary? That would be quite amusing."
     "These white knights are seen as heroes.\nThey take the credit for everything, including our work."
@@ -121,8 +119,6 @@ label exploration:
     "They say he was a tyrant. Some say he needed a staff just to wield mana. And he supposedly executed people at the drop of a hat."
     "Some sympathize with the banshee. What got her burned was an attempt on his life. Hecate's suboordinates see her as a martyr despite {i}the Reckoning{/i}."
     "The lackadaisical Nick always grows stern when we speak of {i}The Third{/i}.\nAnd this is the same buffoon he conjures fiends for a profession."
-
-    stop sound fadeout 0.8
 
     hide celestial with dissolve
     hide celestial_2 with dissolve
@@ -157,7 +153,8 @@ label exploration:
         hop
     c "Godforsaken leech! You dare trail us?!" with vpunch
     
-    gr "Indeed I am.\nKeep on with your search, it isn't like any of you can stop me."
+    gr "Indeed I am."
+    extend "\nnKeep on with your search, it isn't like any of you can stop me."
     
     play sound sfx.weapon_draw
     hide celestial with Dissolve(0.4) #Capital D = customizable dissolve
@@ -202,7 +199,7 @@ label exploration:
     
     gr "You aren't wrong, and you aren't stopping me."
     
-    show celestial combat at celestial_normal_range: #will probably need to reassign come zoom in sprite
+    show celestial combat at celestial_normal_range:
         hop
     c "You just want a meal, don't you?!"
     
@@ -219,7 +216,7 @@ label exploration:
     hide jory
     hide celestial
     hide celestial_2
-    with dissolve #position this way triggers the transitions simultaneously
+    with dissolve
     "I talk proudly, but I'm well aware I am one of his abominations.\nIf these cattle have anything over me, it's their humanity."
     "Hence why it is I who should hunt them down. These sentimental knights will only make things worse. Their sympathy for those who abuse the paste will inevitably help its spread."
     "Besides anyone can indulge in drugs. Even the Reverend.\nAnd those who don't indulge in the paste sell it. It's a very lucrative trade, especially after {i}the Reckoning{/i}."
@@ -237,7 +234,7 @@ label exploration:
     show jory neutral
     extend "\nListen, don't kill anyone you don't have to. Please.\nMy people don't want to see bloodshed."
     
-    gr "I make no promises.\nA little blood is better than more addicts distributing the paste.\nYou might want to see if any of \"your people\" are using."
+    gr "I make no promises. A little blood is better than more addicts distributing the paste.\nYou might want to see if any of \"your people\" are using."
     
     j "They aren't. I'm well aware of the symptoms.\nI saw a lot of addiction when I was {i}the fourth's{/i} shieldbearer..."
 

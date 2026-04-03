@@ -1,13 +1,14 @@
 
 label explanation:
     
-    scene background emissary base with dissolve
+    scene background emissary base with iris_in_out_slow
     
     pause 1.0
 
     window show
     
-    "I open my eyes at the sunset streaming through the window.\nLooks like I was more tired than I thought..."
+    "I open my eyes at the sunset streaming through the window."
+    extend "\nLooks like I was more tired than I thought..."
     "That damned banshee nearly killed us.\nTo be given so much trouble by a lowly succubus, it's humiliating!"
     "Her kind isn't usually that deadly, at least one-on-one.\nAnd now she's out doing Ishmael-knows-what."
     "I sit up, my stomach grumbling."
@@ -19,7 +20,7 @@ label explanation:
     "The door creaks open, and I narrow my eyes at the lanky elf that enters."
     "Disgust graces my tongue.\nI'd sooner starve than feed on him, even if he was the last mortal on the plane."
 
-    play music another_day fadein 0.8
+    play music bgm.another_day fadein 0.8
 
     show nick happy at center with ease
     ni "Wow, you were out like a light.\nNever thought you'd struggle against a succubus."
@@ -185,7 +186,7 @@ label explanation:
     play sound sfx.hurl
     queue sound sfx.pottery_break
     hide nick with moveoutright #TODO - Make a dropout command that's faster
-    with vpunch
+    with quickflash
     
     "I send him spiraling into the desk on my way out."
     extend "\nAttacking him is fruitless, but it makes me better.\nIt's too addicting..."

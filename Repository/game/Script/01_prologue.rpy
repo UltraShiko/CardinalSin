@@ -36,7 +36,6 @@ label prologue:
     ch "Aghhh!"
     mo "Shh! You have to be strong. You have to or he'll-"
 
-
     play sound sfx.pottery_break
     with quickflash
 
@@ -72,9 +71,9 @@ label prologue:
 
     pause 2.0
 
+    play sound sfx.weapon_swing
     call screen image_display("vfx/sword_swing.png")
-    queue sound sfx.weapon_swing
-    play sound sfx.blood_splatter
+    queue sound sfx.blood_splatter
     with quickblood
     scene image "#000"
 
@@ -83,41 +82,37 @@ label prologue:
     ch "Mooooom!!!" with vpunch
 
     "My mouth falls open. All I see is the door crumble, and then Mom..."
-
-    play sound sfx.weapon_swing
     "She tried her best. throwing herself at him."
     extend "\nBut...it isn't enough. He grabs her and sinks and bites into her throat."
-
-    play sound sfx.blood_splatter
-    with quickblood
     "her body twitches. I hear her gagging as she stares into my eyes."
     extend "\nI hear him sucking, but blood is everywhere... It makes me want to puke!"
-
-    play sound sfx.slash
-
-    "He grabs her, and his teeth tear into her neck."
-    extend "\nRed goo starts gushing from her. I yelp as some splatters on my leg."
 
     mo "Uughhh..."
     extend " Chris...toph-"
 
     v "Mmph! Bland."
 
-    scene christoph2
+    scene christoph2 with iris_in_out
     play sound sfx.thud
 
-    "He drops her like a sack of potatoes.\nShe lies there, her eyes open and her throat torn to shreds."
+    "He drops her like a sack of potatoes."
+    extend "\nShe lies there, her eyes open and her throat torn to shreds."
     "Their pupils look at me. It feels like she's still here, even though she's not..."
     "I shiver like a leaf as the monster, looking like one of the humans, wipes his mouth and glares at me."
     "A mix of tears and more goop run down my face. I'm about to cry, but I clench my fists instead."
-    "I grab the dagger from mom's body. I know I can't hurt him, but I'll make him pay!"
-    extend "Somehow..."
+    play sound sfx.dagger_draw
+    "I grab the knife from mom's body."
+    extend "\nI know I can't hurt him, but I'll make him pay!"
+    extend " Somehow..."
 
     ch "You...You killed her-"
     
     play sound sfx.weapon_swing
-    with quickflash
+    call screen image_display("vfx/sword_swing.png")
+    scene christoph2:
+        zoom 1.5
     queue sound sfx.grapple
+    with quickflash
     
     extend " Aggh!"
     
@@ -127,7 +122,7 @@ label prologue:
 
     scene image "#f00" with Dissolve(0.2)
     
-    ch "{size+=80}{b}AHHHHHHHHH!!!{/b}" with vpunch
+    ch "{size=+80}{b}AHHHHHHHHH!!!{/b}" with vpunch
     
     stop music
     window hide

@@ -153,7 +153,6 @@ label confrontation:
         flip
 
     window hide #simulates a pounce
-
     
     window show
     # meant to simulate a lunge from Christoph lunge
@@ -172,7 +171,7 @@ label confrontation:
     show christoph combat feral at christoph_normal_range
     ch "{size=+35}{b}AS IF A LEECH LIKE YOU WOULD UNDERSTAND!{/b}" with vpunch
 
-    play sound sfx.weapon_swing
+    play sound sfx.lunge_slash
     call screen image_display("vfx/sword_swing.png")
     hide christoph
     show christoph combat feral at christoph_normal_range with moveinright:
@@ -262,7 +261,6 @@ label confrontation:
     gr "I'll give you one more chance. Leave with me and end this wretched cycle."
     extend " Or die at my hand, here and now."
 
-
     show christoph feral at christoph_normal_range:
         center
     ch "{size=+80}{b}FUCK YOU!!!{/b}" with vpunch 
@@ -275,8 +273,7 @@ label confrontation:
 
     hide christoph
     call screen image_display("vfx/strike.png")
-    play sound sfx.heavy_bam
-    queue sound sfx.bam_pottery_break
+    play sound sfx.bam_pottery_break
     extend " He tries to slash me but I kick him, sending him crashing into a set of plates as I dart towards my other weapon."
     
     play sound sfx.bubble1
@@ -498,16 +495,22 @@ label confrontation:
         center
     ch "{size=+40}{b}AND IT'S NOT A FRACTION OF WHAT I'VE FELT!{/b}" with vpunch 
     
+    play sound sfx.weapon_swing
+    pause 0.6
     play sound sfx.singe
     with quickblood
     
     ch "{size=+80}{b}My mother!{/b}"
 
+    play sound sfx.weapon_swing
+    pause 0.6
     play sound sfx.singe
     with quickblood
 
     ch "{size=+80}{b}My joy!{/b}"
 
+    play sound sfx.weapon_swing
+    pause 0.6
     play sound sfx.singe
     with quickblood
 
@@ -529,7 +532,6 @@ label confrontation:
 
     hide christoph with quickflash
     play sound sfx.bam_wood_break
-    queue sound sfx.wood_break
     with vpunch
     
     "A closed hand sends me sliding into the wall."
@@ -795,7 +797,7 @@ label confrontation:
 
     "He smiles broadly and a cold fury pumps through my veins."
 
-    show jory n#Teutral
+    show jory neutral
     j "N-No, that's not what I meant... I just think, maybe I was wrong about you. Maybe you aren't so bad after-"
 
     "I bare my fangs, unnerving all in sight." 

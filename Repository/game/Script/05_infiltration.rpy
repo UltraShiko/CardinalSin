@@ -1,9 +1,8 @@
 
 label infiltration:
 
-    play sound sfx.footsteps_snowf fadein 0.8 loop
+    play music bgm.winter_ambience loop
     hide celestial 
-    hide villager
     hide celestial_2
     with moveoutright #Idk how to have the hide command apply to one of the sprites
     "I chortle darkly as I slip past the demoralized hallowmen."
@@ -44,6 +43,8 @@ label infiltration:
 
     play sound sfx.door_open
 
+    stop music
+
     play music bgm.something_amiss fadein 0.8
 
     pause 1.0
@@ -59,7 +60,7 @@ label infiltration:
     "How has this place not been searched sooner?\nEven if the Celestials have their hands full, where are the city guards?"
     "Hmm, I wonder how many of them are in this circle? Or have been bribed?\nMortals are weak in the face of sinful temptation, after all..."
 
-    show christoph happy at christoph_normal_range:
+    show christoph happy at christoph_normal_range with dissolve:
         center
     "I'm escorted past them to a sickly green goblin lounging in a chair too regal for this dump. This must be my prey."
     extend " He looks up at me and grins, jagged teeth meeting my eyes."
@@ -216,7 +217,9 @@ label infiltration:
     "I leave the window. Trailing him is child's play.\nHe doesn't even look over his shoulder. A wolf could pounce on him at any moment."
     extend " How fortuitous for me!" with vpunch 
 
-    #play sound sfx.rustle_three #TODO - Import rustle sound fx
+    play sound sfx.rustle
+    queue sound sfx.rustle
+    queue sound sfx.rustle
     "I dart from tree to tree, waiting for him to find his firewood.\nAs he does, he devotes his focus to gathering it. My mouth waters."
     "He bends down and I arch forward, eager to pounce."
 

@@ -1,6 +1,6 @@
 label interrogation:
     
-    play sound sfx.footsteps_snow fadein 0.8 loop
+    #
 
     "I skulk away. \nMy stomach growls, and my eyes begin to dilate."
     extend " Good!"
@@ -8,17 +8,19 @@ label interrogation:
     "I see many footprints in the snow, but one pattern stands outs."
     "These tracks are haphazard, almost as if he was hopping about like a rabbit. Intoxication leads to vivid hallucinations. I remember thinking I could fly during one of them..."
     
-    stop sound fadeout 0.8
+    #stop sound fadeout 0.8
     
     "I take a whiff. The sickly sweet smell irritates my nose.\nSanguine Paste smells eerily similar to candy."
     extend "\nSo these tracks belong to an addict, or a loon."
     
-    play sound sfx.footsteps_snow fadein 0.8 loop
+    #play sound sfx.footsteps_snow fadein 0.8 loop
     
     "Either way, I follow them."
     "The stench of the paste grows stronger with each step.\nIs he indulging even as I track him? I'm prepared all the same, this'll just make subdoing him easier."
-    "I snarl.\nI no longer crave that wretched paste but I don't want to reek of it either! This disgusting oaf is going to regret using."
-    "Soon the prints are followed by sounds.\nTheir keeper is babbling not too far from here."
+    "I snarl."
+    extend "\nI no longer crave that wretched paste but I don't want to reek of it either! This disgusting oaf is going to regret using."
+    "Soon the prints are followed by sounds."
+    extend "\nTheir keeper is babbling not too far from here."
 
     v "Hey-hey! Yes, Charlotta, it's me! I'm back just as I promised!"
     v "Ohohoho! There's no way you could be evil. Not with those sweet, voluptuous tits of yours! If they drag me to Hell, I won't struggle~!\nUnless you want me too..."
@@ -41,7 +43,6 @@ label interrogation:
 
     stop sound fadeout 0.8
 
-    #TODO - maybe alter the camera a few xpos down to simulate squatting?
     "Regardless I crouch. I calculate the distance between us."
     extend "\nNo weapons or mana will be needed. I don't know why I bother preparing to attack.." 
     "My instincts call for wariness, even from an oaf trapped in stupor."
@@ -105,7 +106,7 @@ label interrogation:
 
     gr "First off, where did you find that paste?"
     
-    #have silhouette hop up and down if doing animations
+    show villager at hop
     m "What-what does a monster like you want with-"
     
     play sound sfx.grapple
@@ -127,7 +128,7 @@ label interrogation:
     play sound sfx.light_grapple
     show villager at center with moveinbottom:
         zoom 1.5 ypos 1.3
-    m "Ngh... I, I-"
+    m "Ngh...I, I-"
     v "Goddamned leech!" with vpunch 
 
     hide villager
@@ -145,9 +146,7 @@ label interrogation:
     with quickflash
     
     "I meet their gaze, then break the remaining pinky."
-
-    #maybe zoomin on both?
-    extend " His outcry provokes the band to march closer. I grab his index finger, ready to resume
+    extend "\nHis outcry provokes the band to march closer. I grab his index finger, ready to resume
     as if they weren't present."
 
     gr "We aren't done here. Where did you find that paste?"
@@ -253,6 +252,7 @@ label interrogation:
     c "H-How vile..."
 
     play sound sfx.zap
+    with quickflash
     "Every time Christoph's infernal name is mentioned, I twitch."
     extend " I oughta cut this butcher down for that slight alone. For some reason, I feel nostalgia when I hear his name. But I never met a butcher by that name..."
     "But have I ever met a goblin? They're uncommon in the cities."
@@ -280,7 +280,7 @@ label interrogation:
     extend " Considering the intel, I wager this Christoph is a monster just like myself. You all are free to accompany me at your own peril."
     gr "As the addiction turns you, you crave more and more forbidden tastes, ending with blood. He is likely using his supplies to attract more prey."
 
-    #hide silhouette
+    hide villager with dissolve
     show celestial combat at celestial_normal_range:
         hop
     show celestial combat as celestial_2 at celestial_normal_range:

@@ -22,7 +22,7 @@ label revelation:
     
     gr "I don't know what the hell he was, but he's dead. Now give me a drink!"
 
-    play music another_day fadein 0.8
+    play music bgm.another_day fadein 0.8
     hide nick with easeoutleft
     #show caius at caius_normal_range with dissolve:
         #hop
@@ -51,6 +51,7 @@ label revelation:
     #hide caius with dissolve
     show nick happy at nick_normal_range with easeinright:
         right
+        flip
 
     "That elf has a stupid grin on his face. I glare at him and it only grows."
     "I then take notice of the mask shrouding Caius's forehead.\nIt looks like its glued to his skin."
@@ -129,7 +130,7 @@ label revelation:
     gr "Hmm, so those Exorcists perpetuated that..."
 
     ni "Yep... They lacked the numbers to face the Celestials, so they sacked Thrycia."
-    extend "\nI guess they believed their attack wouldn't warrant retaliation. Thrycia was technically independent."
+    ni "I guess they believed their attack wouldn't warrant retaliation. Thrycia was technically independent."
 
     gr "I do not understand why we cling to this peace."
     extend "\nIt's only a matter of time before those peons attack again."
@@ -259,6 +260,7 @@ label revelation:
 
     show nick at nick_normal_range with easeinright:
         right
+        flip
     ni "Of course. It's my passion. A really bad passion hehehe, but I know just about everything when it comes to devils."
     
     gr "He's only escaped the noose because he's useful.\nEven {i}the Third{/i} had to put up with him."
@@ -290,10 +292,10 @@ label revelation:
     bu "Second signature was weak. No corpse detected."
     extend "]nIt was a fiend, a very powerful fiend~!"
 
-    #hide nick 
+    hide nick 
     #hide buzz 
     #hidde caius
-    #with dissolve
+    with dissolve
 
     "I groan as Caius's eyes expand. He has a one track mind, this monk..."
     "He'll be a liability, at this rate. All some monster has to do is capture his friend, and Caius will surrender."
@@ -336,10 +338,10 @@ label revelation:
     show nick elated at nick_close_range with dissolve
     ni "And besides vampire, someone needs to keep you in-"
 
+    hide nick with moveoutright
     play sound sfx.hurl
     pause 0.5
     play sound sfx.pottery_break
-    hide nick with moveoutright
     with quickflash
     
     "I toss him into the wall. I've heard enough of his nonsense."
@@ -358,8 +360,8 @@ label revelation:
     gr "Start trying to get that mana of yours under control.\nIf you're truly able to wield Justice, we'll need that firepower."
     gr "More importantly, I don't want to have to protect you from yourself.\nI expect you to make the most of your respite."
     
-    show caius happy at caius_close_range:
-        hop
+    #show caius happy at caius_close_range:
+        #hop
     ca "You don't have to tell me twice."
     
     bu "Buzz accompany you~. Act as eyes and ears for master."
@@ -392,7 +394,8 @@ label revelation:
 
     play music bgm.mother_of_the_damned fadein 0.8
 
-    show persephone angry at t_alpha(0.3) with Dissolve(1.0) #t_alpha makes her sprite transparent
+    show persephone angry at t_alpha(0.3) with Dissolve(1.0): #t_alpha makes her sprite transparent
+        center
 
     window show
 
