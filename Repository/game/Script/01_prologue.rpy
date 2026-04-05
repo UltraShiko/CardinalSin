@@ -3,6 +3,9 @@ label prologue:
     camera:
         perspective True
 
+    $ quick_menu = True
+    window show
+
     "...My head, it hurts..."
     "I can't see... Every time I open my eyes, a red goo burns them.\nThis ick is all over me..."
 
