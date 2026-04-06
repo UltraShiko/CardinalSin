@@ -8,6 +8,7 @@ label exploration:
 
     pause 1.0
 
+    $ quick_menu = True
     window show
 
     play music bgm.village_ambience
@@ -113,16 +114,25 @@ label exploration:
     "I follow. I don't hide."
     extend "\nWhat will they do, arrest an Emissary? That would be quite amusing."
     "These white knights are seen as heroes.\nThey take the credit for everything, including our work."
-    "Granted, the higher-ranked Celestials wield the mana of Grace, and some Justice too. Both manas are highly effeicient at killing devils."
+    "Granted, the higher-ranked Celestials wield the mana of Grace, and some Justice too. Both manas are highly efficient at killing devils."
     "Problem is, most of these knights are just fodder, celebrated to keep the commoners from panicking. {i}The Reckoning's{/i} scars cut deep."
     "I wonder if that Archfiend Hecate intended to split our empire into halves.\nGranted, I hear {i}the Third{/i} was a fiend in his own way."
     "They say he was a tyrant. Some say he needed a staff just to wield mana. And he supposedly executed people at the drop of a hat."
     "Some sympathize with the banshee. What got her burned was an attempt on his life. Hecate's suboordinates see her as a martyr despite {i}the Reckoning{/i}."
     "The lackadaisical Nick always grows stern when we speak of {i}The Third{/i}.\nAnd this is the same buffoon he conjures fiends for a profession."
 
+    $ quick_menu = False
+    window hide
+    
     hide celestial with dissolve
     hide celestial_2 with dissolve
     show jory neutral with dissolve 
+
+    pause 1.2
+
+    $ quick_menu = True
+    window show
+
     "As our march continues, a man of over nine feet blocks their path."    
     extend "\nThis giant is named Jory. He's a nephillim rumored to have courted the banshee. That's what Caius believes."
 
@@ -154,12 +164,13 @@ label exploration:
     c "Godforsaken leech! You dare trail us?!" with vpunch
     
     gr "Indeed I am."
-    extend "\nnKeep on with your search, it isn't like any of you can stop me."
+    extend "\nKeep on with your search, it isn't like any of you can stop me."
     
     play sound sfx.weapon_draw
-    hide celestial with Dissolve(0.4) #Capital D = customizable dissolve
-    show celestial combat at celestial_close_range:
-        left
+    
+    hide celestial 
+    show celestial combat at celestial_close_range, left
+    with Dissolve(0.4) #Capital D = customizable dissolve
 
     c "Monster! I'll drive this this blade through your heart!"
     
@@ -169,9 +180,16 @@ label exploration:
     
     j "Enough!" with vpunch
 
+    $ quick_menu = False
+    window hide
+
     hide celestial with easeoutleft
     hide celestial_2 with easeoutright
     show jory angry with Dissolve(0.2)
+
+    $ quick_menu = True
+    window show
+
     "Jory's gentle, yet thunderous voice leaves the knights shivering from more than just the snow."
     "The hallowman look at each other in disbelief, and then turn to Jory, who nods gravely."
     extend " Despite his composure, even this gentle giant is bitter with me."
@@ -217,10 +235,11 @@ label exploration:
     hide celestial
     hide celestial_2
     with dissolve
+
     "I talk proudly, but I'm well aware I am one of his abominations.\nIf these cattle have anything over me, it's their humanity."
     "Hence why it is I who should hunt them down. These sentimental knights will only make things worse. Their sympathy for those who abuse the paste will inevitably help its spread."
     "Besides anyone can indulge in drugs. Even the Reverend.\nAnd those who don't indulge in the paste sell it. It's a very lucrative trade, especially after {i}the Reckoning{/i}."
-    "I imagine the Celestials will arrest everyone, bring them in, and lock up the addicts for some time. But when they get out, they'll just resume their anttics."
+    "I imagine the Celestials will arrest everyone, bring them in, and lock up the addicts for some time. But when they get out, they'll just resume their antics."
     "It's what I did. You can't help those that have become enslaved to the paste. No one could have helped me."
 
     show jory sad at center with dissolve
@@ -234,7 +253,7 @@ label exploration:
     show jory neutral
     extend "\nListen, don't kill anyone you don't have to. Please.\nMy people don't want to see bloodshed."
     
-    gr "I make no promises. A little blood is better than more addicts distributing the paste.\nYou might want to see if any of \"your people\" are using."
+    gr "I make no promises. A little blood is better than more addicts distributing the paste. You might want to see if any of \"your people\" are using."
     
     j "They aren't. I'm well aware of the symptoms.\nI saw a lot of addiction when I was {i}the fourth's{/i} shieldbearer..."
 
@@ -258,6 +277,9 @@ label exploration:
 
     gr "I'm leaving now. If you're ready to die, you are free to follow."
     extend "\nOr, you could take credit for my work as usual.\nI have no use for prestige, only results."
+
+    $ quick_menu = False
+    window hide
     
     hide jory with dissolve
     jump interrogation
