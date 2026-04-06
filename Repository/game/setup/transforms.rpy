@@ -11,9 +11,9 @@ transform flip_r: #reverts sprite's original xzoom
     xzoom 1.0
 
 transform hop:
-    linear 0.1 yoffset -150
+    linear 0.1 yoffset 150
     linear 0.1 yoffset 0
-    linear 0.1 yoffset -150
+    linear 0.1 yoffset 150
     linear 0.1 yoffset 0
 
 transform sway:

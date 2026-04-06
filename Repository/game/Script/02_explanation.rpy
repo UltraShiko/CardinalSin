@@ -5,6 +5,7 @@ label explanation:
     
     pause 1.0
 
+    $ quick_menu = True
     window show
     
     "I open my eyes at the sunset streaming through the window."
@@ -14,8 +15,16 @@ label explanation:
     "I sit up, my stomach grumbling."
     extend "\nIt's been three days since I last ate. I should have a syringe lying around somewhere."
 
+    $ quick_menu = False
+    window hide
+
     play sound sfx.door_open
     show nick happy at nick_normal_range with easeinleft
+
+    pause 1.0
+
+    $ quick_menu = True
+    window show
 
     "The door creaks open, and I narrow my eyes at the lanky elf that enters."
     "Disgust graces my tongue.\nI'd sooner starve than feed on him, even if he was the last mortal on the plane."
@@ -29,15 +38,26 @@ label explanation:
     
     show nick elated at center:
         xzoom -1.0
+    
     ni "Hehe... Of course, she was the banshee who caused {i}the Reckoning{/i}."
     extend "\nToo bad you can't wield silver."
     
-    gr "Hmph, I only need to tear him limb from limb. The monk can do the rest.."
+    gr "Hmph, I only need to tear her limb from limb. The monk can do the rest..."
 
     play sound light_grapple
+
     "I put on my boots, stand, and stretch.\nI wish my scenery wasn't so unpleasant."
 
+    $ quick_menu = False
+    window hide
+
     show nick elated at nick_close_range with dissolve
+    
+    pause 1.2
+
+    $ quick_menu = True
+    window show
+
     "This elf is revolting!" 
     extend " His hair is disheveled, his jagged fingernails are unsightly, and he's wearing short sleeves despite the winter's snow."
     "Worst of all, he's a Malconvoker - a buffoon who summons devils to fight other devils. It's only a matter of time before one takes his head off."
@@ -64,6 +84,7 @@ label explanation:
     
     show nick neutral at right with moveinright:
         xzoom -1.0 
+    
     ni "Malice wears on your soul when overused.\nJustice is like turning your very soul into a weapon. It will kill you, and probably everyone else nearby if mishandled."
     ni "On top of that, your friend is a lunatic."
     
@@ -105,7 +126,6 @@ label explanation:
         center
         nick_close_range
 
-        
     extend " Ngh!"
 
     "I yank the fool by his collar, only for him to smile whimiscally."
@@ -136,9 +156,11 @@ label explanation:
     
     gr "Hmm... Why are you giving me this?\nSurely, you understand that Persephone is our top priority."
     
-    show nick happy at hop:
+    # Note: Doing this to avoid an animation bug.
+    hide nick
+    show nick happy at nick_normal_range, hop, center:
         xzoom -1.0
-
+        
     ni "She is, and I intend to help you find her, but there's something I want to investigate first."
     extend " You know how a dretchling destroyed Thrycia?"
     
@@ -149,6 +171,7 @@ label explanation:
     gr "It was that pain devil, isn't it?!" with vpunch
 
     show nick elated with dissolve
+
     "He grins sheepishly. Maybe I should kill him after all!"
     "When I first met this loon, he had a brute of a fiend bound to his service. She was over seven feet tall and a even monster by devil standards."
     "I told this fool {i}countless{/i} times to slit her throat and be done with it."
@@ -162,11 +185,12 @@ label explanation:
     
     gr "Yes, {i}spite{/i}, because you blame her for your failure.\nAs if you alone could've stopped {i}the Reckoning{/i}."
     
-    show nick neutral at left with move:
+    show nick neutral at nick_normal_range,left with move:
         xzoom 1.0
+
     ni "Hard to close a tear in the plane with a chain through your chest..."
     show nick elated
-    extend " hehehe..."
+    extend " Hehehe..."
     
     gr "You're revolting!" with vpunch
 
@@ -182,15 +206,22 @@ label explanation:
     show nick elated at left with easeinleft:
         nick_close_range
     ni "It does keep you in line-"
-    
+
+    $ quick_menu = False
+    window hide
+
     play sound sfx.hurl
     queue sound sfx.pottery_break
     hide nick with moveoutright #TODO - Make a dropout command that's faster
     with quickflash
     
+    $ quick_menu = True
+    window show
+
     "I send him spiraling into the desk on my way out."
     extend "\nAttacking him is fruitless, but it makes me better.\nIt's too addicting..."
-    
+
+    $ quick_menu = False
     window hide
 
     jump exploration
