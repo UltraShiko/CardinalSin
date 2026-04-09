@@ -7,6 +7,7 @@ label revelation:
     #show caius neutral at caius_normal_range with dissolve:
         #right
     
+    $ quick_menu = True
     window show
 
     "I return and find both Caius and Nick conversing."
@@ -118,7 +119,7 @@ label revelation:
     extend " Whenever he's done something foolish, he acts like this. A sane mortal would dread my wrath, but Nick's lust for pain encourages it."
 
     gr "Caius, fetch me a broom."
-    extend "\nOn second thought, a broom won't cut it/ Grab me that staff over there."
+    extend "\nOn second thought, a broom won't cut it. Grab me that staff over there."
     
     ca "Umm, okay...?"
     
@@ -178,7 +179,7 @@ label revelation:
     bu "Buzz know mana signature of the deceased. Yes yes, the hellknights were not alone. In fact, some corpses were nice and crispy~.\nElectrocuted, hmhmhm!"
     bu "Buzz detect powerful mana. Very malicious and sadistic.\nWe devils enjoy torturing others, but this one's bloodlust is unrivaled."
     
-    show nick elated with zoomin #further than before
+    show nick elated #further than before
     
     extend "\nYes, Buzz detect what you mortals call; a pain devil-"
 
@@ -290,7 +291,7 @@ label revelation:
     ca "Please continue, Buzz."
 
     bu "Second signature was weak. No corpse detected."
-    extend "]nIt was a fiend, a very powerful fiend~!"
+    extend "\nIt was a fiend, a very powerful fiend~!"
 
     hide nick 
     #hide buzz 
@@ -320,8 +321,9 @@ label revelation:
     
     gr "Be quiet-"
     
-    show nick happy at nick_normal_range with easeinleft:
+    show nick happy at nick_normal_range:
         hop
+
     ni "Nah. I think Caius has a point."
     extend " More importantly, there's another powerful fiend on the loose. We probably need to stop it."
     
@@ -336,21 +338,29 @@ label revelation:
     extend "\nI'd much rather cleanse the source, even if I have to get my hands dirty..."
 
     show nick elated at nick_close_range with dissolve
+
     ni "And besides vampire, someone needs to keep you in-"
 
-    hide nick with moveoutright
+    $ quick_menu = False
+    window hide
+
     play sound sfx.hurl
-    pause 0.5
+
+    hide nick with moveoutright
+
     play sound sfx.pottery_break
     with quickflash
-    
+
+    $ quick_menu = True
+    window show
+
     "I toss him into the wall. I've heard enough of his nonsense."
 
     gr "Very well, you are hereby my suboordinate."
     extend " But understand this.\nWe will do things {i}my{/i} way. I'm not interested in rescuing damsels, or your friend."
     gr "In fact, I plan to kill him if he's aiding fiends, and I expect you to back me up."
     
-    c "I'm aware..."
+    ca "I'm aware..."
     
     gr "Elf, make arrangements. Once my wounds are healed, we depart."
     extend "\nAs for you, monk..."
@@ -370,9 +380,15 @@ label revelation:
     
     gr "I make no promises..."
 
+    $ quick_menu = False
+    window hide
+
     scene image "#000" with pixellate
 
     play sound sfx.drop_clothes
+
+    $ quick_menu = True
+    window show
 
     "I rest on one of the beds, throwing the blanket over my face so I don't have to see either of them any longer."
     "My mind races. I still can't believe that I channeled Sin in place of Malice.  Does this development imply I'm getting soft? I sure hope not..."
@@ -390,6 +406,7 @@ label revelation:
 
     gri "Banshee. To what do I owe the displeasure?"
 
+    $ quick_menu = False
     window hide
 
     play music bgm.mother_of_the_damned fadein 0.8
@@ -397,8 +414,11 @@ label revelation:
     show persephone angry at t_alpha(0.3) with Dissolve(1.0): #t_alpha makes her sprite transparent
         center
 
-    window show
+    pause 1.0
 
+    $ quick_menu = True
+    window show
+    
     pei "So I did some digging, and you're a liar. You weren't jinxed, you fed on a child... You turned him into a freak, {i}after{/i}, you devoured his mother in front of him!"
 
     gri "Heh, do my ears betray me, or does {i}the banshee{/i} have a bleeding heart?"
@@ -437,7 +457,8 @@ label revelation:
     ##############################
 
     $ quick_menu = False
-
+    window hide
+    
     call screen cinematic_credits_screen()
 
     # Update flag used to determine if the ending has been seen once.
