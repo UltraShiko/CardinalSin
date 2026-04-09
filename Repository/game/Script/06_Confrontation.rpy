@@ -1,10 +1,12 @@
 
 label confrontation:
-    window hide
     show christoph combat at christoph_normal_range with dissolve:
         flip
     pause 1.0
-    window show #to help player get a good idea of christoph's combat pose
+
+    $ quick_menu = True
+    window show
+    
     ch "Grrr! Filthy Emissary!"
     
     gr "A word of advice, make sure your \"guests\" don't keep their weapons."
@@ -22,9 +24,19 @@ label confrontation:
     
     ch "A brat you say?"
     extend " Oh..."
+
+    $ quick_menu = False
+    window hide
+
     show christoph combat feral at christoph_normal_range with dissolve:
         center
         flip
+
+    pause 1.0
+
+    $ quick_menu = True
+    window show
+
     ch "{size=+70}Ohhhh! Now I remember!" with vpunch
     
     "This time, his teeth greet me but not from the nicety of a smile."
@@ -70,8 +82,13 @@ label confrontation:
     ch "Not only did you kill my mother, you murdered my humanity!"
     extend " \nAfter you \"spared\" me, I started getting these cravings..."
     ch "At first, I wanted raw meat. My caretakers thought I was mad, so I had to steal it." 
-    show christoph feral at christoph_normal_range:
-        hop
+    
+    show christoph feral:
+        ease 0.1 yoffset 350
+        ease 0.1 yoffset 250
+        ease 0.1 yoffset 350
+        ease 0.1 yoffset 250
+        
     ch "It was {b}scrumptuous!{/b}! But not enough..."
     extend " I broke out of the orphanage and sought out the most {b}forbidden{/b} pleasures.\nFrom whores, to drugs, and finally..."
 
@@ -93,14 +110,21 @@ label confrontation:
     
     gr "I can't relate."
 
-    show christoph angry at christoph_normal_range:
-        hop
+    show christoph angry:
+        ease 0.1 yoffset 350
+        ease 0.1 yoffset 250
+        ease 0.1 yoffset 350
+        ease 0.1 yoffset 250
+
     ch "Of course you can't... You are gifted. You can feast on blood and lead a normal life."
+    
     show christoph angry at christoph_normal_range:
+        yoffset 0
         flip_r
+
     extend " While I, the boy you defiled..."
     show christoph feral at christoph_normal_range
-    ch "Have to suffer {size=+50}{b}a neverending hunger!!!{/b}" with vpunch
+    ch "...has to suffer {size=+50}{b}a neverending hunger!!!{/b}" with vpunch
     
     gr "My life is {i}far{/i} from normal, Chriistoph."
 
@@ -138,12 +162,15 @@ label confrontation:
         center
         flip_r
     gr "And do you believe this changes anything? You are still enslaved to your hunger."
-    extend "\nAnd as people disappear, it's only a matter of time before they come for you"
+    extend " And as people disappear, it's only a matter of time before they come for you"
     gr "I have to admit, I'm impressed with your ruse. Butchers are outcasts by trade, but few would suspect one of cannibalism."
     
     show christoph happy at christoph_normal_range
 
     ch "Hehehehehehe... Why thank you!"
+
+    $ quick_menu = False
+    window hide
 
     play sound sfx.lunge_slash
     call screen image_display("vfx/sword_swing.png")
@@ -152,10 +179,8 @@ label confrontation:
         left
         flip
 
-    window hide #simulates a pounce
-    
+    $ quick_menu = True
     window show
-    # meant to simulate a lunge from Christoph lunge
 
     "He springs at at me like a grasshopper. Not bad, he almost nicked me."
     extend "\nI didn't see mana coming from his legs. So that agility is natural then?"
@@ -171,15 +196,22 @@ label confrontation:
     show christoph combat feral at christoph_normal_range
     ch "{size=+35}{b}AS IF A LEECH LIKE YOU WOULD UNDERSTAND!{/b}" with vpunch
 
+    $ quick_menu = False
+    window hide
+
     play sound sfx.lunge_slash
     call screen image_display("vfx/sword_swing.png")
     hide christoph
     show christoph combat feral at christoph_normal_range with moveinright:
         center
+
+    $ quick_menu = True
+    window show
+
     "He swings again, catching nothing but air."
     extend "\nUnstable he may be, dodging him is child's play. Not even a drop of malice has left his body. Let's hope it stays that way."
     "I show the empty syringe."
-    extend "\nAt times like these, I'm thankful I've lost my huamnity. If I let my guilt speak for me, I'd just become another meal."
+    extend "\nAt times like these, I'm thankful I've lost my humanity. If I let my guilt speak for me, I'd just become another meal."
     "Cruel indeed considering that it’s the only way to save him and expose his weakness."
 
     gr "You're mistaken. I don't crave flesh, however I nearly devoured four men on my way here. I almost didn't spare them."
@@ -193,11 +225,18 @@ label confrontation:
     show christoph combat feral at christoph_normal_range
     ch "{b}{size=+80}Grrraaahhh!!!{/b}" with vpunch
 
+    $ quick_menu = False
+    window hide
+
     play sound sfx.lunge_slash
     call screen image_display("vfx/sword_swing.png")
     hide christoph
     show christoph combat angry at christoph_normal_range with moveinleft:
         right
+
+    $ quick_menu = True
+    window show
+
     gr "I still feed, I just do so on the deserving. I don't let my affliction command me. And you can do the same."
 
     ch "{size=+20}{b}YOU SAID YOU NEARLY DEVOURED FOUR MEN! WERE THEY MONSTERS TOO?!{/b}" with vpunch
@@ -246,7 +285,8 @@ label confrontation:
 
     "I grip my sword. With my hatchet being in the wall, I'm not at my best. And if he leaps at me, I'll need all the defenses I can get."
 
-    ch "{size=+30}{b}YOU THINK THIS CHANGES ANYTHING?! YOU THINK THIS MAKES THING RIGHT?!{/b}" with vpunch
+    ch "{size=+30}{b}YOU THINK THIS CHANGES ANYTHING?!{/b}" with vpunch
+    ch "{size=+30}{b}YOU THINK THIS MAKES THING RIGHT?!{/b}" with vpunch
     ch "Why do I need to change..? Why do I need to fix myself..?\nI did nothing wrong..."
     extend " I'm only like this because of {b}YOU!!!{/b}" with vpunch
 
@@ -271,6 +311,9 @@ label confrontation:
 
     "I duck a chair flung at me."
 
+    $ quick_menu = False
+    window hide
+
     hide christoph
     call screen image_display("vfx/strike.png")
     play sound sfx.bam_pottery_break
@@ -281,6 +324,10 @@ label confrontation:
 
     show christoph combat happy at christoph_normal_range with dissolve:
         center
+
+    $ quick_menu = True
+    window show
+
     "I wince as I spot blood bubbling from his fingertips.\nCan he wield hemomancy as well?"
 
     ch "Since you love blood so much, have some on the house!"
@@ -312,9 +359,11 @@ label confrontation:
     #show christoph combat happy at christoph_normal_range with dissolve
     "A grisly smile etches itself across Christoph's face.\nThat serpentine tongue again graces his lips."
 
-    show christoph combat happy at christoph_normal_range with dissolve:
+    show christoph combat happy at christoph_normal_range:
         hop
+
     ch "Ahhh, I see."
+    
     show christoph combat happy at christoph_normal_range with moveinbottom:
         flip
     extend " They say you need hatred to wield Malice.\nI'm not surprised that you cling to it. You are a leech, after all.\nAnd that's too bad."
@@ -343,10 +392,23 @@ label confrontation:
     extend "\nAnd the next, and the next, and the next."
     
     "My flurry of swings shakes the goblin."
-    
+
+    $ quick_menu = False
+    window hide
+
     scene background christoph house
-    show christoph combat feral at christoph_normal_range with moveinright:
-        center
+    show christoph combat feral at christoph_normal_range, center:
+        xoffset 350
+        
+        ease 0.3 xoffset 0
+
+    with dissolve
+
+    $ quick_menu = True
+    window show
+
+    show christoph combat feral at christoph_normal_range, center:
+        xoffset 0
 
     ch "Grrrr...."
     
@@ -517,7 +579,7 @@ label confrontation:
     ch "{size=+80}{b}MY LIFE!!!{/b}" with vpunch
 
     "It's as if acid is being splashed onto my skin."
-    extend "\nThis excruciating pain isn't enough to make me scream at, but I won't survive much longer at this rate.."
+    extend "\nThis excruciating pain isn't enough to make me scream at, but I won't survive much longer at this rate."
     
     gr "..."
     
@@ -545,8 +607,9 @@ label confrontation:
 
     show christoph combat feral at christoph_normal_range with quickblinds:
         center
+    
     ch "Grrr..." 
-    extend "{size=+70}I'll kill you...!"
+    extend " {size=+70}I'll kill you...!"
 
     "To be slain by the person whose life I destroyed is justice."
     extend"\nI avoided the stake but merely postponed my execution."
@@ -574,6 +637,7 @@ label confrontation:
     play sound sfx.bone_breakh
     with quickflash
     hide christoph with moveoutbottom
+
     ch "{size=+20}{b}AAAAAGGGGHHHH!!!{/b}" with vpunch
 
     "He backs off, his jaw slouched open."
@@ -616,7 +680,8 @@ label confrontation:
     "It pushes me forward. It grants me the strength to overcome my pain and keep fighting."
     extend "\nPerhaps my desire is to save him? Heh, how trite."
 
-    scene background christoph house
+    # scene background christoph house
+
     gr "Give up, Christoph. Every farce must come to an end."
 
     show christoph combat angry at christoph_normal_range:
@@ -706,7 +771,7 @@ label confrontation:
     gr "I needed to adapt a different mana to defeat you." 
     extend "\nYou may be surprised to know that I wanted to save you."
     
-    show christoph combat angry at christoph_close_range with easeinbottom:
+    show christoph combat angry at christoph_close_range:
         hop
     ch "S-Save me?! Unless you can fix what I am, you can't save me!"
     
@@ -714,8 +779,11 @@ label confrontation:
     extend "\nThe only person who can save you is yourself."
 
     hide christoph
-    show christoph angry at christoph_normal_range with dissolve:
+    show christoph angry at christoph_normal_range:
         center
+
+    with dissolve
+
     "Despite his disbelief, his face still burns with anger." 
     extend "\nGood, this is how it should be. One mercy on my end doesn't erase the suffering I caused him."
     play sound footsteps_snowf
@@ -734,6 +802,7 @@ label confrontation:
 
     "He snarls, and I turn away."
 
+    $ quick_menu = False
     window hide
 
     stop music fadeout 0.8
@@ -748,13 +817,15 @@ label confrontation:
 
     pause 0.4
 
+    $ quick_menu = True
     window show
     
     "The sound of steel pounding the ground grows closer until both the Celestials and Jory appear before us."
     "The band of knights recoil upon seeing me.\nMy injuries are grisly, to the mortal eye."
 
-    show celestial combat at celestial_normal_range with moveinleft:
+    show celestial combat at celestial_normal_range:
         hop
+
     c "By Ishmael, we told you not to devour any civilians!"
 
     "Or not..."
@@ -805,11 +876,13 @@ label confrontation:
 
     gr "To call you an oaf would be a cardinal sin against the stupid!\nGet out of my way!" with vpunch
 
+    $ quick_menu = False
     window hide
 
     play sound footsteps_snowf
     hide jory with moveoutright
 
+    $ quick_menu = True
     window show
 
     "I slither haphazardly past the lot. The hallowmen rightfully avoid me, but my ears detect that giant's obnoxious snickers!"
@@ -817,6 +890,7 @@ label confrontation:
     extend " No wonder he was seduced by the banshee..."
     "Caius begged me not to tell Jory that she has returned, and he is very fortunate I owe both my life and that favor to him. Otherwise..."
     
+    $ quick_menu = False
     window hide
     
     jump revelation
