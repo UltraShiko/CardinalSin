@@ -37,7 +37,8 @@ screen compendium_screen():
 
     ### Variables.
     default currently_selected_entry = -1
-
+    default viewport_y_adjustment = ui.adjustment()
+    
     frame:
 
         pos (0,0)
@@ -87,36 +88,17 @@ screen compendium_screen():
                         textbutton persistent.compendium.getEntryTitle( i ):
 
                             selected ( i == currently_selected_entry )
-
-                            if currently_selected_entry == -1:
-
-                                action SetScreenVariable( "currently_selected_entry", i )
-
-                            else:
-
-                                action [
-                                    SetScreenVariable( "currently_selected_entry", i ),
-                                    Scroll("compendium_content_viewport", "vertical decrease", amount=1.0)
-                                ]
+                        
+                            action [
+                                SetScreenVariable( "currently_selected_entry", i ),
+                                Function( viewport_y_adjustment.change, 1.0 )
+                            ]
 
         ### Selected entry content.
 
         # Only display the information, if the selected entry index is different than -1.
         # -1 means no entry is selected.
         if not currently_selected_entry == -1:
-
-            # vbox:
-            #     style_prefix "codex"
-            #
-            #     xsize 850
-            #     xalign 0.5 yalign 0.5
-            #     xoffset 200
-            #     text persistent.compendium.getEntryContent( currently_selected_entry )
-            #     #text _p("""Welcome to the codex!""")
-
-
-                    #Really short text might not be centered correctly, you have to adjust the xoffset.
-
 
             viewport:
 
@@ -129,6 +111,8 @@ screen compendium_screen():
                 scrollbars None
                 draggable True
                 pagekeys True
+
+                yadjustment viewport_y_adjustment
 
                 scrollbar_unscrollable "hide"
 
