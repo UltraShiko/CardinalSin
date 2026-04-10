@@ -52,7 +52,7 @@ label prologue:
 
     play sound sfx.door_break
     with hpunch
-    v "{size=+40}Graaaah! Where the hell are they?!" with vpunch
+    v "{size=+40}Graaaah! Where the hell are they?!{/size}" with vpunch
 
     play sound sfx.light_grapple
     "Mama holds my mouth shut as another door is torn from its hinges.\nHe's in our room..."
@@ -137,7 +137,7 @@ label prologue:
 
     scene image "#f00" with Dissolve(0.2)
     
-    ch "{size=+80}{b}AHHHHHHHHH!!!{/b}" with vpunch
+    ch "{size=+80}{b}AHHHHHHHHH!!!{/b}{/size}" with vpunch
     
     $ quick_menu = False
     stop music

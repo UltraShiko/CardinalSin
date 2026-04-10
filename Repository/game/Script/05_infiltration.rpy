@@ -203,7 +203,7 @@ label infiltration:
 
     stop music fadeout 0.8
 
-    hide Christoph
+    hide christoph
     scene image "#000" with pixellate
     
     pause 0.5
@@ -337,7 +337,7 @@ label infiltration:
     queue sound sfx.slash 
     with quickblood
 
-    ch "{size=+80}{b}GRAHHHHH!!!!{/b}" with vpunch 
+    ch "{size=+80}{b}GRAHHHHH!!!!{/b}{/size}" with vpunch 
 
     "Christoph, however, is another matter."
     hide christoph with quickblinds

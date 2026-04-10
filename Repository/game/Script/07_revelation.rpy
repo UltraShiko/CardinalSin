@@ -199,7 +199,7 @@ label revelation:
 
     ca "St-Stop! You're going to kill him!"
     
-    gr "{size=+80}{b}GOOD!{/b}" with vpunch #center text via textbox
+    gr "{size=+80}{b}GOOD!{/b}{/size}" with vpunch #center text via textbox
 
     show nick at nick_close_range with easeinbottom:
         center

@@ -22,5 +22,5 @@ define iris_in_out_slow = ImageDissolve("images/transitions/eye_1.png", 1.0)
 
 
 ##sprite transitions
-define quickblinds = ImageDissolve(im.Tile("blindstile.png"), 0.5, 8)
-define quicksquares = ImageDissolve(im.Tile("squarestile.png"), 0.5, 256)
+define quickblinds = ImageDissolve( Tile("blindstile.png"), 0.5, 8)
+define quicksquares = ImageDissolve( Tile("squarestile.png"), 0.5, 256)
