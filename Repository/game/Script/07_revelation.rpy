@@ -233,7 +233,7 @@ label revelation:
     gr "Thrycia was your home, right? \nRemember how your friend was blamed for its destruction?"
     gr "Well, you can thank this maniac for that!" with vpunch
     extend "\nYes, the leader of us Emissaries is an irresponsible lunatic who summons devils! He is who you'll be working under."
-    gr "That pain devil that destroyed Thrycia was {i}his{/i} doing! He could've banished too, and now she's loose..."
+    gr "That pain devil that destroyed Thrycia was {i}his{/i} doing! He could've killed her, but now she's loose..."
 
     ca "...If you understood how destructive this monster could be, why would you bind her?"
     
