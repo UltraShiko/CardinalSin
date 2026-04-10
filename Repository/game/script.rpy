@@ -1,17 +1,20 @@
 ﻿
 label start:
 
-    menu:
+    # Hide the quick menu.
+    $ quick_menu = False
 
-        "What to do?"
+    # menu:
 
-        "Start the game.":
+    #     "What to do?"
 
-            pass
+    #     "Start the game.":
 
-        "Test sprite positioning.":
+    #         pass
 
-            jump sprite_positioning
+    #     "Test sprite positioning.":
+
+    #         jump sprite_positioning
 
     stop music fadeout 1.0
 

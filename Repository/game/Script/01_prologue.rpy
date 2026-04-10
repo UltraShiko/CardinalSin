@@ -3,11 +3,15 @@ label prologue:
     camera:
         perspective True
 
+    $ quick_menu = True
+    window show
+
     "...My head, it hurts..."
     "I can't see... Every time I open my eyes, a red goo burns them.\nThis ick is all over me..."
 
     v "-istop- Chris- ca- -ou -ar me?!" with vpunch
 
+    $ quick_menu = False
     window hide
 
     play music bgm.something_amiss fadein 0.5
@@ -16,6 +20,7 @@ label prologue:
 
     pause 1.0
 
+    $ quick_menu = True
     window show
 
     "Mom...?"
@@ -47,7 +52,7 @@ label prologue:
 
     play sound sfx.door_break
     with hpunch
-    v "{size=+40}Graaaah! Where the hell are they?!" with vpunch
+    v "{size=+40}Graaaah! Where the hell are they?!{/size}" with vpunch
 
     play sound sfx.light_grapple
     "Mama holds my mouth shut as another door is torn from its hinges.\nHe's in our room..."
@@ -64,6 +69,7 @@ label prologue:
     ch "But-"
     mo "I love you, Christoph. I always-"
 
+    $ quick_menu = False
     window hide
     
     play sound sfx.door_break
@@ -77,14 +83,15 @@ label prologue:
     with quickblood
     scene image "#000"
 
+    $ quick_menu = True
     window show
     
     ch "Mooooom!!!" with vpunch
 
     "My mouth falls open. All I see is the door crumble, and then Mom..."
-    "She tried her best. throwing herself at him."
+    "She tried her best, throwing herself at him."
     extend "\nBut...it isn't enough. He grabs her and sinks and bites into her throat."
-    "her body twitches. I hear her gagging as she stares into my eyes."
+    "Her body twitches. I hear her gagging as she stares into my eyes."
     extend "\nI hear him sucking, but blood is everywhere... It makes me want to puke!"
 
     mo "Uughhh..."
@@ -92,8 +99,16 @@ label prologue:
 
     v "Mmph! Bland."
 
+    $ quick_menu = False
+    window hide
+
     scene christoph2 with iris_in_out
     play sound sfx.thud
+
+    pause 1.2
+
+    $ quick_menu = True
+    window show
 
     "He drops her like a sack of potatoes."
     extend "\nShe lies there, her eyes open and her throat torn to shreds."
@@ -122,8 +137,9 @@ label prologue:
 
     scene image "#f00" with Dissolve(0.2)
     
-    ch "{size=+80}{b}AHHHHHHHHH!!!{/b}" with vpunch
+    ch "{size=+80}{b}AHHHHHHHHH!!!{/b}{/size}" with vpunch
     
+    $ quick_menu = False
     stop music
     window hide
     
