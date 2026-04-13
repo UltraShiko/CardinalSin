@@ -1,7 +1,7 @@
 ## Main Characters
 
 define ch = Character("Christoph")
-define gr = Character("Griswyr")
+define gr = Character("Griswyr", image="griswyr")
 
 ## Side Characters
 define bu = Character("Buzz")
@@ -16,6 +16,6 @@ define v = Character("Voice")
 define w = Character("Woman")
 
 ## Misc
-define gri = Character("Griswyr", what_italic=True)
+define gri = Character("Griswyr", image="griswyr", what_italic=True)
 define pei = Character("Persephone", what_italic=True)
 define vi = Character("Voice", what_italic=True)

@@ -4,17 +4,17 @@ label start:
     # Hide the quick menu.
     $ quick_menu = False
 
-    # menu:
+    menu:
 
-    #     "What to do?"
+        "What to do?"
 
-    #     "Start the game.":
+        "Start the game.":
 
-    #         pass
+            pass
 
-    #     "Test sprite positioning.":
+        "Test Griswyr sprites.":
 
-    #         jump sprite_positioning
+            jump griswyr_test
 
     stop music fadeout 1.0
 
@@ -27,58 +27,18 @@ label start:
     return
 
 
+label griswyr_test:
 
-label sprite_positioning:
-
-    window hide
-
-    show nick neutral at center, nick_normal_range
-
-    pause
-
-    show nick elated at center, nick_close_range
+    gr neutral "Dialogue"
     
-    pause
-
-    show nick happy
+    gr smirk "Dialogue"
     
-    pause
-
-    hide nick
-
-    ############################################
-
-    ############################################
+    gr angry "Dialogue"
     
-    show celestial at center, celestial_normal_range
-
-    pause
-
-    show celestial combat at center, celestial_normal_range
-
-    pause
-
-    show celestial at center, celestial_close_range
-
-    pause
-
-    show celestial combat at center, celestial_close_range
-
-    pause
-
-    window show
-
-    show celestial at center, celestial_far_range
-
-    pause
-
-    show celestial combat at center, celestial_far_range
-
-    pause
-
-    ############################################
+    gri neutral "Dialogue"
     
-
+    gri smirk "Dialogue"
+    
+    gri angry "Dialogue"
+    
     return
-
-
