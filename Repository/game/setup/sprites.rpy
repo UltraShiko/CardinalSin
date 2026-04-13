@@ -12,15 +12,17 @@
 
 image celestial:
 
-    # zpos 400
+    "images/sprites/celestial/neutral.webp"
+
+image celestial smile:
 
     "images/sprites/celestial/default.webp"
 
 image celestial combat:
 
-    # yoffset 251 zpos 250
-
     "images/sprites/celestial/combat.webp"
+
+
 
 # TODO - Acquire and fine tune sprites
 #image Caius: #This sprite will have him masked
