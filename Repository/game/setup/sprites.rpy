@@ -12,15 +12,17 @@
 
 image celestial:
 
-    # zpos 400
+    "images/sprites/celestial/neutral.webp"
+
+image celestial smile:
 
     "images/sprites/celestial/default.webp"
 
 image celestial combat:
 
-    # yoffset 251 zpos 250
-
     "images/sprites/celestial/combat.webp"
+
+
 
 # TODO - Acquire and fine tune sprites
 #image Caius: #This sprite will have him masked
@@ -164,6 +166,41 @@ image villager:
 
     "images/sprites/villager.png"
 
-### Other
 
+### Griswyr
 
+image side griswyr = "griswyr_layered emo_neutral"
+image side griswyr angry = "griswyr_layered emo_angry"
+image side griswyr neutral = "griswyr_layered emo_neutral"
+image side griswyr smirk = "griswyr_layered emo_smirk"
+
+layeredimage griswyr_layered:
+
+    zoom 0.7
+
+    yoffset 500
+    xoffset -120
+
+    always:
+
+        "images/sprites/griswyr_portraits/body.png"
+
+    group emotes:
+
+        attribute emo_angry:
+
+            pos( 354, 171 )
+
+            "images/sprites/griswyr_portraits/angry.png"  
+
+        attribute emo_neutral default:
+
+            pos( 353, 160 )
+
+            "images/sprites/griswyr_portraits/neutral.png"
+
+        attribute emo_smirk:
+
+            pos( 354, 162 )
+
+            "images/sprites/griswyr_portraits/smirk.png"
