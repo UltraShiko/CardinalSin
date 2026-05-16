@@ -11,6 +11,7 @@ label infiltration:
     $ quick_menu = True
     window show
 
+
     "I chortle darkly as I slip past the demoralized hallowmen."
     "Seeing that pig's delusions reminds me of my own.\nJudge him as I may, I wasn't much different..."
     "The hallucinations vary based on our desires.\nI thought I could fly out of this god forsaken empire. My hardships were caused by {i}the Recknoning's{/i} impact."
@@ -24,16 +25,18 @@ label infiltration:
     extend " Not that I couldn't handle them, however I mustn't take risks with another vampire around."
     "Christoph will probably figure out what I am with a glance.\nI could slip in, or..."
     extend " I can face him head on and see why he has such a hold over me." with vpunch
-    
+
     $ quick_menu = False
     window hide
 
+    
     play sound sfx.knock_and_open
     pause 1.8
     show villager with dissolve
 
     $ quick_menu = True
     window show
+
 
     "An elf, with the grace and dexterity of a three legged horse, meets my gaze."
     extend " He's trying so hard to be intimidating. He'd break like glass if he tried to attack me. He's so skinny, I can see his skeleton."
@@ -51,7 +54,7 @@ label infiltration:
 
     $ quick_menu = False
     window hide
-    
+
     scene background christoph house with Dissolve(0.8)
 
     play sound sfx.door_open
@@ -64,7 +67,6 @@ label infiltration:
 
     $ quick_menu = True
     window show
-
     "I almost pity just how simple he is. I wonder if he knows what plane he's on now. Christoph should consider a sober watchhman next time."
     "He doesn't confiscate my weapons. They're out of sight, but any decent guardsman would search me at least."
     "The house is cramped. Not because it's small, but because of the mess."
@@ -78,6 +80,7 @@ label infiltration:
     $ quick_menu = False
     window hide
 
+
     show christoph happy at christoph_normal_range with dissolve:
         center
 
@@ -85,7 +88,7 @@ label infiltration:
 
     $ quick_menu = True
     window show
-    
+
     "I'm escorted past them to a sickly green goblin lounging in a chair too regal for this dump. This must be my prey."
     extend " He looks up at me and grins, jagged teeth meeting my eyes."
     "My heart pounds. As I predicted, I've met him somewhere. But when?"
@@ -104,7 +107,7 @@ label infiltration:
     play sound sfx.coins
     show christoph happy at christoph_normal_range:
         hop
-    ch "Oooooh!!!"
+    ch "{size=+80}Oooooh!!!"
 
     "I slap down a sack of coin, much more than I paid the smith."
     "The goblin's eyes expand. This must be more money than he's ever seen in his life. I see a long, slender tongue lick his lips."
@@ -124,9 +127,7 @@ label infiltration:
 
     show villager at left with easeinleft:
         zoom 1.2
-
         yoffset 120
-
     ch "Start him off. We're having him over for the night.\nIt is our duty to cater to our guests~."
     
     m "Hmph."
@@ -140,14 +141,14 @@ label infiltration:
     
     hide villager with moveoutleft
     "If I use, I will hallucinate but not be incapacitated."
-    extend " \nMy cravings have evolved to blood, and paste is now only a recreation rather than a hindrance."
+    extend " \nMy cravings have evolved to blood, and paste is now only a recreation rather than a hindurance."
     "Perhaps I can use it to tap into my memories, help me decipher why this fiend matters so much to me."
     
     play sound sfx.zap
     camera at invert_camera
     "I reach for my hatchet. The thought of hurling it at the goblin's head causes my hand to twitch."
 
-    camera at revert_camera 
+    camera at revert_camera
     with Dissolve(0.25)
 
     extend " As expected, violence is off the table.\nFor now..."
@@ -172,19 +173,17 @@ label infiltration:
     gr "Hmm. I have used for a long time... It isn't impossible."
     extend "\nSay, if I were to help you, where would I go to acquire more paste?"
     
-    show christoph happy:
+    show christoph happy at christoph_normal_range:
         ease 0.1 yoffset 350
         ease 0.1 yoffset 250
         ease 0.1 yoffset 350
         ease 0.1 yoffset 250
-
     ch "Hahahaha, an opportunist! I respect that, but I think we should get to know each other more first."
 
-    hide christoph
-    show christoph happy at christoph_close_range:
+    show christoph happy at christoph_close_range with dissolve:
         center
-
     with dissolve
+
 
     "He too, pulls out a wad of paste."
     extend " Would he be debilitated by snorting it? Many see goblins as feral, and he indeed looks well past having humanity."
@@ -203,9 +202,12 @@ label infiltration:
 
     stop music fadeout 0.8
 
-    hide christoph
+
+    hide Christoph
     scene image "#000" with pixellate
     
+    stop music fadeout 0.8
+
     pause 0.5
 
     $ quick_menu = True
@@ -240,7 +242,6 @@ label infiltration:
 
     ch "Fine..."
 
-    $ quick_menu = False
     window hide
 
     scene background forest with Fade(0.7, 0.8, 0.7, color="#fff")
@@ -249,7 +250,6 @@ label infiltration:
 
     $ quick_menu = True
     window show
-    
     "I am now standing outside a window. They don't see me."
     "My mouth waters. Both of them look so scrumptuous!\nAnd I've heard the blood of a child is {b}DIVINE!{/b}"
     "It'll be so easy. This foolish mother is trusting him outside as the sun sets. She {b}deserves{/b} to lose him." 
@@ -263,6 +263,7 @@ label infiltration:
     play sound sfx.door_open
 
     play music bgm.lethal_suspense fadein 0.8
+    #show young christoph at center #TODO - add in Sprite
     show villager at center:
         zoom 0.8
 
@@ -270,6 +271,7 @@ label infiltration:
 
     $ quick_menu = True
     window show
+
 
     "The young goblin tuggling on his fur jacket, shambles outside."
     extend " Being of the forest, their eyes are more accustomed to the dark. But so are mine."
@@ -295,14 +297,16 @@ label infiltration:
     
     stop music
     play sound sfx.weapon_swingh
+    #show young christoph at center: #TODO - Add in young christoph
+        #zoom x
     show villager at center:
         zoom 1.5 ypos 1.3
     pause 1.0
     camera at revert_camera
+    stop music
     
     $ quick_menu = True
     window show
-    
     gr "(I've seen enough.)"
 
     $ quick_menu = False
@@ -359,7 +363,7 @@ label infiltration:
 
     $ quick_menu = False
     window hide
-    
+
     jump confrontation
 
     return

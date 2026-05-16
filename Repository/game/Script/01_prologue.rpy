@@ -27,7 +27,7 @@ label prologue:
     "I try wiping the red stuff away, but it keeps coming.\nOnly a warm cloth manages to douse this 
     crimson stream."
 
-    mo "By Ishmael, he split your head open..."
+    mo "By Yeshua, he split your head open..."
     ch "Mom...? What's-"
     mo "Shh! Be quiet, dear. He's still outside."
     ch "He...?"

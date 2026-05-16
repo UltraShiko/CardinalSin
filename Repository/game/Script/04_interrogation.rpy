@@ -19,7 +19,7 @@ label interrogation:
     #play sound sfx.footsteps_snow fadein 0.8 loop
     
     "Either way, I follow them."
-    "The stench of the paste grows stronger with each step.\nIs he indulging even as I track him? I'm prepared all the same, this'll just make subdoing him easier."
+    "The stench of the paste grows stronger with each step.\nIs he indulging even as I track him? I'm prepared all the same, this'll just make subYeshuahim easier."
     "I snarl."
     extend "\nI no longer crave that wretched paste but I don't want to reek of it either! This disgusting oaf is going to regret using."
     "Soon the prints are followed by sounds."
@@ -92,7 +92,7 @@ label interrogation:
     "His eyes twitch and snot runs down both of his nostrils.\nI then retrieve the vial and clean it in the snow."
     "Tears leave both eyes, but they're no longer glazed.\nHis gaze becomes fearful now as it meets mine."
 
-    m "Agh...by Ishmael, what the-?"
+    m "Agh...by Yeshua, what the-?"
     
     gr "Sobered up, are we?"
     
@@ -102,7 +102,7 @@ label interrogation:
     
     m "No wait, you have fangs... And your eyes, they're...so-"
     show villager at hop
-    extend "\nBy Ishmael! Vampire!!!"
+    extend "\nBy Yeshua! Vampire!!!"
 
     "I snicker. His squirms only entertain me.\nHe can writhe and scream as he much as he likes, no one is saving him."
     "I imagine he wishes Charlotta was here in my place.\nPerhaps Hell will have a devil in store for him to tend to his wishes."
@@ -122,7 +122,7 @@ label interrogation:
     
     play sound sfx.bone_break
     with quickflash
-    extend " {b}GAAAAAAAAHHHHH!!!{/b}" with vpunch
+    m "{size=+80}{b}GAAAAAAAAHHHHH!!!{/b}" with vpunch
     
     gr "One down, nine to go."
 
@@ -136,7 +136,7 @@ label interrogation:
     show villager at center with moveinbottom:
         zoom 1.5 ypos 1.3
     m "Ngh...I, I-"
-    v "Goddamned leech!" with vpunch 
+    v "{size=+80}Goddamned leech!" with vpunch 
 
     $ quick_menu = False
     window hide
@@ -175,14 +175,14 @@ label interrogation:
     
     gr "Go on, remind them of their place~."
     
-    c "We don't give a {b}damn{/b} about your station, Emissary! You're all a bunch of crooks who escaped the noose! And what you're doing now proves it!"
+    c "We don't give a {b}damn{/b} about your station, Emissary! You're all a bunch of crooks who escaped the noose! And what you're Yeshuanow proves it!"
     
     gr "Hmm, so if I choose to break another finger..."
     
     show celestial as celestial_2 at celestial_normal_range:
         hop
 
-    c "By Ishmael, he isn't your target! I thought you were after the dealer!"
+    c "By Yeshua, he isn't your target! I thought you were after the dealer!"
     
     gr "I need information, and he's keeping it from me.\nHe fears his supplier more than me..!"
     extend "\nBut if you wish to oppose me, you're free to try."
@@ -213,7 +213,7 @@ label interrogation:
     "Perhaps after I butcher these pretenders, my quarry will speak up.\nIt isn't like the reverend is coming to save him, though I'd be delighted if he tried!"
     "I flash my fangs at the intruders. They recoil and ready their weapons."
 
-    c "Ishmael shield us, he's eyeing us like meat!"
+    c "Yeshua shield us, he's eyeing us like meat!"
 
     play sound sfx.grapple
     show villager at center with moveinbottom:
@@ -261,7 +261,7 @@ label interrogation:
  
     "The heroes look at me in disbelief. This must quite the night for them."
 
-    c "You're...releasing him? Ishmael must live indeed."
+    c "You're...releasing him? Yeshua must live indeed."
 
     gr "Talk, morsel, before I change my mind."
     

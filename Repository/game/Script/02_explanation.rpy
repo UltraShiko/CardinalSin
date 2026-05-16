@@ -11,7 +11,7 @@ label explanation:
     "I open my eyes at the sunset streaming through the window."
     extend "\nLooks like I was more tired than I thought..."
     "That damned banshee nearly killed us.\nTo be given so much trouble by a lowly succubus, it's humiliating!"
-    "Her kind isn't usually that deadly, at least one-on-one.\nAnd now she's out doing Ishmael-knows-what."
+    "Her kind isn't usually that deadly, at least one-on-one.\nAnd now she's out doing Yeshua-knows-what."
     "I sit up, my stomach grumbling."
     extend "\nIt's been three days since I last ate. I should have a syringe lying around somewhere."
 
@@ -85,27 +85,28 @@ label explanation:
     show nick neutral at right with moveinright:
         xzoom -1.0 
     
-    ni "Malice wears on your soul when overused.\nJustice is like turning your very soul into a weapon. It will kill you, and probably everyone else nearby if mishandled."
+    ni "Malice wears on your soul when overused.\nJustice is like turning your very soul into a weapon. It will kill you, and probably everyone nearby if mishandled."
     ni "On top of that, your friend is a lunatic."
     
     gr "He's not insane, you are."
 
-    ni "Not every lunatic is insane. He just sees the world differently than us."
+    ni "Not every lunatic is insane. His mana flows differently than yours. It seemed to ebb and flo like the tide."
     
     gr "Hmmm..."
 
     hide nick with quickblinds
-    "I scratch my chin. It does make sense."
-    "For example, Caius rarely makes eye contact without straining himself. And one of his limbs, and sometimes his entire body, is always in motion."
+    "I scratch my chin. The monk is peculiar..."
+    "Caius rarely makes eye contact. He claims it strains him to do so."
+    extend "\nAnd one of his limbs, and sometimes his entire body, is always in motion."
     "It was humorous watching him weave past Persephone's attacks. I figured he had an unusual fighting style."
-    "Has he weaponized his peculiarity? How interesting..."
+    "Has he weaponized his quirks somehow? How interesting..."
 
     gr "And you gauged that much just from treating an unconscious body?"
     
     show nick at nick_normal_range with easeinright:
         xzoom -1.0, xalign 1.0
-    ni "Well, how his mana flows was also a clue.\nIt doesn't have the restraints that a normal person does, so it's no wonder Justice started erupting from him out of nowhere."
-    ni "I hypothesize the stress of that battle must've led to him somehow channeling it. Justice manifests from one's regrets, much like your Malice comes from hatred. "
+    ni "Well, how his mana flows was also a clue.\nIt doesn't have the restraints that a normal person does, so it's no wonder Justice started erupting out of nowhere."
+    ni "I hypothesize the stress of that battle must've led to him somehow channeling it. Justice manifests from one's regrets, much like your Malice comes from hatred."
 
     hide nick
     show jory at center with pixellate:
@@ -168,12 +169,12 @@ label explanation:
     
     ni "Absolutely not. So I just want to do a bit of research and-"
     
-    gr "It was that pain devil, isn't it?!" with vpunch
+    gr "{size=+40}It was that pain devil, isn't it?!" with vpunch
 
     show nick elated with dissolve
 
     "He grins sheepishly. Maybe I should kill him after all!"
-    "When I first met this loon, he had a brute of a fiend bound to his service. She was over seven feet tall and a even monster by devil standards."
+    "When I first met this loon, he had a brute of a fiend bound to his service. She was over ten feet tall and a monster even by devil standards."
     "I told this fool {i}countless{/i} times to slit her throat and be done with it."
     extend "\nWell, he didn't listen, she broke free, and is going to be a {b}pain in the ass{/b} to take down."
 
@@ -192,7 +193,7 @@ label explanation:
     show nick elated
     extend " Hehehe..."
     
-    gr "You're revolting!" with vpunch
+    gr "{size=+80}You're revolting!" with vpunch
 
     hide nick with quickblinds
     "Hmm, prioritize drug dealers or the very monster that nearly destroyed everything. The choice is obvious."
