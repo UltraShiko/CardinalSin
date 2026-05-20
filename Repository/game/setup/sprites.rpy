@@ -23,6 +23,31 @@ image celestial combat:
     "images/sprites/celestial/combat.webp"
 
 
+layeredimage buzz:
+
+    always: #ensures the default sprite is the one below
+
+        "images/sprites/buzz/base.png"
+
+    group emotions:
+
+        #attribute angry default:
+
+            #pos (906, 417)
+
+            #"images/sprites/buzz/happy.png"
+
+        attribute happy default:
+
+            pos (906, 417)
+
+            "images/sprites/buzz/happy.png"
+
+        attribute shocked:
+
+            pos (905, 434)
+
+            "images/sprites/buzz/shocked.png"
 
 # TODO - Acquire and fine tune sprites
 #image Caius: #This sprite will have him masked
@@ -58,9 +83,6 @@ layeredimage christoph:
         attribute feral:
 
             "images/sprites/christoph/feral.png"
-
-
-
     
 
 # TODO - Acquire and fine tune sprites

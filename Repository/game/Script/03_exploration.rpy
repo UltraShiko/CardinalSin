@@ -17,16 +17,18 @@ label exploration:
     "Not as a monster, however."
     extend "\nMy pale flesh and blood-red eyes can't be concealed. If I'm not mistaken for a dretchling, people see me for what I am."
     "A vampire."
+    extend "\nI can't believe I fooled the Banshee into believing I was disabled. If the lame could conjure blood, they wouldn't be at the bottom of society."
     "I only cloak myself to conceal my occupation.\nWe Emissaries are despised at best, and hunted by criminals and fiends otherwise."
     "The Celestials know of us. We even hold some power over them.\nBut any respect they give us is shallow. Many vie for our heads to be on pikes."
 
     "As I stroll through the snow, people part from my path as if I'm feral.\nI can't blame them. They're {i}almost{/i} right."
+    "In times like these I wish we were located in a hamlet. The moon is high in the sky yet the commoners are still making noise. Peace and quiet is one of the perks of being nocturnal."
 
     show villager at left with dissolve
     w "Is that a hellspawn?"
     
     show villager as villager_2 at right with dissolve
-    m "Worse, a bloody leech. Look at his eyes.\nHe's sizing us up like meat."
+    m "Worse, a bloody leech. Look at his eyes, he's sizing us up like meat."
     
     show villager at hop
     w "Shouldn't the Celestials do something?"
@@ -80,6 +82,7 @@ label exploration:
     gr "Not for this venture. My quarry isn't nearly as threatening."
 
     play sound sfx.bam
+    with vpunch
     "He spits and shoves my weapons into my arms."
 
     sm "Here ya are. Now begone with ya!"
@@ -109,9 +112,6 @@ label exploration:
         right #TODO - Should I use a looping hop transform to simulate walking, or is the sound fx good enough?
     extend "\nBefore I can finish reading, I notice a band of silvered knights marching by, conveniently right where I need them to be."
     
-    stop music fadeout 0.8
-    play music bgm.winter_ambience
-    queue music bgm.winter_ambienceloop
     "I follow. I don't hide."
     extend "\nWhat will they do, arrest an Emissary? That would be quite amusing."
     "These white knights are seen as heroes.\nThey take the credit for everything, including our work."
@@ -120,7 +120,7 @@ label exploration:
     "I wonder if that Archfiend Hecate intended to split our empire into halves.\nGranted, I hear {i}the Third{/i} was a fiend in his own way."
     "They say he was a tyrant. Some say he needed a staff just to wield mana. And he supposedly executed people at the drop of a hat."
     "Some sympathize with the banshee. What got her burned was an attempt on his life. Hecate's suboordinates see her as a martyr despite {i}the Reckoning{/i}."
-    "The lackadaisical Nick always grows stern when we speak of {i}The Third{/i}.\nAnd this is the same buffoon he conjures fiends for a profession."
+    "The lackadaisical Nick always grows stern when we speak of {i}The Third{/i}.\nAnd this is the same buffoon who conjures fiends for a profession."
 
     hide celestial with dissolve
     hide celestial_2 with dissolve
@@ -156,7 +156,7 @@ label exploration:
     c "Godforsaken leech! You dare trail us?!" with vpunch
     
     gr "Indeed I am."
-    extend "\nnKeep on with your search, it isn't like any of you can stop me."
+    extend "\nKeep on with your search, it isn't like any of you can stop me."
     
     play sound sfx.weapon_draw
     hide celestial with Dissolve(0.4) #Capital D = customizable dissolve
@@ -191,7 +191,7 @@ label exploration:
     
     show celestial as celestial_2 at celestial_normal_range: #will probably need to reassign come zoom in sprite
         hop
-    c "{size=+60}Then what are you doing here?!" with vpunch
+    c "{size=+50}Then what are you doing here?!" with vpunch
     
     gr "Trailing you, as you already observed.\nI'm after the same criminals you are."
     

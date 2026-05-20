@@ -113,7 +113,7 @@ label revelation:
     #show buzz at buzz_close_range with moveinright:
         #center
     "This ugly, devilish cockroach gives me a migraine."
-    extend "\nOh Ishmael, how much more will you test my patience tonight?!"
+    extend "\nOh Yeshua, how much more will you test my patience tonight?!"
 
     "Nick chuckles faintly. He isn't amused, he's guilty."
     extend " Whenever he's done something foolish, he acts like this. A sane mortal would dread my wrath, but Nick's lust for pain encourages it."
@@ -227,7 +227,7 @@ label revelation:
         #center
     
     "I yank Nick up by his hair and make him face Caius."
-    "Ishmael knows what godforsaken expression is on Nick's face.\nI never understood Caius's fixation on joining us."
+    "Yeshua knows what godforsaken expression is on Nick's face.\nI never understood Caius's fixation on joining us."
     extend "\nEither way, here's his chance to quit!"
 
     gr "Thrycia was your home, right? \nRemember how your friend was blamed for its destruction?"
@@ -238,9 +238,10 @@ label revelation:
     ca "...If you understood how destructive this monster could be, why would you bind her?"
     
     ni "She's useful."
+    extend "\nWe wouldn't have as much intel on the Exorcists and their nation had it not been for her. She may be the only reason war has been avoided."
 
     gr "Worst of all, she's going to want revenge, and you and I will be the ones to hunt her down!" 
-    extend "\nIf you thought Persephone was bad, oh Ishmael... You are not prepared!"
+    extend "\nIf you thought Persephone was bad, oh Yeshua... You are not prepared!"
     
     ni "Devils take years to revive. We have tim-"
     
@@ -290,7 +291,7 @@ label revelation:
     
     ca "Please continue, Buzz."
 
-    bu "Second signature was weak. No corpse detected."
+    bu "There was another signature. No corpse detected."
     extend "\nIt was a fiend, a very powerful fiend~!"
 
     hide nick 
@@ -419,7 +420,7 @@ label revelation:
     $ quick_menu = True
     window show
     
-    pei "So I did some digging, and you're a liar. You weren't jinxed, you fed on a child... You turned him into a freak, {i}after{/i}, you devoured his mother in front of him!"
+    pei "So I did some digging, and you're a liar! You weren't jinxed, you fed on a child... You turned him into a freak, {i}after{/i}, you devoured his mother in front of him!"
 
     gri "Heh, do my ears betray me, or does {i}the banshee{/i} have a bleeding heart?"
     gri "The fact that you fell for such a fib betrays your ignorance.\nPerhaps you aren't as clever as I thought."

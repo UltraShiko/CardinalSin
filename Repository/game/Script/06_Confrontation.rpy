@@ -795,7 +795,7 @@ label confrontation:
 
     gr "Good. In fact, you flatter me."
     extend " If I were to lose myself and become feral, I hope you would take me down." 
-    extend " If it keeps you from becoming monster, hate me as I much as you want."
+    extend " If it keeps you from becoming a monster, hate me as I much as you want."
     gr "But do us both a favor; stay away from fiends." 
     extend " Don't succumb to their trickery just to get to me. I'll gladly face you any time, anywhere." 
     gr "So long as you do not disgrace us both by falling for their deceit."
@@ -826,7 +826,7 @@ label confrontation:
     show celestial combat at celestial_normal_range:
         hop
 
-    c "By Ishmael, we told you not to devour any civilians!"
+    c "By Yeshuael, we told you not to devour any civilians!"
 
     "Or not..."
 

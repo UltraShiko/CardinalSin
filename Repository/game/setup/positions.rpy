@@ -11,6 +11,15 @@ transform center_right:
     xpos 0.75
     ypos 1.0
 
+transform buzz_normal_range:
+
+    zoom 0.1
+    yoffset -450
+
+transform buzz_close_range:
+
+    zoom 0.2
+    yoffset -50
 
 transform nick_normal_range:
 

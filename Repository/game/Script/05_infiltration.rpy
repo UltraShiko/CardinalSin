@@ -1,7 +1,6 @@
 
 label infiltration:
 
-    play music bgm.winter_ambience loop
     hide celestial 
     hide celestial_2
     with moveoutright #Idk how to have the hide command apply to one of the sprites
@@ -10,7 +9,6 @@ label infiltration:
 
     $ quick_menu = True
     window show
-
 
     "I chortle darkly as I slip past the demoralized hallowmen."
     "Seeing that pig's delusions reminds me of my own.\nJudge him as I may, I wasn't much different..."
@@ -28,7 +26,6 @@ label infiltration:
 
     $ quick_menu = False
     window hide
-
     
     play sound sfx.knock_and_open
     pause 1.8
@@ -36,7 +33,6 @@ label infiltration:
 
     $ quick_menu = True
     window show
-
 
     "An elf, with the grace and dexterity of a three legged horse, meets my gaze."
     extend " He's trying so hard to be intimidating. He'd break like glass if he tried to attack me. He's so skinny, I can see his skeleton."
@@ -72,7 +68,7 @@ label infiltration:
     "The house is cramped. Not because it's small, but because of the mess."
     "The place is bereft of homely items such as furniture.\nInstead, it's filled to the brim with trash such as empty bottles, cigarette butts, and general junk."
     "I expect rats and vermin to scurry across my boot with each step I take.\nI see a hallway leading back to what I guess is a bedroom, barricaded by more trash."
-    "The \"residents\" weren't much better off."
+    "The \"residents\" aren't much better off."
     extend " Several disheveled men and women sit in a circle, ogling at whatever fantasy they were trapped in."
     "How has this place not been searched sooner?\nEven if the Celestials have their hands full, where are the city guards?"
     "Hmm, I wonder how many of them are in this circle? Or have been bribed?\nMortals are weak in the face of sinful temptation, after all..."
@@ -124,7 +120,6 @@ label infiltration:
         flip
     extend "\nHe reverts his gaze from his spoils, flashing a toothy smile."
 
-
     show villager at left with easeinleft:
         zoom 1.2
         yoffset 120
@@ -136,12 +131,12 @@ label infiltration:
     show villager at left with easeinleft:
         zoom 1.2
     "The elf takes a a wad of paste from his pocket and dumps it into my hands."
-    "I shouldn't be surprised but I'm repulsed all the same. Ishmael knows what else lies in those breeches."
+    "I shouldn't be surprised but I'm repulsed all the same. Yeshua knows what else lies in those breeches."
     extend " Though addicts rarely care..."
     
     hide villager with moveoutleft
     "If I use, I will hallucinate but not be incapacitated."
-    extend " \nMy cravings have evolved to blood, and paste is now only a recreation rather than a hindurance."
+    extend " \nMy cravings have evolved to blood, and paste is now only a recreation rather than a hindranceance."
     "Perhaps I can use it to tap into my memories, help me decipher why this fiend matters so much to me."
     
     play sound sfx.zap
@@ -151,7 +146,7 @@ label infiltration:
     camera at revert_camera
     with Dissolve(0.25)
 
-    extend " As expected, violence is off the table.\nFor now..."
+    extend " As expected, violence is off the table. For now..."
 
     show christoph happy at christoph_normal_range with easeinright:
         right
@@ -174,13 +169,10 @@ label infiltration:
     extend "\nSay, if I were to help you, where would I go to acquire more paste?"
     
     show christoph happy at christoph_normal_range:
-        ease 0.1 yoffset 350
-        ease 0.1 yoffset 250
-        ease 0.1 yoffset 350
-        ease 0.1 yoffset 250
+        hop
     ch "Hahahaha, an opportunist! I respect that, but I think we should get to know each other more first."
 
-    show christoph happy at christoph_close_range with dissolve:
+    show christoph happy at christoph_close_range:
         center
     with dissolve
 
@@ -272,11 +264,10 @@ label infiltration:
     $ quick_menu = True
     window show
 
-
     "The young goblin tuggling on his fur jacket, shambles outside."
     extend " Being of the forest, their eyes are more accustomed to the dark. But so are mine."
     "I leave the window. Trailing him is child's play.\nHe doesn't even look over his shoulder. A wolf could pounce on him at any moment."
-    extend " How fortuitous for me!" with vpunch 
+    "{size=+80}How fortuitous for me!{/size}" with vpunch 
 
     play sound sfx.rustle
     queue sound sfx.rustle
@@ -286,11 +277,13 @@ label infiltration:
 
     play sound sfx.mana_charge
     with maliceflash
+    camera at red_camera
     extend " My muscles brace as my Malice flows."
     extend "\nHe is {b}MINE!{/b} His feeble matron can't save him, even if she was here!"
     "My mouth waters, eager to taste his delectable blood.\nMy thirst is overwhelming! I cannot wait!!!"
     extend "\nI inch forward. In Three..."
     extend " Two..."
+    extend " One..."
 
     $ quick_menu = False
     window hide
@@ -327,6 +320,7 @@ label infiltration:
     "My sin is irredeemable. Only Hell or oblivion await me in the afterlife."
     extend "\nI have no regrets. Tis a fitting end for someone like me."
 
+    play sound sfx.grapple
     w "Ngh, what are you doing?!" with vpunch
     
     show christoph angry at christoph_normal_range:

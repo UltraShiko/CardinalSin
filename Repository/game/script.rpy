@@ -40,5 +40,35 @@ label griswyr_test:
     gri smirk "Dialogue"
     
     gri angry "Dialogue"
+
+    show buzz happy at buzz_normal_range:
+        center
+
+    bu "Hiii!!!"
+
+    show buzz shocked at buzz_close_range:
+        center 
+
+    bu "You ugly..."
+
+    show buzz happy at buzz_normal_range:
+        left 
+
+    bu "Lalalalala!!!"
+
+    show buzz shocked at buzz_close_range:
+        right
+
+    bu "Aiiiiieeee!!!"
+
+    show buzz shocked at buzz_close_range:
+        left
+
+    bu "ugly...."
+
+    show buzz happy at buzz_normal_range:
+        right
+
+    bu "DONATE MONEY, UGLY!!!" with vpunch
     
     return

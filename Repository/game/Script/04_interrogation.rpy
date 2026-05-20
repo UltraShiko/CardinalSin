@@ -5,7 +5,8 @@ label interrogation:
     $ quick_menu = True
     window show
     
-    "I skulk away. \nMy stomach growls, and my eyes begin to dilate."
+    "I skulk away."
+    extend "\nMy stomach growls, and my eyes begin to dilate."
     extend " Good!"
     "Monstrosity follows my gnawing hunger. These heightened senses make tracking all to easy."
     "I see many footprints in the snow, but one pattern stands outs."
@@ -16,10 +17,11 @@ label interrogation:
     "I take a whiff. The sickly sweet smell irritates my nose.\nSanguine Paste smells eerily similar to candy."
     extend "\nSo these tracks belong to an addict, or a loon."
     
-    #play sound sfx.footsteps_snow fadein 0.8 loop
+    stop music fadeout 0.8
+    play music something_amiss fadein 0.8
     
     "Either way, I follow them."
-    "The stench of the paste grows stronger with each step.\nIs he indulging even as I track him? I'm prepared all the same, this'll just make subYeshuahim easier."
+    "The stench of the paste grows stronger with each step.\nIs he indulging even as I track him? I'm prepared all the same, this'll just make Yeshua's job easier."
     "I snarl."
     extend "\nI no longer crave that wretched paste but I don't want to reek of it either! This disgusting oaf is going to regret using."
     "Soon the prints are followed by sounds."
@@ -33,21 +35,18 @@ label interrogation:
 
     "Hmmm... A hatchet to the head would shut him up.\nI could just find someone else, but..."
     extend " No, he'll do. I'll drink his blood as payment. He {i}clearly{/i} doesn't need it anymore."
-
-    stop sound fadeout 0.8
     
     show villager at center_left, sway with Dissolve(0.25):
         zoom 1.2
 
     "He comes in my sights, arms and body flailing for an illusion.\nHiding is hardly necessary."
 
-    stop sound fadeout 0.8
-
     "Regardless I crouch. I calculate the distance between us."
     extend "\nNo weapons or mana will be needed. I don't know why I bother preparing to attack.." 
     "My instincts call for wariness, even from an oaf trapped in stupor."
     "I breathe in, my fangs now visible. I won't need my instincts after I'm through with him."
-    extend " He'll squeal like a pig, and then I {b}FEAST!{/b}" with vpunch 
+    extend " He'll squeal like a pig..."
+    "{size+=80}And then I {b}FEAST!{/b}{/size}" with vpunch 
 
     m "Ohhh Charlotta, take me... Take-"
 
@@ -84,7 +83,7 @@ label interrogation:
     with quickblood
     
     m "Ngh, ahh..."
-    extend"{b}AaaaaAAAGHHHH!!!{/b}" with vpunch
+    m "{size+=80}{b}AaaaaAAAGHHHH!!!{/b}{/size}" with vpunch
 
     "I ram the elixir's contents up his nose. It's much quicker than forcing it down his throat."
     extend " To call this an elixir is generous. It's mere garlic concentrated into a liquid."
@@ -102,7 +101,7 @@ label interrogation:
     
     m "No wait, you have fangs... And your eyes, they're...so-"
     show villager at hop
-    extend "\nBy Yeshua! Vampire!!!"
+    m "{size+=80}By Yeshua! Vampire!!!{/size}"
 
     "I snicker. His squirms only entertain me.\nHe can writhe and scream as he much as he likes, no one is saving him."
     "I imagine he wishes Charlotta was here in my place.\nPerhaps Hell will have a devil in store for him to tend to his wishes."
@@ -175,7 +174,7 @@ label interrogation:
     
     gr "Go on, remind them of their place~."
     
-    c "We don't give a {b}damn{/b} about your station, Emissary! You're all a bunch of crooks who escaped the noose! And what you're Yeshuanow proves it!"
+    c "We don't give a {b}damn{/b} about your station, Emissary! You're all a bunch of crooks who escaped the noose!"
     
     gr "Hmm, so if I choose to break another finger..."
     
@@ -187,19 +186,15 @@ label interrogation:
     gr "I need information, and he's keeping it from me.\nHe fears his supplier more than me..!"
     extend "\nBut if you wish to oppose me, you're free to try."
 
-    #have screen tint redden. Either a carmine red or a dark red
-    #this is to emulate Griswyr's vampiric nature taking hold
+    camera at red_camera
     "After all, there are no other witnesses in sight. As big as Jubilee is, many murders still go unnoticed down here."
-    #hide silhouette
     
     $ quick_menu = False
     window hide
 
     hide celestial
     hide celestial_2
-
-    camera at red_camera
-
+    
     with Dissolve(0.8)
 
     pause 0.4
@@ -235,6 +230,8 @@ label interrogation:
     
     camera at revert_camera 
     with Dissolve(0.35)
+    play music village_ambience fadein 0.8
+    queue music village_ambienceLoop loop
     
     "My body recoils at his name. Why...?"
     extend " I'm no longer eager nor entertained.\nAnd we vampires aren't susceptible to magic, which means Christoph wasn't an incantation. So what gives the word power over me?"
