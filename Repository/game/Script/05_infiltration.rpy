@@ -40,11 +40,11 @@ label infiltration:
 
     m "Who are ya?"
 
-    gr "I heard I could find paste here. I would like to indulge."
+    gr neutral "I heard I could find paste here. I would like to indulge."
     
     m "...Ya don't look like one of us. Where'd ya get the cloak?"
     
-    gr " Not all addicts are bottomfeeders. Some of us can {i}control{/i} our use."
+    gr neutral " Not all addicts are bottomfeeders. Some of us can {i}control{/i} our use."
     
     m "Hmph! Follow me."
 
@@ -98,7 +98,7 @@ label infiltration:
     ch "Yes, yes, buy a lot more than my average customer, I'm assuming."
     extend "\nHehehehe, to whom do I owe the pleasure for his patronage."
     
-    gr "My name is of no importance to you."
+    gr neutral "My name is of no importance to you."
 
     play sound sfx.coins
     show christoph happy at christoph_normal_range:
@@ -153,19 +153,19 @@ label infiltration:
 
     ch "Go on, take a whiff. You have the entire night. No need to hurry."
 
-    gr "..."
+    gr neutral "..."
     extend "Who are you?"
     
     show christoph neutral at christoph_normal_range with easeinright
     ch "Eh?"
     
-    gr "I feel like we've met somewhere."
+    gr neutral "I feel like we've met somewhere."
     show christoph neutral at christoph_normal_range
     ch "Perhaps we have. My business isn't appreciated. I've become a wanderer of sorts. I've been at this for several years now."
     show christoph happy at christoph_normal_range
     extend " Though... I feel as if we've met as well. Mayhaps you were one of my earlier clients?"
     
-    gr "Hmm. I have used for a long time... It isn't impossible."
+    gr neutral "Hmm. I have used for a long time... It isn't impossible."
     extend "\nSay, if I were to help you, where would I go to acquire more paste?"
     
     show christoph happy at christoph_normal_range:
@@ -209,13 +209,13 @@ label infiltration:
     "I hate it!" with vpunch
     "But I know how this drug works. It pulls us into our deepest desires.\nAnd with my awareness, maybe..."
 
-    gr "Who is Christoph?"
+    gr neutral "Who is Christoph?"
 
     "Damn, even though I'm conscious, I have little control over what I witness."
     extend " This drug is truly insidious. I'm vulnerable, both in my body and my mind. I can only hope Christoph is just as incapacitated."
     "Yet I perservere. Perhaps if I keep my mind on Christoph, I can at least learn something."
 
-    gr "Who are you, goblin?"
+    gr neutral "Who are you, goblin?"
 
     w "Christoph, can you fetch the firewood? Let's get a roaring fire going!"
 
@@ -246,7 +246,7 @@ label infiltration:
     "It'll be so easy. This foolish mother is trusting him outside as the sun sets. She {b}deserves{/b} to lose him." 
     extend " Later I'll feast on her too as punishment."
 
-    gr "(Ngh...these thoughts aren't my own. Is this the drug's handiwork too?)"
+    gr neutral "(Ngh...these thoughts aren't my own. Is this the drug's handiwork too?)"
 
     $ quick_menu = False
     window hide
@@ -299,7 +299,7 @@ label infiltration:
     
     $ quick_menu = True
     window show
-    gr "(I've seen enough.)"
+    gr neutral "(I've seen enough.)"
 
     $ quick_menu = False
     window hide
@@ -344,7 +344,7 @@ label infiltration:
         center
     ch "How dare you! What is she to you?!" with vpunch
     
-    gr "No one. But this is over, Christoph."
+    gr neutral "No one. But this is over, Christoph."
 
     play music bgm.reckoning_I fadein 0.8
     play sound sfx.drop_clothes

@@ -43,7 +43,7 @@ label explanation:
     ni "Hehe... Of course, she was the banshee who caused {i}the Reckoning{/i}."
     extend "\nToo bad you can't wield silver."
     
-    gr "Hmph, I only need to tear her limb from limb. The monk can do the rest..."
+    gr neutral "Hmph, I only need to tear her limb from limb. The monk can do the rest..."
 
     play sound light_grapple
 
@@ -66,24 +66,24 @@ label explanation:
     "It is no less than what I deserve for my weakness."
 
     show nick neutral
-    gr "Speaking of, how is the monk?"
+    gr neutral "Speaking of, how is the monk?"
 
     ni "Caius will be fine. Though he will need to get used to wearing a mask."
     extend " His mana was gushing like a fountain."
     
-    gr "What the hell happened? I patched up his wounds."
+    gr neutral "What the hell happened? I patched up his wounds."
     extend "\nHe was fine for a moment, then this white mana started spilling out."
     
     show nick happy:
         xzoom 1.0 
     ni "That's Justice for you."
     
-    gr "Justice?"
+    gr neutral "Justice?"
 
     ni "Ahh, it's the mana of archons. Much like how your Malice is from Hell."
     extend " Mortals weren't intended to wield it. And when they do, it tears their body apart."
     
-    gr "Doesn't Malice do the same?"
+    gr neutral "Doesn't Malice do the same?"
     
     show nick neutral at right with moveinright:
         xzoom -1.0 
@@ -91,11 +91,11 @@ label explanation:
     ni "Malice wears on your soul when overused.\nJustice is like turning your very soul into a weapon. It will kill you, and probably everyone nearby if mishandled."
     ni "On top of that, your friend is a lunatic."
     
-    gr "He's not insane, you are."
+    gr neutral "He's not insane, you are."
 
     ni "Not every lunatic is insane. His mana flows differently than yours. It seemed to ebb and flo like the tide."
     
-    gr "Hmmm..."
+    gr neutral "Hmmm..."
 
     hide nick with quickblinds
     "I scratch my chin. The monk is peculiar..."
@@ -104,7 +104,7 @@ label explanation:
     "It was humorous watching him weave past Persephone's attacks. I figured he had an unusual fighting style."
     "Has he weaponized his quirks somehow? How interesting..."
 
-    gr "And you gauged that much just from treating an unconscious body?"
+    gr neutral "And you gauged that much just from treating an unconscious body?"
     
     show nick at nick_normal_range with easeinright:
         xzoom -1.0, xalign 1.0
@@ -119,7 +119,7 @@ label explanation:
     "Considering the regrets I have, I wonder why that white mana hasn't sprouted from me yet. Guess I'm not pure enough."
 
     hide jory with pixellate
-    gr "Hmph, than I'll let him rest. I have a banshee to hunt."
+    gr neutral "Hmph, than I'll let him rest. I have a banshee to hunt."
     
     show nick neutral at nick_normal_range with easeinbottom:
         xalign 0.5
@@ -145,7 +145,7 @@ label explanation:
     
     ni "But Griswyr, I found a nest of Paste smugglers..."
     
-    gr "Really?"
+    gr neutral "Really?"
 
     hide nick with moveoutbottom
     play sound sfx.thud
@@ -158,7 +158,7 @@ label explanation:
 
     ni "Consider this your reward for dealing with those cultists."
     
-    gr "Hmm..."
+    gr neutral "Hmm..."
     extend " Why are you giving me this?\nSurely, you understand that Persephone is our top priority."
     
     # Note: Doing this to avoid an animation bug.
@@ -169,7 +169,7 @@ label explanation:
     ni "She is, and I intend to help you find her, but there's something I want to investigate first."
     extend " You know how a dretchling destroyed Thrycia?"
     
-    gr "How can I not? It's what put Caius into a coma. And it wasn't a dretchling."
+    gr neutral "How can I not? It's what put Caius into a coma. And it wasn't a dretchling."
     
     ni "Absolutely not. So I just want to do a bit of research and-"
     
@@ -207,7 +207,7 @@ label explanation:
     "When overused, Sanguine Paste warps your humanity.\nIt makes you crave forbidden pleasures until you ultimately turn to seeking the blood of others."
     "These drug dealers may as well be plaguespreaders.\nThey won't threaten all of humanity, but removing their infection is still a service."
 
-    gr "Fine, I'll snuff out this operation.\nBe grateful I hate Sanguine Paste more than I hate you."
+    gr neutral "Fine, I'll snuff out this operation.\nBe grateful I hate Sanguine Paste more than I hate you."
     
     show nick elated at left with easeinleft:
         nick_close_range

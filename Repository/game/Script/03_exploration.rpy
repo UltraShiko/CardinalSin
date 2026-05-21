@@ -52,23 +52,23 @@ label exploration:
 
     sm "Back again? All too soon..."
 
-    gr "I want these sharpened."
+    gr neutral "I want these sharpened."
     
     sm "Put the money on the table first."
 
     play sound sfx.coins
     "I obey. He takes my weapons and hobbles towards the sharpening wheel."
 
-    gr "It would be much faster if I sharpened them myself."
+    gr neutral "It would be much faster if I sharpened them myself."
     
     show villager at hop
     sm "Ya trying to run me out of business?! I don't want yer mangy mitts on my equipment!"
     
-    gr "Any diseases I'd harbor wouldn't spread through touch."
+    gr neutral "Any diseases I'd harbor wouldn't spread through touch."
     
     sm "But yer foul presence would."
     
-    gr "Suit yourself, dwarf."
+    gr neutral "Suit yourself, dwarf."
 
     #TODO - Maybe find a sound fx for this
     "I lean against his stall as he sits on the sharpening wheel, my stomach grumbling."
@@ -80,7 +80,7 @@ label exploration:
 
     sm "I don't suppose ya want yer breastplate repaired as well?"
     
-    gr "Not for this venture. My quarry isn't nearly as threatening."
+    gr neutral "Not for this venture. My quarry isn't nearly as threatening."
 
     play sound sfx.bam
     with vpunch
@@ -88,7 +88,7 @@ label exploration:
 
     sm "Here ya are. Now begone with ya!"
     
-    gr "A satisfactory job as always."
+    gr neutral "A satisfactory job as always."
     
     show villager at hop
     sm "Hurry along! I don't want no one seeing ya at my stand!"
@@ -97,7 +97,7 @@ label exploration:
     
     sm "And not the Celestials? Why is a crook like you getting involved?"
     
-    gr "I suspect it's the same reason why you drink. Consider purchasing some incense."
+    gr neutral "I suspect it's the same reason why you drink. Consider purchasing some incense."
 
     hide villager with easeoutright
     "I take my posessions and leave."
@@ -189,34 +189,34 @@ label exploration:
         right
     c "You must be kidding!\nThe fourth, allow a leech like him to roam free?! Is he mad?"
     
-    gr "As if your low-grade blood would satisfy me."
+    gr neutral "As if your low-grade blood would satisfy me."
     
     show celestial as celestial_2 at celestial_normal_range: #will probably need to reassign come zoom in sprite
         hop
     c "{size=+50}Then what are you doing here?!" with vpunch
     
-    gr "Trailing you, as you already observed. I'm after the same criminals you are."
+    gr neutral "Trailing you, as you already observed. I'm after the same criminals you are."
     
     show celestial combat at celestial_normal_range with easeinleft:
         left
     c "Absolutely not! This doesn't concern you rogues!\nHalf of you are criminals yourselves!"
     
-    gr "You aren't wrong, and you aren't stopping me."
+    gr neutral "You aren't wrong, and you aren't stopping me."
     
     show celestial combat at celestial_normal_range:
         hop
     c "You just want a meal, don't you?!"
     
-    gr "Are you going to shed tears for drug dealers? Do you not understand what Sanguine Paste is?"
+    gr neutral "Are you going to shed tears for drug dealers? Do you not understand what Sanguine Paste is?"
     gr smirk "I wonder, if you knew that this infernal substance made me what I am today, would you still mourn their deaths?"
     
     show jory sad
     j "Most of them aren't that far gone yet. A lot of them are only sick for now, much like you used to be."
     
-    gr "Perhaps, however I wager their kingpin isn't much different from myself."
+    gr neutral "Perhaps, however I wager their kingpin isn't much different from myself."
     #TODO - Add lore entry
-    gr "Drugs like that paste are made by monsters. I'm certain you all know that the Archfiend, Dharts, concocted it to spread his kin. They don't call him the {i}King of Hunger{/i} for nothing."
-    gr "It's quite impressive how these Archdevils harvest souls. Each one has their own methods, and I intend to stop this plague before it spreads any further."
+    gr neutral "Drugs like that paste are made by monsters. I'm certain you all know that the Archfiend, Dharts, concocted it to spread his kin. They don't call him the {i}King of Hunger{/i} for nothing."
+    gr neutral "It's quite impressive how these Archdevils harvest souls. Each one has their own methods, and I intend to stop this plague before it spreads any further."
 
     hide jory
     hide celestial
@@ -235,7 +235,7 @@ label exploration:
     show jory sad at center with dissolve
     j "Griswyr, how is Caius?"
 
-    gr "Still asleep, and he will live."
+    gr neutral "Still asleep, and he will live."
     
     show jory happy at hop
     j "Praise Yeshua..."
@@ -243,12 +243,12 @@ label exploration:
     show jory neutral
     extend "\nListen, don't kill anyone you don't have to. Please... People in {i}the Hells{/i} suffer as is.."
     
-    gr "I make no promises. A little blood is better than dealers distributing the paste."
+    gr neutral "I make no promises. A little blood is better than dealers distributing the paste."
     extend "\nYou might want to see if any of your friends are using."
     
     j "They aren't. I'm well aware of the symptoms. I've seen a lot of addiction while serving our Reverend."
 
-    gr "Addicts are superb at hiding their use, nephillim. They understand well what happens if they're caught."
+    gr neutral "Addicts are superb at hiding their use, nephillim. They understand well what happens if they're caught."
     
     show celestial combat at celestial_normal_range with easeinleft:
         left
@@ -266,7 +266,7 @@ label exploration:
     "At least Jory remains composed. I hear he was on the frontlines during {i}the Reckoning{/i}. Nick claims he went toe-to-toe with that pain devil."
     "Truth be told, I wager it's one of my kind distributing the paste.\nA devil appearing isn't an impossibility though."
 
-    gr "I'm leaving now. If you're ready to die, you are free to follow."
+    gr neutral "I'm leaving now. If you're ready to die, you are free to follow."
     extend "\nOr, you could take credit for my work as usual. I have no use for prestige, only results."
     
     hide jory with dissolve

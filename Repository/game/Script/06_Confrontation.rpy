@@ -9,18 +9,18 @@ label confrontation:
     
     ch "Grrr! Filthy Emissary!"
     
-    gr "A word of advice, make sure your \"guests\" don't keep their weapons."
+    gr neutral "A word of advice, make sure your \"guests\" don't keep their weapons."
     
     show christoph combat at christoph_normal_range:
         hop
     ch "I thought you only hunted fiends!"
     
-    gr "We don't discriminate."
+    gr neutral "We don't discriminate."
     extend " However I'm feeling rather merciful tonight.\nSo if you abandon your wares and flee, you might see the sun tomorrow."
     
     ch "Grrr... And what's the catch?! You rogues are merciless!"
 
-    gr "Have you not realized who I am? You were a brat when we first met."
+    gr neutral "Have you not realized who I am? You were a brat when we first met."
     
     ch "A brat you say?"
     extend " Oh..."
@@ -45,7 +45,7 @@ label confrontation:
 
     ch "You're that leech who killed my mother!" with vpunch
 
-    gr "Indeed."
+    gr neutral "Indeed."
     
     ch "And you {b}DARE{/b} hunt {b}ME?!{/b} As if you {b}aren't the monster!!!{/b}" with vpunch 
     
@@ -63,7 +63,7 @@ label confrontation:
         hop
     ch "Tell me, vampire, have you any idea what you've done to me?!"
 
-    gr "Not a clue. You are not like myself."
+    gr neutral "Not a clue. You are not like myself."
     
     ch "Hmmm..."
 
@@ -108,7 +108,7 @@ label confrontation:
     ch "As I matured, so did my cravings... I'd devour cow after cow and never be sated! Have you any idea how torturous that is?!" 
     ch "{b}{size=+30}To never be full no matter how often you dine?!{/size}{/b}" with vpunch 
     
-    gr "I can't relate."
+    gr neutral "I can't relate."
 
     show christoph angry:
         ease 0.1 yoffset 350
@@ -126,7 +126,7 @@ label confrontation:
     show christoph feral at christoph_normal_range
     ch "...has to suffer {size=+50}{b}a neverending hunger!!!{/b}{/size}" with vpunch
     
-    gr "My life is {i}far{/i} from normal, Chriistoph."
+    gr neutral "My life is {i}far{/i} from normal, Chriistoph."
 
     hide christoph
     show christoph neutral at christoph_normal_range:
@@ -161,9 +161,9 @@ label confrontation:
     show christoph neutral at christoph_normal_range:
         center
         flip_r
-    gr "And do you believe this changes anything? You are still enslaved to your hunger."
+    gr neutral "And do you believe this changes anything? You are still enslaved to your hunger."
     extend " And as people disappear, it's only a matter of time before they come for you"
-    gr "I have to admit, I'm impressed with your ruse. Butchers being outcasts by trade makes them easy to hide."
+    gr neutral "I have to admit, I'm impressed with your ruse. Butchers being outcasts by trade makes them easy to hide."
     extend "It's normal for you to be stained in blood. Few would've guessed it was a mortal you ate."
     
     show christoph happy at christoph_normal_range
@@ -191,7 +191,7 @@ label confrontation:
     show christoph combat angry at christoph_normal_range
     ch "You killed my mother! You forced me to eat flesh!"
     
-    gr "The former is true, but you did the rest yourself."
+    gr neutral "The former is true, but you did the rest yourself."
     
     ch "Oh...?"
     show christoph combat feral at christoph_normal_range
@@ -215,14 +215,14 @@ label confrontation:
     extend "\nAt times like these, I'm thankful I've lost my humanity. If I let my guilt speak for me, I'd just become another meal."
     "Cruel indeed considering that it’s the only way to save him and expose his weakness."
 
-    gr "You're mistaken. I don't crave flesh, however I nearly devoured four men on my way here. I almost didn't spare them."
+    gr neutral "You're mistaken. I don't crave flesh, however I nearly devoured four men on my way here. I almost didn't spare them."
     extend " Yes, you cannot escape your hunger. Yes, I did turn you into a monster. However."
 
     show christoph combat angry at christoph_normal_range:
         hop
     ch "However?!"
     
-    gr "You chose to consume your master. You've chosen to hide like a predator, spread addiction, and pounce on those you've rendered helpless."
+    gr neutral "You chose to consume your master. You've chosen to hide like a predator, spread addiction, and pounce on those you've rendered helpless."
     show christoph combat feral at christoph_normal_range
     ch "{b}{size=+80}Grrraaahhh!!!{/size}{/b}" with vpunch
 
@@ -238,11 +238,11 @@ label confrontation:
     $ quick_menu = True
     window show
 
-    gr "I still feed, I just do so on the deserving. I don't let my affliction command me. And you can do the same."
+    gr neutral "I still feed, I just do so on the deserving. I don't let my affliction command me. And you can do the same."
 
     ch "{size=+20}{b}YOU SAID YOU NEARLY DEVOURED FOUR MEN! WERE THEY MONSTERS TOO?!{/b}{/size}" with vpunch
     
-    gr "No, and I'm thankful I didn't. Do you want to know what stopped me?"
+    gr neutral "No, and I'm thankful I didn't. Do you want to know what stopped me?"
     extend " Hearing your name."
     
     ch "Huh...?!"
@@ -251,15 +251,15 @@ label confrontation:
     extend " Again, I'm not one for diplomacy. My weapons are much sharper than my tongue, so it intrigues me to see him so bewildered."
     "I narrow my eyes. As if I was readying to pounce, I go for the kill with my words."
 
-    gr "Killing me won't resolve anything. It'll only make things worse."
+    gr neutral "Killing me won't resolve anything. It'll only make things worse."
     extend "\nWithout someone to hate, you will sink deeper into your madness until you become just like me."
-    gr "Hate me if you wish, but at least try to be different. It would make your shouting a tad less obnoxious."
+    gr neutral "Hate me if you wish, but at least try to be different. It would make your shouting a tad less obnoxious."
 
     show christoph combat feral at christoph_close_range with dissolve:
         center
     "I extend my hand, further breaking his focus.."
 
-    gr "As I stated, I'm feeling rather generous. Come with me, and I will help you find a remedy."
+    gr neutral "As I stated, I'm feeling rather generous. Come with me, and I will help you find a remedy."
     extend "\nI can't cure what you are, but I can help you find a way to subdue those cravings."
     
     show christoph combat feral at christoph_close_range:
@@ -291,15 +291,15 @@ label confrontation:
     ch "Why do I need to change..? Why do I need to fix myself..?\nI did nothing wrong..."
     extend " I'm only like this because of {b}YOU!!!{/b}" with vpunch
 
-    gr "You've done nothing wrong? Are you certain?"
+    gr neutral "You've done nothing wrong? Are you certain?"
     extend " How many people have you sold that paste too? How many fathers and mothers have you devoured?" 
     gr smirk "I wonder how many of your victims would say the same to you."
     
     ch "{size=+50}{b}BUT IT WAS ALL BECAUSE OF-{/b}{/size}"
     
-    gr "I know. And I'm ending it here."
+    gr neutral "I know. And I'm ending it here."
     extend " Your fury is justified, but your actions aren't. You and I have ruined many lives, Christoph."
-    gr "I'll give you one more chance. Leave with me and end this wretched cycle."
+    gr neutral "I'll give you one more chance. Leave with me and end this wretched cycle."
     extend " Or die at my hand, here and now."
 
     show christoph feral at christoph_normal_range:
@@ -372,7 +372,7 @@ label confrontation:
     ch "Had a Celestial with a bleeding heart faced me, their mana wouldn't have abandoned them."
     extend " You aren't accustomed to having any care for who you kill. You {i}need{/i} your indifference to keep yourself alive."
     
-    gr "Hmph, as if this is any handicap worth noting. I only wished to end this in one strike." 
+    gr neutral "Hmph, as if this is any handicap worth noting. I only wished to end this in one strike." 
     extend " It appears I'll have to toy with you instead."
 
     show christoph combat feral at christoph_normal_range:
@@ -450,7 +450,7 @@ label confrontation:
 
     ch "{size=+80}{b}BLECH! Rancid!{/b}{/size}" with vpunch
     
-    gr "How disappointing... I've had vermin bite harder than that."
+    gr neutral "How disappointing... I've had vermin bite harder than that."
     
     show christoph happy at christoph_normal_range:
         flip
@@ -500,7 +500,7 @@ label confrontation:
     ch "I hate you!" 
     ch "{size=+80}{b}I HATE YOU!!!{/b}{/size}" with vpunch #center text in textbox
     
-    gr "Tch!"
+    gr neutral "Tch!"
 
     "He drags his lethal claws through the air. He has power but he lacks str-"
     
@@ -583,11 +583,11 @@ label confrontation:
     "It's as if acid is being splashed onto my skin."
     extend "\nThis excruciating pain isn't enough to make me scream at, but I won't survive much longer at this rate."
     
-    gr "..."
+    gr neutral "..."
     
     ch "What's wrong? Nothing more to say?"
     
-    gr "..."
+    gr neutral "..."
     extend "Pitiful."
     
     play sound sfx.mana_charge
@@ -653,7 +653,7 @@ label confrontation:
         center
     ch "Agh...aggghhh! You broke my jaw, you bastard!"
 
-    gr "Yet, you're still talking."
+    gr neutral "Yet, you're still talking."
 
     ch "{size=+75}Agggghh... Damn you...!{/size}"
 
@@ -671,7 +671,7 @@ label confrontation:
     with sinflash
     play music bgm.reckoning_II fadein 0.8
     
-    gr "Sin?"
+    gr neutral "Sin?"
 
     "When I focus, a purple hue arises in place of the red one I'm usually wield."
     "I see. Sin isn't funneled from hatred, but desire, ambition, purpose."
@@ -683,7 +683,7 @@ label confrontation:
 
     scene bg christoph house
 
-    gr "Give up, Christoph. Every farce must come to an end."
+    gr neutral "Give up, Christoph. Every farce must come to an end."
 
     show christoph combat angry at christoph_normal_range:
         hop
@@ -723,7 +723,7 @@ label confrontation:
     with quicksin
     extend " Wh-what?! Where did he-"
     
-    gr "{size=+80}{b}{i}Bloodedge!{/i}{/b}{/size}"
+    gr neutral "{size=+80}{b}{i}Bloodedge!{/i}{/b}{/size}"
 
     call screen image_display("vfx/twin_sword_slash.jpg")
     play sound sfx.slash
@@ -747,36 +747,36 @@ label confrontation:
         center
     ch "This...this is only a flesh wound...!"
 
-    gr "Then stand. I'll wait."
+    gr neutral "Then stand. I'll wait."
 
     ch "Grr..."
     show christoph combat feral at christoph_close_range:
         hop
     extend " Agggh! Why can't I move?! My body...its wounds are nothing compared to yours."
     
-    gr "As I said, you are simple." 
+    gr neutral "As I said, you are simple." 
     extend " You didn't realize the toll you were placing on your body." 
     extend " Even without summoning mana, you use up your very vitality when wielding your blood."
-    gr "Those wounds are indeed minor." 
+    gr neutral "Those wounds are indeed minor." 
     extend " It is your own recklessness that has lost you this fight."
 
     ch "But...how would you know? You only used your blood once!"
     
-    gr "Unfortunately Christoph, my powers were limited during this fight."
+    gr neutral "Unfortunately Christoph, my powers were limited during this fight."
     extend "\nI couldn't wield mana nor kill you."
     
     ch "Stop lying..!"
 
-    gr "What do I gain by lying to you now? Torment? Please..."
+    gr neutral "What do I gain by lying to you now? Torment? Please..."
     extend "\nAs I said earlier, your name saved those Celestials. And Malice requires hatred."
-    gr "I needed to adapt a different mana to defeat you." 
+    gr neutral "I needed to adapt a different mana to defeat you." 
     extend "\nYou may be surprised to know that I wanted to save you."
     
     show christoph combat angry at christoph_close_range:
         hop
     ch "S-Save me?! Unless you can fix what I am, you can't save me!"
     
-    gr "On that, we agree. However I will not kill you either."
+    gr neutral "On that, we agree. However I will not kill you either."
     extend "\nThe only person who can save you is yourself."
 
     hide christoph
@@ -797,9 +797,9 @@ label confrontation:
     gr smirk "Good. In fact, you flatter me."
     extend " If I were to lose myself and become feral, I hope you would take me down." 
     extend " If it keeps you from becoming a monster, hate me as I much as you want."
-    gr "But do us both a favor, stay away from fiends." 
+    gr neutral "But do us both a favor, stay away from fiends." 
     extend " Don't succumb to their trickery just to get to me. I'll gladly face you any time, anywhere." 
-    gr "So long as you do not disgrace us both by falling for their trickery. Don't make me regret sparing you, goblin."
+    gr neutral "So long as you do not disgrace us both by falling for their trickery. Don't make me regret sparing you, goblin."
 
     "He snarls, and I turn away."
 
@@ -839,7 +839,7 @@ label confrontation:
         hop
     c "O-Oh, I apologize! Is... Whatever Christoph was... Vanquished?"
     
-    gr "Indeed. Your sacred streets are now safe again."
+    gr neutral "Indeed. Your sacred streets are now safe again."
     extend " For now..."
     
     j "Hmm..."
@@ -849,7 +849,7 @@ label confrontation:
     show jory happy
     "I look to Jory and he nods knowingly."
 
-    gr "If we are done here, I need to rest."
+    gr neutral "If we are done here, I need to rest."
     extend "\nThough if you're willing to donate some of your-"
 
     hide celestial_2
@@ -861,7 +861,7 @@ label confrontation:
     hide celestial
     hide celestial_2
     with dissolve
-    gr "Lovely."
+    gr neutral "Lovely."
     extend " Why are you smiling, nephillim?"
     
     j "I believe you would say, \"how amusing\"? Uhh..."
