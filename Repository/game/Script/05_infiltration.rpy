@@ -194,7 +194,6 @@ label infiltration:
 
     stop music fadeout 0.8
 
-
     hide Christoph
     scene image "#000" with pixellate
     

@@ -129,7 +129,7 @@ label interrogation:
     "His pinky snaps like a twig as I grip the other one."
     "I'm being much too merciful counting down from ten. After all, there are 205 more bones left to break. Outliers happen of course, but I imagine he won't be conscious long enough for it to matter."
 
-    gr "Talk, you wretch."
+    gr angry "Talk, you wretch."
     
     play sound sfx.light_grapple
     show villager at center with moveinbottom:
@@ -172,7 +172,7 @@ label interrogation:
     m "That's...impossible! There's no way in Hell you're a-"
     extend "\nWait, if you outrank them that means... That means..."
     
-    gr "Go on, remind them of their place~."
+    gr smirk "Go on, remind them of their place~."
     
     c "We don't give a {b}damn{/b} about your station, Emissary! You're all a bunch of crooks who escaped the noose!"
     
@@ -183,7 +183,7 @@ label interrogation:
 
     c "By Yeshua, he isn't your target! I thought you were after the dealer!"
     
-    gr "I need information, and he's keeping it from me.\nHe fears his supplier more than me..!"
+    gr "I need information, and he's keeping it from me. He fears his supplier more than me..!"
     extend "\nBut if you wish to oppose me, you're free to try."
 
     camera at red_camera
@@ -226,7 +226,7 @@ label interrogation:
     stop music
     camera at invert_camera
 
-    gr "Gngh!"
+    gr angry "Gngh!"
     
     camera at revert_camera 
     with Dissolve(0.35)
@@ -260,14 +260,14 @@ label interrogation:
 
     c "You're...releasing him? Yeshua must live indeed."
 
-    gr "Talk, morsel, before I change my mind."
+    gr angry "Talk, morsel, before I change my mind."
     
     show villager at center with moveinbottom:
         zoom 1.85
         yoffset 650
     m "He's...he's a goblin butcher.\nHe reeks of blood and gore, but he always has the paste."
     
-    gr "Gnngh..!" with vpunch
+    gr angry "Gnngh..!" with vpunch
     
     m "Look...for a house with a deer's skull on the front door.\nThat's where we'd have our parties. They were so...amazing."
     
@@ -353,7 +353,7 @@ label interrogation:
     
     gr "Save it." 
     extend " You are right for fearing me. And you {i}should{/i} fear me."
-    gr "Do not be swayed, for I may be deceiving you. That is how we monsters entrap our food~."
+    gr smirk "Do not be swayed, for I may be deceiving you. That is how we monsters entrap our food~."
     
     $ quick_menu = False
     window hide

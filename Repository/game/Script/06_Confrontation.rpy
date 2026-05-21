@@ -49,7 +49,7 @@ label confrontation:
     
     ch "And you {b}DARE{/b} hunt {b}ME?!{/b} As if you {b}aren't the monster!!!{/b}" with vpunch 
     
-    gr "It's a funny world we live in."
+    gr smirk "It's a funny world we live in."
 
     "What else am I to say?"
     extend "\nThat I'm sorry?"
@@ -163,7 +163,8 @@ label confrontation:
         flip_r
     gr "And do you believe this changes anything? You are still enslaved to your hunger."
     extend " And as people disappear, it's only a matter of time before they come for you"
-    gr "I have to admit, I'm impressed with your ruse. Butchers are outcasts by trade, but few would suspect one of cannibalism."
+    gr "I have to admit, I'm impressed with your ruse. Butchers being outcasts by trade makes them easy to hide."
+    extend "It's normal for you to be stained in blood. Few would've guessed it was a mortal you ate."
     
     show christoph happy at christoph_normal_range
 
@@ -258,8 +259,8 @@ label confrontation:
         center
     "I extend my hand, further breaking his focus.."
 
-    gr "As I stated, I'm feeling rather generous.\nCome with me, and I will help you find a remedy."
-    extend " I can't cure what you are, but I can help you find a way to subdue those cravings."
+    gr "As I stated, I'm feeling rather generous. Come with me, and I will help you find a remedy."
+    extend "\nI can't cure what you are, but I can help you find a way to subdue those cravings."
     
     show christoph combat feral at christoph_close_range:
         hop
@@ -292,7 +293,7 @@ label confrontation:
 
     gr "You've done nothing wrong? Are you certain?"
     extend " How many people have you sold that paste too? How many fathers and mothers have you devoured?" 
-    gr "I wonder how many of your victims would say the same to you."
+    gr smirk "I wonder how many of your victims would say the same to you."
     
     ch "{size=+50}{b}BUT IT WAS ALL BECAUSE OF-{/b}{/size}"
     
@@ -341,10 +342,10 @@ label confrontation:
     "I'd know, I do both as well. But I can replenish myself through drinking the blood of my foe. I'm doubtful he can do the same."
     
     play sound sfx.dagger_draw
-    #scene Griswyr CG
+    #TODO - #scene Griswyr CG
     "I hold the ax head up to my palm."
 
-    gr "What was that supposed to be? I thought you wanted to kill me."
+    gr angry "What was that supposed to be? I thought you wanted to kill me."
     extend "\nLet me show you how its done!" with vpunch 
 
     play sound sfx.stab
@@ -355,7 +356,7 @@ label confrontation:
     extend " Can these {b}feeble{/b} emotions not see that he'll keep killing if I don't put him down?!" with vpunch
     "Without Malice, I can't use my hemomancy. Shit, I can't use any of my techniques either!"
 
-    #scene background christoph house with dissolve #TODO - Add when CG is ready
+    #TODO - #scene bg christoph house with dissolve #TODO - Add when CG is ready
     #show christoph combat happy at christoph_normal_range with dissolve
     "A grisly smile etches itself across Christoph's face.\nThat serpentine tongue again graces his lips."
 
@@ -422,7 +423,7 @@ label confrontation:
     play sound sfx.zap
     camera at invert_camera
     
-    gr "Ngh?!" with vpunch
+    gr angry "Ngh?!" with vpunch
 
     camera at revert_camera
     "I flinch?! My arms buckle just before I can decapitate him."
@@ -431,7 +432,7 @@ label confrontation:
     play sound sfx.heavy_slash
     with quickblood
     
-    gr "Gngh!"
+    gr angry "Gngh!"
 
     "He ragged teeth tear into my leg."
     
@@ -454,7 +455,7 @@ label confrontation:
         flip
     ch "Hmmm... Perhaps I'll flay you instead. It'd be much more painful that way."
     
-    gr "Heh. You, flay me? I've seen drunks with more grace."
+    gr smirk "Heh. You, flay me? I've seen drunks with more grace."
     extend "\nOne of your addicts would do a better job."
     
     show christoph angry at christoph_normal_range:
@@ -509,7 +510,7 @@ label confrontation:
     play sound sfx.heavy_slash
     call screen image_display("vfx/blood_slash.png")
     with quickblood
-    gr "Aaaaghh!!!" with vpunch
+    gr angry "Aaaaghh!!!" with vpunch
 
     show christoph combat happy at christoph_close_range with dissolve:
         center
@@ -547,7 +548,7 @@ label confrontation:
 
     scene background christoph house
 
-    gr "Nnnngh...!"
+    gr angry "Nnnngh...!"
     
     show christoph combat happy at christoph_normal_range with dissolve:
         center
@@ -665,7 +666,7 @@ label confrontation:
     extend "\nThese aren't my instincts taking over. Something else powers me now."
     "I ready my weapons, my grip heavy and trembling. Yet I wonder..."
 
-    #scene CG_Griswyr_Sin
+    #TODO - #scene CG_Griswyr_Sin
     play sound sfx.mana_charge
     with sinflash
     play music bgm.reckoning_II fadein 0.8
@@ -680,7 +681,7 @@ label confrontation:
     "It pushes me forward. It grants me the strength to overcome my pain and keep fighting."
     extend "\nPerhaps my desire is to save him? Heh, how trite."
 
-    # scene background christoph house
+    #TODO - scene bg christoph house
 
     gr "Give up, Christoph. Every farce must come to an end."
 
@@ -688,7 +689,7 @@ label confrontation:
         hop
     ch "F-Farce?! I was destroying you!" 
     
-    gr "I see you aren't as loud with that jaw displaced. And you're about to keel over as well."
+    gr smirk "I see you aren't as loud with that jaw displaced. And you're about to keel over as well."
     extend " Heh, you simpleton. You've lost this bout and you're too pigheaded to notice."
     
     ch "{size=+75}I'll show you simple!!!{/size}" with vpunch 
@@ -717,7 +718,7 @@ label confrontation:
     with quickflash
     ch "Ha! You missed!"
 
-    #scene image "#000" #TODO - Implement when CG is collected
+    #TODO - scene image "#000" #TODO - Implement when CG is collected
     play sound sfx.mana_charge
     with quicksin
     extend " Wh-what?! Where did he-"
@@ -793,12 +794,12 @@ label confrontation:
 
     ch "This...this means nothing!\nOnly Hell awaits you, and I'll never forgive you...!"
 
-    gr "Good. In fact, you flatter me."
+    gr smirk "Good. In fact, you flatter me."
     extend " If I were to lose myself and become feral, I hope you would take me down." 
     extend " If it keeps you from becoming a monster, hate me as I much as you want."
-    gr "But do us both a favor; stay away from fiends." 
+    gr "But do us both a favor, stay away from fiends." 
     extend " Don't succumb to their trickery just to get to me. I'll gladly face you any time, anywhere." 
-    gr "So long as you do not disgrace us both by falling for their deceit."
+    gr "So long as you do not disgrace us both by falling for their trickery. Don't make me regret sparing you, goblin."
 
     "He snarls, and I turn away."
 
@@ -826,11 +827,11 @@ label confrontation:
     show celestial combat at celestial_normal_range:
         hop
 
-    c "By Yeshuael, we told you not to devour any civilians!"
+    c "By Yeshua, we told you not to devour any civilians!"
 
     "Or not..."
 
-    gr "Do you not see my wounds, or are you just stupid?"
+    gr angry "Do you not see my wounds, or are you just stupid?"
 
     play sound sfx.sheathe_sword
     show celestial as celestial_2 at celestial_normal_range
@@ -838,7 +839,8 @@ label confrontation:
         hop
     c "O-Oh, I apologize! Is... Whatever Christoph was... Vanquished?"
     
-    gr "Indeed. Your sacred streets are now safe again.\nFor now..."
+    gr "Indeed. Your sacred streets are now safe again."
+    extend " For now..."
     
     j "Hmm..."
 
@@ -864,7 +866,7 @@ label confrontation:
     
     j "I believe you would say, \"how amusing\"? Uhh..."
     
-    gr "Does my sorry state humor you...?!"
+    gr angry "Does my sorry state humor you...?!"
 
     "He smiles broadly and a cold fury pumps through my veins."
 
@@ -874,7 +876,7 @@ label confrontation:
     "I bare my fangs, unnerving all in sight." 
     extend " My blood, what little I have left, pulses with indignity! I would've much preferred he mock me."
 
-    gr "To call you an oaf would be a cardinal sin against the stupid!\nGet out of my way!" with vpunch
+    gr angry "To call you an oaf would be a cardinal sin against the stupid!\nGet out of my way!" with vpunch
 
     $ quick_menu = False
     window hide

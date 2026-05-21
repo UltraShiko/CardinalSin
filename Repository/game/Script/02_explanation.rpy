@@ -27,14 +27,15 @@ label explanation:
     window show
 
     "The door creaks open, and I narrow my eyes at the lanky elf that enters."
-    "Disgust graces my tongue.\nI'd sooner starve than feed on him, even if he was the last mortal on the plane."
+    "Disgust graces my tongue."
+    extend "\nI'd sooner starve than feed on him, even if he was the last morsel on the plane."
 
     play music bgm.another_day fadein 0.8
 
     show nick happy at center with ease
     ni "Wow, you were out like a light.\nNever thought you'd struggle against a succubus."
 
-    gr "Be quiet, Nick."
+    gr angry "Be quiet, elf."
     
     show nick elated at center:
         xzoom -1.0
@@ -65,11 +66,13 @@ label explanation:
     "It is no less than what I deserve for my weakness."
 
     show nick neutral
-    gr "Speaking of, how is Caius?"
+    gr "Speaking of, how is the monk?"
 
-    ni "He'll be fine. Though he will need to get used to wearing a mask.\nHis mana was gushing like a fountain."
+    ni "Caius will be fine. Though he will need to get used to wearing a mask."
+    extend " His mana was gushing like a fountain."
     
-    gr "What the hell happened? I patched up his wounds.\nHe was fine for a moment, then this white mana started spilling out."
+    gr "What the hell happened? I patched up his wounds."
+    extend "\nHe was fine for a moment, then this white mana started spilling out."
     
     show nick happy:
         xzoom 1.0 
@@ -133,12 +136,12 @@ label explanation:
     "If he wasn't so useful, I'd crush his neck where we stand.\nBut he'd enjoy every second of it anyway. This maniac adores pain."    
     extend " Granted, I adore hitting him..."
 
-    gr "Listen, you disgusting cur! If that banshee causes another Reckoning, we're finished! Our Empire is on the verge of war as it is!"
+    gr angry "Listen, you disgusting cur! If that banshee causes another Reckoning, we're finished! Our Empire is on the verge of war as it is!"
     
     show nick elated
     ni "Ehehehe..."
 
-    gr "So, I'm going to track her down and finish what I started.\nAre we clear?"
+    gr angry "So, I'm going to track her down and finish what I started.\nAre we clear?"
     
     ni "But Griswyr, I found a nest of Paste smugglers..."
     
@@ -155,7 +158,8 @@ label explanation:
 
     ni "Consider this your reward for dealing with those cultists."
     
-    gr "Hmm... Why are you giving me this?\nSurely, you understand that Persephone is our top priority."
+    gr "Hmm..."
+    extend " Why are you giving me this?\nSurely, you understand that Persephone is our top priority."
     
     # Note: Doing this to avoid an animation bug.
     hide nick
@@ -165,11 +169,11 @@ label explanation:
     ni "She is, and I intend to help you find her, but there's something I want to investigate first."
     extend " You know how a dretchling destroyed Thrycia?"
     
-    gr "How can I not? It's what put Caius into a coma.\nAnd it wasn't a dretchling."
+    gr "How can I not? It's what put Caius into a coma. And it wasn't a dretchling."
     
     ni "Absolutely not. So I just want to do a bit of research and-"
     
-    gr "{size=+40}It was that pain devil, isn't it?!" with vpunch
+    gr angry "{size=+40}It was that pain devil, wasn't it?!" with vpunch
 
     show nick elated with dissolve
 
@@ -180,11 +184,12 @@ label explanation:
 
     ni "I doubt Persephone was behind this, though maybe more of Hecate's cultists were..."
     
-    gr "For your sake, you better hope it's those Thorns!\nI'm certain you realize the carnage a pain devil would cause."
+    gr angry "For your sake, you better hope it's those Thorns!"
+    extend "\nI'm certain you realize the carnage a pain devil would cause."
     
     ni "Hehehe... Oh it'd be a bloodbath. There's a reason I bound her."
     
-    gr "Yes, {i}spite{/i}, because you blame her for your failure.\nAs if you alone could've stopped {i}the Reckoning{/i}."
+    gr angry "Yes, {i}spite{/i}, because you blame her for your failure.\nAs if you alone could've stopped {i}the Reckoning{/i}."
     
     show nick neutral at nick_normal_range,left with move:
         xzoom 1.0
@@ -193,7 +198,7 @@ label explanation:
     show nick elated
     extend " Hehehe..."
     
-    gr "{size=+80}You're revolting!" with vpunch
+    gr angry "{size=+80}You're revolting!" with vpunch
 
     hide nick with quickblinds
     "Hmm, prioritize drug dealers or the very monster that nearly destroyed everything. The choice is obvious."

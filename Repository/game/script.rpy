@@ -29,13 +29,13 @@ label start:
 
 label griswyr_test:
 
-    gr neutral "Dialogue"
+    gr "Dialogue"
     
     gr smirk "Dialogue"
     
     gr angry "Dialogue"
     
-    gri neutral "Dialogue"
+    gri "Dialogue"
     
     gri smirk "Dialogue"
     

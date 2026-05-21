@@ -62,7 +62,7 @@ label exploration:
     gr "It would be much faster if I sharpened them myself."
     
     show villager at hop
-    sm "Ya trying to run me out of business?!\nI don't want yer mangy mitts on my equipment!"
+    sm "Ya trying to run me out of business?! I don't want yer mangy mitts on my equipment!"
     
     gr "Any diseases I'd harbor wouldn't spread through touch."
     
@@ -70,7 +70,8 @@ label exploration:
     
     gr "Suit yourself, dwarf."
 
-    "I lean against his stall, my stomach grumbling."
+    #TODO - Maybe find a sound fx for this
+    "I lean against his stall as he sits on the sharpening wheel, my stomach grumbling."
     extend "\nI choose to wait on taking the syringe. As my cravings worsen, my senses heighten. Hunger makes you better at finding food after all."
     "This twinge in my gut isn't too unlike when I used to be an addict.\nOnly instead of sweats or mania, I become more feral."
     "Hunting down undesirables has been a wonderful way to stay fed.\nIt's also why I haven't been burnt at the stake."
@@ -92,24 +93,25 @@ label exploration:
     show villager at hop
     sm "Hurry along! I don't want no one seeing ya at my stand!"
     
-    gr "Would you prefer drug dealers? That's who I'm going after."
+    gr smirk "Would you prefer drug dealers? That's who I'm going after."
     
     sm "And not the Celestials? Why is a crook like you getting involved?"
     
-    gr "I suspect it's the same reason why you drink.\nConsider purchasing some incense."
+    gr "I suspect it's the same reason why you drink. Consider purchasing some incense."
 
     hide villager with easeoutright
     "I take my posessions and leave."
-    extend "\nHumorously, I hear him start drinking from a bottle on my way out."
+    extend "\nHumorously, I hear him start drinking on my way out."
 
     "I review the writ."
+    #TODO - Add a lore entry
     extend "\nMy quarry is located at some hobble in {i}the Hells{/i}, where the bottomfeeders of Jubilee reside." 
     "If the Celestials are doing a search, then maybe I can follow them."
 
     show celestial at celestial_normal_range with dissolve:
         left
     show celestial as celestial_2 at celestial_normal_range with dissolve:
-        right #TODO - Should I use a looping hop transform to simulate walking, or is the sound fx good enough?
+        right
     extend "\nBefore I can finish reading, I notice a band of silvered knights marching by, conveniently right where I need them to be."
     
     "I follow. I don't hide."
@@ -155,7 +157,7 @@ label exploration:
         hop
     c "Godforsaken leech! You dare trail us?!" with vpunch
     
-    gr "Indeed I am."
+    gr smirk "Indeed I am."
     extend "\nKeep on with your search, it isn't like any of you can stop me."
     
     play sound sfx.weapon_draw
@@ -165,7 +167,7 @@ label exploration:
 
     c "Monster! I'll drive this this blade through your heart!"
     
-    gr "And kill an Emissary? Heh, that would make my night."
+    gr smirk "And kill an Emissary? Heh, that would make my night."
     
     c "You're no Emissary! You're just-"
     
@@ -193,7 +195,7 @@ label exploration:
         hop
     c "{size=+50}Then what are you doing here?!" with vpunch
     
-    gr "Trailing you, as you already observed.\nI'm after the same criminals you are."
+    gr "Trailing you, as you already observed. I'm after the same criminals you are."
     
     show celestial combat at celestial_normal_range with easeinleft:
         left
@@ -205,25 +207,30 @@ label exploration:
         hop
     c "You just want a meal, don't you?!"
     
-    gr "Are you going to shed tears for drug dealers?\nDo you not  understand what Sanguine Paste is?"
-    gr "I wonder, if you knew that this infernal substance made me what I am today, would you still mourn their deaths?"
+    gr "Are you going to shed tears for drug dealers? Do you not understand what Sanguine Paste is?"
+    gr smirk "I wonder, if you knew that this infernal substance made me what I am today, would you still mourn their deaths?"
     
     show jory sad
-    j "Most of them aren't that far gone yet.\nA lot of them are only sick for now, much like you used to be."
+    j "Most of them aren't that far gone yet. A lot of them are only sick for now, much like you used to be."
     
     gr "Perhaps, however I wager their kingpin isn't much different from myself."
-    gr "Drugs like that paste are made by monsters.\nI'm certain you all know that the Archfiend, Dharts, concocted it to spread his kin. They don't call him the {i}King of Hunger{/i} for nothing."
-    gr "It's quite impressive how these Archdevils harvest souls.\nEach one has their own methods, and I intend to stop this plague before it spreads any further."
+    #TODO - Add lore entry
+    gr "Drugs like that paste are made by monsters. I'm certain you all know that the Archfiend, Dharts, concocted it to spread his kin. They don't call him the {i}King of Hunger{/i} for nothing."
+    gr "It's quite impressive how these Archdevils harvest souls. Each one has their own methods, and I intend to stop this plague before it spreads any further."
 
     hide jory
     hide celestial
     hide celestial_2
     with dissolve
-    "I talk proudly, but I'm well aware I am one of his abominations.\nIf these cattle have anything over me, it's their humanity."
-    "Hence why it is I who should hunt them down. These sentimental knights will only make things worse. Their sympathy for those who abuse the paste will inevitably help its spread."
-    "Besides anyone can indulge in drugs. Even the Reverend.\nAnd those who don't indulge in the paste sell it. It's a very lucrative trade, especially after {i}the Reckoning{/i}."
-    "I imagine the Celestials will arrest everyone, bring them in, and lock up the addicts for some time. But when they get out, they'll just resume their anttics."
-    "It's what I did. You can't help those that have become enslaved to the paste. No one could have helped me."
+    "I talk proudly, but I'm well aware I am one of his abominations."
+    extend "\nIf these cattle have anything over me, it's their humanity."
+    "Hence why it is I who should hunt them down. These sentimental knights will only make things worse."
+    extend "\nTheir sympathy for those who abuse the paste will inevitably help its spread."
+    "Besides anyone can indulge in drugs, even the Reverend.\nAnd those who don't indulge in the paste sell it. It's a very lucrative trade, especially after {i}the Reckoning{/i}."
+    "I'd know. I foolishly indulged to escape my own sadness. When I lost my mother to starvation, I had nothing to my name. Nothing but those delusions."
+    "I imagine the Celestials will arrest everyone, bring them in, and lock up the addicts for some time. The Reverend before ours would've had them burned for treason, but not this new one."
+    "It's too bad. When they get out, they'll just resume their anttics, until they become monsters for me to kill."
+    extend "\nI know, because that's how they tried to \"help\" me. You can't help those that have become enslaved to the paste. No one could have helped me."
 
     show jory sad at center with dissolve
     j "Griswyr, how is Caius?"
@@ -234,19 +241,20 @@ label exploration:
     j "Praise Yeshua..."
 
     show jory neutral
-    extend "\nListen, don't kill anyone you don't have to. Please.\nMy people don't want to see bloodshed."
+    extend "\nListen, don't kill anyone you don't have to. Please... People in {i}the Hells{/i} suffer as is.."
     
-    gr "I make no promises. A little blood is better than more addicts distributing the paste.\nYou might want to see if any of \"your people\" are using."
+    gr "I make no promises. A little blood is better than dealers distributing the paste."
+    extend "\nYou might want to see if any of your friends are using."
     
-    j "They aren't. I'm well aware of the symptoms.\nI saw a lot of addiction when I was {i}the fourth's{/i} shieldbearer..."
+    j "They aren't. I'm well aware of the symptoms. I've seen a lot of addiction while serving our Reverend."
 
-    gr "Addicts are superb at hiding their use, nephillim.\nThey understand well what happens if they're caught."
+    gr "Addicts are superb at hiding their use, nephillim. They understand well what happens if they're caught."
     
     show celestial combat at celestial_normal_range with easeinleft:
         left
     c "Or, you could crawl back into whatever hole you came from and let us handle it."
     
-    gr "You're free to join me. I won't forbid it, however..."
+    gr smirk "You're free to join me. I won't forbid it, however..."
     extend "\nAs you know, there may be fiendish activity afoot. I recently fought a devil, and I wouldn't be surprised if another is behind this."
     
     show celestial combat at celestial_normal_range:
@@ -259,7 +267,7 @@ label exploration:
     "Truth be told, I wager it's one of my kind distributing the paste.\nA devil appearing isn't an impossibility though."
 
     gr "I'm leaving now. If you're ready to die, you are free to follow."
-    extend "\nOr, you could take credit for my work as usual.\nI have no use for prestige, only results."
+    extend "\nOr, you could take credit for my work as usual. I have no use for prestige, only results."
     
     hide jory with dissolve
     jump interrogation

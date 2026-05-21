@@ -23,7 +23,7 @@ label revelation:
     hide nick with easeoutleft
     ni "Oof, what happened? Vampire?"
     
-    gr neutral "I don't know what the hell he was, but he's dead. Now give me a drink!"
+    gr "I don't know what the hell he was, but he's dead. Now give me a drink!"
 
     #show caius at caius_normal_range with dissolve:
         #hop
@@ -31,23 +31,23 @@ label revelation:
     "Caius recoils as a wooden mug, filled to the brim with blood, is placed before me."
     "I down it all immediately. The pain in my body eases to a dull tingle in place of the agonizing throb. I feel as if I'm drunk as both fatigue and drowsiness finally set in."
 
-    gr neutral "With a day of rest, I'll be as right as rain. My body isn't feeble unlike yours, monk."
+    gr "With a day of rest, I'll be as right as rain. My body isn't feeble unlike yours, monk."
 
     #show caius snide at caius_normal_range with dissolve:
         #flip
     ca "I'm, I'm not a monk..."
     
-    gr neutral "You look and fight like one."
+    gr "You look and fight like one."
     
     ca "And you look like you're in a foul mood."
     
-    gr neutral "You have {i}your friend{/i} to thank for that!" with vpunch
+    gr "You have {i}your friend{/i} to thank for that!" with vpunch
     
     #show caius neutral at caius_normal_range with dissolve:
         #flip_r
     ca "Oh, Jory must still be upset..."
     
-    gr neutral "No, but I wish he was."
+    gr "No, but I wish he was."
     
     #hide caius with dissolve
     show nick happy at nick_normal_range with easeinright:
@@ -58,11 +58,11 @@ label revelation:
     "I then take notice of the mask shrouding Caius's forehead. It looks like its glued to his skin."
     extend " Didn't Nick mention this earlier?"
 
-    gr neutral "What's with the mask?"
+    gr "What's with the mask?"
 
     ca "It's to restrain my mana..."
     
-    gr neutral "Nick?"
+    gr "Nick?"
     
     show nick happy at nick_normal_range with move:
         center
@@ -71,14 +71,14 @@ label revelation:
     
     ca "And it's stuck to my face..."
     
-    gr neutral "Yeah, why is that?"
+    gr "Yeah, why is that?"
     
     show nick happy at nick_normal_range:
         hop
     ni "So that it attunes to his mana. Can't have Justice dislodging it."
     extend " He now has a trump card. The inhibitors will vanish if he rips it off. You might want to run when that happens."
     
-    gr neutral "...Do you mean to tell me this boy I met just a day ago is now a ticking time bomb?!"
+    gr "...Do you mean to tell me this boy I met just a day ago is now a ticking time bomb?!"
 
     show nick happy at nick_normal_range:
         flip
@@ -86,7 +86,7 @@ label revelation:
     
     ca "I'm twenty-two, Griswyr."
     
-    gr neutral "And {i}very{/i} sheltered."
+    gr "And {i}very{/i} sheltered."
 
     play sound sfx.door_open
     
@@ -101,7 +101,7 @@ label revelation:
 
     ca "Th-That's an imp! We have to-"
     
-    gr neutral "Calm yourself. This is Nick's familiar."
+    gr "Calm yourself. This is Nick's familiar."
     
     ca "Wh-what?! But we just fought a devil! Why does he-"
 
@@ -118,7 +118,7 @@ label revelation:
     "Nick chuckles faintly. He isn't amused, he's guilty."
     extend " Whenever he's done something foolish, he acts like this. A sane mortal would dread my wrath, but Nick's lust for pain encourages it."
 
-    gr neutral "Caius, fetch me a broom."
+    gr "Caius, fetch me a broom."
     extend "\nOn second thought, a broom won't cut it. Grab me that staff over there."
     
     ca "Umm, okay...?"
@@ -128,12 +128,12 @@ label revelation:
     bu "Oooh yes, city destroyed! Burned! Blood and ash everywhere!"
     extend "\nMany dead knights, with red and brown armors scattered about!\nIt was hilarious! Favorite mission so far~!"
     
-    gr neutral "Hmm, so those Exorcists perpetuated that..."
+    gr "Hmm, so those Exorcists perpetuated that..."
 
     ni "Yep... They lacked the numbers to face the Celestials, so they sacked Thrycia."
     ni "I guess they believed their attack wouldn't warrant retaliation. Thrycia was technically independent."
 
-    gr neutral "I do not understand why we cling to this peace."
+    gr "I do not understand why we cling to this peace."
     extend "\nIt's only a matter of time before those peons attack again."
     
     show buzz at buzz_close_range with moveinright:
@@ -149,7 +149,7 @@ label revelation:
     "Caius eagerly passes me the staff. His eyes are filled with desperation, hoping that his friend was not responsible, I imagine."
     "The imp eyes him like a slab of meat. I guess devils big and small can't resist corrupting souls as virtuous as his."
 
-    gr neutral "Nick, keep your pet under control or you'll need a new one."
+    gr "Nick, keep your pet under control or you'll need a new one."
     
     show buzz shocked at buzz_close_range with moveinright:
         center
@@ -162,7 +162,7 @@ label revelation:
     extend"\nHowever...Buzz found a charred silhouette on the ground~. Only devils could broil the earth like that. 
     We explode when slain."
     
-    gr neutral "Oh really? Tell us more..!"
+    gr "Oh really? Tell us more..!"
 
     play sound sfx.light_grapple
     #hide caius
@@ -292,7 +292,7 @@ label revelation:
 
     bu "Buzz knows~! Two mana signatures were detected."
     
-    gr neutral "...And you waited to share this fact because?"
+    gr "...And you waited to share this fact because?"
     
     show buzz shocked at buzz_normal_range with moveinleft:
         hop
@@ -320,12 +320,12 @@ label revelation:
     #show caius neutral at caius_close_range with dissolve:
     ca "...I know it might be foolish of me. However, Nick has no trace on Persephone's whereabouts. So I wonder if she might be involved somehow?"
     
-    gr neutral "Do you honestly believe some dretchling would attract the banshee?"
+    gr "Do you honestly believe some dretchling would attract the banshee?"
 
     ca "The fiendish presence was powerful, and we both know how deadly she is."
     extend " Frankly, I plan on going to Thrycia with or without you. It was what I wanted to do before, you know..."
     
-    gr neutral "Thrycia is a week's travel by horseback. Unless you plan to walk..."
+    gr "Thrycia is a week's travel by horseback. Unless you plan to walk..."
     
     show nick happy at nick_normal_range with easeinleft:
         left
@@ -368,19 +368,19 @@ label revelation:
 
     "I toss him into the wall. I've heard enough of his nonsense."
 
-    gr neutral "Very well, you are hereby my suboordinate."
+    gr "Very well, you are hereby my suboordinate."
     extend " But understand this.\nWe will do things {i}my{/i} way. I'm not interested in rescuing damsels, or your friend."
-    gr neutral "In fact, I plan to kill him if he's aiding fiends, and I expect you to back me up."
+    gr "In fact, I plan to kill him if he's aiding fiends, and I expect you to back me up."
     
     ca "I'm aware..."
     
-    gr neutral "Elf, make arrangements. Once my wounds are healed, we depart."
+    gr "Elf, make arrangements. Once my wounds are healed, we depart."
     extend "\nAs for you, monk..."
     
     ca "Why do you keep calling me that...?"
 
-    gr neutral "Start trying to get that mana of yours under control. If you're truly able to wield Justice, we'll need that firepower."
-    gr neutral "More importrantly, I don't want to have to protect you from yourself. I expect you to make the most of your respite."
+    gr "Start trying to get that mana of yours under control. If you're truly able to wield Justice, we'll need that firepower."
+    gr "More importrantly, I don't want to have to protect you from yourself. I expect you to make the most of your respite."
     
     #show caius happy at caius_close_range:
         #hop
@@ -392,7 +392,7 @@ label revelation:
     
     ni "Yes, try not lose your temper on him, Griswyr."
     
-    gr neutral "I make no promises."
+    gr "I make no promises."
 
     $ quick_menu = False
     window hide
@@ -413,12 +413,12 @@ label revelation:
 
     stop music fadeout 0.8
 
-    vi "Hey Snowflake! We need to chat." with vpunch
+    vi "Hey Snowflake, we need to chat!" with vpunch
 
     "A voice booms into my ear. No one else has arrived here, or Caius and Nick would've reacted by now. And our base is littered with alarm wards. So it must be telepathy."
     "That, and only one person addresses me with that name..."
 
-    gri neutral "Banshee. To what do I owe the displeasure?"
+    gri "Banshee. To what do I owe the displeasure?"
 
     $ quick_menu = False
     window hide
@@ -441,15 +441,15 @@ label revelation:
     pei "Yeah, well, here's something to chew on. If I see you again, it's on sight!"
     extend " And here I was pitying you, willing to take you under my wing.\nYou're disgusting, and that's coming from me..."
 
-    gri neutral "Oh no, the Banshee doesn't approve of me.\nI'm certain to lose so much sleep."
+    gri "Oh no, the Banshee doesn't approve of me.\nI'm certain to lose so much sleep."
     extend " Especially when you and your broodmother's henchman murdered thousands. People still suffer because {i}the Reckoning{/i}.\nAnd you don't scare me, heh, it's quite the opposite."
-    gri neutral "If you're so offended, then stop hiding. We'll find you eventually."
+    gri "If you're so offended, then stop hiding. We'll find you eventually."
     
     show persephone smirk at t_alpha(0.3)
 
     pei "In due time, Snowflake. Your days are numbered all the same.\nYou'll beg for death when Mother gets her hands on you."
     
-    gri neutral "My days have been numbered. Do you have anything new to share?"
+    gri "My days have been numbered. Do you have anything new to share?"
 
     window hide
 
