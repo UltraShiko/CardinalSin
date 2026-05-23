@@ -24,7 +24,7 @@ label prologue:
     window show
 
     "Mom...?"
-    "I try wiping the red stuff away, but it keeps coming.\nOnly a warm cloth manages to douse this 
+    "I try wiping the red stuff away, but it keeps coming. Only a warm cloth manages to douse this 
     crimson stream."
 
     mo "By Yeshua, he split your head open..."
@@ -102,7 +102,7 @@ label prologue:
     $ quick_menu = False
     window hide
 
-    scene christoph2 with iris_in_out
+    scene cg christoph2 with iris_in_out
     play sound sfx.thud
 
     pause 1.2
@@ -124,7 +124,7 @@ label prologue:
     
     play sound sfx.weapon_swing
     call screen image_display("vfx/sword_swing.png")
-    scene christoph2:
+    scene cg christoph2:
         zoom 1.5
     queue sound sfx.grapple
     with quickflash

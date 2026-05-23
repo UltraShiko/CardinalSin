@@ -336,14 +336,16 @@ label confrontation:
     call screen image_display("vfx/blood_slash.png")
     play sound weapon_swingh
     queue sound sfx.singe
-    scene griswyr_pose
+    scene cg griswyr_pose:
+        zoom 0.5
     "Again, I duck. The blob of crimson collides with the wall behind me, eating away at its paint."
     extend " I see. Since his undoing was at my hands, he must be able to weaponize his blood just like me."
     "However, doing so taxes your constitution, just as mana taxes one's willpower. Wielding both Malice and blood with reckless abandon will tire him out quickly."
     "I'd know, I do both as well. But I can replenish myself through drinking the blood of my foe. I'm doubtful he can do the same."
     
     play sound sfx.dagger_draw
-    scene griswyr_malice
+    scene cg griswyr_malice:
+        zoom 0.5
     "I hold the ax head up to my palm."
 
     gr angry "What was that supposed to be? I thought you wanted to kill me."
@@ -659,14 +661,16 @@ label confrontation:
 
     hide christoph with quickblinds
 
-    scene griswyr_pose
+    scene griswyr_pose:
+        zoom 0.5
     "I pull myself to my feet. By then, he's back to his senses."
     extend " I don't know what to do. I can't kill him, and my body won't survive another onslaught. Even if he is exhausted."
     "Instead I walk towards him. My mind has surrendered, but my body refuses."
     extend "\nThese aren't my instincts taking over. Something else powers me now."
     "I ready my weapons, my grip heavy and trembling. Yet I wonder..."
 
-    scene griswyr_sin
+    scene griswyr_sin:
+        zoom 0.5
     play sound sfx.mana_charge
     with sinflash
     play music bgm.reckoning_II fadein 0.8
@@ -718,7 +722,7 @@ label confrontation:
     with quickflash
     ch "Ha! You missed!"
 
-    #TODO - scene image "#000" #TODO - Implement when CG is collected
+    scene image "#000"
     play sound sfx.mana_charge
     with quicksin
     extend " Wh-what?! Where did he-"

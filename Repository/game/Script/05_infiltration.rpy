@@ -254,9 +254,7 @@ label infiltration:
     play sound sfx.door_open
 
     play music bgm.lethal_suspense fadein 0.8
-    #show young christoph at center #TODO - add in Sprite
-    show villager at center:
-        zoom 0.8
+    show y_christoph at center
 
     with Dissolve(0.35)
 
@@ -289,10 +287,8 @@ label infiltration:
     
     stop music
     play sound sfx.weapon_swingh
-    #show young christoph at center: #TODO - Add in young christoph
-        #zoom x
-    show villager at center:
-        zoom 1.5 ypos 1.3
+    show y_christoph at center:
+        zoom 1.1
     pause 1.0
     camera at revert_camera
     stop music

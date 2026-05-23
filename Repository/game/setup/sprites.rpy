@@ -56,6 +56,13 @@ layeredimage buzz:
 
     # "images/sprites/caius/neutral.png"
 
+image y_christoph:
+
+    zoom 0.5
+    yoffset 251
+
+    "images/sprites/christoph/y_christoph.png"
+
 layeredimage christoph:
 
     attribute combat: #combat is first attribute for purpose of second statement
@@ -84,13 +91,6 @@ layeredimage christoph:
 
             "images/sprites/christoph/feral.png"
     
-
-# TODO - Acquire and fine tune sprites
-#image Christoph_combat
-
-    #yoffset 251
-
-    # "images/sprites/christoph/combat.png"
 
 layeredimage nick:
 
@@ -189,7 +189,7 @@ image villager:
     "images/sprites/villager.png"
 
 
-### Griswyr
+### Griswyr Portraits
 
 image side griswyr = "griswyr_layered emo_neutral"
 image side griswyr angry = "griswyr_layered emo_angry"

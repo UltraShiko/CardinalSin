@@ -1,2 +1,5 @@
-
 image cg christoph = "images/CGs/christoph1.png"
+image cg christoph2 = "images/CGs/christoph2.png"
+image cg griswyr = "images/CGs/griswyr_pose.png"
+image cg griswyr_malice = "images/CGs/griswyr_malice.png"
+image cg griswyr_sin = "images/CGs/griswyr_sin.png"

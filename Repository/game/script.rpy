@@ -29,10 +29,16 @@ label start:
 
 label griswyr_test:
 
+    show y_christoph at center:
+        zoom 1.1
     gr neutral "Dialogue"
     
+    scene cg griswyr_malice:
+        zoom 0.5
     gr smirk "Dialogue"
     
+    scene cg griswyr_sin:
+        zoom 0.5
     gr angry "Dialogue"
     
     gri "Dialogue"
